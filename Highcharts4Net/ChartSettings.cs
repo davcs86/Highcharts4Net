@@ -18,6 +18,9 @@ namespace Highcharts4Net
         public Title Title { set; get; }
         public Subtitle SubTitle { set; get; }
 
+        public XAxis XAxis { get; set; }
+        public YAxis YAxis { get; set; }
+
         public ChartSettings()
         {
             Chart = new Chart();

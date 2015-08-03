@@ -47,6 +47,17 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public string Text { get; set; }
 
+        /// <summary>
+        /// Horizontal pixel offset of the title position. 
+        /// Default:  0
+        /// </summary>
+        public Number? X { get; set; }
+
+        /// <summary>
+        /// Vertical pixel offset of the title position.
+        /// </summary>
+        public Number? Y { get; set; }
+
 	}
 
 }

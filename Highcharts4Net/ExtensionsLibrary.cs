@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.UI;
+using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net
 {
@@ -29,10 +30,18 @@ namespace Highcharts4Net
                                   "'></script>");
         }
 
-        public LineChart LineChart(Action<ChartSettings> settings)
+        public HighchartsRender LineChart(Action<ChartSettings> settings)
         {
-            return
-                new LineChart(settings);
+            var chart = new HighchartsRender();
+            chart.CreateChart(settings, ChartTypes.Line);
+            return chart;
+        }
+
+        public HighchartsRender SplineChart(Action<ChartSettings> settings)
+        {
+            var chart = new HighchartsRender();
+            chart.CreateChart(settings, ChartTypes.Spline);
+            return chart;
         }
 
         public void Dispose()

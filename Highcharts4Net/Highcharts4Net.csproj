@@ -49,13 +49,16 @@
     <Compile Include="Hc4xHandler.cs" />
     <Compile Include="Hc4xHandlerFactory.cs" />
     <Compile Include="Highcharts4NetHelper.cs" />
-    <Compile Include="HighchartsWrapper.cs" />
+    <Compile Include="HighchartsRender.cs" />
     <Compile Include="IHc4xHandler.cs" />
     <Compile Include="Library\Attributes\JsonFormatterAttribute.cs" />
     <Compile Include="Library\Attributes\NameAttribute.cs" />
     <Compile Include="Library\Container.cs" />
     <Compile Include="Library\Enums\AxisTitleAligns.cs" />
-    <Compile Include="Library\Enums\AxisTypes.cs" />
+    <Compile Include="Library\Enums\AxisTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Enums\AxisUnitsTypes.cs" />
     <Compile Include="Library\Enums\ChartTypes.cs" />
     <Compile Include="Library\Enums\Cursors.cs" />
     <Compile Include="Library\Enums\DashStyles.cs" />
@@ -92,6 +95,8 @@
     <Compile Include="Library\Helpers\Tools.cs" />
     <Compile Include="Library\Highcharts.cs" />
     <Compile Include="Library\JsonSerializer.cs" />
+    <Compile Include="Library\Options\AxisBreaks.cs" />
+    <Compile Include="Library\Options\AxisUnits.cs" />
     <Compile Include="Library\Options\Chart.cs" />
     <Compile Include="Library\Options\ChartEvents.cs" />
     <Compile Include="Library\Options\ChartOptions3d.cs" />
@@ -381,7 +386,6 @@
     <Compile Include="Library\Options\YAxisPlotLinesLabel.cs" />
     <Compile Include="Library\Options\YAxisStackLabels.cs" />
     <Compile Include="Library\Options\YAxisTitle.cs" />
-    <Compile Include="LineChart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

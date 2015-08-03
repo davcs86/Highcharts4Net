@@ -22,6 +22,11 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Color? AlternateGridColor { get; set; }
 
+        /// <summary>
+        /// <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href='#series.data'>name</a> and setting axis <a href='#xAxis.type'>type</a> to <code>'category'</code>.</p><p>Example:<pre>categories: ['Apples', 'Bananas', 'Oranges']</pre> Defaults to <code>null</code></p>
+        /// </summary>
+        public AxisBreaks[] Breaks { get; set; }
+
 		/// <summary>
 		/// <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href='#series.data'>name</a> and setting axis <a href='#xAxis.type'>type</a> to <code>'category'</code>.</p><p>Example:<pre>categories: ['Apples', 'Bananas', 'Oranges']</pre> Defaults to <code>null</code></p>
 		/// </summary>
@@ -306,6 +311,12 @@ namespace Highcharts4Net.Library.Options
 		/// Default: linear
 		/// </summary>
 		public AxisTypes? Type { get; set; }
+
+        /// <summary>
+        /// Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples.
+        /// </summary>
+        [JsonFormatter("[{0}, {1}]")]
+        public AxisUnits Units { get; set; }
 
 	}
 

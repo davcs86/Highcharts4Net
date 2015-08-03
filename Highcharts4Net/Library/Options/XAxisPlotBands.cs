@@ -11,6 +11,19 @@ namespace Highcharts4Net.Library.Options
 	/// </summary>
 	public class XAxisPlotBands
 	{
+
+        /// <summary>
+        /// Border color for the plot band. Also requires <pre>borderWidth</pre> to be set.
+        /// Default: null
+        /// </summary>
+        public Color? BorderColor { get; set; }
+
+        /// <summary>
+        /// Border width for the plot band. Also requires <pre>borderColor</pre> to be set.
+        /// Default: 0
+        /// </summary>
+        public Number? BorderWidth { get; set; }
+
 		/// <summary>
 		/// The color of the plot band.
 		/// </summary>

@@ -22,6 +22,11 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Color? AlternateGridColor { get; set; }
 
+        /// <summary>
+        /// <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href='#series.data'>name</a> and setting axis <a href='#xAxis.type'>type</a> to <code>'category'</code>.</p><p>Example:<pre>categories: ['Apples', 'Bananas', 'Oranges']</pre> Defaults to <code>null</code></p>
+        /// </summary>
+        public AxisBreaks[] Breaks { get; set; }
+
 		/// <summary>
 		/// <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href='#series.data'>name</a> and setting axis <a href='#xAxis.type'>type</a> to <code>'category'</code>.</p><p>Example:<pre>categories: ['Apples', 'Bananas', 'Oranges']</pre> Defaults to <code>null</code></p>
 		/// </summary>
@@ -114,7 +119,7 @@ namespace Highcharts4Net.Library.Options
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the maximum value of the Y axis.
 		/// Default: #102D4C
 		/// </summary>
-		public Color? MaxColor { get; set; }
+		//public Color? MaxColor { get; set; }
 
 		/// <summary>
 		/// Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area.
@@ -134,7 +139,7 @@ namespace Highcharts4Net.Library.Options
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the minimum value of the Y axis.
 		/// Default: #EFEFFF
 		/// </summary>
-		public Color? MinColor { get; set; }
+		//public Color? MinColor { get; set; }
 
 		/// <summary>
 		/// Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area.
@@ -268,6 +273,12 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Gradient Stops { get; set; }
 
+        /// <summary>
+        /// The amount of ticks to draw on the axis. This opens up for aligning the ticks of multiple charts or panes within a chart. This option overrides the <pre>tickPixelInterval</pre> option.
+        /// This option only has an effect on linear axes. Datetime, logarithmic or category axes are not affected.
+        /// </summary>
+        public Number? TickAmount { get; set; }
+
 		/// <summary>
 		/// Color for the main tick marks.
 		/// Default: #C0D0E0
@@ -326,6 +337,12 @@ namespace Highcharts4Net.Library.Options
 		/// Default: linear
 		/// </summary>
 		public AxisTypes? Type { get; set; }
+
+        /// <summary>
+        /// Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples.
+        /// </summary>
+        [JsonFormatter("[{0}, {1}]")]
+        public AxisUnits Units { get; set; }
 
 	}
 

@@ -8,11 +8,22 @@ using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net
 {
-    public class HighchartsWrapper
+    public class HighchartsRender
     {
-        internal static Highcharts _chart;
+        private static Highcharts _chart;
 
-        internal void applySettings(ChartSettings settings)
+        internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes Chart_Type)
+        {
+            var _chartSettings = new ChartSettings();
+
+            getSettings(_chartSettings);
+
+            _chartSettings.Chart.Type = Chart_Type;
+
+            applySettings(_chartSettings);
+        }
+
+        private void applySettings(ChartSettings settings)
         {
             _chart = new Highcharts(settings.Name)
                 .InitChart(settings.Chart)

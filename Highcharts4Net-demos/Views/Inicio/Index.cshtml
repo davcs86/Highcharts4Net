@@ -1,4 +1,5 @@
-﻿@using Highcharts4Net
+﻿@using System.Drawing
+@using Highcharts4Net
 @using Highcharts4Net.Library.Options
 @{
     ViewBag.Title = "Index";
@@ -10,10 +11,7 @@
     settings =>
     {
         settings.Chart.Inverted = true;
-        settings.SubTitle = new Subtitle
-        {
-            
-        };
+        //settings.XAxis.PlotLines.
     }).Render()
 
 @ViewBag.Chart
