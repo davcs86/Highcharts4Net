@@ -1,0 +1,19 @@
+﻿@using Highcharts4Net
+@using Highcharts4Net.Library.Options
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.Highcharts4Net().LineChart(
+    settings =>
+    {
+        settings.Chart.Inverted = true;
+        settings.SubTitle = new Subtitle
+        {
+            
+        };
+    }).Render()
+
+@ViewBag.Chart
