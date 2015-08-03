@@ -19,11 +19,11 @@ namespace Highcharts4Net.Library
 
         internal string FunctionName { get; private set; }
 
-        Chart _Chart;
+        Chart _Chart; //
         Credits _Credits;
         Drilldown _Drilldown;
         Labels _Labels;
-        Legend _Legend;
+        Legend _Legend; //
         Loading _Loading;
         Navigation _Navigation;
         NoData _NoData;
@@ -32,13 +32,13 @@ namespace Highcharts4Net.Library
         Pane[] _PaneArray;
         Series _Series;
         Series[] _SeriesArray;
-        Subtitle _Subtitle;
-        Title _Title;
-        Tooltip _Tooltip;
-        XAxis _XAxis;
-        XAxis[] _XAxisArray;
-        YAxis _YAxis;
-        YAxis[] _YAxisArray;
+        Subtitle _Subtitle; //
+        Title _Title; //
+        Tooltip _Tooltip; //
+        XAxis _XAxis; //
+        XAxis[] _XAxisArray; //
+        YAxis _YAxis; //
+        YAxis[] _YAxisArray; //
         Exporting _Exporting;
 
         /// <summary>

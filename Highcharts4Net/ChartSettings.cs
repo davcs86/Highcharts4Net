@@ -21,6 +21,8 @@ namespace Highcharts4Net
         public XAxis XAxis { get; set; }
         public YAxis YAxis { get; set; }
 
+        public Tooltip Tooltip{ get; set; }
+
         public ChartSettings()
         {
             Chart = new Chart();

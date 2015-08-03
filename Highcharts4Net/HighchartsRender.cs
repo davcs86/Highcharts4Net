@@ -27,7 +27,13 @@ namespace Highcharts4Net
         {
             _chart = new Highcharts(settings.Name)
                 .InitChart(settings.Chart)
+                .SetTitle(settings.Title)
+                .SetSubtitle(settings.SubTitle)
+                .SetXAxis(settings.XAxis)
+                .SetYAxis(settings.YAxis)
+                .SetTooltip(settings.Tooltip)
                 .SetLegend(settings.Legend);
+
         }
 
         public HtmlString Render()

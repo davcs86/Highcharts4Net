@@ -17,12 +17,12 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Data Data { get; set; }
 
-		[Obsolete("This method is deprecated as of version 2.0. Instead, use options preprocessing as described in <a href='http://docs.highcharts.com/#preprocessing'>the docs</a>.")]
+		/*[Obsolete("This method is deprecated as of version 2.0. Instead, use options preprocessing as described in <a href='http://docs.highcharts.com/#preprocessing'>the docs</a>.")]
 		[JsonFormatter("{0}")]
 		public string DataParser { get; set; }
 
 		[Obsolete("This method is deprecated as of version 2.0. Instead, load the data using jQuery.ajax and use options preprocessing as described in <a href='http://docs.highcharts.com/#preprocessing'>the docs</a>.")]
-		public string DataURL { get; set; }
+		public string DataURL { get; set; }*/
 
 		/// <summary>
 		/// An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
