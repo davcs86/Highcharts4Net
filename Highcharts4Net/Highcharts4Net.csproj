@@ -169,8 +169,10 @@
     <Compile Include="Library\Options\PlotOptionsAreasplinerangeStates.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplinerangeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplinerangeStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreasplinerangeStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplinerangeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplinerangeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreasplinerangeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStates.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStatesHoverHalo.cs" />
