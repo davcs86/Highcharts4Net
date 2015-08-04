@@ -51,11 +51,17 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public string PointFormat { get; set; }
 
+        /// <summary>
+        /// <p>A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.</p>
+        /// </summary>
+        [JsonFormatter("{0}")]
+        public string Pointformatter { get; set; }
+
 		/// <summary>
 		/// The name of a symbol to use for the border around the tooltip. In Highcharts 3.x and less, the shape was <code>square</code>. 
 		/// Default: callout
 		/// </summary>
-		public string Shape { get; set; }
+		//public string Shape { get; set; }
 
 		/// <summary>
 		/// How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.

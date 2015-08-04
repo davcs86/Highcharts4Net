@@ -142,13 +142,16 @@
     <Compile Include="Library\Options\PlotOptionsArearange.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsArearangeMarkerStates.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangePoint.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangePointEvents.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeStates.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsArearangeStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsArearangeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsArearangeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaspline.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineEvents.cs" />
