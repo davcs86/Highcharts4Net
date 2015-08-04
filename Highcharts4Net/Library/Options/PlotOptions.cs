@@ -62,7 +62,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The heatmap series type. This series type is available both in Highcharts and Highmaps. See the <a href='http://api.highcharts.com/highmaps#plotOptions.heatmap'>Highmaps API</a> for details.
 		/// </summary>
-		public Object Heatmap { get; set; }
+		public PlotOptionsHeatmap Heatmap { get; set; }
 
 		public PlotOptionsLine Line { get; set; }
 
@@ -70,6 +70,11 @@ namespace Highcharts4Net.Library.Options
 		/// A pie chart is a circular chart divided into sectors, illustrating numerical proportion.
 		/// </summary>
 		public PlotOptionsPie Pie { get; set; }
+
+        /// <summary>
+        /// A polygon series can be used to draw any freeform shape in the cartesian coordinate system. A fill is applied with the color option, and stroke is applied through <pre>lineWidth</pre> and <pre>lineColor</pre> options. Requires the <pre>highcharts-more.js</pre> file.
+        /// </summary>
+        public PlotOptionsPolygon Polygon { get; set; }
 
 		/// <summary>
 		/// A pyramid chart consists of a single pyramid with item heights corresponding to each point value. Technically it is the same as a reversed funnel chart without a neck.
@@ -89,6 +94,11 @@ namespace Highcharts4Net.Library.Options
 		public PlotOptionsSolidgauge Solidgauge { get; set; }
 
 		public PlotOptionsSpline Spline { get; set; }
+
+        /// <summary>
+        /// The size of the point shape is determined by its value relative to its siblings values. Requires the module <pre>heatmap.js</pre> as well, if functionality such as the colorAxis is to be used.
+        /// </summary>
+        public PlotOptionsTreemap Treemap { get; set; }
 
 		/// <summary>
 		/// Options for the waterfall series type.

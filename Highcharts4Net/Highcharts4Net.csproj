@@ -68,7 +68,10 @@
     <Compile Include="Library\Enums\Placement.cs" />
     <Compile Include="Library\Enums\RelativeTo.cs" />
     <Compile Include="Library\Enums\Shapes.cs" />
-    <Compile Include="Library\Enums\Stackings.cs" />
+    <Compile Include="Library\Enums\Stackings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Enums\Steps.cs" />
     <Compile Include="Library\Enums\Symbols.cs" />
     <Compile Include="Library\Enums\TickPositions.cs" />
     <Compile Include="Library\Enums\VerticalAligns.cs" />
@@ -173,8 +176,10 @@
     <Compile Include="Library\Options\PlotOptionsAreaStates.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreaStatesHoverHaloAtributes.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreaZone.cs" />
     <Compile Include="Library\Options\PlotOptionsBar.cs" />
     <Compile Include="Library\Options\PlotOptionsBarDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsBarEvents.cs" />
@@ -259,6 +264,7 @@
     <Compile Include="Library\Options\PlotOptionsGaugeStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmap.cs" />
     <Compile Include="Library\Options\PlotOptionsLine.cs" />
     <Compile Include="Library\Options\PlotOptionsLineDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsLineEvents.cs" />
@@ -283,6 +289,7 @@
     <Compile Include="Library\Options\PlotOptionsPieStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsPieStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsPieTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsPolygon.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramid.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidEvents.cs" />
@@ -345,6 +352,7 @@
     <Compile Include="Library\Options\PlotOptionsSplineStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemap.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfall.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallEvents.cs" />
@@ -366,7 +374,6 @@
     <Compile Include="Library\Options\SeriesDataMarkerStatesHover.cs" />
     <Compile Include="Library\Options\SeriesDataMarkerStatesSelect.cs" />
     <Compile Include="Library\Options\Subtitle.cs" />
-    <Compile Include="Library\Options\Symbols.cs" />
     <Compile Include="Library\Options\Title.cs" />
     <Compile Include="Library\Options\Tooltip.cs" />
     <Compile Include="Library\Options\XAxis.cs" />
