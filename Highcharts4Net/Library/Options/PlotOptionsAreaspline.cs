@@ -76,6 +76,17 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? FillOpacity { get; set; }
 
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
 		/// <summary>
 		/// A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>.
 		/// </summary>
@@ -115,6 +126,11 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 1
 		/// </summary>
 		public Number? PointInterval { get; set; }
+
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
 
 		/// <summary>
 		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
@@ -163,6 +179,11 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public PlotOptionsAreasplineStates States { get; set; }
 
+        /// <summary>
+        /// Whether to apply steps to the line. Possible values are left, center and right.
+        /// </summary>
+        public Steps? Step { get; set; }
+
 		/// <summary>
 		/// Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
 		/// Default: true
@@ -197,6 +218,18 @@ namespace Highcharts4Net.Library.Options
 		/// Default: true
 		/// </summary>
 		public bool? Visible { get; set; }
+
+
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsAreasplineZone[] Zones { get; set; }
 
 	}
 

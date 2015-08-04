@@ -174,8 +174,10 @@
     <Compile Include="Library\Options\PlotOptionsAreasplineStates.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreasplineStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsAreasplineTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsAreasplineZone.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStates.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsAreaStatesHoverHalo.cs" />
