@@ -17,6 +17,12 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public HorizontalAligns? Align { get; set; }
 
+        /// <summary>
+        /// Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the <pre>dataLabels.padding</pre> can be set to 0.
+        /// Default: false
+        /// </summary>
+        public bool? AllowOverlap { get; set; }
+
 		/// <summary>
 		/// The background color or gradient for the data label. Defaults to <code>undefined</code>.
 		/// </summary>

@@ -244,8 +244,10 @@
     <Compile Include="Library\Options\PlotOptionsColumnStates.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsColumnStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsColumnZone.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbar.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarEvents.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarPoint.cs" />
