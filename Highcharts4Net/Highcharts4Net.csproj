@@ -195,8 +195,10 @@
     <Compile Include="Library\Options\PlotOptionsBarStates.cs" />
     <Compile Include="Library\Options\PlotOptionsBarStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsBarStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsBarStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsBarStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsBarTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsBarZone.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplot.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotEvents.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotPoint.cs" />
