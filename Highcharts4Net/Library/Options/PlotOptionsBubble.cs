@@ -62,6 +62,17 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsBubbleEvents Events { get; set; }
 
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
 		/// <summary>
 		/// The width of the line connecting the data points.
 		/// Default: 0
@@ -103,6 +114,11 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 1
 		/// </summary>
 		public Number? PointInterval { get; set; }
+
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
 
 		/// <summary>
 		/// If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
@@ -187,6 +203,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? ZThreshold { get; set; }
 
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsBubbleZone[] Zones { get; set; }
 	}
 
 }

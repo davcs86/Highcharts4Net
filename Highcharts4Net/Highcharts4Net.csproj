@@ -206,8 +206,10 @@
     <Compile Include="Library\Options\PlotOptionsBoxplotStates.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsBoxplotZone.cs" />
     <Compile Include="Library\Options\PlotOptionsBubble.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleEvents.cs" />
@@ -220,8 +222,10 @@
     <Compile Include="Library\Options\PlotOptionsBubbleStates.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsBubbleStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsBubbleTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsBubbleZone.cs" />
     <Compile Include="Library\Options\PlotOptionsColumn.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnEvents.cs" />

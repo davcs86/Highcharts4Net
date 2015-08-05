@@ -69,6 +69,12 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Color? FillColor { get; set; }
 
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
 		/// <summary>
 		/// Padding between each value groups, in x axis units.
 		/// Default: 0.2
@@ -86,6 +92,11 @@ namespace Highcharts4Net.Library.Options
 		/// Default: true
 		/// </summary>
 		public bool? Grouping { get; set; }
+
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
 
 		/// <summary>
 		/// The width of the line surrounding the box. If any of <a href='#plotOptions.boxplot.stemWidth'>stemWidth</a>, <a href='#plotOptions.boxplot.medianWidth'>medianWidth</a> or <a href='#plotOptions.boxplot.whiskerWidth'>whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
@@ -126,6 +137,11 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 1
 		/// </summary>
 		public Number? PointInterval { get; set; }
+
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
 
 		/// <summary>
 		/// Padding between each column or bar, in x axis units.
@@ -239,6 +255,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? WhiskerWidth { get; set; }
 
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsBoxplotZone[] Zones { get; set; }
 	}
 
 }
