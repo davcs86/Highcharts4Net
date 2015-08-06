@@ -287,6 +287,16 @@
     <Compile Include="Library\Options\PlotOptionsGaugeTooltip.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsHeatmap.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapDataLabels.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapPoint.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapPointEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapStates.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapStatesHover.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapStatesHoverHaloAttributes.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsHeatmapZone.cs" />
     <Compile Include="Library\Options\PlotOptionsLine.cs" />
     <Compile Include="Library\Options\PlotOptionsLineDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsLineEvents.cs" />
