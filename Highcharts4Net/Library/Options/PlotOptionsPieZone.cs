@@ -4,7 +4,7 @@ using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
 {
-    public class PlotOptionsLineZone
+    public class PlotOptionsPieZone
     {
         /// <summary>
         /// Defines the color of the series.

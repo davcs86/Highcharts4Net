@@ -119,11 +119,17 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Shadow { get; set; }
 
-		/// <summary>
-		/// Whether to render the connector as a soft arc or a line with sharp break.
-		/// Default: true
-		/// </summary>
-		public bool? SoftConnector { get; set; }
+        /// <summary>
+        /// The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
+        /// Default: square.
+        /// </summary>
+        public string Shape { get; set; }
+
+        /// <summary>
+        /// Whether to render the connector as a soft arc or a line with sharp break.
+        /// Default: true
+        /// </summary>
+        public bool? SoftConnector { get; set; }
 
 		/// <summary>
 		/// Styles for the label.

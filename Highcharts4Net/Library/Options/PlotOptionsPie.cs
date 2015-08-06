@@ -74,11 +74,17 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsPieEvents Events { get; set; }
 
-		/// <summary>
-		/// <p>Equivalent to <a href='#chart.ignoreHiddenSeries'>chart.ignoreHiddenSeries</a>, this option tells whether the series shall be redrawn as if the hidden point were <code>null</code>.</p><p>The default value changed from <code>false</code> to <code>true</code> with Highcharts 3.0.</p>
-		/// Default: true
-		/// </summary>
-		public bool? IgnoreHiddenPoint { get; set; }
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// <p>Equivalent to <a href='#chart.ignoreHiddenSeries'>chart.ignoreHiddenSeries</a>, this option tells whether the series shall be redrawn as if the hidden point were <code>null</code>.</p><p>The default value changed from <code>false</code> to <code>true</code> with Highcharts 3.0.</p>
+        /// Default: true
+        /// </summary>
+        public bool? IgnoreHiddenPoint { get; set; }
 
 		/// <summary>
 		/// The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. Can be a percentage or pixel value. Percentages are relative to the size of the plot area. Pixel values are given as integers.
@@ -87,10 +93,15 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel InnerSize { get; set; }
 
-		/// <summary>
-		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
-		/// </summary>
-		public string LinkedTo { get; set; }
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
+        /// <summary>
+        /// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
+        /// </summary>
+        public string LinkedTo { get; set; }
 
 		/// <summary>
 		/// The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
@@ -162,6 +173,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Visible { get; set; }
 
-	}
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsPieZone[] Zones { get; set; }
+    }
 
 }

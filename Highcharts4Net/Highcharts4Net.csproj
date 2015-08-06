@@ -321,8 +321,10 @@
     <Compile Include="Library\Options\PlotOptionsPieStates.cs" />
     <Compile Include="Library\Options\PlotOptionsPieStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsPieStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsPieStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsPieStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsPieTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsPieZone.cs" />
     <Compile Include="Library\Options\PlotOptionsPolygon.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramid.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidDataLabels.cs" />
