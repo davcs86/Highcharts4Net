@@ -17,10 +17,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public HorizontalAligns? Align { get; set; }
 
-		/// <summary>
-		/// The background color or gradient for the data label. Defaults to <code>undefined</code>.
-		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+        /// <summary>
+        /// Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the <pre>dataLabels.padding</pre> can be set to 0.
+        /// Default: false
+        /// </summary>
+        public bool? AllowOverlap { get; set; }
+
+        /// <summary>
+        /// The background color or gradient for the data label. Defaults to <code>undefined</code>.
+        /// </summary>
+        [JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
@@ -111,11 +117,17 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
-		/// <summary>
-		/// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.
-		/// Default: false
-		/// </summary>
-		public bool? UseHTML { get; set; }
+        /// <summary>
+        /// The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
+        /// Default: square.
+        /// </summary>
+        public string Shape { get; set; }
+
+        /// <summary>
+        /// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.
+        /// Default: false
+        /// </summary>
+        public bool? UseHTML { get; set; }
 
 		/// <summary>
 		/// The vertical alignment of the data label.

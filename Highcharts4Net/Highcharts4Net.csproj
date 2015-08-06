@@ -238,7 +238,6 @@
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverHaloAttributes.cs" />
-    <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeTooltip.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStates.cs" />
@@ -262,6 +261,7 @@
     <Compile Include="Library\Options\PlotOptionsFunnel.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsFunnelMarkerStates.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelPoint.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelPointEvents.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelStates.cs" />
@@ -275,14 +275,17 @@
     <Compile Include="Library\Options\PlotOptionsGaugeDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeDial.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsGaugeMarkerStates.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugePivot.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugePoint.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugePointEvents.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeStates.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsGaugeStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsGaugeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsHeatmap.cs" />
     <Compile Include="Library\Options\PlotOptionsLine.cs" />
     <Compile Include="Library\Options\PlotOptionsLineDataLabels.cs" />
