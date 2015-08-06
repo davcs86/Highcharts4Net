@@ -196,7 +196,6 @@
     <Compile Include="Library\Options\PlotOptionsBarStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsBarStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsBarStatesHoverHaloAttributes.cs" />
-    <Compile Include="Library\Options\PlotOptionsBarStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsBarTooltip.cs" />
     <Compile Include="Library\Options\PlotOptionsBarZone.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplot.cs" />
@@ -207,7 +206,6 @@
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverHalo.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverHaloAttributes.cs" />
-    <Compile Include="Library\Options\PlotOptionsBoxplotStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotTooltip.cs" />
     <Compile Include="Library\Options\PlotOptionsBoxplotZone.cs" />
     <Compile Include="Library\Options\PlotOptionsBubble.cs" />
@@ -269,8 +267,10 @@
     <Compile Include="Library\Options\PlotOptionsFunnelStates.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsFunnelStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsFunnelZone.cs" />
     <Compile Include="Library\Options\PlotOptionsGauge.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsGaugeDial.cs" />
