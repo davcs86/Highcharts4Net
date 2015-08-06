@@ -309,8 +309,10 @@
     <Compile Include="Library\Options\PlotOptionsLineStates.cs" />
     <Compile Include="Library\Options\PlotOptionsLineStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsLineStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsLineStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsLineStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsLineTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsLineZone.cs" />
     <Compile Include="Library\Options\PlotOptionsPie.cs" />
     <Compile Include="Library\Options\PlotOptionsPieDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsPieEvents.cs" />
