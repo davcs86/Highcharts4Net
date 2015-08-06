@@ -63,18 +63,29 @@ namespace Highcharts4Net.Library.Options
 		public bool? EnableMouseTracking { get; set; }
 
 		public PlotOptionsErrorbarEvents Events { get; set; }
+        
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
 
-		/// <summary>
-		/// The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
-		/// Default: 1
-		/// </summary>
-		public Number? GroupZPadding { get; set; }
+        /// <summary>
+        /// The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
+        /// Default: 1
+        /// </summary>
+        public Number? GroupZPadding { get; set; }
 
-		/// <summary>
-		/// The width of the line surrounding the box. If any of <a href='#plotOptions.boxplot.stemWidth'>stemWidth</a>, <a href='#plotOptions.boxplot.medianWidth'>medianWidth</a> or <a href='#plotOptions.boxplot.whiskerWidth'>whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
-		/// Default: 1
-		/// </summary>
-		public Number? LineWidth { get; set; }
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
+        /// <summary>
+        /// The width of the line surrounding the box. If any of <a href='#plotOptions.boxplot.stemWidth'>stemWidth</a>, <a href='#plotOptions.boxplot.medianWidth'>medianWidth</a> or <a href='#plotOptions.boxplot.whiskerWidth'>whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
+        /// Default: 1
+        /// </summary>
+        public Number? LineWidth { get; set; }
 
 		/// <summary>
 		/// The parent series of the error bar. The default value links it to the previous series. Otherwise, use the id of the parent series.
@@ -99,11 +110,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? PointInterval { get; set; }
 
-		/// <summary>
-		/// Padding between each column or bar, in x axis units.
-		/// Default: 0.1
-		/// </summary>
-		public Number? PointPadding { get; set; }
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
+
+        /// <summary>
+        /// Padding between each column or bar, in x axis units.
+        /// Default: 0.1
+        /// </summary>
+        public Number? PointPadding { get; set; }
 
 		/// <summary>
 		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
@@ -199,6 +215,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? WhiskerWidth { get; set; }
 
-	}
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsErrorbarZone[] Zones { get; set; }
+    }
 
 }

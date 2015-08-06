@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
 		/// </summary>
-		public Object Attributes { get; set; }
+		public PlotOptionsErrorbarStatesHoverHaloAttributes Attributes { get; set; }
 
 		/// <summary>
 		/// Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.

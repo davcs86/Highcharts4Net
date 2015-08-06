@@ -257,8 +257,10 @@
     <Compile Include="Library\Options\PlotOptionsErrorbarStates.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsErrorbarStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsErrorbarTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsErrorbarZone.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnel.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsFunnelEvents.cs" />
