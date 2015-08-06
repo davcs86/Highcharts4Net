@@ -110,6 +110,12 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Shadow { get; set; }
 
+        /// <summary>
+        /// The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
+        /// Default: square.
+        /// </summary>
+        public string Shape { get; set; }
+
 		/// <summary>
 		/// Styles for the label.
 		/// </summary>

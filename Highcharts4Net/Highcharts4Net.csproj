@@ -239,8 +239,10 @@
     <Compile Include="Library\Options\PlotOptionsColumnrangeStates.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnrangeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsColumnrangeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStates.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsColumnStatesHoverHalo.cs" />

@@ -70,7 +70,7 @@ namespace Highcharts4Net.Library.Options
 		public Cursors? Cursor { get; set; }
 
 		/// <summary>
-		/// Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually. 
+		/// Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually.
 		/// </summary>
 		public PlotOptionsColumnrangeDataLabels DataLabels { get; set; }
 
@@ -99,6 +99,12 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsColumnrangeEvents Events { get; set; }
 
+    /// <summary>
+    /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+    /// Default: false
+    /// </summary>
+    public bool? GetExtremesFromAll { get; set; }
+
 		/// <summary>
 		/// Padding between each value groups, in x axis units.
 		/// Default: 0.2
@@ -117,6 +123,11 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Grouping { get; set; }
 
+    /// <summary>
+    /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+    /// </summary>
+    public string[] Keys { get; set; }
+
 		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 		/// </summary>
@@ -132,7 +143,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
-		public Color? NegativeColor { get; set; }
+		//public Color? NegativeColor { get; set; }
 
 		/// <summary>
 		/// Properties for each single point
@@ -144,6 +155,11 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 1
 		/// </summary>
 		public Number? PointInterval { get; set; }
+
+    /// <summary>
+    /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+    /// </summary>
+    public string PointIntervalUnit { get; set; }
 
 		/// <summary>
 		/// Padding between each column or bar, in x axis units.
@@ -201,7 +217,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Whether to stack the values of each series on top of each other. Possible values are null to disable, 'normal' to stack by value or 'percent'.
 		/// </summary>
-		public Stackings? Stacking { get; set; }
+		//public Stackings? Stacking { get; set; }
 
 		/// <summary>
 		/// A wrapper object for all the series options in specific states.
@@ -236,6 +252,17 @@ namespace Highcharts4Net.Library.Options
 		/// Default: true
 		/// </summary>
 		public bool? Visible { get; set; }
+
+		/// <summary>
+    /// Defines the Axis on which the zones are applied.
+    /// Default: y.
+    /// </summary>
+    public string ZoneAxis { get; set; }
+
+    /// <summary>
+    /// An array defining zones within a series.
+    /// </summary>
+    public PlotOptionsColumnrangeZone[] Zones { get; set; }
 
 	}
 
