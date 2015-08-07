@@ -40,7 +40,7 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? LineWidthPlus { get; set; }
 
-		public PlotOptionsPyramidStatesHoverMarker Marker { get; set; }
+		//public PlotOptionsPyramidStatesHoverMarker Marker { get; set; }
 
 	}
 

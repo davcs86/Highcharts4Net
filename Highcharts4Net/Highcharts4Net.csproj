@@ -349,8 +349,10 @@
     <Compile Include="Library\Options\PlotOptionsPyramidStates.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsPyramidStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsPyramidTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsPyramidZone.cs" />
     <Compile Include="Library\Options\PlotOptionsScatter.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterEvents.cs" />
@@ -363,8 +365,10 @@
     <Compile Include="Library\Options\PlotOptionsScatterStates.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsScatterStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsScatterTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsScatterZone.cs" />
     <Compile Include="Library\Options\PlotOptionsSeries.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesEvents.cs" />

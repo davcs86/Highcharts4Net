@@ -20,11 +20,17 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient FillColor { get; set; }
 
-		/// <summary>
-		/// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
-		/// Default: #FFFFFF
-		/// </summary>
-		public Color? LineColor { get; set; }
+        /// <summary>
+        /// Image markers only. Set the image height explicitly. When using this option, a width must also be set. 
+        /// Default: null
+        /// </summary>
+        public Number? Height { get; set; }
+
+        /// <summary>
+        /// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
+        /// Default: #FFFFFF
+        /// </summary>
+        public Color? LineColor { get; set; }
 
 		/// <summary>
 		/// The width of the point marker's outline.
@@ -45,6 +51,12 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public string Symbol { get; set; }
 
-	}
+        /// <summary>
+        /// Image markers only. Set the image width explicitly. When using this option, a height must also be set. 
+        /// Default: null
+        /// </summary>
+        public Number? Width { get; set; }
+
+    }
 
 }
