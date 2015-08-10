@@ -422,8 +422,10 @@
     <Compile Include="Library\Options\PlotOptionsWaterfallStates.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsWaterfallStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsWaterfallZone.cs" />
     <Compile Include="Library\Options\Point.cs" />
     <Compile Include="Library\Options\PointEvents.cs" />
     <Compile Include="Library\Options\PointMarker.cs" />

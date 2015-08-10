@@ -96,11 +96,17 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsWaterfallEvents Events { get; set; }
 
-		/// <summary>
-		/// Padding between each value groups, in x axis units.
-		/// Default: 0.2
-		/// </summary>
-		public Number? GroupPadding { get; set; }
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// Padding between each value groups, in x axis units.
+        /// Default: 0.2
+        /// </summary>
+        public Number? GroupPadding { get; set; }
 
 		/// <summary>
 		/// The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
@@ -114,11 +120,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Grouping { get; set; }
 
-		/// <summary>
-		/// The color of the line that connects columns in a waterfall series.
-		/// Default: #333333
-		/// </summary>
-		public Color? LineColor { get; set; }
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
+        /// <summary>
+        /// The color of the line that connects columns in a waterfall series.
+        /// Default: #333333
+        /// </summary>
+        public Color? LineColor { get; set; }
 
 		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -142,11 +153,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? PointInterval { get; set; }
 
-		/// <summary>
-		/// Padding between each column or bar, in x axis units.
-		/// Default: 0.1
-		/// </summary>
-		public Number? PointPadding { get; set; }
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
+
+        /// <summary>
+        /// Padding between each column or bar, in x axis units.
+        /// Default: 0.1
+        /// </summary>
+        public Number? PointPadding { get; set; }
 
 		/// <summary>
 		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
@@ -228,6 +244,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Visible { get; set; }
 
-	}
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsWaterfallZone[] Zones { get; set; }
+    }
 
 }
