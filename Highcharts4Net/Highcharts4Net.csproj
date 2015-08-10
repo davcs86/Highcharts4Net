@@ -409,8 +409,10 @@
     <Compile Include="Library\Options\PlotOptionsSplineStates.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsSplineStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsSplineZone.cs" />
     <Compile Include="Library\Options\PlotOptionsTreemap.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfall.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallDataLabels.cs" />

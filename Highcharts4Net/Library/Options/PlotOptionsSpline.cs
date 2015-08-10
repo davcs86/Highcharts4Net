@@ -65,11 +65,22 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsSplineEvents Events { get; set; }
 
-		/// <summary>
-		/// Pixel with of the graph line.
-		/// Default: 2
-		/// </summary>
-		public Number? LineWidth { get; set; }
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
+        /// <summary>
+        /// Pixel with of the graph line.
+        /// Default: 2
+        /// </summary>
+        public Number? LineWidth { get; set; }
 
 		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -95,10 +106,15 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? PointInterval { get; set; }
 
-		/// <summary>
-		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
-		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        /// <summary>
+        /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
+        /// </summary>
+        public string PointIntervalUnit { get; set; }
+
+        /// <summary>
+        /// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
+        /// </summary>
+        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PointPlacement PointPlacement { get; set; }
 
 		/// <summary>
@@ -171,6 +187,17 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Visible { get; set; }
 
-	}
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsSplineZone[] Zones { get; set; }
+
+    }
 
 }
