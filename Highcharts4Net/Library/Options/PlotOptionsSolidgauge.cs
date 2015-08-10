@@ -36,11 +36,22 @@ namespace Highcharts4Net.Library.Options
 
 		public PlotOptionsSolidgaugeEvents Events { get; set; }
 
-		/// <summary>
-		/// Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
-		/// Default: 0
-		/// </summary>
-		public Number? Overshoot { get; set; }
+        /// <summary>
+        /// Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+        /// Default: false
+        /// </summary>
+        public bool? GetExtremesFromAll { get; set; }
+
+        /// <summary>
+        /// An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+        /// </summary>
+        public string[] Keys { get; set; }
+
+        /// <summary>
+        /// Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
+        /// Default: 0
+        /// </summary>
+        public Number? Overshoot { get; set; }
 
 		/// <summary>
 		/// Properties for each single point
@@ -92,6 +103,16 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Wrap { get; set; }
 
-	}
+        /// <summary>
+        /// Defines the Axis on which the zones are applied.
+        /// Default: y.
+        /// </summary>
+        public string ZoneAxis { get; set; }
+
+        /// <summary>
+        /// An array defining zones within a series.
+        /// </summary>
+        public PlotOptionsSolidgaugeZone[] Zones { get; set; }
+    }
 
 }

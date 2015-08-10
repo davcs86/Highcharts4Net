@@ -393,8 +393,10 @@
     <Compile Include="Library\Options\PlotOptionsSolidgaugeStates.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsSolidgaugeStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsSolidgaugeZone.cs" />
     <Compile Include="Library\Options\PlotOptionsSpline.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineEvents.cs" />
