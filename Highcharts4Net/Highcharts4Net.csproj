@@ -381,8 +381,10 @@
     <Compile Include="Library\Options\PlotOptionsSeriesStates.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesStatesHover.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsSeriesStatesHoverHaloAttributes.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesStatesHoverMarker.cs" />
     <Compile Include="Library\Options\PlotOptionsSeriesTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsSeriesZone.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgauge.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsSolidgaugeEvents.cs" />
