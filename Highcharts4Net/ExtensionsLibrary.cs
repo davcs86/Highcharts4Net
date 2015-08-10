@@ -30,6 +30,14 @@ namespace Highcharts4Net
                                   "'></script>");
         }
 
+        public HighchartsRender AreaChart(Action<ChartSettings> settings)
+        {
+            var chart = new HighchartsRender();
+            chart.CreateChart(settings, ChartTypes.Area);
+            return chart;
+        }
+
+
         public HighchartsRender LineChart(Action<ChartSettings> settings)
         {
             var chart = new HighchartsRender();
