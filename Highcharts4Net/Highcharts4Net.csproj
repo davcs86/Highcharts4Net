@@ -64,7 +64,9 @@
     <Compile Include="Library\Enums\DashStyles.cs" />
     <Compile Include="Library\Enums\EasingTypes.cs" />
     <Compile Include="Library\Enums\HorizontalAligns.cs" />
+    <Compile Include="Library\Enums\LayoutAlgorithms.cs" />
     <Compile Include="Library\Enums\Layouts.cs" />
+    <Compile Include="Library\Enums\LayoutStartingDirections.cs" />
     <Compile Include="Library\Enums\Placement.cs" />
     <Compile Include="Library\Enums\RelativeTo.cs" />
     <Compile Include="Library\Enums\Shapes.cs" />
@@ -414,6 +416,17 @@
     <Compile Include="Library\Options\PlotOptionsSplineTooltip.cs" />
     <Compile Include="Library\Options\PlotOptionsSplineZone.cs" />
     <Compile Include="Library\Options\PlotOptionsTreemap.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapDataLabels.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapLevels.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapPoint.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapPointEvents.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapStates.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapStatesHover.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapStatesHoverHalo.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapStatesHoverHaloAttributes.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapTooltip.cs" />
+    <Compile Include="Library\Options\PlotOptionsTreemapZone.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfall.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallDataLabels.cs" />
     <Compile Include="Library\Options\PlotOptionsWaterfallEvents.cs" />
