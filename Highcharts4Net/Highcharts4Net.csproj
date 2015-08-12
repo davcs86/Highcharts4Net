@@ -114,6 +114,7 @@
     <Compile Include="Library\Helpers\DateTimeLabel.cs" />
     <Compile Include="Library\Helpers\Events.cs" />
     <Compile Include="Library\Helpers\GlobalOptions.cs" />
+    <Compile Include="Library\Helpers\JSFunction.cs" />
     <Compile Include="Library\Helpers\JsonFormatter.cs" />
     <Compile Include="Library\Helpers\Lang.cs" />
     <Compile Include="Library\Helpers\MenuItem.cs" />
@@ -503,6 +504,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts\highcharts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fastJSON\fastJSON.csproj">
+      <Project>{207e91b1-c9f8-4913-88e1-3549ef5f3273}</Project>
+      <Name>fastJSON</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

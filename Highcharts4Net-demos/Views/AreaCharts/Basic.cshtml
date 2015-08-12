@@ -1,4 +1,6 @@
-﻿@using Highcharts4Net
+﻿@using System.Web.UI.WebControls
+@using Highcharts4Net
+@using Highcharts4Net.Library
 @using Highcharts4Net.Library.Options
 
 @{
@@ -7,16 +9,39 @@
 
 @Html.Highcharts4Net().AreaChart(settings =>
 {
-    settings.Chart.ClassName = "highcharts-container";
+    settings.chart.ClassName = "highcharts-container";
 
-    settings.Chart.Style = "position: relative; overflow: hidden; width: 538px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
-    settings.Title = new Title
+    settings.chart.Events = new ChartEvents
+    {
+        Click = "function(s){var d = \\\"s\";return\x20 false;\n}"
+    };
+    //settings.Chart.Style.Add("position: relative");
+
+    //" overflow: hidden; width: 300px; height: 200px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);");
+    settings.title = new Title
     {
         Text = "US and USSR nuclear stockpiles"
     };
-    settings.SubTitle = new Subtitle
+    settings.subTitle = new Subtitle
     {
         Text="Source: <a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com</a>"
     };
-}).Render();
+}).Render()
 
+@section source_code{
+@@Html.Highcharts4Net().AreaChart(
+    settings =>
+    {
+        settings.Chart.ClassName = "highcharts-container";
+        settings.Chart.Style = "position: relative; overflow: hidden; width: 800px; height: 600px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);";
+        settings.Title = new Title
+        {
+            Text = "US and USSR nuclear stockpiles"
+        };
+        settings.SubTitle = new Subtitle
+        {
+            Text = "Source: &lt;a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\"&gt;thebulletin.metapress.com&lt;/a&gt;"
+        };
+    }
+).Render()
+}

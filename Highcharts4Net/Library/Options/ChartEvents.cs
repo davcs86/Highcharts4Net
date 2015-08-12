@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.Xml.Serialization;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
@@ -29,11 +30,10 @@ namespace Highcharts4Net.Library.Options
         [JsonFormatter("{0}")]
         public string BeforePrint { get; set; }
 
-		/// <summary>
-		/// <p>Fires when clicking on the plot background. The <code>this</code> keyword refers to the  chart object itself. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.</p> <p>Information on the clicked spot can be found through <code>event.xAxis</code> and  <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' value at the clicked spot. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00.</p><pre>click: function(e) { console.log( Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', e.xAxis[0].value),  e.yAxis[0].value )}</pre>
-		/// </summary>
-		[JsonFormatter("{0}")]
-		public string Click { get; set; }
+        /// <summary>
+        /// <p>Fires when clicking on the plot background. The <code>this</code> keyword refers to the  chart object itself. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.</p> <p>Information on the clicked spot can be found through <code>event.xAxis</code> and  <code>event.yAxis</code>, which are arrays containing the axes of each dimension and each axis' value at the clicked spot. The primary axes are <code>event.xAxis[0]</code> and <code>event.yAxis[0]</code>. Remember the unit of a datetime axis is milliseconds since 1970-01-01 00:00:00.</p><pre>click: function(e) { console.log( Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', e.xAxis[0].value),  e.yAxis[0].value )}</pre>
+        /// </summary>
+        public LiteralString Click { get; set; }
 
 		/// <summary>
 		/// <p>Fires when a drilldown point is clicked, before the new series is added. Event arguments include <code>point</code> for the originating point, and <code>seriesOptions</code> for the new series.</p><p>This event is also utilized for async drilldown, where the seriesOptions are not added by option, but rather loaded async.</p>
@@ -65,6 +65,33 @@ namespace Highcharts4Net.Library.Options
 		[JsonFormatter("{0}")]
 		public string Selection { get; set; }
 
-	}
+        public class EventEvent
+        {
+            public EventEvent(string x)
+            {
+                _EventEvent = x;
+            }
+
+            public string _EventEvent { get; }
+
+            public override string ToString()
+            {
+                return _EventEvent; // return the internal string
+            }
+            // Implicit Conversion from string to SuperString
+            // creates a new SuperString and returns it
+            public static implicit operator EventEvent(string x)
+            {
+                EventEvent s = new EventEvent(x);
+                return s;
+            }
+            // Explicit conversion from SuperString to string. returns
+            // the internal string
+            public static explicit operator string (EventEvent x)
+            {
+                return x._EventEvent;
+            }
+        }
+    }
 
 }

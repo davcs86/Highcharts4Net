@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -30,10 +31,35 @@ namespace Highcharts4Net.Library
         {
             if (obj is Array)
                 return GetJsonArray(obj as Array, true);
-
+            if (IsList(obj))
+            {
+                // loop through the list
+                IEnumerable list = obj as IEnumerable;
+                string result = "";
+                foreach (var item in list)
+                {
+                    result += GetJsonObject(item, appendCurlyBrackets) + ", ";
+                }
+                return result.Substring(0, result.Length - 2);
+            }
             return GetJsonObject(obj, appendCurlyBrackets);
         }
 
+        public static bool IsList(object o)
+        {
+            if (o == null) return false;
+            return o is IList &&
+                   o.GetType().IsGenericType &&
+                   o.GetType().GetGenericTypeDefinition().IsAssignableFrom(typeof(List<>));
+        }
+
+        public static bool IsDictionary(object o)
+        {
+            if (o == null) return false;
+            return o is IDictionary &&
+                   o.GetType().IsGenericType &&
+                   o.GetType().GetGenericTypeDefinition().IsAssignableFrom(typeof(Dictionary<,>));
+        }
 
         static string GetJsonArray(Array obj, bool useCurlyBracketsForObject)
         {
@@ -96,27 +122,52 @@ namespace Highcharts4Net.Library
             if (obj is Array)
                 return GetJsonArray(obj as Array, appendCurlyBrackets);
 
+            if (IsList(obj))
+            {
+                // loop through the list
+                IEnumerable list = obj as IEnumerable;
+                string result = "";
+                foreach (var item in list)
+                {
+                    result += GetJsonObject(item, appendCurlyBrackets) + ", ";
+                }
+                return result.Substring(0, result.Length - 2);
+            }
+
             List<string> json = new List<string>();
 
             foreach (PropertyInfo property in obj.GetType().GetMembers().Where(x => x.MemberType == MemberTypes.Property))
             {
-                object propertyValue = property.GetValue(obj, null);
-                JsonFormatter formatter = GetJsonFormatter(property);
-
-                if (propertyValue != null)
+                if (property.GetIndexParameters().Length == 0)
                 {
-                    Type propertyType = property.PropertyType;
-                    string propertyName = GetPropertyName(property);
+                    object propertyValue = property.GetValue(obj, null);
+                    JsonFormatter formatter = GetJsonFormatter(property);
 
-                    string value;
-                    if (propertyType == typeof(Array) || propertyType.BaseType == typeof(Array) || propertyValue is Array)
-                        value = GetJsonArray(propertyValue as Array, formatter.UseCurlyBracketsForObject);
-                    else if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
-                        value = GetValue(propertyValue, propertyType.GetGenericArguments()[0], formatter);
-                    else
-                        value = GetValue(propertyValue, propertyType, formatter);
+                    if (propertyValue != null)
+                    {
+                        Type propertyType = property.PropertyType;
+                        string propertyName = GetPropertyName(property);
 
-                    json.Add(formatter.AddPropertyName ? string.Format(JSON_PROPERTY_WITH_VALUE_FORMAT, GetFirstLetterLower(propertyName), value) : value);
+                        string value="";
+                        if (IsList(propertyValue))
+                        {
+                            // loop through the list
+                            IEnumerable list = propertyValue as IEnumerable;
+                            foreach (var item in list)
+                            {
+                                value += GetJsonObject(item, appendCurlyBrackets) + ", ";
+                            }
+                            value = value.Substring(0, value.Length - 2);
+                        }
+                        if (propertyType == typeof(Array) || propertyType.BaseType == typeof(Array) || propertyValue is Array)
+                            value = GetJsonArray(propertyValue as Array, formatter.UseCurlyBracketsForObject);
+                        else if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                            value = GetValue(propertyValue, propertyType.GetGenericArguments()[0], formatter);
+                        else
+                            value = GetValue(propertyValue, propertyType, formatter);
+
+                        json.Add(formatter.AddPropertyName ? string.Format(JSON_PROPERTY_WITH_VALUE_FORMAT, GetFirstLetterLower(propertyName), value) : value);
+                    }
                 }
             }
             return appendCurlyBrackets ? string.Format(JSON_OBJECT_FORMAT, string.Join(", ", json)) : string.Join(", ", json);

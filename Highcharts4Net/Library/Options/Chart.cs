@@ -1,15 +1,18 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Web.UI.WebControls;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
 {
-	/// <summary>
-	/// Options regarding the chart area and plot area as well as general chart options.
-	/// </summary>
-	public class Chart
+    /// <summary>
+    /// Options regarding the chart area and plot area as well as general chart options.
+    /// </summary>
+    //[Serializable()]
+    public class Chart
 	{
 		/// <summary>
 		/// When using multiple axis, the ticks of two or more opposite axes will  automatically be aligned by adding ticks to the axis or axes with the least ticks. This can be prevented by setting <code>alignTicks</code> to false. If the grid lines look messy, it's a good idea to hide them for the secondary axis by setting <code>gridLineWidth</code> to 0.
@@ -49,10 +52,10 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? BorderWidth { get; set; }
 
-		/// <summary>
-		/// A CSS class name to apply to the charts container <code>div</code>, allowing unique CSS styling for each chart.
-		/// </summary>
-		public string ClassName { get; set; }
+        /// <summary>
+        /// A CSS class name to apply to the charts container <code>div</code>, allowing unique CSS styling for each chart.
+        /// </summary>
+        public string ClassName { get; set; }
 
 		[Obsolete("Alias of <code>type</code>.")]
 		public ChartTypes? DefaultSeriesType { get; set; }
@@ -229,7 +232,7 @@ namespace Highcharts4Net.Library.Options
 		/// Additional CSS styles to apply inline to the container <code>div</code>. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally. Defaults to:<pre>style: { fontFamily: ''Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif', // default font fontSize: '12px'}</pre>
 		/// </summary>
 		[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+        public List<string> Style { get; set; }
 
 		/// <summary>
 		/// The default series type for the chart. Can be any of the chart types listed under <a href='#plotOptions'>plotOptions</a>.

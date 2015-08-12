@@ -13,20 +13,22 @@ using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net
 {
-    public class ExtensionsLibrary : IDisposable
+    public class ExtensionsLibrary
     {
-        private HtmlHelper helper;
 
-        internal ExtensionsLibrary(HtmlHelper helper)
+        private static HtmlHelper _helper;
+
+        public ExtensionsLibrary(HtmlHelper helper)
         {
-            this.helper = helper;
+            _helper = helper;
         }
+
 
         public MvcHtmlString GetLibraryScripts()
         {
             return
                 new MvcHtmlString("<script src='" +
-                                  UrlHelper.GenerateContentUrl("~/highcharts.hc4x", helper.ViewContext.HttpContext) +
+                                  UrlHelper.GenerateContentUrl("~/highcharts.hc4x", _helper.ViewContext.HttpContext) +
                                   "'></script>");
         }
 
@@ -38,23 +40,19 @@ namespace Highcharts4Net
         }
 
 
-        public HighchartsRender LineChart(Action<ChartSettings> settings)
+        public static HighchartsRender LineChart(Action<ChartSettings> settings)
         {
             var chart = new HighchartsRender();
             chart.CreateChart(settings, ChartTypes.Line);
             return chart;
         }
 
-        public HighchartsRender SplineChart(Action<ChartSettings> settings)
+        public static HighchartsRender SplineChart(Action<ChartSettings> settings)
         {
             var chart = new HighchartsRender();
             chart.CreateChart(settings, ChartTypes.Spline);
             return chart;
         }
-
-        public void Dispose()
-        {
-            helper = null;
-        }
+        
     }
 }

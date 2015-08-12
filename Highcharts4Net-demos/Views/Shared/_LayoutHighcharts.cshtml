@@ -8,11 +8,11 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     <title>Spline with inverted axes | Highcharts</title>
-    <link rel="stylesheet" href="/media/com_demo/css/highslide.min.css" type="text/css">
-    <link rel="stylesheet" href="/joomla/templates/highsoft_bootstrap/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="http://www.highcharts.com/media/com_demo/css/highslide.min.css" type="text/css">
+    <link rel="stylesheet" href="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="/joomla/templates/highsoft_bootstrap/assets/css/template.css" type="text/css">
+    <link rel="stylesheet" href="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/css/template.css" type="text/css">
     <style type="text/css">
         .container{width:100%}#hs-component{background-color:inherit;padding:0}#hs-component .container{padding:0;width:100%}#comp-menu{background-color:#252530;z-index:1;padding:0}#comp-menu .cont,.demo{padding:0 50px}#comp-menu h2,#comp-menu h2 a{color:#eeeaea;font-weight:lighter;text-transform:inherit}#comp-menu h2 a:hover{color:#8085e8}a.btn.btn-theme{color:#eeeaea;background-color:#34343e;border:1px solid #34343e;border-bottom:0;border-radius:0;font-weight:400;margin:0 5px 0 0}a.btn.btn-theme:hover{color:#90ef7f}a.btn.btn-theme.disabled{background-color:#FFF;color:#313131;opacity:1}.demo{background-color:#f6f6f6}.demo .demo-name{color:#313131;font-weight:lighter;text-transform:none;padding-left:15px;text-align:center;display:inline;margin:0 10px}#chart-switcher{text-align:center;padding:30px 0}.demo #chart-switcher #next-example,.demo #chart-switcher #previous-example{font-size:30px;padding:0 10px;color:#888}#demo-buttons{text-align:center;padding:30px 0}#demo-buttons a{background-color:#ddd}#demo-buttons a:hover{background-color:#40818b}.demo .chart-container{position:relative;background-color:#fff;padding:30px 0}.demo .chart-container #previous-example{position:absolute;top:50%;left:-30px;font-size:70px;color:#888}.demo .chart-container #next-example{position:absolute;top:50%;right:-30px;font-size:70px;color:#888}.sidebar-eq-fill{background-color:#f6f6f6};
         @@media screen and (max-width:400px){
@@ -22,78 +22,35 @@
            .demo{padding:15px}#sidebar-close{position:absolute;top:0;left:0;background-color:#252530;color:#fff;border-radius:0;z-index:100;cursor:pointer;padding:10px;visibility:hidden}.toggled #sidebar-close{visibility:visible}
         }
     </style>
-    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
-    <script src="/joomla/media/com_demo/js/highslide-full.min.js" type="text/javascript"></script>
-    <script src="/joomla/media/com_demo/js/highslide.config.min.js" type="text/javascript"></script>
-    <script src="/lib/jquery-1.7.2.js" type="text/javascript"></script>
-    <script src="/joomla/templates/highsoft_bootstrap/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/joomla/templates/highsoft_bootstrap/assets/js/modernizr.js" type="text/javascript"></script>
-    <script src="/joomla/templates/highsoft_bootstrap/assets/js/script.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/joomla/media/com_demo/js/highslide-full.min.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/joomla/media/com_demo/js/highslide.config.min.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/lib/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/js/modernizr.js" type="text/javascript"></script>
+    <script src="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/js/script.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-        jQuery(document).ready(function(){jQuery("#view-menu").click(function(e){jQuery("#wrap").toggleClass("toggled")}),jQuery("#sidebar-close").click(function(e){jQuery("#wrap").removeClass("toggled")}),jQuery(document).keydown(function(e){var t;"INPUT"!=e.target.tagName&&(39==e.keyCode?t=document.getElementById("next-example"):37==e.keyCode&&(t=document.getElementById("previous-example")),t&&(location.href=t.href))}),jQuery("#switcher-selector").bind("change",function(){var e=jQuery(this).val();return e&&(window.location=e),!1})});
+        jQuery(document).ready(
+            function () { jQuery("#view-menu").click(function (e) { jQuery("#wrap").toggleClass("toggled") }), jQuery("#sidebar-close").click(function (e) { jQuery("#wrap").removeClass("toggled") }), jQuery(document).keydown(function (e) { var t; "INPUT" != e.target.tagName && (39 == e.keyCode ? t = document.getElementById("next-example") : 37 == e.keyCode && (t = document.getElementById("previous-example")), t && (location.href = t.href)) }), jQuery("#switcher-selector").bind("change", function () { var e = jQuery(this).val(); return e && (window.location = e), !1 }) });
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="57x57" href="http://www.highcharts.com/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.highcharts.com/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.highcharts.com/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://www.highcharts.com/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://www.highcharts.com/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.highcharts.com/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.highcharts.com/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.highcharts.com/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.highcharts.com/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="http://www.highcharts.com/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="http://www.highcharts.com/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="http://www.highcharts.com/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="http://www.highcharts.com/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://www.highcharts.com/favicon-32x32.png" sizes="32x32">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <style type="text/css">
-        .highslide img {
-            cursor: url(http://www.highcharts.com/highslide/graphics/zoomin.cur), pointer !important;
-        }
-
-        .highslide-viewport-size {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-        }
-    </style>
-    <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Joomla&quot;:-1,&quot;Google Analytics&quot;:-1,&quot;GoogleFontApi&quot;:-1,&quot;jQuery&quot;:&quot;1.7.2&quot;,&quot;Modernizr&quot;:&quot;2.8.3&quot;}">
-    <script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script>
-    <style id="style-1-cropbar-clipper">
-        /* Copyright 2014 Evernote Corporation. All rights reserved. */
-        .en-markup-crop-options {
-            top: 18px !important;
-            left: 50% !important;
-            margin-left: -100px !important;
-            width: 200px !important;
-            border: 2px rgba(255,255,255,.38) solid !important;
-            border-radius: 4px !important;
-        }
-
-            .en-markup-crop-options div div:first-of-type {
-                margin-left: 0px !important;
-            }
-    </style>
-    <style type="text/css">
-        .highslide img {
-            cursor: url(http://www.highcharts.com/highslide/graphics/zoomin.cur), pointer !important;
-        }
-
-        .highslide-viewport-size {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-        }
-    </style>
+    <meta name="msapplication-TileImage" content="http://www.highcharts.com/mstile-144x144.png">
 </head>
 <body>
     <div id="menu">
@@ -104,7 +61,7 @@
                         <span class="sr-only">Toggle navigation</span>
                     </a>
                     <a class="navbar-brand" href="http://www.highcharts.com/" title="Highcharts">
-                        <img src="/templates/highsoft_bootstrap/assets/images/logo.svg" alt="Highcharts">
+                        <img src="@Url.Content("~/Content/images/logo.svg")" alt="Highcharts">
                     </a>
                 </div>
 
@@ -598,12 +555,13 @@
                     </div>
                     <div class="chart-container">
                         <a id="previous-example" class="hidden-xs" title="Previous (arrow left)" href="http://www.highcharts.com/demo/line-time-series"><i class="fa fa-angle-left"></i></a>
-                        <script src="http://code.highcharts.com/highcharts.js"></script>
-                        <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
                         <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto" data-highcharts-chart="0">
-                            
-                            <div class="highcharts-container" id="highcharts-0" style=""><svg version="1.1" style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="538" height="400"><desc>Created with Highcharts 4.1.7</desc><defs><clipPath id="highcharts-1"><rect x="1" y="0" width="265" height="444"></rect></clipPath></defs><rect x="0" y="0" width="538" height="400" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><g class="highcharts-button" style="cursor: default;" stroke-linecap="round" transform="translate(504,10)"><title>Chart context menu</title><rect x="0.5" y="0.5" width="24" height="22" strokeWidth="1" fill="white" stroke="none" stroke-width="1" rx="2" ry="2"></rect><path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666" stroke-width="3" zIndex="1"></path><text x="0" zIndex="1" style="color: black; fill: black;" y="12"></text></g><g class="highcharts-grid" zIndex="1"></g><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 157.5 71 L 157.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 231.5 71 L 231.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 305.5 71 L 305.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 379.5 71 L 379.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 453.5 71 L 453.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 528.5 71 L 528.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 83.5 71 L 83.5 337" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 84 334.5 L 74 334.5" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 84 256.5 L 74 256.5" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 84 178.5 L 74 178.5" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 84 99.5 L 74 99.5" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><text x="28.375" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 28.375 204)" class=" highcharts-xaxis-title" style="color: #707070; fill: #707070;" visibility="visible" y="204">Altitude</text><path fill="none" d="M 83.5 71 L 83.5 337" stroke="#C0D0E0" stroke-width="1" zIndex="7" visibility="visible"></path></g><g class="highcharts-axis" zIndex="2"><text x="306" zIndex="7" text-anchor="middle" transform="translate(0,0)" class=" highcharts-yaxis-title" style="color: #707070; fill: #707070;" visibility="visible" y="379">Temperature</text><path fill="none" d="M 84 337 L 528 337" stroke="#C0D0E0" stroke-width="2" zIndex="7" visibility="visible"></path></g><g class="highcharts-series-group" zIndex="3"><path fill="rgba(124,181,236,0.25)" d="M 0 0"></path><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(528,337) rotate(90) scale(-1,1) scale(1 1)" clip-path="url(http://www.highcharts.com/demo/spline-inverted#highcharts-1)" width="444" height="266"><path fill="none" d="M 2.509433962264151 18.5 C 2.509433962264151 18.5 21.330188679245285 234.95000000000005 33.87735849056604 259 C 46.42452830188679 283.04999999999995 52.698113207547166 283.04999999999995 65.24528301886792 283.04999999999995 C 77.79245283018868 283.04999999999995 84.06603773584905 271.506 96.61320754716981 246.04999999999998 C 109.16037735849056 220.594 115.43396226415094 188.32999999999996 127.98113207547169 155.76999999999998 C 140.52830188679246 123.20999999999997 146.80188679245285 83.25 159.3490566037736 83.25 C 171.89622641509433 83.25 178.16981132075472 137.12200000000007 190.71698113207546 176.49 C 203.26415094339623 215.85800000000006 209.53773584905662 243.9780000000001 222.08490566037736 280.09000000000003 C 234.63207547169813 316.2020000000001 253.45283018867923 357.05 253.45283018867923 357.05" stroke="#7cb5ec" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -7.490566037735849 18.5 L 2.509433962264151 18.5 C 2.509433962264151 18.5 21.330188679245285 234.95000000000005 33.87735849056604 259 C 46.42452830188679 283.04999999999995 52.698113207547166 283.04999999999995 65.24528301886792 283.04999999999995 C 77.79245283018868 283.04999999999995 84.06603773584905 271.506 96.61320754716981 246.04999999999998 C 109.16037735849056 220.594 115.43396226415094 188.32999999999996 127.98113207547169 155.76999999999998 C 140.52830188679246 123.20999999999997 146.80188679245285 83.25 159.3490566037736 83.25 C 171.89622641509433 83.25 178.16981132075472 137.12200000000007 190.71698113207546 176.49 C 203.26415094339623 215.85800000000006 209.53773584905662 243.9780000000001 222.08490566037736 280.09000000000003 C 234.63207547169813 316.2020000000001 253.45283018867923 357.05 253.45283018867923 357.05 L 263.45283018867923 357.05" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(528,337) rotate(90) scale(-1,1) scale(1 1)" clip-path="url(http://www.highcharts.com/demo/spline-inverted#highcharts-2)" style="" width="444" height="266"><path fill="#7cb5ec" d="M 253 353.05 C 258.328 353.05 258.328 361.05 253 361.05 C 247.672 361.05 247.672 353.05 253 353.05 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 222 276.09000000000003 C 227.328 276.09000000000003 227.328 284.09000000000003 222 284.09000000000003 C 216.672 284.09000000000003 216.672 276.09000000000003 222 276.09000000000003 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 190 172.49 C 195.328 172.49 195.328 180.49 190 180.49 C 184.672 180.49 184.672 172.49 190 172.49 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 159 79.25 C 164.328 79.25 164.328 87.25 159 87.25 C 153.672 87.25 153.672 79.25 159 79.25 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 127 151.76999999999998 C 132.328 151.76999999999998 132.328 159.76999999999998 127 159.76999999999998 C 121.672 159.76999999999998 121.672 151.76999999999998 127 151.76999999999998 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 96 242.04999999999998 C 101.328 242.04999999999998 101.328 250.04999999999998 96 250.04999999999998 C 90.672 250.04999999999998 90.672 242.04999999999998 96 242.04999999999998 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 65 279.04999999999995 C 70.328 279.04999999999995 70.328 287.04999999999995 65 287.04999999999995 C 59.672 287.04999999999995 59.672 279.04999999999995 65 279.04999999999995 Z"></path><path fill="#7cb5ec" d="M 33 255 C 38.328 255 38.328 263 33 263 C 27.672 263 27.672 255 33 255 Z"></path><path fill="#7cb5ec" d="M 2 14.5 C 7.328 14.5 7.328 22.5 2 22.5 C -3.3280000000000003 22.5 -3.3280000000000003 14.5 2 14.5 Z"></path></g></g><text x="269" text-anchor="middle" class="highcharts-title" zIndex="4" style="color: #333333; font-size: 18px; fill: #333333; width: 474px;" y="24"><tspan>Atmosphere Temperature by Altitude</tspan></text><text x="269" text-anchor="middle" class="highcharts-subtitle" zIndex="4" style="color: #555555; fill: #555555; width: 474px;" y="52"><tspan>According to the Standard Atmosphere Model</tspan></text><g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"><text x="69" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 168px; text-overflow: clip;" text-anchor="end" transform="translate(0,0)" y="337" opacity="1">0km</text><text x="69" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 168px; text-overflow: clip;" text-anchor="end" transform="translate(0,0)" y="259" opacity="1">25km</text><text x="69" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 168px; text-overflow: clip;" text-anchor="end" transform="translate(0,0)" y="180" opacity="1">50km</text><text x="69" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 168px; text-overflow: clip;" text-anchor="end" transform="translate(0,0)" y="102" opacity="1">75km</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="158" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">-80°</text><text x="232" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">-60°</text><text x="306" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">-40°</text><text x="380" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">-20°</text><text x="454" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">0°</text><text x="519.515625" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">20°</text><text x="84" style="color: #606060; cursor: default; font-size: 11px; fill: #606060; width: 64px; text-overflow: clip;" text-anchor="middle" transform="translate(0,0)" y="356" opacity="1">-100°</text></g><g class="highcharts-tooltip" zIndex="8" style="cursor: default; padding: 0; white-space: nowrap;" transform="translate(24,-9999)" opacity="0" visibility="visible"><path fill="none" d="M 3.5 0.5 L 103.5 0.5 C 106.5 0.5 106.5 0.5 106.5 3.5 L 106.5 18 112.5 24 106.5 30 106.5 46.5 C 106.5 49.5 106.5 49.5 103.5 49.5 L 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)" width="106" height="49"></path><path fill="none" d="M 3.5 0.5 L 103.5 0.5 C 106.5 0.5 106.5 0.5 106.5 3.5 L 106.5 18 112.5 24 106.5 30 106.5 46.5 C 106.5 49.5 106.5 49.5 103.5 49.5 L 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)" width="106" height="49"></path><path fill="none" d="M 3.5 0.5 L 103.5 0.5 C 106.5 0.5 106.5 0.5 106.5 3.5 L 106.5 18 112.5 24 106.5 30 106.5 46.5 C 106.5 49.5 106.5 49.5 103.5 49.5 L 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)" width="106" height="49"></path><path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 103.5 0.5 C 106.5 0.5 106.5 0.5 106.5 3.5 L 106.5 18 112.5 24 106.5 30 106.5 46.5 C 106.5 49.5 106.5 49.5 103.5 49.5 L 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#7cb5ec" stroke-width="1"></path><text x="8" zIndex="1" style="font-size: 12px; color: #333333; fill: #333333;" y="20"><tspan style="font-weight: bold">Temperature</tspan><tspan x="8" dy="15">80 km: -76.5°C</tspan></text></g><text x="528" text-anchor="end" zIndex="8" style="cursor: pointer; color: #909090; font-size: 9px; fill: #909090;" y="395">Highcharts.com</text></svg>
+
+                            <div class="highcharts-container" id="highcharts-0" style="">
+
+                                @RenderBody()
+
                             </div>
                         </div>
                         <a id="next-example" class="hidden-xs" title="Next (arrow right)" href="http://www.highcharts.com/demo/spline-symbols"><i class="fa fa-angle-right"></i></a>
@@ -611,9 +569,9 @@
                     <div id="demo-buttons">
                         <a class="button" href="javascript:" onclick="hs.htmlExpand(this, { width: 800,
 					headingText: 'Highcharts Configuration Preview',
-					wrapperClassName: 'draggable-header' })">View options »</a>
+					wrapperClassName: 'draggable-header' })">View code »</a>
                         <div class="highslide-maincontent">
-                            <pre></pre>
+                            <pre>@RenderSection("source_code",required:false)</pre>
                         </div>
                         
                     </div>
@@ -631,8 +589,6 @@
     </div>
     <div id="hs-bottom">
         <div class="container">
-            @RenderBody()
-            @Html.Highcharts4Net().GetLibraryScripts()
         </div>
     </div>
     <div id="footer">
@@ -645,21 +601,12 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="socials">
                     <div>
-                        <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
-                        <a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
                         <a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
-                        <a href="https://www.youtube.com/channel/UCzxXofPTQ0DoT7uIy3Fxw7A"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-(function () {
-        return window.SIG_EXT = {};
-      })()</script><div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="Click to cancel" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Loading...</a><div style="display: none;"></div><div class="highslide-viewport highslide-viewport-size" style="padding: 0px; border: none; margin: 0px; visibility: hidden;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) 0px 0px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) 0px -40px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) -20px 0px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) 0px -80px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) -20px -80px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) 0px -20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) 0px -60px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; height: 20px; width: 20px; background: url(http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png) -20px -20px;"></td></tr></tbody></table><img src="http://www.highcharts.com/highslide/graphics/outlines/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; top: -9999px;"></div>
+    @Html.Highcharts4Net().GetLibraryScripts()
 </body>
-<span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>
 </html>

@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library
 
         internal string FunctionName { get; private set; }
 
-        Chart _Chart; //
+        internal Chart _Chart; //
         Credits _Credits;
         Drilldown _Drilldown;
         Labels _Labels;

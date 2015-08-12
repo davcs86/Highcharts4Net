@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Web.UI.WebControls;
+using Highcharts4Net.Library.Helpers;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
@@ -11,22 +13,24 @@ namespace Highcharts4Net
     {
         public string Name { get; set; }
 
-        public Chart Chart { get; private set; }
+        public Chart chart { get; private set; }
 
-        public Legend Legend { set; get; }
+        public Legend legend { set; get; }
 
-        public Title Title { set; get; }
-        public Subtitle SubTitle { set; get; }
+        public Title title { set; get; }
+        public Subtitle subTitle { set; get; }
 
-        public XAxis XAxis { get; set; }
-        public YAxis YAxis { get; set; }
+        public XAxis xAxis { get; set; }
+        public YAxis yAxis { get; set; }
 
-        public Tooltip Tooltip{ get; set; }
+        public Tooltip tooltip{ get; set; }
 
         public ChartSettings()
         {
-            Chart = new Chart();
-            Name = DateTime.Now.ToString("HHmmssffffff");
+            chart = new Chart();
+            //Chart.Style = new List<string>();
+            Name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
         }
+
     }
 }

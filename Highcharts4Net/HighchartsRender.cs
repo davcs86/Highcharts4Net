@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using fastJSON;
 using Highcharts4Net.Library;
 using Highcharts4Net.Library.Enums;
+using Highcharts4Net.Library.Helpers;
+using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
     public class HighchartsRender
     {
         private static Highcharts _chart;
+        private static ChartSettings ChartSS ;
 
         internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes Chart_Type)
         {
@@ -18,7 +22,9 @@ namespace Highcharts4Net
 
             getSettings(_chartSettings);
 
-            _chartSettings.Chart.Type = Chart_Type;
+            _chartSettings.chart.Type = Chart_Type;
+
+            ChartSS = _chartSettings;
 
             applySettings(_chartSettings);
         }
@@ -26,19 +32,30 @@ namespace Highcharts4Net
         private void applySettings(ChartSettings settings)
         {
             _chart = new Highcharts(settings.Name)
-                .InitChart(settings.Chart)
-                .SetTitle(settings.Title)
-                .SetSubtitle(settings.SubTitle)
-                .SetXAxis(settings.XAxis)
-                .SetYAxis(settings.YAxis)
-                .SetTooltip(settings.Tooltip)
-                .SetLegend(settings.Legend);
+                .InitChart(settings.chart)
+                .SetTitle(settings.title)
+                .SetSubtitle(settings.subTitle)
+                .SetXAxis(settings.xAxis)
+                .SetYAxis(settings.yAxis)
+                .SetTooltip(settings.tooltip)
+                .SetLegend(settings.legend);
 
+        }
+
+        private string ChartEventsSerializer(object data)
+        {
+            return "-"+data+"*";
+        }
+
+        private string ChartEventsDeserializer(string data)
+        {
+            throw new NotImplementedException();
         }
 
         public HtmlString Render()
         {
-            return new HtmlString(_chart.ToHtmlString());
+            JSON.RegisterCustomType(typeof(JSFunction), ChartEventsSerializer, ChartEventsDeserializer);
+            return new HtmlString(JSON.ToNiceJSON(ChartSS, new JSONParameters { EnableAnonymousTypes = true, SerializeNullValues = false }));
         }
 
     }
