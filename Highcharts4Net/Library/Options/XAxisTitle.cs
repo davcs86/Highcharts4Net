@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -40,7 +40,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
 		/// Default: { "color": "#707070", "fontWeight": "bold" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>

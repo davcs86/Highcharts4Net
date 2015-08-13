@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -31,7 +31,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// CSS styles for the credits label. Defaults to:<pre>style: { cursor: 'pointer', color: '#909090', fontSize: '10px'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>

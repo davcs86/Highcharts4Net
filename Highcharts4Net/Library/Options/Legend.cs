@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The background color of the legend.
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
@@ -62,13 +62,13 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// CSS styles for each legend item when the corresponding series or point is hidden. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from <code>style</code> unless overridden here. Defaults to:<pre>itemHiddenStyle: { color: '#CCC'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string ItemHiddenStyle { get; set; }
 
 		/// <summary>
 		/// CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from <code>style</code> unless overridden here. Defaults to:<pre>itemHoverStyle: { color: '#000'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string ItemHoverStyle { get; set; }
 
 		/// <summary>
@@ -87,7 +87,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text.
 		/// Default: { "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string ItemStyle { get; set; }
 
 		/// <summary>
@@ -104,7 +104,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback function to format each of the series' labels. The <em>this</em> keyword refers to the series object, or the point object in case of pie charts. By default the series or point name is printed.
 		/// </summary>
-		[JsonFormatter("{0}")]
+		//[JsonFormatter("{0}")]
 		public string LabelFormatter { get; set; }
 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace Highcharts4Net.Library.Options
 		public bool? Shadow { get; set; }
 
 		[Obsolete("CSS styles for the legend area. In the 1.x versions the position of the legend area was determined by CSS. In 2.x, the position is determined by properties like  <code>align</code>, <code>verticalAlign</code>, <code>x</code> and <code>y</code>, but the styles are still parsed for backwards compatibility.")]
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>

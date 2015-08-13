@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Helpers
     {
         public Color? Fill { get; set; }
 
-        [JsonFormatter("{{ {0} }}")]
+        //[JsonFormatter("{{ {0} }}")]
         public string Style { get; set; }
     }
 }

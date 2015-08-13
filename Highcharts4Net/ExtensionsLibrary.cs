@@ -35,7 +35,7 @@ namespace Highcharts4Net
         public HighchartsRender AreaChart(Action<ChartSettings> settings)
         {
             var chart = new HighchartsRender();
-            chart.CreateChart(settings, ChartTypes.Area);
+            chart.CreateChart(settings, ChartTypes.area);
             return chart;
         }
 

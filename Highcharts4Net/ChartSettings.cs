@@ -11,25 +11,31 @@ namespace Highcharts4Net
 {
     public class ChartSettings
     {
-        public string Name { get; set; }
+        [System.Xml.Serialization.XmlIgnore]
+        public string name { get; set; }
 
-        public Chart chart { get; private set; }
+        public Chart Chart { get; }
 
-        public Legend legend { set; get; }
+        public Legend Legend { set; get; }
 
-        public Title title { set; get; }
-        public Subtitle subTitle { set; get; }
+        public Title Title { set; get; }
+        public Subtitle Subtitle { set; get; }
 
-        public XAxis xAxis { get; set; }
-        public YAxis yAxis { get; set; }
+        public XAxis XAxis { get; set; }
+        public YAxis YAxis { get; set; }
 
-        public Tooltip tooltip{ get; set; }
+        public Tooltip Tooltip{ get; set; }
+
+        public PlotOptions PlotOptions { get; set; }
+
+        public Series[] Series { get; set; }
 
         public ChartSettings()
         {
-            chart = new Chart();
+            Chart = new Chart();
             //Chart.Style = new List<string>();
-            Name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
+            name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
+            Chart.RenderTo = "{0}_container".FormatWith(name);
         }
 
     }

@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -15,7 +15,7 @@ namespace Highcharts4Net.Library.Options
 		/// The background or fill color of the gauge's dial. 
 		/// Default: black
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>

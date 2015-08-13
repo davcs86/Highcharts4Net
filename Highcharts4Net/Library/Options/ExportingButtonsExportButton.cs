@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A click handler callback to use on the button directly instead of the popup menu.
 		/// </summary>
-		[JsonFormatter("{0}")]
+		//[JsonFormatter("{0}")]
 		public string Onclick { get; set; }
 
 		/// <summary>

@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
 		/// Default: true
 		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Animation Animation { get; set; }
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Text styles for the legend page navigation.
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 	}

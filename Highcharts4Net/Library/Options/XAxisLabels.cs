@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -50,8 +50,8 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback JavaScript function to format the label. The value is  given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. Defaults to: <pre>function() { return this.value;}</pre>
 		/// </summary>
-		[JsonFormatter("{0}")]
-		public string Formatter { get; set; }
+		////[JsonFormatter("{0}")]
+		public LiteralString Formatter { get; set; }
 
 		/// <summary>
 		/// Horizontal axis only. When <code>staggerLines</code> is not set, <code>maxStaggerLines</code> defines how many lines the axis is allowed to add to automatically avoid overlapping X labels. Set to <code>1</code> to disable overlap detection. 
@@ -89,7 +89,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// CSS styles for the label. Use <code>whiteSpace: 'nowrap'</code> to prevent wrapping of category labels. Defaults to:<pre>style: { color: '#6D869F', fontWeight: 'bold'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>

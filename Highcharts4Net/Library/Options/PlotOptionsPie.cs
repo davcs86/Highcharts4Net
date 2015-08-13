@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href='#chart.animation'>chart.animation</a> and the animation parameter under the API methods.The following properties are supported:</p><dl>  <dt>duration</dt>  <dd>The duration of the animation in milliseconds.</dd><dt>easing</dt><dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or<code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notablythe jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using MooTools as the general framework, use the property name <code>transition</code> instead of <code>easing</code>.</dd></dl><p>Due to poor performance, animation is disabled in old IE browsers for column charts and polar charts.</p>
 		/// Default: true
 		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Animation Animation { get; set; }
 
 		/// <summary>
@@ -90,7 +90,7 @@ namespace Highcharts4Net.Library.Options
 		/// The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. Can be a percentage or pixel value. Percentages are relative to the size of the plot area. Pixel values are given as integers.
 		/// Default: 0
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel InnerSize { get; set; }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Highcharts4Net.Library.Options
 		/// The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example <code>'75%'</code>.
 		/// Default:  
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel Size { get; set; }
 
 		/// <summary>

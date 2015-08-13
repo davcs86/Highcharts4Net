@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net.Library.Helpers
@@ -12,11 +11,10 @@ namespace Highcharts4Net.Library.Helpers
 
         public Crosshairs(CrosshairsForamt xCrosshairsForamt, CrosshairsForamt yCrosshairsForamt) { CrosshairsForamt = new[] { xCrosshairsForamt, yCrosshairsForamt }; }
 
-        [Name("crosshairs")]
         public bool? ShowXCrosshairs { get; private set; }
-        [Name("crosshairs")]
+
         public bool[] ShowBothCrosshairs { get; private set; }
-        [Name("crosshairs")]
+
         public CrosshairsForamt[] CrosshairsForamt { get; private set; }
     }
 

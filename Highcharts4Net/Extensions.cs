@@ -58,7 +58,7 @@ namespace Highcharts4Net
                 sb.Append(value.Value.ToString(CultureInfo.InvariantCulture));
         }
 
-        public static void AppendHighchart(this StringBuilder sb, Highcharts chart)
+        /*public static void AppendHighchart(this StringBuilder sb, Highcharts chart)
         {
             foreach (KeyValuePair<string, string> jsVariable in chart.JsVariables)
                 sb.AppendLine("var {0} = {1};".FormatWith(jsVariable.Key, jsVariable.Value), 1);
@@ -74,6 +74,6 @@ namespace Highcharts4Net
                 sb.AppendLine(jsFunction.Value, 2);
                 sb.AppendLine("}", 1);
             }
-        }
+        }*/
     }
 }

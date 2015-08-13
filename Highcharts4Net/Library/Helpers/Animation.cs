@@ -1,14 +1,11 @@
-﻿using Highcharts4Net.Library.Attributes;
-using Highcharts4Net.Library.Enums;
+﻿using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net.Library.Helpers
 {
     public class Animation
     {
-        [Name("animation")]
         public bool? EnableAnimation { get; private set; }
 
-        [Name("animation")]
         public AnimationConfig AnimationConfig { get; private set; }
 
         public Animation(bool animation) { EnableAnimation = animation; }

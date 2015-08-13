@@ -78,9 +78,6 @@
     <Compile Include="Highcharts4NetHelper.cs" />
     <Compile Include="HighchartsRender.cs" />
     <Compile Include="IHc4xHandler.cs" />
-    <Compile Include="Library\Attributes\JsonFormatterAttribute.cs" />
-    <Compile Include="Library\Attributes\NameAttribute.cs" />
-    <Compile Include="Library\Container.cs" />
     <Compile Include="Library\Enums\AxisTitleAligns.cs" />
     <Compile Include="Library\Enums\AxisTypes.cs">
       <SubType>Code</SubType>
@@ -126,8 +123,6 @@
     <Compile Include="Library\Helpers\Position.cs" />
     <Compile Include="Library\Helpers\Theme.cs" />
     <Compile Include="Library\Helpers\Tools.cs" />
-    <Compile Include="Library\Highcharts.cs" />
-    <Compile Include="Library\JsonSerializer.cs" />
     <Compile Include="Library\Options\AxisBreaks.cs" />
     <Compile Include="Library\Options\AxisUnits.cs" />
     <Compile Include="Library\Options\Chart.cs" />
@@ -511,6 +506,7 @@
       <Name>fastJSON</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

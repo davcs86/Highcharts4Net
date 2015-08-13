@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// A click handler callback to use on the button directly. By default this onclick calls
 		/// chart.print(), but it can be overridden to do other actions.
 		/// </summary>
-		[JsonFormatter("{0}")]
+		//[JsonFormatter("{0}")]
 		public string Onclick { get; set; }
 
 		/// <summary>

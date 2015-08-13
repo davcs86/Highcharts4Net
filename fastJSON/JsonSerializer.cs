@@ -136,6 +136,8 @@ namespace fastJSON
                     if (pendingSeparator) _output.Append(',');
                     if (_params.SerializeToLowerCaseNames)
                         WritePair(key.ToLower(), nameValueCollection[key]);
+                    else if (_params.SerializeToLowerFirstLetterNames)
+                        WritePair(key.ToLowerFirst(), nameValueCollection[key]);
                     else
                         WritePair(key, nameValueCollection[key]);
                     pendingSeparator = true;
@@ -162,6 +164,8 @@ namespace fastJSON
                     string k = (string)entry.Key;
                     if (_params.SerializeToLowerCaseNames)
                         WritePair(k.ToLower(), entry.Value);
+                    else if (_params.SerializeToLowerFirstLetterNames)
+                        WritePair(k.ToLowerFirst(), entry.Value);
                     else
                         WritePair(k, entry.Value);
                     pendingSeparator = true;
@@ -419,6 +423,8 @@ namespace fastJSON
                         _output.Append(',');
                     if (_params.SerializeToLowerCaseNames)
                         WritePair(p.lcName, o);
+                    else if (_params.SerializeToLowerFirstLetterNames)
+                        WritePair(p.Name.ToLowerFirst(), o);
                     else
                         WritePair(p.Name, o);
                     if (o != null && _params.UseExtensions)
@@ -492,6 +498,8 @@ namespace fastJSON
                     string k = (string)entry.Key;
                     if (_params.SerializeToLowerCaseNames)
                         WritePair(k.ToLower(), entry.Value);
+                    else if (_params.SerializeToLowerFirstLetterNames)
+                        WritePair(k.ToLowerFirst(), entry.Value);
                     else
                         WritePair(k, entry.Value);
                     pendingSeparator = true;
@@ -516,6 +524,8 @@ namespace fastJSON
 
                     if (_params.SerializeToLowerCaseNames)
                         WritePair(k.ToLower(), entry.Value);
+                    else if (_params.SerializeToLowerFirstLetterNames)
+                        WritePair(k.ToLowerFirst(), entry.Value);
                     else
                         WritePair(k, entry.Value);
                     pendingSeparator = true;

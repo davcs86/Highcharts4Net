@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Web.UI.WebControls;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -24,14 +24,14 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the  initial series animation, see <a class='internal' href='#plotOptions.series.animation'>plotOptions.series.animation</a>.</p>  <p>The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  </p><dl> <dt>duration</dt> <dd>The duration of the animation in milliseconds.</dd>  <dt>easing</dt> <dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or <code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notably the jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using  MooTools as the general framework, use the property name <code>transition</code> instead  of <code>easing</code>.</dd> </dl>
 		/// Default: true
 		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Animation Animation { get; set; }
 
 		/// <summary>
 		/// The background color or gradient for the outer chart area.
 		/// Default: #FFFFFF
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
@@ -132,7 +132,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The background color or gradient for the plot area.
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public BackColorOrGradient PlotBackgroundColor { get; set; }
 
 		/// <summary>
@@ -170,15 +170,15 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public bool? Reflow { get; set; }
 
-		/// <summary>
-		/// The HTML element where the chart will be rendered. If it is a string, the element by that id is used. The HTML element can also be passed by direct reference.
-		/// </summary>
-		// TODO: renderTo for object is not implemented. Just for string when the name of the chart is specified.
+        /// <summary>
+        /// The HTML element where the chart will be rendered. If it is a string, the element by that id is used. The HTML element can also be passed by direct reference.
+        /// </summary>
+        public string RenderTo { get; set; }
 
-		/// <summary>
-		/// The button that appears after a selection zoom, allowing the user to reset zoom.
-		/// </summary>
-		public ChartResetZoomButton ResetZoomButton { get; set; }
+        /// <summary>
+        /// The button that appears after a selection zoom, allowing the user to reset zoom.
+        /// </summary>
+        public ChartResetZoomButton ResetZoomButton { get; set; }
 
 		/// <summary>
 		/// The background color of the marker square when selecting (zooming in on) an area of the chart.
@@ -231,14 +231,14 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Additional CSS styles to apply inline to the container <code>div</code>. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally. Defaults to:<pre>style: { fontFamily: ''Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif', // default font fontSize: '12px'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
-        public List<string> Style { get; set; }
+		////[JsonFormatter("{{ {0} }}")]
+        public Dictionary<string,string> Style { get; set; }
 
 		/// <summary>
 		/// The default series type for the chart. Can be any of the chart types listed under <a href='#plotOptions'>plotOptions</a>.
 		/// Default: line
 		/// </summary>
-		internal ChartTypes? Type { get; set; }
+		public ChartTypes? Type { get; internal set; }
 
 		/// <summary>
 		/// An explicit width for the chart. By default the width is calculated from the offset width of the containing element.

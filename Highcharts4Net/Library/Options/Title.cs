@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -33,14 +33,14 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the title. Use this for font styling, but use <code>align</code>, <code>x</code> and <code>y</code> for text alignment.
 		/// Default: { "color": "#333333", "fontSize": "18px" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>
 		/// The title of the chart. To disable the title, set the <code>text</code> to <code>null</code>.
 		/// Default: Chart title
 		/// </summary>
-		public string Text { get; set; }
+		public string text { get; set; }
 
 		/// <summary>
 		/// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the text.

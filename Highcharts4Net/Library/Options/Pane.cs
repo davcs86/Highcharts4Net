@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -31,7 +31,7 @@ namespace Highcharts4Net.Library.Options
 		/// The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are.
 		/// Default: 85%
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel Size { get; set; }
 
 		/// <summary>

@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -281,7 +281,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> and <a href='#xAxis.tickInterval'>tickInterval</a>.
 		/// </summary>
-		[JsonFormatter("{0}")]
+		//[JsonFormatter("{0}")]
 		public string TickPositioner { get; set; }
 
 		/// <summary>
@@ -315,7 +315,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples.
         /// </summary>
-        [JsonFormatter("[{0}, {1}]")]
+        //[JsonFormatter("[{0}, {1}]")]
         public AxisUnits Units { get; set; }
 
 	}

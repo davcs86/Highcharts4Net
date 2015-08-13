@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library.Helpers

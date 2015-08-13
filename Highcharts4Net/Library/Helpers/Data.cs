@@ -1,5 +1,6 @@
 ﻿using System;
-using Highcharts4Net.Library.Attributes;
+using fastJSON;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library.Helpers
@@ -14,16 +15,29 @@ namespace Highcharts4Net.Library.Helpers
 
         public Data(SeriesData[] data) { SeriesData = data; }
 
-        [Name("data")]
-        public object[] ArrayData { get; private set; }
+        private object[] ArrayData { get; set; }
 
-        [Name("data")]
-        public object[,] DoubleArrayData { get; private set; }
+        private object[,] DoubleArrayData { get; set ; }
 
-        [Name("data")]
-        public Point[] Points { get; private set; }
+        private Point[] Points { get; set; }
 
-        [Name("data")]
-        public SeriesData[] SeriesData { get; private set; }
+        private SeriesData[] SeriesData { get; set; }
+
+        public override string ToString()
+        {
+            if (ArrayData != null)
+            {
+                return JSON.ToJSON(ArrayData);
+            }
+            if (DoubleArrayData != null)
+            {
+                return JSON.ToJSON(DoubleArrayData);
+            }
+            if (Points != null)
+            {
+                return JSON.ToJSON(Points);
+            }
+            return SeriesData != null ? JSON.ToJSON(SeriesData) : "";
+        }
     }
 }

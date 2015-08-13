@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -45,7 +45,7 @@ namespace Highcharts4Net.Library.Options
 		/// In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like <code>'100%'</code>, or as a pixel number, like <code>100</code>. By default, the inner radius is controlled by the <a href='#yAxis.plotBands.thickness'>thickness</a> option.
 		/// Default: null
 		/// </summary>
-		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		////[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		//public PercentageOrPixel InnerRadius { get; set; }
 
 		/// <summary>
@@ -57,14 +57,14 @@ namespace Highcharts4Net.Library.Options
 		/// In a gauge chart, this option determines the outer radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like <code>'100%'</code>, or as a pixel number, like <code>100</code>.
 		/// Default: 100%
 		/// </summary>
-		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		////[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		//public PercentageOrPixel OuterRadius { get; set; }
 
 		/// <summary>
 		/// In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like <code>'10%'</code>, or as a pixel number, like <code>10</code>. The default value 10 is the same as the default <a href='#yAxis.tickLength'>tickLength</a>, thus making the plot band act as a background for the tick markers. 
 		/// Default: 10
 		/// </summary>
-		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		////[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		//public PercentageOrPixel Thickness { get; set; }
 
 		/// <summary>

@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -9,10 +8,8 @@ namespace Highcharts4Net.Library.Helpers
 
         public BackColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
-        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject : false)]
         public Color? Color { get; private set; }
 
-        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: true)]
         public Gradient Gradient { get; private set; }
     }
 

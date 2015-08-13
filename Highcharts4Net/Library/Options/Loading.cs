@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the loading label <code>span</code>.
 		/// Default: { "fontWeight": "bold", "position": "relative", "top": "45%" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string LabelStyle { get; set; }
 
 		/// <summary>
@@ -33,7 +33,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// CSS styles for the loading screen that covers the plot area. Defaults to:<pre>style: { position: 'absolute', backgroundColor: 'white', opacity: 0.5, textAlign: 'center'}</pre>
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 	}

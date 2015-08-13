@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the no-data label. 
 		/// Default: { "fontSize": "12px", "fontWeight": "bold", "color": "#60606a" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 	}

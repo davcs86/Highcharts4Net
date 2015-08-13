@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the title. Exact positioning of the title can be achieved by changing the margin property, or by adding <code>position: 'absolute'</code> and  left and top properties.
 		/// Default: { "color": "#555555" }
 		/// </summary>
-		[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
 		public string Style { get; set; }
 
 		/// <summary>

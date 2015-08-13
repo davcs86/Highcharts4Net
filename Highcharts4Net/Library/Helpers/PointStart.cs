@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Highcharts4Net.Library.Attributes;
+using fastJSON;
+//using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -24,16 +25,17 @@ namespace Highcharts4Net.Library.Helpers
         /// <param name="pointStart"></param>
         public PointStart(Number pointStart) { PointStartNumber = pointStart; }
 
-        /// <summary>
-        /// Date start point
-        /// </summary>
-        [Name("PointStart")]
-        public DateTime? PointStartDate { get; private set; }
+        private DateTime? PointStartDate { get; set; }
 
-        /// <summary>
-        /// Number start point
-        /// </summary>
-        [Name("PointStart")]
-        public Number? PointStartNumber { get; private set; }
+        private Number? PointStartNumber { get; set; }
+
+        public override string ToString()
+        {
+            if (PointStartDate != null)
+            {
+                return JSON.ToJSON(PointStartDate);
+            }
+            return (PointStartNumber != null) ? JSON.ToJSON(PointStartNumber) : "";
+        }
     }
 }

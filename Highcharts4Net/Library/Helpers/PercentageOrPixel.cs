@@ -1,4 +1,4 @@
-﻿using Highcharts4Net.Library.Attributes;
+﻿//using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Helpers
                 Value = number.ToString();
         }
 
-        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        //[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
         public string Value { get; private set; }
     }
 }

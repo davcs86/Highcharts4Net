@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -70,7 +70,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
         /// </summary>
-        [JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+        //[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel Height { get; set; }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
 		/// Default: 90%
 		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
 		public PercentageOrPixel Width { get; set; }
 
         /// <summary>

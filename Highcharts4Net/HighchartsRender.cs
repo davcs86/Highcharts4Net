@@ -13,49 +13,39 @@ namespace Highcharts4Net
 {
     public class HighchartsRender
     {
-        private static Highcharts _chart;
-        private static ChartSettings ChartSS ;
+        private static ChartSettings ChartSettings;
 
         internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes Chart_Type)
         {
-            var _chartSettings = new ChartSettings();
+            ChartSettings = new ChartSettings();
 
-            getSettings(_chartSettings);
+            getSettings(ChartSettings);
 
-            _chartSettings.chart.Type = Chart_Type;
-
-            ChartSS = _chartSettings;
-
-            applySettings(_chartSettings);
-        }
-
-        private void applySettings(ChartSettings settings)
-        {
-            _chart = new Highcharts(settings.Name)
-                .InitChart(settings.chart)
-                .SetTitle(settings.title)
-                .SetSubtitle(settings.subTitle)
-                .SetXAxis(settings.xAxis)
-                .SetYAxis(settings.yAxis)
-                .SetTooltip(settings.tooltip)
-                .SetLegend(settings.legend);
+            ChartSettings.Chart.Type = Chart_Type;
 
         }
 
-        private string LiteralStringSerializer(object data)
+        private static string ToStringSerializer(object data)
         {
             return data.ToString();
         }
 
-        private string LiteralStringDeserializer(string data)
+        private static string ToStringDeserializer(string data)
         {
             throw new NotImplementedException();
         }
 
         public HtmlString Render()
         {
-            JSON.RegisterCustomType(typeof(LiteralString), LiteralStringSerializer, LiteralStringDeserializer);
-            return new HtmlString(JSON.ToJSON(ChartSS, new JSONParameters { EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true}));
+            JSON.RegisterCustomType(typeof(LiteralString), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
+            
+            var chartOptions = JSON.ToJSON(ChartSettings,
+                new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true});
+            var chartContainer = "<div id='{0}'></div>\n<script>\n\tvar {1};\n\twindow.onload=function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}};\n</script>".FormatWith(ChartSettings.Chart.RenderTo, ChartSettings.name, chartOptions);
+            return new HtmlString(chartContainer);
         }
 
     }

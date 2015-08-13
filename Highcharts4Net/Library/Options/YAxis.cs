@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using Highcharts4Net.Library.Enums;
-using Highcharts4Net.Library.Attributes;
+//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -270,7 +270,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// <p>Solid gauge series only. Color stops for the solid gauge. Use this in cases where a linear gradient between a <code>minColor</code> and <code>maxColor</code> is not sufficient. The stops is an array of tuples, where the first item is a float between 0 and 1 assigning the relative position in the gradient, and the second item is the color.</p><p>For solid gauges, the Y axis also inherits the concept of <a href='http://api.highcharts.com/highmaps#colorAxis.dataClasses'>data classes</a> from the Highmaps color axis.</p>
 		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Gradient Stops { get; set; }
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> and <a href='#xAxis.tickInterval'>tickInterval</a>.
 		/// </summary>
-		[JsonFormatter("{0}")]
+		//[JsonFormatter("{0}")]
 		public string TickPositioner { get; set; }
 
 		/// <summary>
@@ -341,7 +341,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// Datetime axis only. An array determining what time intervals the ticks are allowed to fall on. Each array item is an array where the first value is the time unit and the second value another array of allowed multiples.
         /// </summary>
-        [JsonFormatter("[{0}, {1}]")]
+        //[JsonFormatter("[{0}, {1}]")]
         public AxisUnits Units { get; set; }
 
 	}

@@ -1,4 +1,4 @@
-﻿using Highcharts4Net.Library.Attributes;
+﻿//using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -12,7 +12,7 @@ namespace Highcharts4Net.Library.Helpers
         /// <summary>
         /// Callback function to run on click.
         /// </summary>
-        [JsonFormatter("{0}")]
+        //[JsonFormatter("{0}")]
         public string Onclick { get; set; }
     }
 }

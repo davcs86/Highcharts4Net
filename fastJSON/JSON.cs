@@ -93,6 +93,11 @@ namespace fastJSON
         /// </summary>
         public bool SerializeToLowerCaseNames = false;
 
+        /// <summary>
+        /// (CUSTOM FUNCTION FOR HIGHCHARTS4NET) Save property/field names as lower first letter (default = false)
+        /// </summary>
+        public bool SerializeToLowerFirstLetterNames = false;
+
         public void FixValues()
         {
             if (UseExtensions == false) // disable conflicting params

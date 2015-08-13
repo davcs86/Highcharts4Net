@@ -364,8 +364,8 @@ namespace Highcharts4Net.Library
             StringBuilder scripts = new StringBuilder();
 
             scripts.AppendLine("<script type='text/javascript'>");
-            if (Options != null)
-                scripts.AppendLine("Highcharts.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));
+            /*if (Options != null)
+                scripts.AppendLine("Highcharts.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));*/
 
             scripts.AppendLine("var {0};".FormatWith(Name));
             scripts.AppendLine(!string.IsNullOrEmpty(FunctionName) ? string.Format("function {0}() {{", FunctionName) : "$(document).ready(function() {");
