@@ -114,7 +114,7 @@
     <Compile Include="Library\Helpers\DateTimeLabel.cs" />
     <Compile Include="Library\Helpers\Events.cs" />
     <Compile Include="Library\Helpers\GlobalOptions.cs" />
-    <Compile Include="Library\Helpers\JSFunction.cs" />
+    <Compile Include="Library\Helpers\LiteralString.cs" />
     <Compile Include="Library\Helpers\JsonFormatter.cs" />
     <Compile Include="Library\Helpers\Lang.cs" />
     <Compile Include="Library\Helpers\MenuItem.cs" />

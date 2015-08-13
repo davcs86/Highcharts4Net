@@ -42,20 +42,20 @@ namespace Highcharts4Net
 
         }
 
-        private string ChartEventsSerializer(object data)
+        private string LiteralStringSerializer(object data)
         {
-            return "-"+data+"*";
+            return data.ToString();
         }
 
-        private string ChartEventsDeserializer(string data)
+        private string LiteralStringDeserializer(string data)
         {
             throw new NotImplementedException();
         }
 
         public HtmlString Render()
         {
-            JSON.RegisterCustomType(typeof(JSFunction), ChartEventsSerializer, ChartEventsDeserializer);
-            return new HtmlString(JSON.ToNiceJSON(ChartSS, new JSONParameters { EnableAnonymousTypes = true, SerializeNullValues = false }));
+            JSON.RegisterCustomType(typeof(LiteralString), LiteralStringSerializer, LiteralStringDeserializer);
+            return new HtmlString(JSON.ToJSON(ChartSS, new JSONParameters { EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true}));
         }
 
     }
