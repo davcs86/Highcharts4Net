@@ -7,14 +7,14 @@
     /// </summary>
     public enum ChartTypes
     {
-        area,
-        arearange,
-        areaspline,
-        bar,
-        boxplot,
-        bubble,
-        column,
-        columnrange,
+        Area,
+        Arearange,
+        Areaspline,
+        Bar,
+        Boxplot,
+        Bubble,
+        Column,
+        Columnrange,
         Errorbar,
         Funnel,
         Gauge,

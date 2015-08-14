@@ -15,13 +15,14 @@ namespace Highcharts4Net
     {
         private static ChartSettings ChartSettings;
 
-        internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes Chart_Type)
+        internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes? Chart_Type)
         {
             ChartSettings = new ChartSettings();
 
             getSettings(ChartSettings);
 
-            ChartSettings.Chart.Type = Chart_Type;
+            if (Chart_Type!=null)
+                ChartSettings.Chart.Type = Chart_Type;
 
         }
 
