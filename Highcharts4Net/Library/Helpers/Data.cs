@@ -1,5 +1,5 @@
 ﻿using System;
-using fastJSON;
+using Highcharts4Net.fastJSON;
 //using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Options;
 

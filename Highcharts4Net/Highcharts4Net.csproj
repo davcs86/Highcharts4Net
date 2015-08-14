@@ -73,6 +73,15 @@
     <Compile Include="ChartSettings.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="ExtensionsLibrary.cs" />
+    <Compile Include="fastJSON\dynamic.cs" />
+    <Compile Include="fastJSON\Formatter.cs" />
+    <Compile Include="fastJSON\Getters.cs" />
+    <Compile Include="fastJSON\JSON.cs" />
+    <Compile Include="fastJSON\JsonParser.cs" />
+    <Compile Include="fastJSON\JsonSerializer.cs" />
+    <Compile Include="fastJSON\Reflection.cs" />
+    <Compile Include="fastJSON\SafeDictionary.cs" />
+    <Compile Include="fastJSON\StringExtensions.cs" />
     <Compile Include="Hc4xHandler.cs" />
     <Compile Include="Hc4xHandlerFactory.cs" />
     <Compile Include="Highcharts4NetHelper.cs" />
@@ -499,12 +508,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts\highcharts.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\fastJSON\fastJSON.csproj">
-      <Project>{207e91b1-c9f8-4913-88e1-3549ef5f3273}</Project>
-      <Name>fastJSON</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

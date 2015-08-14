@@ -24,7 +24,10 @@ namespace Highcharts4Net
             _helper = helper;
             _chart = new HighchartsRender();
         }
-
+        /// <summary>
+        /// Returns the script tag to include Highcharts-all.js in your page.
+        /// </summary>
+        /// <returns></returns>
         public MvcHtmlString GetLibraryScripts()
         {
             return

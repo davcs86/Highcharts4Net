@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
-using fastJSON;
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
