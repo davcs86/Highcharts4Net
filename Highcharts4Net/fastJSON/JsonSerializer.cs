@@ -188,7 +188,10 @@ namespace Highcharts4Net.fastJSON
             if (_params.UseValuesOfEnums)
                 WriteValue(Convert.ToInt32(e));
             else
-                WriteStringFast(e.ToString());
+                if (_params.SerializeToLowerFirstLetterEnums)
+                    WriteStringFast(e.ToString().ToLowerFirst());
+                else 
+                    WriteStringFast(e.ToString());
         }
 
         private void WriteGuid(Guid g)

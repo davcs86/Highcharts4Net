@@ -42,9 +42,10 @@ namespace Highcharts4Net
             JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
-            
+            JSON.RegisterCustomType(typeof(BackColorOrGradient), ToStringSerializer, ToStringDeserializer);
+
             var chartOptions = JSON.ToJSON(ChartSettings,
-                new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true});
+                new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true, SerializeToLowerFirstLetterEnums = true});
             var chartContainer = "<div id='{0}'></div>\n<script>\n\tvar {1};\n\twindow.onload=function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}};\n</script>".FormatWith(ChartSettings.Chart.RenderTo, ChartSettings.name, chartOptions);
             return new HtmlString(chartContainer);
         }

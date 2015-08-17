@@ -7,7 +7,7 @@
     {
         Linear,
         Logarithmic,
-        Datetime,
+        Latetime,
         Category
     }
 }

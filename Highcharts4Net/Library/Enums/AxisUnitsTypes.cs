@@ -5,13 +5,13 @@
     /// </summary>
     public enum AxisUnitsType
     {
-        millisecond,
-        second,
-        minute,
-        hour,
-        day,
-        week,
-        month,
-        year
+        Millisecond,
+        Second,
+        Minute,
+        Hour,
+        Day,
+        Week,
+        Month,
+        Year
     }
 }

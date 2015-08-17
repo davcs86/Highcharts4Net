@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using Highcharts4Net.fastJSON;
 
 namespace Highcharts4Net.Library.Helpers
 {
@@ -8,9 +9,14 @@ namespace Highcharts4Net.Library.Helpers
 
         public BackColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
-        public string Color { get; private set; }
+        public string Color { get; }
 
-        public Gradient Gradient { get; private set; }
+        public Gradient Gradient { get; }
+
+        public override string ToString()
+        {
+            return Gradient?.ToString() ?? Color;
+        }
     }
 
     public class Gradient
@@ -18,6 +24,42 @@ namespace Highcharts4Net.Library.Helpers
         public int[] LinearGradient { get; set; }
         public RadialGradient RadialGradient { get; set; }
         public object[,] Stops { get; set; }
+        public override string ToString()
+        {
+            if (RadialGradient != null)
+            {
+                return JSON.ToJSON(RadialGradient,
+                    new JSONParameters
+                    {
+                        EnableAnonymousTypes = true,
+                        SerializeNullValues = false,
+                        UseEscapedUnicode = true,
+                        SerializeToLowerFirstLetterNames = true,
+                        SerializeToLowerFirstLetterEnums = true
+                    });
+            }
+            if (LinearGradient != null)
+            {
+                return JSON.ToJSON(LinearGradient,
+                    new JSONParameters
+                    {
+                        EnableAnonymousTypes = true,
+                        SerializeNullValues = false,
+                        UseEscapedUnicode = true,
+                        SerializeToLowerFirstLetterNames = true,
+                        SerializeToLowerFirstLetterEnums = true
+                    });
+            }
+            return JSON.ToJSON(Stops,
+                new JSONParameters
+                {
+                    EnableAnonymousTypes = true,
+                    SerializeNullValues = false,
+                    UseEscapedUnicode = true,
+                    SerializeToLowerFirstLetterNames = true,
+                    SerializeToLowerFirstLetterEnums = true
+                });
+        }
     }
 
     public class RadialGradient

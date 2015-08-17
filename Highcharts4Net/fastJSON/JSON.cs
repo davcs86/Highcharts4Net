@@ -98,6 +98,11 @@ namespace Highcharts4Net.fastJSON
         /// </summary>
         public bool SerializeToLowerFirstLetterNames = false;
 
+        /// <summary>
+        /// (CUSTOM FUNCTION FOR HIGHCHARTS4NET) Save enum values as lower first letter (default = false)
+        /// </summary>
+        public bool SerializeToLowerFirstLetterEnums = false;
+
         public void FixValues()
         {
             if (UseExtensions == false) // disable conflicting params
