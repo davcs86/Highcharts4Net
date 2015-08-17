@@ -2,7 +2,7 @@
 {
     public enum Stackings
     {
-        Normal,
-        Percent
+        normal,
+        percent
     }
 }
