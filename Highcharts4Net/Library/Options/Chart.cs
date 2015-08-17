@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Web.UI.WebControls;
 using Highcharts4Net.Library.Enums;
-//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
@@ -24,15 +23,13 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the  initial series animation, see <a class='internal' href='#plotOptions.series.animation'>plotOptions.series.animation</a>.</p>  <p>The animation can either be set as a boolean or a configuration object. If <code>true</code>, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  </p><dl> <dt>duration</dt> <dd>The duration of the animation in milliseconds.</dd>  <dt>easing</dt> <dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or <code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notably the jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using  MooTools as the general framework, use the property name <code>transition</code> instead  of <code>easing</code>.</dd> </dl>
 		/// Default: true
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public Animation Animation { get; set; }
 
-		/// <summary>
-		/// The background color or gradient for the outer chart area.
-		/// Default: #FFFFFF
-		/// </summary>
-		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+        /// <summary>
+        /// The background color or gradient for the outer chart area.
+        /// Default: #FFFFFF
+        /// </summary>
+        public BackColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The color of the outer chart border.
@@ -56,9 +53,6 @@ namespace Highcharts4Net.Library.Options
         /// A CSS class name to apply to the charts container <code>div</code>, allowing unique CSS styling for each chart.
         /// </summary>
         public string ClassName { get; set; }
-
-		[Obsolete("Alias of <code>type</code>.")]
-		public ChartTypes? DefaultSeriesType { get; set; }
 
 		/// <summary>
 		/// Event listeners for the chart.
@@ -231,7 +225,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Additional CSS styles to apply inline to the container <code>div</code>. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally. Defaults to:<pre>style: { fontFamily: ''Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif', // default font fontSize: '12px'}</pre>
 		/// </summary>
-		////[JsonFormatter("{{ {0} }}")]
+		//[JsonFormatter("{{ {0} }}")]
         public Dictionary<string,string> Style { get; set; }
 
 		/// <summary>

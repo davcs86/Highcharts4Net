@@ -7,7 +7,7 @@
     <meta name="generator" content="Joomla! - Open Source Content Management">
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    <title>Spline with inverted axes | Highcharts</title>
+    <title>@ViewBag.Title | Highcharts4Net</title>
     <link rel="stylesheet" href="http://www.highcharts.com/media/com_demo/css/highslide.min.css" type="text/css">
     <link rel="stylesheet" href="http://www.highcharts.com/joomla/templates/highsoft_bootstrap/assets/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css">
@@ -76,7 +76,7 @@
                 <div id="comp-menu" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-9"></div>
                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 cont">
-                        <h2 class="demo-name"><a href="http://www.highcharts.com/demo/">Highcharts Demos</a> › Spline with inverted axes</h2>
+                        <h2 class="demo-name"><a href="http://www.highcharts.com/demo/">Highcharts Demos</a> › @ViewBag.Title</h2>
                         <div class="btn-group theme">
                             <a class="btn btn-theme disabled" href="#">Default</a>
                             <a class="btn btn-theme" href="http://www.highcharts.com/demo/spline-inverted/dark-unica">Dark Unica</a>
@@ -567,9 +567,7 @@
                         <a id="next-example" class="hidden-xs" title="Next (arrow right)" href="http://www.highcharts.com/demo/spline-symbols"><i class="fa fa-angle-right"></i></a>
                     </div>
                     <div id="demo-buttons">
-                        <a class="button" href="javascript:" onclick="hs.htmlExpand(this, { width: 800,
-					headingText: 'Highcharts Configuration Preview',
-					wrapperClassName: 'draggable-header' })">View code »</a>
+                        <a class="button" href="javascript:" onclick="hs.htmlExpand(this, { width: 800,headingText: 'Source code',wrapperClassName: 'draggable-header' })">View code »</a>
                         <div class="highslide-maincontent">
                             <pre>@RenderSection("source_code",required:false)</pre>
                         </div>

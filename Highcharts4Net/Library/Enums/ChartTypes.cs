@@ -7,27 +7,27 @@
     /// </summary>
     public enum ChartTypes
     {
-        Area,
-        Arearange,
-        Areaspline,
-        Bar,
-        Boxplot,
-        Bubble,
-        Column,
-        Columnrange,
-        Errorbar,
-        Funnel,
-        Gauge,
-        Heatmap,
-        Line,
-        Pie,
-        Polygon,
-        Pyramid,
-        Scatter,
-        Solidgauge,
-        Spline,
-        Treemap,
-        Waterfall
+        area,
+        arearange,
+        areaspline,
+        bar,
+        boxplot,
+        bubble,
+        column,
+        columnrange,
+        errorbar,
+        funnel,
+        gauge,
+        heatmap,
+        line,
+        pie,
+        polygon,
+        pyramid,
+        scatter,
+        solidgauge,
+        spline,
+        treemap,
+        waterfall
     }
 
     #endregion

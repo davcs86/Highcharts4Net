@@ -18,7 +18,7 @@ namespace Highcharts4Net
             return string.Empty;
         }
 
-        public static string FormatWith(this string format, ChartTypes? value)
+        internal static string FormatWith(this string format, ChartTypes? value)
         {
             if (value != null)
                 return string.Format(format, value.Value.ToString().ToLowerInvariant());

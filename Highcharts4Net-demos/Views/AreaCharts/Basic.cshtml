@@ -6,6 +6,7 @@
 
 @{
     Layout = "~/Views/Shared/_LayoutHighcharts.cshtml";
+    ViewBag.Title = "Basic AreaChart";
 }
 
 @Html.Highcharts4Net().AreaChart(settings =>
@@ -111,7 +112,7 @@
 
     settings.Subtitle = new Subtitle
     {
-        Text = "Source: <a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com</a>"
+        Text = "Source: &lt;a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com&lt;/a>"
     };
 
     settings.XAxis = new XAxis
@@ -136,7 +137,7 @@
     };
     settings.Tooltip = new Tooltip
     {
-        PointFormat = "{series.name} produced <b>{point.y:,.0f}</b><br />warheads in {point.x}"
+        PointFormat = "{series.name} produced &lt;b>{point.y:,.0f}&lt;/b>&lt;br />warheads in {point.x}"
     };
     settings.PlotOptions = new PlotOptions
     {
