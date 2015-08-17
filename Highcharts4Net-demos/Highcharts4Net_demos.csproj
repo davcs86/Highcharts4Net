@@ -209,6 +209,9 @@
   <ItemGroup>
     <Content Include="Views\AreaCharts\Areaspline.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AreaCharts\Arearange.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

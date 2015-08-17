@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net.Library.Helpers
@@ -9,16 +10,29 @@ namespace Highcharts4Net.Library.Helpers
 
         public Crosshairs(bool showXCrosshairs, bool sShowYCrosshairs) { ShowBothCrosshairs = new[] { showXCrosshairs, sShowYCrosshairs }; }
 
-        public Crosshairs(CrosshairsForamt xCrosshairsForamt, CrosshairsForamt yCrosshairsForamt) { CrosshairsForamt = new[] { xCrosshairsForamt, yCrosshairsForamt }; }
+        public Crosshairs(CrosshairsFormat xCrosshairsFormat, CrosshairsFormat yCrosshairsFormat) { CrosshairsFormat = new[] { xCrosshairsFormat, yCrosshairsFormat }; }
 
-        public bool? ShowXCrosshairs { get; private set; }
+        public bool? ShowXCrosshairs { get; }
 
-        public bool[] ShowBothCrosshairs { get; private set; }
+        public bool[] ShowBothCrosshairs { get; }
 
-        public CrosshairsForamt[] CrosshairsForamt { get; private set; }
+        public CrosshairsFormat[] CrosshairsFormat { get; }
+
+        public override string ToString()
+        {
+            if (CrosshairsFormat!=null)
+            {
+                return JSON.ToJSON(CrosshairsFormat);
+            }
+            if (ShowBothCrosshairs != null)
+            {
+                return JSON.ToJSON(ShowBothCrosshairs);
+            }
+            return ShowXCrosshairs != null ? JSON.ToJSON(ShowXCrosshairs) : "";
+        }
     }
 
-    public class CrosshairsForamt
+    public class CrosshairsFormat
     {
         public int? Width { get; set; }
         public string Color { get; set; }

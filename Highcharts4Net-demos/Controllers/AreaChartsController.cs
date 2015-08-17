@@ -55,5 +55,11 @@ namespace Highcharts4Net_demos.Controllers
 
             return View();
         }
+
+        public ActionResult Arearange()
+        {
+
+            return View();
+        }
     }
 }

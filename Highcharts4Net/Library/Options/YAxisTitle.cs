@@ -14,8 +14,8 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public AxisTitleAligns? Align { get; set; }
 
-		[Obsolete("Deprecated. Set the <code>text</code> to <code>null</code> to disable the title.")]
-		public string Enabled { get; set; }
+		//[Obsolete("Deprecated. Set the <code>text</code> to <code>null</code> to disable the title.")]
+		public bool? Enabled { get; set; }
 
 		/// <summary>
 		/// The pixel distance between the axis labels and the title. Positive values are outside the axis line, negative are inside.
