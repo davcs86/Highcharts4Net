@@ -70,7 +70,7 @@ namespace Highcharts4Net
         }
         public static string ToRGBAString(this Color c)
         {
-            return "rgba(" + c.R + "," + c.G + "," + c.B + "," + c.A + ")";
+            return "rgba(" + c.R + "," + c.G + "," + c.B + "," + decimal.Round(c.A/100.0m,2).ToString("N2", CultureInfo.InvariantCulture) + ")";
         }
     }
 }
