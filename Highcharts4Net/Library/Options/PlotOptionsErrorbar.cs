@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// The main color of the bars. This can be overridden by <a href='#plotOptions.errorbar.stemColor'>stemColor</a> and <a href='#plotOptions.errorbar.whiskerColor'>whiskerColor</a> individually. 
 		/// Default: #000000
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point.
@@ -48,7 +48,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
 		/// </summary>
-		public Color? EdgeColor { get; set; }
+		public string EdgeColor { get; set; }
 
 		/// <summary>
 		/// 3D columns only. The width of the colored edges.
@@ -97,7 +97,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
-		public Color? NegativeColor { get; set; }
+		public string NegativeColor { get; set; }
 
 		/// <summary>
 		/// Properties for each single point
@@ -159,7 +159,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used.
 		/// Default: null
 		/// </summary>
-		public Color? StemColor { get; set; }
+		public string StemColor { get; set; }
 
 		/// <summary>
 		/// The dash style of the stem, the vertical line extending from the box to the whiskers.
@@ -200,7 +200,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general series color is used.
 		/// Default: null
 		/// </summary>
-		public Color? WhiskerColor { get; set; }
+		public string WhiskerColor { get; set; }
 
 		/// <summary>
 		/// The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.

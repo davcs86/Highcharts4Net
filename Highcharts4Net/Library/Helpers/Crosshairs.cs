@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Helpers
     public class CrosshairsForamt
     {
         public int? Width { get; set; }
-        public Color? Color { get; set; }
+        public string Color { get; set; }
         public DashStyles DashStyle { get; set; }
         public int? ZIndex { get; set; }
     }

@@ -28,7 +28,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the border of each waterfall column.
 		/// Default: #333333
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The corner radius of the border surrounding each column or bar.
@@ -45,7 +45,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point.
@@ -80,7 +80,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
 		/// </summary>
-		public Color? EdgeColor { get; set; }
+		public string EdgeColor { get; set; }
 
 		/// <summary>
 		/// 3D columns only. The width of the colored edges.
@@ -129,7 +129,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the line that connects columns in a waterfall series.
         /// Default: #333333
         /// </summary>
-        public Color? LineColor { get; set; }
+        public string LineColor { get; set; }
 
 		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -236,7 +236,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The color used specifically for positive point columns. When not specified, the general series color is used.
 		/// </summary>
-		public Color? UpColor { get; set; }
+		public string UpColor { get; set; }
 
 		/// <summary>
 		/// Set the initial visibility of the series.

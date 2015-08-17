@@ -29,7 +29,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the tooltip border. When <code>null</code>, the border takes the color of the corresponding series or point.
 		/// Default: null
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The radius of the rounded border corners.

@@ -23,13 +23,13 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
 		/// </summary>
-		public Color? FillColor { get; set; }
+		public string FillColor { get; set; }
 
 		/// <summary>
 		/// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
 		/// Default: #FFFFFF
 		/// </summary>
-		public Color? LineColor { get; set; }
+		public string LineColor { get; set; }
 
 		/// <summary>
 		/// The width of the point marker's outline.

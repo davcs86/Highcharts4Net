@@ -15,7 +15,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the active up or down arrow in the legend page navigation.
 		/// Default: #3E576F
 		/// </summary>
-		public Color? ActiveColor { get; set; }
+		public string ActiveColor { get; set; }
 
 		/// <summary>
 		/// How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
@@ -34,7 +34,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the inactive up or down arrow in the legend page navigation.  .
 		/// Default: #CCC
 		/// </summary>
-		public Color? InactiveColor { get; set; }
+		public string InactiveColor { get; set; }
 
 		/// <summary>
 		/// Text styles for the legend page navigation.

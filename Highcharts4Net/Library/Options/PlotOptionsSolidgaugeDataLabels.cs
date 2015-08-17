@@ -33,7 +33,7 @@ namespace Highcharts4Net.Library.Options
 		/// The border color for the data label.
 		/// Default: silver
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The border radius in pixels for the gauge's data label.
@@ -50,7 +50,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The text color for the data labels. Defaults to <code>null</code>.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the <a href='#plotOptions.series.dataLabels.overflow'>overflow</a> option.

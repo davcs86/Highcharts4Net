@@ -5,8 +5,8 @@ namespace Highcharts4Net.Library.Helpers
 {
     public class Theme
     {
-        public Color? Fill { get; set; }
-        public Color? Stroke { get; set; }
+        public string Fill { get; set; }
+        public string Stroke { get; set; }
         public Number? R { get; set; }
         public ThemeStates States { get; set; }
     }
@@ -18,7 +18,7 @@ namespace Highcharts4Net.Library.Helpers
 
     public class ThemeStatesHover
     {
-        public Color? Fill { get; set; }
+        public string Fill { get; set; }
 
         //[JsonFormatter("{{ {0} }}")]
         public string Style { get; set; }

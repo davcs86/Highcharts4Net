@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the drawn border around the legend.
 		/// Default: #909090
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The border corner radius of the legend.

@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Helpers
 
         public PercentageOrPixel BorderWidth { get; set; }
 
-        public Color? BorderColor { get; set; }
+        public string BorderColor { get; set; }
 
         public Shapes? Shape { get; set; }
     }

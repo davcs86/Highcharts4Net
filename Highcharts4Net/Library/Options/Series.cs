@@ -71,9 +71,9 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public Number? ZIndex { get; set; }
 
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
-		public Color? UpColor { get; set; }
+		public string UpColor { get; set; }
 
 		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PlotOptionsArea PlotOptionsArea { get; set; }

@@ -18,6 +18,11 @@ namespace Highcharts4Net_demos.Controllers
 
         public ActionResult Index()
         {
+            return RedirectToActionPermanent("Demo");
+        }
+
+        public ActionResult Demo()
+        {
             return View();
         }
 

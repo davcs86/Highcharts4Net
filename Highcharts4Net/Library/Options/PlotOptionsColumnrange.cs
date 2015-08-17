@@ -28,7 +28,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the border surrounding each column or bar.
 		/// Default: #FFFFFF
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The corner radius of the border surrounding each column or bar.
@@ -45,7 +45,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point.
@@ -83,7 +83,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
 		/// </summary>
-		public Color? EdgeColor { get; set; }
+		public string EdgeColor { get; set; }
 
 		/// <summary>
 		/// 3D columns only. The width of the colored edges.
@@ -143,7 +143,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
-		//public Color? NegativeColor { get; set; }
+		//public string NegativeColor { get; set; }
 
 		/// <summary>
 		/// Properties for each single point

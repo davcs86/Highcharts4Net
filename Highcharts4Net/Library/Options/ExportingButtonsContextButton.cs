@@ -50,7 +50,7 @@ namespace Highcharts4Net.Library.Options
 		/// See <a class='internal' href='#navigation.buttonOptions'>navigation.buttonOptions</a> =&gt; symbolFill.
 		/// Default: #A8BF77
 		/// </summary>
-		public Color? SymbolFill { get; set; }
+		public string SymbolFill { get; set; }
 
 		/// <summary>
 		/// The pixel size of the symbol on the button.
@@ -62,7 +62,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the symbol's stroke or line.
 		/// Default: #666
 		/// </summary>
-		public Color? SymbolStroke { get; set; }
+		public string SymbolStroke { get; set; }
 
 		/// <summary>
 		/// The pixel stroke width of the symbol on the button.

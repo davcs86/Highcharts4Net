@@ -24,7 +24,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// Polar charts only. Whether to connect the ends of a line series plot across the extremes.
@@ -68,7 +68,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
 		/// </summary>
-		public Color? FillColor { get; set; }
+		public string FillColor { get; set; }
 
 		/// <summary>
 		/// Fill opacity for the area.
@@ -90,7 +90,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>.
 		/// </summary>
-		public Color? LineColor { get; set; }
+		public string LineColor { get; set; }
 
 		/// <summary>
 		/// Pixel with of the graph line.
@@ -109,12 +109,12 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
-		public Color? NegativeColor { get; set; }
+		public string NegativeColor { get; set; }
 
 		/// <summary>
 		/// A separate color for the negative part of the area.
 		/// </summary>
-		public Color? NegativeFillColor { get; set; }
+		public string NegativeFillColor { get; set; }
 
 		/// <summary>
 		/// Properties for each single point

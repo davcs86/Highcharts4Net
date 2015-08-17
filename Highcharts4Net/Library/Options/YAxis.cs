@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// When using an alternate grid color, a band is painted across the plot area between every other grid line.
 		/// </summary>
-		public Color? AlternateGridColor { get; set; }
+		public string AlternateGridColor { get; set; }
 
         /// <summary>
         /// <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href='#series.data'>name</a> and setting axis <a href='#xAxis.type'>type</a> to <code>'category'</code>.</p><p>Example:<pre>categories: ['Apples', 'Bananas', 'Oranges']</pre> Defaults to <code>null</code></p>
@@ -60,7 +60,7 @@ namespace Highcharts4Net.Library.Options
 		/// Color of the grid lines extending the ticks across the plot area.
 		/// Default: #C0C0C0
 		/// </summary>
-		public Color? GridLineColor { get; set; }
+		public string GridLineColor { get; set; }
 
 		/// <summary>
 		/// The dash or dot style of the grid lines. For possible values, see <a href='http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/'>this demonstration</a>.
@@ -97,7 +97,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the line marking the axis itself.
 		/// Default: #C0D0E0
 		/// </summary>
-		public Color? LineColor { get; set; }
+		public string LineColor { get; set; }
 
 		/// <summary>
 		/// The width of the line marking the axis itself.
@@ -119,7 +119,7 @@ namespace Highcharts4Net.Library.Options
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the maximum value of the Y axis.
 		/// Default: #102D4C
 		/// </summary>
-		//public Color? MaxColor { get; set; }
+		//public string MaxColor { get; set; }
 
 		/// <summary>
 		/// Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area.
@@ -139,7 +139,7 @@ namespace Highcharts4Net.Library.Options
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the minimum value of the Y axis.
 		/// Default: #EFEFFF
 		/// </summary>
-		//public Color? MinColor { get; set; }
+		//public string MinColor { get; set; }
 
 		/// <summary>
 		/// Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area.
@@ -161,7 +161,7 @@ namespace Highcharts4Net.Library.Options
 		/// Color of the minor, secondary grid lines.
 		/// Default: #E0E0E0
 		/// </summary>
-		public Color? MinorGridLineColor { get; set; }
+		public string MinorGridLineColor { get; set; }
 
 		/// <summary>
 		/// The dash or dot style of the minor grid lines. For possible values, see <a href='http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/'>this demonstration</a>.
@@ -179,7 +179,7 @@ namespace Highcharts4Net.Library.Options
 		/// Color for the minor tick marks.
 		/// Default: #A0A0A0
 		/// </summary>
-		public Color? MinorTickColor { get; set; }
+		public string MinorTickColor { get; set; }
 
 		/// <summary>
 		/// <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>'auto'</code>,  the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code>, minor ticks are not shown.</p> <p>On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10,  10 and 100 etc. A minorTickInterval of 'auto' on a log axis results in a best guess, attempting to enter approximately 5 minor ticks between each major tick.</p><p>On axes using <a href='#xAxis.categories'>categories</a>, minor ticks are not supported.</p>
@@ -283,7 +283,7 @@ namespace Highcharts4Net.Library.Options
 		/// Color for the main tick marks.
 		/// Default: #C0D0E0
 		/// </summary>
-		public Color? TickColor { get; set; }
+		public string TickColor { get; set; }
 
 		/// <summary>
 		/// <p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category.  Note that datetime axes are based on milliseconds, so for  example an interval of one day is expressed as <code>24 * 3600 * 1000</code>.</p> <p>On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.</p>

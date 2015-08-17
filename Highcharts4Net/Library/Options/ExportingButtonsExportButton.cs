@@ -15,7 +15,7 @@ namespace Highcharts4Net.Library.Options
 		/// See navigation.buttonOptions
 		/// => hoverSymbolFill. Defaults to #768F3E
 		/// </summary>
-		public Color? HoverSymbolFill { get; set; }
+		public string HoverSymbolFill { get; set; }
 
 		/// <summary>
 		/// A click handler callback to use on the button directly instead of the popup menu.
@@ -45,7 +45,7 @@ namespace Highcharts4Net.Library.Options
 		/// See navigation.buttonOptions
 		/// => symbolFill. Defaults to #A8BF77
 		/// </summary>
-		public Color? SymbolFill { get; set; }
+		public string SymbolFill { get; set; }
 
 		/// <summary>
 		/// The horizontal positioin of the button relative to the align

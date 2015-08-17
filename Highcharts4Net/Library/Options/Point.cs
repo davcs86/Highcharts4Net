@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Individual color for the point. Defaults to null
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// Individual data label for each point. The options are the same as the ones for 

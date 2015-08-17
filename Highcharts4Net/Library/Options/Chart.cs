@@ -35,7 +35,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the outer chart border.
 		/// Default: #4572A7
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The corner radius of the outer chart border.
@@ -138,7 +138,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the inner chart or plot area border.
 		/// Default: #C0C0C0
 		/// </summary>
-		public Color? PlotBorderColor { get; set; }
+		public string PlotBorderColor { get; set; }
 
 		/// <summary>
 		/// The pixel width of the plot area border.
@@ -178,7 +178,7 @@ namespace Highcharts4Net.Library.Options
 		/// The background color of the marker square when selecting (zooming in on) an area of the chart.
 		/// Default: rgba(69,114,167,0.25)
 		/// </summary>
-		public Color? SelectionMarkerFill { get; set; }
+		public string SelectionMarkerFill { get; set; }
 
 		/// <summary>
 		/// Whether to apply a drop shadow to the outer chart area. Requires that  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.

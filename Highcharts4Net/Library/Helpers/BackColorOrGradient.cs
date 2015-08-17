@@ -4,11 +4,11 @@ namespace Highcharts4Net.Library.Helpers
 {
     public class BackColorOrGradient
     {
-        public BackColorOrGradient(Color color) { Color = color; }
+        public BackColorOrGradient(string color) { Color = color; }
 
         public BackColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
-        public Color? Color { get; private set; }
+        public string Color { get; private set; }
 
         public Gradient Gradient { get; private set; }
     }

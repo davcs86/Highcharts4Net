@@ -284,7 +284,7 @@ namespace Highcharts4Net_demos.Controllers
         public static readonly Series Female = new Series
         {
             Name = "Female",
-            Color = Color.FromArgb(127, 223, 83, 83),
+            //Color = Color.FromArgb(127, 223, 83, 83).,
             Data = new Data(new object[,]
             {
                 { 161.2, 51.6 }, { 167.5, 59.0 }, { 159.5, 49.2 }, { 157.0, 63.0 }, { 155.8, 53.6 },
@@ -346,7 +346,7 @@ namespace Highcharts4Net_demos.Controllers
         public static readonly Series Male = new Series
         {
             Name = "Male",
-            Color = Color.FromArgb(127, 119, 152, 191),
+            //Color = Color.FromArgb(127, 119, 152, 191),
             Data = new Data(new object[,]
             {
                 { 174.0, 65.6 }, { 175.3, 71.8 }, { 193.5, 80.7 }, { 186.5, 72.6 }, { 187.2, 78.8 },

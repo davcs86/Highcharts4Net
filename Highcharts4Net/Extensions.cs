@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Text;
 using Highcharts4Net.Library;
@@ -58,22 +59,18 @@ namespace Highcharts4Net
                 sb.Append(value.Value.ToString(CultureInfo.InvariantCulture));
         }
 
-        /*public static void AppendHighchart(this StringBuilder sb, Highcharts chart)
+        public static string ToHexString(this Color c)
         {
-            foreach (KeyValuePair<string, string> jsVariable in chart.JsVariables)
-                sb.AppendLine("var {0} = {1};".FormatWith(jsVariable.Key, jsVariable.Value), 1);
+            return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
+        }
 
-            sb.AppendLine(chart.Name + " = new Highcharts.Chart({", 1);
-            sb.Append(chart.GetOptions(), 2);
-            sb.AppendLine("});", 1);
-
-            foreach (KeyValuePair<string, string> jsFunction in chart.JsFunctions)
-            {
-                sb.AppendLine();
-                sb.AppendLine(jsFunction.Key, 1);
-                sb.AppendLine(jsFunction.Value, 2);
-                sb.AppendLine("}", 1);
-            }
-        }*/
+        public static string ToRGBString(this Color c)
+        {
+            return "rgb(" + c.R + "," + c.G + "," + c.B + ")";
+        }
+        public static string ToRGBAString(this Color c)
+        {
+            return "rgba(" + c.R + "," + c.G + "," + c.B + "," + c.A + ")";
+        }
     }
 }

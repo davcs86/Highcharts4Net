@@ -15,9 +15,8 @@ namespace Highcharts4Net
         public string name { get; set; }
 
         public Chart Chart { get; }
-
+        public Credits Credits { get; set; }
         public Legend Legend { set; get; }
-
         public Title Title { set; get; }
         public Subtitle Subtitle { set; get; }
 
@@ -25,9 +24,7 @@ namespace Highcharts4Net
         public YAxis YAxis { get; set; }
 
         public Tooltip Tooltip{ get; set; }
-
         public PlotOptions PlotOptions { get; set; }
-
         public Series[] Series { get; set; }
 
         public ChartSettings()

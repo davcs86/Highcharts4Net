@@ -17,8 +17,8 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public AxisTitleAligns? Align { get; set; }
 
-		[Obsolete("Deprecated. Set the <code>text</code> to <code>null</code> to disable the title.")]
-		public string Enabled { get; set; }
+		//[Obsolete("Deprecated. Set the <code>text</code> to <code>null</code> to disable the title.")]
+		public bool Enabled { get; set; }
 
 		/// <summary>
 		/// The pixel distance between the axis labels or line and the title. Defaults to 0 for horizontal axes, 10 for vertical

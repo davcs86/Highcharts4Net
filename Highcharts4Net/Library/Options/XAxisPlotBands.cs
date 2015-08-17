@@ -16,7 +16,7 @@ namespace Highcharts4Net.Library.Options
         /// Border color for the plot band. Also requires <pre>borderWidth</pre> to be set.
         /// Default: null
         /// </summary>
-        public Color? BorderColor { get; set; }
+        public string BorderColor { get; set; }
 
         /// <summary>
         /// Border width for the plot band. Also requires <pre>borderColor</pre> to be set.
@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The color of the plot band.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// An object defining mouse events for the plot band. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>.

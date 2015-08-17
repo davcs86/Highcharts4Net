@@ -152,6 +152,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\logo.svg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\highslide-full.min.js" />
+    <Content Include="Content\js\highslide.config.min.js" />
+    <Content Include="Content\js\jquery-1.7.2.js" />
+    <Content Include="Content\js\modernizr.js" />
+    <Content Include="Content\js\script.js" />
+    <Content Include="Content\styles\bootstrap.min.css" />
+    <Content Include="Content\styles\font-awesome.css" />
+    <Content Include="Content\styles\highslide.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
@@ -166,7 +175,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Inicio\Index.cshtml" />
+    <Content Include="Views\Inicio\Demo.cshtml" />
     <Content Include="Views\Shared\_LayoutHighcharts.cshtml" />
     <Content Include="Views\AreaCharts\Basic.cshtml" />
   </ItemGroup>
@@ -181,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AreaCharts\Negative.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AreaCharts\Stacked.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the border of each waterfall column.
         /// Default: #333333
         /// </summary>
-        public Color? BorderColor { get; set; }
+        public string BorderColor { get; set; }
 
         /// <summary>
         /// Set the dash style of the border of all the point which lies on the level.
@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
         /// </summary>
-        public Color? Color { get; set; }
+        public string Color { get; set; }
 
         public PlotOptionsTreemapDataLabels DataLabels { get; set; }
 

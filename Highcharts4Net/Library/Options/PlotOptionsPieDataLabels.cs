@@ -17,7 +17,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The border color for the data label. Defaults to <code>undefined</code>.
 		/// </summary>
-		public Color? BorderColor { get; set; }
+		public string BorderColor { get; set; }
 
 		/// <summary>
 		/// The border radius in pixels for the data label.
@@ -34,13 +34,13 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The text color for the data labels. Defaults to <code>null</code>.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.
 		/// Default: {point.color}
 		/// </summary>
-		public Color? ConnectorColor { get; set; }
+		public string ConnectorColor { get; set; }
 
 		/// <summary>
 		/// The distance from the data label to the connector.

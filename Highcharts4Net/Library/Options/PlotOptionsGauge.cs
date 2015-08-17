@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
-		public Color? Color { get; set; }
+		public string Color { get; set; }
 
 		/// <summary>
 		/// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -66,7 +66,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
-		public Color? NegativeColor { get; set; }
+		public string NegativeColor { get; set; }
 
 		/// <summary>
 		/// Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.

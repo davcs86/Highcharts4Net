@@ -13,8 +13,6 @@ namespace Highcharts4Net_demos.Controllers
 {
     public class AreaChartsController : Controller
     {
-        //
-        // GET: /Inicio/
 
         public ActionResult Basic()
         {
@@ -22,5 +20,16 @@ namespace Highcharts4Net_demos.Controllers
             return View();
         }
 
+        public ActionResult Negative()
+        {
+
+            return View();
+        }
+
+        public ActionResult Stacked()
+        {
+
+            return View();
+        }
     }
 }
