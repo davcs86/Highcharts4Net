@@ -11,18 +11,18 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
-    public class HighchartsRender
+    public class HighchartsRender<T>
     {
-        private static ChartSettings ChartSettings;
+        private static ChartSettings<T> ChartSettings;
 
-        internal void CreateChart(Action<ChartSettings> getSettings, ChartTypes? Chart_Type)
+        internal void CreateChart(Action<ChartSettings<T>> getSettings, ChartTypes? chart_Type)
         {
-            ChartSettings = new ChartSettings();
+            ChartSettings = new ChartSettings<T>();
 
             getSettings(ChartSettings);
 
-            if (Chart_Type!=null)
-                ChartSettings.Chart.Type = Chart_Type;
+            if (chart_Type != null)
+                ChartSettings.Chart.Type = chart_Type;
 
         }
 

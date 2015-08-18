@@ -10,6 +10,7 @@
         Area,
         Arearange,
         Areaspline,
+        Areasplinerange,
         Bar,
         Boxplot,
         Bubble,

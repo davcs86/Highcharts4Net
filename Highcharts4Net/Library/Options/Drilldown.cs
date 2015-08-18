@@ -9,7 +9,7 @@ namespace Highcharts4Net.Library.Options
 	/// <summary>
 	/// <p>Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices.</p><p>The drilldown feature requires the <code>drilldown.js</code> file to be loaded, found in the <code>modules</code> directory of the download package, or online at <a href='http://code.highcharts.com/modules/drilldown.js'>code.highcharts.com/modules/drilldown.js</a>.</p>
 	/// </summary>
-	public class Drilldown
+	public class Drilldown<T>
 	{
 		/// <summary>
 		/// Additional styles to apply to the X axis label for a point that has drilldown data. By default it is underlined and blue to invite to interaction. Defaults to:<pre>activeAxisLabelStyle: { cursor: 'pointer', color: '#0d233a', fontWeight: 'bold', textDecoration: 'underline'}</pre>
@@ -37,7 +37,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// An array of series configurations for the drill down. Each series configuration uses the same syntax as the <a href='#series'>series</a> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.
 		/// </summary>
-		public Series[] Series { get; set; }
+		public T[] Series { get; set; }
 
 	}
 

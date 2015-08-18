@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.UI;
 using Highcharts4Net.Library.Enums;
+using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
@@ -17,12 +18,10 @@ namespace Highcharts4Net
     {
 
         private static HtmlHelper _helper;
-        private static HighchartsRender _chart;
 
         public ExtensionsLibrary(HtmlHelper helper)
         {
             _helper = helper;
-            _chart = new HighchartsRender();
         }
         /// <summary>
         /// Returns the script tag to include Highcharts-all.js in your page.
@@ -36,30 +35,41 @@ namespace Highcharts4Net
                                   "'></script>");
         }
 
-        public HighchartsRender AreaChart(Action<ChartSettings> settings)
+        public HighchartsRender<SeriesArea> AreaChart(Action<ChartSettings<SeriesArea>> settings)
         {
-            _chart.CreateChart(settings, ChartTypes.Area);
-            return _chart;
+            var chart = new HighchartsRender<SeriesArea>();
+            chart.CreateChart(settings, ChartTypes.Area);
+            return chart;
         }
 
-        public HighchartsRender ArearangeChart(Action<ChartSettings> settings)
+        public HighchartsRender<SeriesArearange> ArearangeChart(Action<ChartSettings<SeriesArearange>> settings)
         {
-            _chart.CreateChart(settings, ChartTypes.Arearange);
-            return _chart;
+            var chart = new HighchartsRender<SeriesArearange>();
+            chart.CreateChart(settings, ChartTypes.Arearange);
+            return chart;
         }
 
-        public HighchartsRender AreasplineChart(Action<ChartSettings> settings)
+        public HighchartsRender<SeriesAreaspline> AreasplineChart(Action<ChartSettings<SeriesAreaspline>> settings)
         {
-            _chart.CreateChart(settings, ChartTypes.Areaspline);
-            return _chart;
+            var chart = new HighchartsRender<SeriesAreaspline>();
+            chart.CreateChart(settings, ChartTypes.Areaspline);
+            return chart;
         }
 
-        public HighchartsRender BarChart(Action<ChartSettings> settings)
+        public HighchartsRender<SeriesAreasplinerange> AreasplinerangeChart(Action<ChartSettings<SeriesAreasplinerange>> settings)
         {
-            _chart.CreateChart(settings, ChartTypes.Bar);
-            return _chart;
+            var chart = new HighchartsRender<SeriesAreasplinerange>();
+            chart.CreateChart(settings, ChartTypes.Areasplinerange);
+            return chart;
         }
-
+        
+        public HighchartsRender<SeriesBar> BarChart(Action<ChartSettings<SeriesBar>> settings)
+        {
+            var chart = new HighchartsRender<SeriesBar>();
+            chart.CreateChart(settings, ChartTypes.Bar);
+            return chart;
+        }
+        /*
         public HighchartsRender BoxplotChart(Action<ChartSettings> settings)
         {
             _chart.CreateChart(settings, ChartTypes.Boxplot);
@@ -165,6 +175,6 @@ namespace Highcharts4Net
         public static HighchartsRender GenericChart(Action<ChartSettings> settings)
         {
             return _chart;
-        }
+        }*/
     }
 }
