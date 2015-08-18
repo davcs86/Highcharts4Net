@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web;
 using Highcharts4Net.fastJSON;
-using Highcharts4Net.Library;
-using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
-using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
@@ -15,15 +9,13 @@ namespace Highcharts4Net
     {
         private static ChartSettings<T> ChartSettings;
 
-        internal void CreateChart(Action<ChartSettings<T>> getSettings, ChartTypes? chart_Type)
+        internal HighchartsRender(Action<ChartSettings<T>> getSettings)
         {
             ChartSettings = new ChartSettings<T>();
 
             getSettings(ChartSettings);
 
-            if (chart_Type != null)
-                ChartSettings.Chart.Type = chart_Type;
-
+            ChartSettings.FixChartType();
         }
 
         private static string ToStringSerializer(object data)
@@ -46,7 +38,7 @@ namespace Highcharts4Net
 
             var chartOptions = JSON.ToJSON(ChartSettings,
                 new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true, SerializeToLowerFirstLetterEnums = true});
-            var chartContainer = "<div id='{0}'></div>\n<script>\n\tvar {1};\n\twindow.onload=function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}};\n</script>".FormatWith(ChartSettings.Chart.RenderTo, ChartSettings.name, chartOptions);
+            var chartContainer = "<div id='{0}'></div>\n<script>\n\tif(typeof({3})=='undefined'){{var {3} = [];}};\n\tvar {1};\n\t{3}.push(function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}});\n</script>".FormatWith(ChartSettings.Chart.RenderTo, ChartSettings.name, chartOptions, "hc4n_arr");
             return new HtmlString(chartContainer);
         }
 

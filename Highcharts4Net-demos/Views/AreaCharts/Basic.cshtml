@@ -67,8 +67,7 @@
             }
         }
     };
-    settings.Series = new[]
-    {
+    settings.Series.Add(
         new SeriesArea
         {
             Name = "USA",
@@ -82,7 +81,8 @@
                 22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
                 10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104
             })
-        },
+        });
+    settings.Series.Add(
         new SeriesArea
         {
             Name = "USSR/Russia",
@@ -96,71 +96,70 @@
                 35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
                 21000, 20000, 19000, 18000, 18000, 17000, 16000
             })
-        }
-    };
+        });
 }).Render()
 
 @section source_code{
 @@Html.Highcharts4Net().AreaChart(settings =>
 {
-    settings.Chart.ClassName = "highcharts-container";
+        settings.Chart.ClassName = "highcharts-container";
 
-    settings.Title = new Title
-    {
-        Text = "US and USSR nuclear stockpiles"
-    };
-
-    settings.Subtitle = new Subtitle
-    {
-        Text = "Source: &lt;a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com&lt;/a>"
-    };
-
-    settings.XAxis = new XAxis
-    {
-        AllowDecimals = false,
-        Labels = new XAxisLabels
+        settings.Title = new Title
         {
-            Formatter = @@"function () {
+            Text = "US and USSR nuclear stockpiles"
+        };
+
+        settings.Subtitle = new Subtitle
+        {
+            Text = "Source: &lt;a href=\"http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf\">thebulletin.metapress.com&lt;/a>"
+        };
+
+        settings.XAxis = new XAxis
+        {
+            AllowDecimals = false,
+            Labels = new XAxisLabels
+            {
+                Formatter = @@"function () {
                     return this.value; // clean, unformatted number for year
                 }"
-        }
-    };
-    settings.YAxis = new YAxis
-    {
-        AllowDecimals = false,
-        Labels = new YAxisLabels
+            }
+        };
+        settings.YAxis = new YAxis
         {
-            Formatter = @@"function () {
+            AllowDecimals = false,
+            Labels = new YAxisLabels
+            {
+                Formatter = @@"function () {
                     return this.value / 1000 + 'k';
                 }"
-        }
-    };
-    settings.Tooltip = new Tooltip
-    {
-        PointFormat = "{series.name} produced &lt;b>{point.y:,.0f}&lt;/b>&lt;br />warheads in {point.x}"
-    };
-    settings.PlotOptions = new PlotOptions
-    {
-        Area = new PlotOptionsArea
+            }
+        };
+        settings.Tooltip = new Tooltip
         {
-            PointStart = new PointStart(1940),
-            Marker = new PlotOptionsAreaMarker
+            PointFormat = "{series.name} produced &lt;b>{point.y:,.0f}&lt;/b>&lt;br />warheads in {point.x}"
+        };
+        settings.PlotOptions = new PlotOptions
+        {
+            Area = new PlotOptionsArea
             {
-                Enabled = false,
-                Symbol = "circle",
-                Radius = 2,
-                States = new PlotOptionsAreaMarkerStates
+                PointStart = new PointStart(1940),
+                Marker = new PlotOptionsAreaMarker
                 {
-                    Hover = new PlotOptionsAreaMarkerStatesHover
+                    Enabled = false,
+                    Symbol = "circle",
+                    Radius = 2,
+                    States = new PlotOptionsAreaMarkerStates
                     {
-                        Enabled = true
+                        Hover = new PlotOptionsAreaMarkerStatesHover
+                        {
+                            Enabled = true
+                        }
                     }
                 }
             }
-        }
-    };
-    settings.Series = new[]
-    {
+        };
+        settings.Series = new[]
+        {
         new Series
         {
             Name = "USA",
@@ -190,5 +189,5 @@
             })
         }
     };
-}).Render()
+    }).Render()
 }

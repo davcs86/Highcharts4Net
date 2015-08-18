@@ -9,7 +9,7 @@ namespace Highcharts4Net.Library.Options
 	/// <summary>
 	/// The actual series to append to the chart. In addition to  the members listed below, any member of the <code>plotOptions</code> for that specific type of plot can be added to a series individually. For example, even though a general <code>lineWidth</code> is specified in <code>plotOptions.series</code>, an individual <code>lineWidth</code> can be specified for each series.
 	/// </summary>
-	public class SeriesArea: OptionsAreaBase, ISeries
+	public class SeriesColumnrange: OptionsColumnrangeBase, ISeries
 	{
 
 		/// <summary>
@@ -42,10 +42,10 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		public string Stack { get; set; }
 
-        /// <summary>
-        /// The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
-        /// </summary>
-        public ChartTypes Type => ChartTypes.Area;
+		/// <summary>
+		/// The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
+		/// </summary>
+		public ChartTypes Type => ChartTypes.Columnrange;
 
 	    /// <summary>
 		/// When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href='#xAxis.id'>axis id</a> or the index of the axis in the xAxis array, with 0 being the first.

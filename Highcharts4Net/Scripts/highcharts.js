@@ -565,3 +565,22 @@ v?t.toColor(v,m):m.color||r.color)m.color=v})}};r.plotOptions.heatmap=E(r.plotOp
 supportsDrilldown:!0,getExtremesFromAll:!0,directTouch:!0,init:function(){var m;D.scatter.prototype.init.apply(this,arguments);m=this.options;this.pointRange=m.pointRange=x(m.pointRange,m.colsize||1);this.yAxis.axisPointRange=m.rowsize||1},translate:function(){var r=this.options,l=this.xAxis,t=this.yAxis;this.generatePoints();m(this.points,function(m){var v=(r.colsize||1)/2,x=(r.rowsize||1)/2,C=Math.round(l.len-l.translate(m.x-v,0,1,0,1)),v=Math.round(l.len-l.translate(m.x+v,0,1,0,1)),D=Math.round(t.translate(m.y-
 x,0,1,0,1)),x=Math.round(t.translate(m.y+x,0,1,0,1));m.plotX=m.clientX=(C+v)/2;m.plotY=(D+x)/2;m.shapeType="rect";m.shapeArgs={x:Math.min(C,v),y:Math.min(D,x),width:Math.abs(v-C),height:Math.abs(x-D)}});this.translateColors();this.chart.hasRendered&&m(this.points,function(l){l.shapeArgs.fill=l.options.color||l.color})},drawPoints:D.column.prototype.drawPoints,animate:G,getBox:G,drawLegendSymbol:T.drawRectangle,getExtremes:function(){S.prototype.getExtremes.call(this,this.valueData);this.valueMin=
 this.dataMin;this.valueMax=this.dataMax;S.prototype.getExtremes.call(this)}}))})(Highcharts); 
+
+// Cross Browser helper to addEventListener.
+var cb_addEventListener = function (obj, evt, fnc) {
+    // W3C model
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fnc, false);
+        return true;
+    } else if (obj.attachEvent) {
+        // Microsoft model
+        return obj.attachEvent('on' + evt, fnc);
+    }
+};
+
+cb_addEventListener(window,"load",function(){
+    for (var i in hc4n_arr) {
+        alert(i);
+        hc4n_arr[i]();
+    }
+});

@@ -76,7 +76,7 @@
     };
 }
 
-@Html.Highcharts4Net().ArearangeChart(settings =>
+@Html.Highcharts4Net().MultiTypeChart(settings =>
 {
     settings.Title = new Title
     {
@@ -101,15 +101,31 @@
         ValueSuffix = " °C"
     };
 
-    settings.Series = new[]
-    {
-        new Series
+    settings.Series.Add(
+        new SeriesLine
         {
             Name = "Temperatures",
             Data = new Data(averages),
             ZIndex = 1,
-        }
-    };
+            Marker = new PlotOptionsLineMarker
+            {
+                FillColor = Color.White.ToString(),
+                LineWidth = 2,
+                LineColor = "Highcharts.getOptions().colors[0]"
+            }
+        });
+
+    settings.Series.Add(
+        new SeriesArearange
+        {
+            Name = "Range",
+            Data = new Data(ranges),
+            LineWidth = 0,
+            LinkedTo = ":previous",
+            Color = "Highcharts.getOptions().colors[0]",
+            FillOpacity = 0.3,
+            ZIndex = 0,
+        });
 }).Render()
 
 @section source_code{
