@@ -16,7 +16,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: black
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+		public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The length of the dial's base part, relative to the total radius or length of the dial. 

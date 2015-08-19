@@ -18,7 +18,7 @@ namespace Highcharts4Net.Library.Options
 		/// The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient FillColor { get; set; }
+		public ColorOrGradient FillColor { get; set; }
 
         /// <summary>
         /// Image markers only. Set the image height explicitly. When using this option, a width must also be set. 

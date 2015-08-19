@@ -23,7 +23,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: rgba(255, 255, 255, 0.85)
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+		public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The color of the tooltip border. When <code>null</code>, the border takes the color of the corresponding series or point.

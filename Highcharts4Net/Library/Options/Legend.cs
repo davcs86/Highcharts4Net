@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// The background color of the legend.
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+		public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The color of the drawn border around the legend.

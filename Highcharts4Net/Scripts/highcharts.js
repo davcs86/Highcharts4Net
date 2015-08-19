@@ -580,7 +580,6 @@ var cb_addEventListener = function (obj, evt, fnc) {
 
 cb_addEventListener(window,"load",function(){
     for (var i in hc4n_arr) {
-        alert(i);
         hc4n_arr[i]();
     }
 });

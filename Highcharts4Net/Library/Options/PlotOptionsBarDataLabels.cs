@@ -24,7 +24,7 @@ namespace Highcharts4Net.Library.Options
 		/// The background color or gradient for the data label. Defaults to <code>undefined</code>.
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+		public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The border color for the data label. Defaults to <code>undefined</code>.

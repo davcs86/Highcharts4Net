@@ -34,7 +34,7 @@ namespace Highcharts4Net
             JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
-            JSON.RegisterCustomType(typeof(BackColorOrGradient), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
 
             var chartOptions = JSON.ToJSON(ChartSettings,
                 new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true, SerializeToLowerFirstLetterEnums = true});

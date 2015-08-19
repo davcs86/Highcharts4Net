@@ -29,7 +29,7 @@ namespace Highcharts4Net.Library.Options
         /// The background color or gradient for the outer chart area.
         /// Default: #FFFFFF
         /// </summary>
-        public BackColorOrGradient BackgroundColor { get; set; }
+        public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The color of the outer chart border.
@@ -127,7 +127,7 @@ namespace Highcharts4Net.Library.Options
 		/// The background color or gradient for the plot area.
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient PlotBackgroundColor { get; set; }
+		public ColorOrGradient PlotBackgroundColor { get; set; }
 
 		/// <summary>
 		/// The URL for an image to use as the plot background. To set an image as the background for the entire chart, set a CSS background image to the container element. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server.

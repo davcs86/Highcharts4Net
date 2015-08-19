@@ -109,9 +109,9 @@
             ZIndex = 1,
             Marker = new PlotOptionsLineMarker
             {
-                FillColor = Color.White.ToString(),
+                FillColor = Color.White.ToHexString(),
                 LineWidth = 2,
-                LineColor = "Highcharts.getOptions().colors[0]"
+                LineColor = new ColorOrGradient("Highcharts.getOptions().colors[0]")
             }
         });
 
@@ -122,7 +122,7 @@
             Data = new Data(ranges),
             LineWidth = 0,
             LinkedTo = ":previous",
-            Color = "Highcharts.getOptions().colors[0]",
+            Color = new ColorOrGradient("Highcharts.getOptions().colors[0]"),
             FillOpacity = 0.3,
             ZIndex = 0,
         });

@@ -6,7 +6,7 @@ namespace Highcharts4Net.Library.Helpers
     public class BackgroundObject
     {
         
-        public BackColorOrGradient BackgroundColor { get; set; }
+        public ColorOrGradient BackgroundColor { get; set; }
 
         public PercentageOrPixel InnerRadius { get; set; }
 

@@ -63,7 +63,7 @@ namespace Highcharts4Net.Library.Options
 		/// </summary>
 		Number? ZIndex { get; set; }
 
-		string Color { get; set; }
+		ColorOrGradient Color { get; set; }
 
 		string UpColor { get; set; }
 

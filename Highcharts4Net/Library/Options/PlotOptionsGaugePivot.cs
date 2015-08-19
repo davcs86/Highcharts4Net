@@ -16,7 +16,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: black
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient BackgroundColor { get; set; }
+		public ColorOrGradient BackgroundColor { get; set; }
 
 		/// <summary>
 		/// The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.

@@ -3,11 +3,11 @@ using Highcharts4Net.fastJSON;
 
 namespace Highcharts4Net.Library.Helpers
 {
-    public class BackColorOrGradient
+    public class ColorOrGradient
     {
-        public BackColorOrGradient(string color) { Color = color; }
+        public ColorOrGradient(string color) { Color = color; }
 
-        public BackColorOrGradient(Gradient gradient) { Gradient = gradient; }
+        public ColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
         public string Color { get; }
 

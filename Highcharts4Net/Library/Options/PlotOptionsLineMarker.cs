@@ -29,7 +29,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
         /// Default: #FFFFFF
         /// </summary>
-        public string LineColor { get; set; }
+        public ColorOrGradient LineColor { get; set; }
 
 		/// <summary>
 		/// The width of the point marker's outline.

@@ -69,7 +69,7 @@ namespace Highcharts4Net.Library.Options
 		/// Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
 		/// </summary>
 		//[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public BackColorOrGradient FillColor { get; set; }
+		public ColorOrGradient FillColor { get; set; }
 
 		/// <summary>
 		/// Fill opacity for the area.
