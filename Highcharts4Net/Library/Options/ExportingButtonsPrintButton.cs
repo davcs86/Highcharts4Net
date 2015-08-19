@@ -35,7 +35,7 @@ namespace Highcharts4Net.Library.Options
 		/// See navigation.buttonOptions
 		/// => symbolFill. Defaults to #B5C9DF
 		/// </summary>
-		public string SymbolFill { get; set; }
+		public new string SymbolFill { get; set; }
 
 		/// <summary>
 		/// The horizontal positioin of the button relative to the align
