@@ -5,13 +5,21 @@ namespace Highcharts4Net.Library.Helpers
 {
     public class ColorOrGradient
     {
-        public ColorOrGradient(string color) { Color = color; }
+        internal ColorOrGradient()
+        {
+        }
+
+        public ColorOrGradient(LiteralString rawColor) { Color = rawColor.ToString(); }
+
+        public ColorOrGradient(string color) { Color = string.Format("\"{0}\"",color); }
 
         public ColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
-        public string Color { get; }
+        public ColorOrGradient(Color color) { Color = string.Format("\"{0}\"",color.ToRGBAString()); }
 
-        public Gradient Gradient { get; }
+        private string Color { get; }
+
+        private Gradient Gradient { get; }
 
         public override string ToString()
         {

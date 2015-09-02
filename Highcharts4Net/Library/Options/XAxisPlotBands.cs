@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The color of the plot band.
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// An object defining mouse events for the plot band. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>.

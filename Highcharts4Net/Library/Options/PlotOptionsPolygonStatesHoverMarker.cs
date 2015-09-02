@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
         /// </summary>
-        public string FillColor { get; set; }
+        public ColorOrGradient FillColor { get; set; }
 
         /// <summary>
         /// Image markers only. Set the image height explicitly. When using this option, a width must also be set. 

@@ -34,7 +34,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The text color for the data labels. Defaults to <code>null</code>.
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.

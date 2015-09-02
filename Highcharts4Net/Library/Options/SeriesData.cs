@@ -15,7 +15,7 @@ namespace Highcharts4Net.Library.Options
 		/// Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
 		/// Default: undefined
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// Individual data label for each point. The options are the same as the ones for  <a class='internal' href='#plotOptions.series.dataLabels'>plotOptions.series.dataLabels</a>

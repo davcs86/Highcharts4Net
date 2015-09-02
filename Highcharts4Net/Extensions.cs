@@ -10,7 +10,7 @@ namespace Highcharts4Net
 {
     public static class Extensions
     {
-        public static string FormatWith(this string format, params object[] parameters) { return string.Format(format, parameters); }
+        /*public static string FormatWith(this string format, params object[] parameters) { return string.Format(format, parameters); }
 
         public static string FormatWith(this string format, int? value)
         {
@@ -57,7 +57,7 @@ namespace Highcharts4Net
                 sb.Append(", ");
             if (value != null)
                 sb.Append(value.Value.ToString(CultureInfo.InvariantCulture));
-        }
+        }*/
 
         public static string ToHexString(this Color c)
         {
@@ -70,7 +70,7 @@ namespace Highcharts4Net
         }
         public static string ToRGBAString(this Color c)
         {
-            return "rgba(" + c.R + "," + c.G + "," + c.B + "," + decimal.Round(c.A/100.0m,2).ToString("N2", CultureInfo.InvariantCulture) + ")";
+            return "rgba(" + c.R + "," + c.G + "," + c.B + "," + decimal.Round(c.A/255.0m,2).ToString("N2", CultureInfo.InvariantCulture) + ")";
         }
     }
 }

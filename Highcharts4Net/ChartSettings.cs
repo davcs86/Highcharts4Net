@@ -1,87 +1,240 @@
 ﻿using System;
 using System.Collections.Generic;
 using Highcharts4Net.Library.Enums;
+using Highcharts4Net.Library.Helpers;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
-    public class ChartSettings<T>
+    internal sealed class HighchartObj<U>
     {
-        [System.Xml.Serialization.XmlIgnore]
-        public string name { get; set; }
-
-        public Chart Chart { get; }
-        public Credits Credits { get; set; }
-        public Legend Legend { set; get; }
-        public Title Title { set; get; }
-        public Subtitle Subtitle { set; get; }
-
-        public XAxis XAxis { get; set; }
-        public YAxis YAxis { get; set; }
-
-        public Tooltip Tooltip{ get; set; }
+        public Chart Chart { internal set; get; }
+        public List<ColorOrGradient> Colors { get; set; }
+        public Credits Credits { get; set; } //
+        public DataOptions Data { get; set; } //
+        public Drilldown<U> Drilldown { set; get; } // 
+        public Exporting Exporting { set; get; } // 
+        public Labels Labels { set; get; } //
+        public Legend Legend { set; get; } //
+        public Loading Loading { set; get; } //
+        public Navigation Navigation { set; get; } //
+        public NoData NoData { set; get; } //
+        public Pane Pane { set; get; } //
         public PlotOptions PlotOptions { get; set; }
-        public List<T> Series { get; set; }
+        public List<U> Series { get; set; }
+        public Subtitle Subtitle { set; get; }
+        public Title Title { set; get; }
+        public Tooltip Tooltip { get; set; }
+        public List<XAxis> XAxis { get; set; }
+        public List<YAxis> YAxis { get; set; }
+    }
 
-        public ChartSettings()
+    public sealed class HighchartSettings<T>
+    {
+        public delegate void ChartSettings(Chart s);
+        //public delegate void ColorsSettings(Colors s);
+        public delegate void CreditsSettings(Credits s);
+        public delegate void DataSettings(DataOptions s);
+
+        public delegate void DrilldownSettings<V>(Drilldown<V> s);
+        public delegate void ExportingSettings(Exporting s);
+        public delegate void LabelsSettings(Labels s);
+        public delegate void LegendSettings(Legend s);
+        public delegate void LoadingSettings(Loading s);
+        public delegate void NavigationSettings(Navigation s);
+        public delegate void NoDataSettings(NoData s);
+        public delegate void PaneSettings(Pane s);
+        public delegate void SerieSettings<V>(V s);
+
+        public delegate void TitleSettings(Title s);
+        public delegate void SubtitleSettings(Subtitle s);
+        public delegate void XAxisSettings(XAxis s);
+        public delegate void YAxisSettings(YAxis s);
+        public delegate void TooltipSettings(Tooltip s);
+        public delegate void PlotOptionsSettings(PlotOptions s);
+
+        private HighchartObj<T> _chart;
+
+        public void AddColor(ColorOrGradient s)
         {
-            Chart = new Chart();
-            Series = new List<T>();
-            name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
+            if (_chart.Colors == null)
+            {
+                _chart.Colors = new List<ColorOrGradient>();
+            }
+            _chart.Colors.Add(s);
+        }
+
+        public void AddXAxis(XAxisSettings s)
+        {
+            if (_chart.XAxis == null)
+            {
+                _chart.XAxis = new List<XAxis>();
+            }
+            var xAxis = new XAxis();
+            s(xAxis);
+            _chart.XAxis.Add(xAxis);
+        }
+
+        public void AddYAxis(YAxisSettings s)
+        {
+            if (_chart.YAxis == null)
+            {
+                _chart.YAxis = new List<YAxis>();
+            }
+            var yAxis = new YAxis();
+            s(yAxis);
+            _chart.YAxis.Add(yAxis);
+        }
+
+        public void AddSeries(SerieSettings<T> s)
+        {
+            if (_chart.Series == null)
+            {
+                _chart.Series = new List<T>();
+            }
+            var serie = (T)Activator.CreateInstance(typeof(T));
+            s(serie);
+            _chart.Series.Add(serie);
+        }
+
+        public string Name { get; set; }
+
+        public void SetChart(ChartSettings s)
+        {
+            s(_chart.Chart);
+        }
+
+        public void SetCredits(CreditsSettings s)
+        {
+            _chart.Credits=new Credits();
+            s(_chart.Credits);
+        }
+
+        public void SetData(DataSettings s)
+        {
+            _chart.Data = new DataOptions();
+            s(_chart.Data);
+        }
+
+        public void SetDrillDown(DrilldownSettings<T> s)
+        {
+            _chart.Drilldown = new Drilldown<T>();
+            s(_chart.Drilldown);
+        }
+
+
+
+
+
+        public void SetLegend(LegendSettings s)
+        {
+            _chart.Legend = new Legend();
+            s(_chart.Legend);
+        }
+
+        public void SetTitle(TitleSettings s)
+        {
+            _chart.Title = new Title();
+            s(_chart.Title);
+        }
+
+        public void SetTooltip(TooltipSettings s)
+        {
+            _chart.Tooltip = new Tooltip();
+            s(_chart.Tooltip);
+        }
+
+        public void SetSubtitle(SubtitleSettings s)
+        {
+            _chart.Subtitle = new Subtitle();
+            s(_chart.Subtitle);
+        }
+
+        public void SetPlotOptions(PlotOptionsSettings s)
+        {
+            _chart.PlotOptions = new PlotOptions();
+            s(_chart.PlotOptions);
+        }
+
+         internal HighchartObj<T> GetChart()
+         {
+             return _chart;
+         }
+
+        public HighchartSettings()
+        {
+            _chart = new HighchartObj<T>{ Chart = new Chart()};
+
+            Name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
         }
 
         internal void FixChartType()
         {
-            Chart.RenderTo = "{0}_container".FormatWith(name);
+            _chart.Chart.RenderTo = string.Format("{0}_container",Name);
 
             Type chartType = typeof(T);
 
             if (chartType == typeof(SeriesArea))
-                Chart.Type = ChartTypes.Area;
+                _chart.Chart.Type = ChartTypes.Area;
             else if (chartType == typeof(SeriesArearange))
-                Chart.Type = ChartTypes.Arearange;
+                _chart.Chart.Type = ChartTypes.Arearange;
             else if (chartType == typeof(SeriesAreaspline))
-                Chart.Type = ChartTypes.Areaspline;
+                _chart.Chart.Type = ChartTypes.Areaspline;
             else if (chartType == typeof(SeriesAreasplinerange))
-                Chart.Type = ChartTypes.Areasplinerange;
+                _chart.Chart.Type = ChartTypes.Areasplinerange;
             else if (chartType == typeof(SeriesBar))
-                Chart.Type = ChartTypes.Bar;
+                _chart.Chart.Type = ChartTypes.Bar;
             else if (chartType == typeof(SeriesBoxplot))
-                Chart.Type = ChartTypes.Boxplot;
+                _chart.Chart.Type = ChartTypes.Boxplot;
             else if (chartType == typeof(SeriesBubble))
-                Chart.Type = ChartTypes.Bubble;
+                _chart.Chart.Type = ChartTypes.Bubble;
             else if (chartType == typeof(SeriesColumn))
-                Chart.Type = ChartTypes.Column;
+                _chart.Chart.Type = ChartTypes.Column;
             else if (chartType == typeof(SeriesColumnrange))
-                Chart.Type = ChartTypes.Columnrange;
+                _chart.Chart.Type = ChartTypes.Columnrange;
             else if (chartType == typeof(SeriesErrorbar))
-                Chart.Type = ChartTypes.Errorbar;
+                _chart.Chart.Type = ChartTypes.Errorbar;
             else if (chartType == typeof(SeriesFunnel))
-                Chart.Type = ChartTypes.Funnel;
+                _chart.Chart.Type = ChartTypes.Funnel;
             else if (chartType == typeof(SeriesGauge))
-                Chart.Type = ChartTypes.Gauge;
+                _chart.Chart.Type = ChartTypes.Gauge;
             else if (chartType == typeof(SeriesHeatmap))
-                Chart.Type = ChartTypes.Heatmap;
-            else if (chartType == typeof(SeriesLine)) 
-                Chart.Type = ChartTypes.Line;
+                _chart.Chart.Type = ChartTypes.Heatmap;
+            else if (chartType == typeof(SeriesLine))
+                _chart.Chart.Type = ChartTypes.Line;
             else if (chartType == typeof(SeriesPie))
-                Chart.Type = ChartTypes.Pie;
+                _chart.Chart.Type = ChartTypes.Pie;
             else if (chartType == typeof(SeriesPolygon))
-                Chart.Type = ChartTypes.Polygon;
+                _chart.Chart.Type = ChartTypes.Polygon;
             else if (chartType == typeof(SeriesPyramid))
-                Chart.Type = ChartTypes.Pyramid;
+                _chart.Chart.Type = ChartTypes.Pyramid;
             else if (chartType == typeof(SeriesScatter))
-                Chart.Type = ChartTypes.Scatter;
+                _chart.Chart.Type = ChartTypes.Scatter;
             else if (chartType == typeof(SeriesSolidgauge))
-                Chart.Type = ChartTypes.Solidgauge;
+                _chart.Chart.Type = ChartTypes.Solidgauge;
             else if (chartType == typeof(SeriesSpline))
-                Chart.Type = ChartTypes.Spline;
+                _chart.Chart.Type = ChartTypes.Spline;
             else if (chartType == typeof(SeriesTreemap))
-                Chart.Type = ChartTypes.Treemap;
+                _chart.Chart.Type = ChartTypes.Treemap;
             else if (chartType == typeof (SeriesWaterfall))
-                Chart.Type = ChartTypes.Waterfall;
+                _chart.Chart.Type = ChartTypes.Waterfall;
 
         }
 
+        public bool FixDataCSV()
+        {
+            if (_chart.Data != null)
+            {
+                if (!string.IsNullOrWhiteSpace(_chart.Data.getJSONP))
+                {
+                    _chart.Data.Csv = Name + "_data";
+                    return true;
+                }
+                _chart.Data.Csv = string.Format("\"{0}\"", Name);
+            }
+            return false;
+        }
     }
+
+    
 }

@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// The main color of the bars. This can be overridden by <a href='#plotOptions.errorbar.stemColor'>stemColor</a> and <a href='#plotOptions.errorbar.whiskerColor'>whiskerColor</a> individually. 
 		/// Default: #000000
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point.

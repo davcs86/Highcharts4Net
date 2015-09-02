@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// Whether to connect a graph line across null points.
@@ -68,7 +68,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
 		/// </summary>
-		public string FillColor { get; set; }
+		public ColorOrGradient FillColor { get; set; }
 
 		/// <summary>
 		/// Fill opacity for the area.

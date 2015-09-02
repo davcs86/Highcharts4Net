@@ -50,7 +50,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The text color for the data labels. Defaults to <code>null</code>.
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the <a href='#plotOptions.series.dataLabels.overflow'>overflow</a> option.

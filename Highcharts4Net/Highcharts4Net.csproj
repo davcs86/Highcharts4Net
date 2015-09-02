@@ -143,6 +143,7 @@
     <Compile Include="Library\Options\ChartResetZoomButton.cs" />
     <Compile Include="Library\Options\Colors.cs" />
     <Compile Include="Library\Options\Credits.cs" />
+    <Compile Include="Library\Options\Data.cs" />
     <Compile Include="Library\Options\Drilldown.cs" />
     <Compile Include="Library\Options\DrilldownDrillUpButton.cs" />
     <Compile Include="Library\Options\Exporting.cs" />

@@ -15,7 +15,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the panel.
 		/// Default: transparent
 		/// </summary>
-		public string Color { get; set; }
+		public ColorOrGradient Color { get; set; }
 
 		/// <summary>
 		/// Thickness of the panel.

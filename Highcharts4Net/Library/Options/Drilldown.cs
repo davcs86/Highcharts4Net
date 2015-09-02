@@ -3,6 +3,7 @@ using System.Drawing;
 using Highcharts4Net.Library.Enums;
 //using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
+using System.Collections.Generic;
 
 namespace Highcharts4Net.Library.Options
 {
@@ -37,7 +38,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// An array of series configurations for the drill down. Each series configuration uses the same syntax as the <a href='#series'>series</a> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.
 		/// </summary>
-		public T[] Series { get; set; }
+		public List<T> Series { get; set; }
 
 	}
 

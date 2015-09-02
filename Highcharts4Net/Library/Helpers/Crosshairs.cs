@@ -35,7 +35,7 @@ namespace Highcharts4Net.Library.Helpers
     public class CrosshairsFormat
     {
         public int? Width { get; set; }
-        public string Color { get; set; }
+        public ColorOrGradient Color { get; set; }
         public DashStyles DashStyle { get; set; }
         public int? ZIndex { get; set; }
     }

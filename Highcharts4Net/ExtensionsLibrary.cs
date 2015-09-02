@@ -35,117 +35,117 @@ namespace Highcharts4Net
                                   "'></script>");
         }
 
-        public HighchartsRender<SeriesArea> AreaChart(Action<ChartSettings<SeriesArea>> settings)
+        public HighchartsRender<SeriesArea> AreaChart(Action<HighchartSettings<SeriesArea>> settings)
         {
             return new HighchartsRender<SeriesArea>(settings);
         }
 
-        public HighchartsRender<SeriesArearange> ArearangeChart(Action<ChartSettings<SeriesArearange>> settings)
+        public HighchartsRender<SeriesArearange> ArearangeChart(Action<HighchartSettings<SeriesArearange>> settings)
         {
             return new HighchartsRender<SeriesArearange>(settings);
         }
 
-        public HighchartsRender<SeriesAreaspline> AreasplineChart(Action<ChartSettings<SeriesAreaspline>> settings)
+        public HighchartsRender<SeriesAreaspline> AreasplineChart(Action<HighchartSettings<SeriesAreaspline>> settings)
         {
             return new HighchartsRender<SeriesAreaspline>(settings);
         }
 
-        public HighchartsRender<SeriesAreasplinerange> AreasplinerangeChart(Action<ChartSettings<SeriesAreasplinerange>> settings)
+        public HighchartsRender<SeriesAreasplinerange> AreasplinerangeChart(Action<HighchartSettings<SeriesAreasplinerange>> settings)
         {
             return new HighchartsRender<SeriesAreasplinerange>(settings);
         }
         
-        public HighchartsRender<SeriesBar> BarChart(Action<ChartSettings<SeriesBar>> settings)
+        public HighchartsRender<SeriesBar> BarChart(Action<HighchartSettings<SeriesBar>> settings)
         {
             return new HighchartsRender<SeriesBar>(settings);
         }
         
-        public HighchartsRender<SeriesBoxplot> BoxplotChart(Action<ChartSettings<SeriesBoxplot>> settings)
+        public HighchartsRender<SeriesBoxplot> BoxplotChart(Action<HighchartSettings<SeriesBoxplot>> settings)
         {
             return new HighchartsRender<SeriesBoxplot>(settings);
         }
 
-        public HighchartsRender<SeriesBubble> BubbleChart(Action<ChartSettings<SeriesBubble>> settings)
+        public HighchartsRender<SeriesBubble> BubbleChart(Action<HighchartSettings<SeriesBubble>> settings)
         {
             return new HighchartsRender<SeriesBubble>(settings);
         }
 
-        public HighchartsRender<SeriesColumn> ColumnChart(Action<ChartSettings<SeriesColumn>> settings)
+        public HighchartsRender<SeriesColumn> ColumnChart(Action<HighchartSettings<SeriesColumn>> settings)
         {
             return new HighchartsRender<SeriesColumn>(settings);
         }
 
-        public HighchartsRender<SeriesColumnrange> ColumnrangeChart(Action<ChartSettings<SeriesColumnrange>> settings)
+        public HighchartsRender<SeriesColumnrange> ColumnrangeChart(Action<HighchartSettings<SeriesColumnrange>> settings)
         {
             return new HighchartsRender<SeriesColumnrange>(settings);
         }
 
-        public HighchartsRender<SeriesErrorbar> ErrorbarChart(Action<ChartSettings<SeriesErrorbar>> settings)
+        public HighchartsRender<SeriesErrorbar> ErrorbarChart(Action<HighchartSettings<SeriesErrorbar>> settings)
         {
             return new HighchartsRender<SeriesErrorbar>(settings);
         }
 
-        public HighchartsRender<SeriesFunnel> FunnelChart(Action<ChartSettings<SeriesFunnel>> settings)
+        public HighchartsRender<SeriesFunnel> FunnelChart(Action<HighchartSettings<SeriesFunnel>> settings)
         {
             return new HighchartsRender<SeriesFunnel>(settings);
         }
 
-        public HighchartsRender<SeriesGauge> GaugeChart(Action<ChartSettings<SeriesGauge>> settings)
+        public HighchartsRender<SeriesGauge> GaugeChart(Action<HighchartSettings<SeriesGauge>> settings)
         {
             return new HighchartsRender<SeriesGauge>(settings);
         }
 
-        public HighchartsRender<SeriesHeatmap> HeatmapChart(Action<ChartSettings<SeriesHeatmap>> settings)
+        public HighchartsRender<SeriesHeatmap> HeatmapChart(Action<HighchartSettings<SeriesHeatmap>> settings)
         {
             return new HighchartsRender<SeriesHeatmap>(settings);
         }
 
-        public HighchartsRender<SeriesLine> LineChart(Action<ChartSettings<SeriesLine>> settings)
+        public HighchartsRender<SeriesLine> LineChart(Action<HighchartSettings<SeriesLine>> settings)
         {
             return new HighchartsRender<SeriesLine>(settings);
         }
 
-        public HighchartsRender<SeriesPie> PieChart(Action<ChartSettings<SeriesPie>> settings)
+        public HighchartsRender<SeriesPie> PieChart(Action<HighchartSettings<SeriesPie>> settings)
         {
             return new HighchartsRender<SeriesPie>(settings);
         }
 
-        public HighchartsRender<SeriesPolygon> PolygonChart(Action<ChartSettings<SeriesPolygon>> settings)
+        public HighchartsRender<SeriesPolygon> PolygonChart(Action<HighchartSettings<SeriesPolygon>> settings)
         {
             return new HighchartsRender<SeriesPolygon>(settings);
         }
 
-        public HighchartsRender<SeriesPyramid> PyramidChart(Action<ChartSettings<SeriesPyramid>> settings)
+        public HighchartsRender<SeriesPyramid> PyramidChart(Action<HighchartSettings<SeriesPyramid>> settings)
         {
             return new HighchartsRender<SeriesPyramid>(settings);
         }
 
-        public HighchartsRender<SeriesScatter> ScatterChart(Action<ChartSettings<SeriesScatter>> settings)
+        public HighchartsRender<SeriesScatter> ScatterChart(Action<HighchartSettings<SeriesScatter>> settings)
         {
             return new HighchartsRender<SeriesScatter>(settings);
         }
 
-        public HighchartsRender<SeriesSolidgauge> SolidgaugeChart(Action<ChartSettings<SeriesSolidgauge>> settings)
+        public HighchartsRender<SeriesSolidgauge> SolidgaugeChart(Action<HighchartSettings<SeriesSolidgauge>> settings)
         {
             return new HighchartsRender<SeriesSolidgauge>(settings);
         }
 
-        public HighchartsRender<SeriesSpline> SplineChart(Action<ChartSettings<SeriesSpline>> settings)
+        public HighchartsRender<SeriesSpline> SplineChart(Action<HighchartSettings<SeriesSpline>> settings)
         {
             return new HighchartsRender<SeriesSpline>(settings);
         }
 
-        public HighchartsRender<SeriesSpline> TreemapChart(Action<ChartSettings<SeriesSpline>> settings)
+        public HighchartsRender<SeriesSpline> TreemapChart(Action<HighchartSettings<SeriesSpline>> settings)
         {
             return new HighchartsRender<SeriesSpline>(settings);
         }
 
-        public HighchartsRender<SeriesWaterfall> WaterfallChart(Action<ChartSettings<SeriesWaterfall>> settings)
+        public HighchartsRender<SeriesWaterfall> WaterfallChart(Action<HighchartSettings<SeriesWaterfall>> settings)
         {
             return new HighchartsRender<SeriesWaterfall>(settings);
         }
 
-        public HighchartsRender<ISeries> MultiTypeChart(Action<ChartSettings<ISeries>> settings)
+        public HighchartsRender<ISeries> MultiTypeChart(Action<HighchartSettings<ISeries>> settings)
         {
             return new HighchartsRender<ISeries>(settings);
         }

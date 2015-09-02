@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Web;
 using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Helpers;
@@ -7,15 +8,18 @@ namespace Highcharts4Net
 {
     public class HighchartsRender<T>
     {
-        private static ChartSettings<T> ChartSettings;
+        internal static HighchartSettings<T> ChartSettings;
+        private bool addJSONP;
 
-        internal HighchartsRender(Action<ChartSettings<T>> getSettings)
+        internal HighchartsRender(Action<HighchartSettings<T>> setSettings)
         {
-            ChartSettings = new ChartSettings<T>();
+            ChartSettings = new HighchartSettings<T>();
 
-            getSettings(ChartSettings);
+            setSettings(ChartSettings);
 
             ChartSettings.FixChartType();
+
+            addJSONP= ChartSettings.FixDataCSV();
         }
 
         private static string ToStringSerializer(object data)
@@ -36,10 +40,39 @@ namespace Highcharts4Net
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
 
-            var chartOptions = JSON.ToJSON(ChartSettings,
-                new JSONParameters {EnableAnonymousTypes = true, SerializeNullValues = false, UseEscapedUnicode = true, SerializeToLowerFirstLetterNames = true, SerializeToLowerFirstLetterEnums = true});
-            var chartContainer = "<div id='{0}'></div>\n<script>\n\tif(typeof({3})=='undefined'){{var {3} = [];}};\n\tvar {1};\n\t{3}.push(function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}});\n</script>".FormatWith(ChartSettings.Chart.RenderTo, ChartSettings.name, chartOptions, "hc4n_arr");
-            return new HtmlString(chartContainer);
+            var chartOptions = JSON.ToJSON(ChartSettings.GetChart(),
+                new JSONParameters
+                {
+                    EnableAnonymousTypes = true,
+                    SerializeNullValues = false,
+                    UseEscapedUnicode = true,
+                    SerializeToLowerFirstLetterNames = true,
+                    SerializeToLowerFirstLetterEnums = true
+                });
+
+            StringBuilder output = new StringBuilder();
+
+            if (addJSONP)
+            {
+                output.AppendFormat("<div id='{0}'></div>\n" +
+                                    "<script>" +
+                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
+                                    "\n\tvar {1};\n\t{3}.push($.getJSON(\"{4}\",function({2}_data){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}}));" +
+                                    "\n</script>",
+                                    ChartSettings.GetChart().Chart.RenderTo, ChartSettings.Name, chartOptions, "hc4n_arr", ChartSettings.GetChart().Data.getJSONP);
+            }
+            else
+            {
+                output.AppendFormat("<div id='{0}'></div>\n" +
+                                    "<script>" +
+                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
+                                    "\n\tvar {1};\n\t{3}.push(function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}});" +
+                                    "\n</script>",
+                                    ChartSettings.GetChart().Chart.RenderTo, ChartSettings.Name, chartOptions, "hc4n_arr");
+            }
+            
+
+            return new HtmlString(output.ToString());
         }
 
     }

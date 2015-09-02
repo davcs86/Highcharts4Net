@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// The fill color of the marker in hover state.
         /// </summary>
-        public string FillColor { get; set; }
+        public ColorOrGradient FillColor { get; set; }
 
         /// <summary>
         /// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.

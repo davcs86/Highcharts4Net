@@ -153,6 +153,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AreaChartsController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\LineChartsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\LineCharts\Basic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LineCharts\AjaxLoadedClickablePoints.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
