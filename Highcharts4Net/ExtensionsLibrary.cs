@@ -122,7 +122,7 @@ namespace Highcharts4Net
             return new PolygonChartExtension(settings);
         }
 
-        public PyramidChartExtension PyramidChart(Action<PolygonChartSettings> settings)
+        public PyramidChartExtension PyramidChart(Action<PyramidChartSettings> settings)
         {
             return new PyramidChartExtension(settings);
         }
