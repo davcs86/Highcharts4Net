@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -70,7 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartSettings.cs" />
+    <Compile Include="Library\ArearangeChartExtension.cs" />
+    <Compile Include="Library\AreaChartExtension.cs" />
+    <Compile Include="HighchartSettings.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="ExtensionsLibrary.cs" />
     <Compile Include="fastJSON\dynamic.cs" />
@@ -85,8 +87,7 @@
     <Compile Include="Hc4xHandler.cs" />
     <Compile Include="Hc4xHandlerFactory.cs" />
     <Compile Include="Highcharts4NetHelper.cs" />
-    <Compile Include="HighchartsRender.cs" />
-    <Compile Include="IHc4xHandler.cs" />
+    <Compile Include="Library\BaseChartExtension.cs" />
     <Compile Include="Library\Enums\AxisTitleAligns.cs" />
     <Compile Include="Library\Enums\AxisTypes.cs">
       <SubType>Code</SubType>
@@ -547,6 +548,7 @@
     <Compile Include="Library\Options\YAxisPlotLinesLabel.cs" />
     <Compile Include="Library\Options\YAxisStackLabels.cs" />
     <Compile Include="Library\Options\YAxisTitle.cs" />
+    <Compile Include="Library\LineChartExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

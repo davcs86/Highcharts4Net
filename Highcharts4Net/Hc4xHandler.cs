@@ -16,7 +16,7 @@ namespace Highcharts4Net
 	/// <summary>
 	/// ASP.NET handler that transforms Hc4x into JavaScript.
 	/// </summary>
-	public class Hc4xHandler : IHc4xHandler
+	public class Hc4xHandler
 	{
         private readonly HttpRequest _request;
         private readonly HttpResponse _response;

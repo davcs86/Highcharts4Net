@@ -1,11 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Web;
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net
 {
+    public delegate void ChartSettings(Chart s);
+    //public delegate void ColorsSettings(Colors s);
+    public delegate void CreditsSettings(Credits s);
+    public delegate void DataSettings(DataOptions s);
+
+    public delegate void DrilldownSettings<V>(Drilldown<V> s);
+    public delegate void ExportingSettings(Exporting s);
+    public delegate void LabelsSettings(Labels s);
+    public delegate void LegendSettings(Legend s);
+    public delegate void LoadingSettings(Loading s);
+    public delegate void NavigationSettings(Navigation s);
+    public delegate void NoDataSettings(NoData s);
+    public delegate void PaneSettings(Pane s);
+    public delegate void SerieSettings<V>(V s);
+
+    public delegate void TitleSettings(Title s);
+    public delegate void SubtitleSettings(Subtitle s);
+    public delegate void XAxisSettings(XAxis s);
+    public delegate void YAxisSettings(YAxis s);
+    public delegate void TooltipSettings(Tooltip s);
+    public delegate void PlotOptionsSettings(PlotOptions s);
+
     internal sealed class HighchartObj<U>
     {
         public Chart Chart { internal set; get; }
@@ -29,29 +54,8 @@ namespace Highcharts4Net
         public List<YAxis> YAxis { get; set; }
     }
 
-    public sealed class HighchartSettings<T>
+    internal sealed class HighchartSettings<T>
     {
-        public delegate void ChartSettings(Chart s);
-        //public delegate void ColorsSettings(Colors s);
-        public delegate void CreditsSettings(Credits s);
-        public delegate void DataSettings(DataOptions s);
-
-        public delegate void DrilldownSettings<V>(Drilldown<V> s);
-        public delegate void ExportingSettings(Exporting s);
-        public delegate void LabelsSettings(Labels s);
-        public delegate void LegendSettings(Legend s);
-        public delegate void LoadingSettings(Loading s);
-        public delegate void NavigationSettings(Navigation s);
-        public delegate void NoDataSettings(NoData s);
-        public delegate void PaneSettings(Pane s);
-        public delegate void SerieSettings<V>(V s);
-
-        public delegate void TitleSettings(Title s);
-        public delegate void SubtitleSettings(Subtitle s);
-        public delegate void XAxisSettings(XAxis s);
-        public delegate void YAxisSettings(YAxis s);
-        public delegate void TooltipSettings(Tooltip s);
-        public delegate void PlotOptionsSettings(PlotOptions s);
 
         private HighchartObj<T> _chart;
 
@@ -122,14 +126,58 @@ namespace Highcharts4Net
             s(_chart.Drilldown);
         }
 
+        public void SetExporting(ExportingSettings s)
+        {
+            _chart.Exporting = new Exporting();
+            s(_chart.Exporting);
+        }
 
-
-
+        public void SetLabels(LabelsSettings s)
+        {
+            _chart.Labels = new Labels();
+            s(_chart.Labels);
+        }
 
         public void SetLegend(LegendSettings s)
         {
             _chart.Legend = new Legend();
             s(_chart.Legend);
+        }
+
+        public void SetLoading(LoadingSettings s)
+        {
+            _chart.Loading = new Loading();
+            s(_chart.Loading);
+        }
+
+        public void SetNavigation(NavigationSettings s)
+        {
+            _chart.Navigation = new Navigation();
+            s(_chart.Navigation);
+        }
+
+        public void SetNoData(NoDataSettings s)
+        {
+            _chart.NoData = new NoData();
+            s(_chart.NoData);
+        }
+
+        public void SetPane(PaneSettings s)
+        {
+            _chart.Pane = new Pane();
+            s(_chart.Pane);
+        }
+
+        public void SetPlotOptions(PlotOptionsSettings s)
+        {
+            _chart.PlotOptions = new PlotOptions();
+            s(_chart.PlotOptions);
+        }
+
+        public void SetSubtitle(SubtitleSettings s)
+        {
+            _chart.Subtitle = new Subtitle();
+            s(_chart.Subtitle);
         }
 
         public void SetTitle(TitleSettings s)
@@ -144,28 +192,65 @@ namespace Highcharts4Net
             s(_chart.Tooltip);
         }
 
-        public void SetSubtitle(SubtitleSettings s)
+        private static string ToStringSerializer(object data)
         {
-            _chart.Subtitle = new Subtitle();
-            s(_chart.Subtitle);
+            return data.ToString();
         }
 
-        public void SetPlotOptions(PlotOptionsSettings s)
+        private static string ToStringDeserializer(string data)
         {
-            _chart.PlotOptions = new PlotOptions();
-            s(_chart.PlotOptions);
+            throw new NotImplementedException();
         }
-
-         internal HighchartObj<T> GetChart()
-         {
-             return _chart;
-         }
 
         public HighchartSettings()
         {
             _chart = new HighchartObj<T>{ Chart = new Chart()};
 
             Name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
+
+            JSON.RegisterCustomType(typeof(LiteralString), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
+        }
+
+        public HtmlString Render()
+        {
+            FixChartType();
+
+            var chartOptions = JSON.ToJSON(_chart,
+                new JSONParameters
+                {
+                    EnableAnonymousTypes = true,
+                    SerializeNullValues = false,
+                    UseEscapedUnicode = true,
+                    SerializeToLowerFirstLetterNames = true,
+                    SerializeToLowerFirstLetterEnums = true
+                });
+
+            StringBuilder output = new StringBuilder();
+
+            if (FixDataCSV())
+            {
+                output.AppendFormat("<div id='{0}'></div>\n" +
+                                    "<script>" +
+                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
+                                    "\n\tvar {1};\n\t{3}.push($.getJSON(\"{4}\",function({2}_data){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}}));" +
+                                    "\n</script>",
+                                    _chart.Chart.RenderTo, Name, chartOptions, "hc4n_arr", _chart.Data.getJSONP);
+            }
+            else
+            {
+                output.AppendFormat("<div id='{0}'></div>\n" +
+                                    "<script>" +
+                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
+                                    "\n\tvar {1};\n\t{3}.push(function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}});" +
+                                    "\n</script>",
+                                    _chart.Chart.RenderTo, Name, chartOptions, "hc4n_arr");
+            }
+
+            return new HtmlString(output.ToString());
         }
 
         internal void FixChartType()
@@ -220,8 +305,8 @@ namespace Highcharts4Net
                 _chart.Chart.Type = ChartTypes.Waterfall;
 
         }
-
-        public bool FixDataCSV()
+        
+        internal bool FixDataCSV()
         {
             if (_chart.Data != null)
             {
@@ -235,6 +320,5 @@ namespace Highcharts4Net
             return false;
         }
     }
-
     
 }

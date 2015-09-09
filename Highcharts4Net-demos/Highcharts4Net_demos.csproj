@@ -151,7 +151,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AreaChartsController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\LineChartsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,7 +186,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Inicio\Demo.cshtml" />
     <Content Include="Views\Shared\_LayoutHighcharts.cshtml" />
-    <Content Include="Views\AreaCharts\Basic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -202,34 +200,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\AreaCharts\Negative.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\Stacked.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\Percentage.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\MissingPoints.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\InvertedAxes.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\Areaspline.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\Arearange.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AreaCharts\ArearangeWithLine.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\LineCharts\Basic.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\LineCharts\AjaxLoadedClickablePoints.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
