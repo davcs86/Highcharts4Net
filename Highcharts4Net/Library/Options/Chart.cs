@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Web.UI.WebControls;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 

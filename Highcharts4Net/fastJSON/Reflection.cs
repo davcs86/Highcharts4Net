@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Reflection.Emit;
-using System.Reflection;
 using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Reflection;
+using System.Reflection.Emit;
 #if !SILVERLIGHT
 using System.Data;
 #endif
-using System.Collections.Specialized;
 
 namespace Highcharts4Net.fastJSON
 {
@@ -106,7 +105,7 @@ namespace Highcharts4Net.fastJSON
                 _customSerializer.Add(type, serializer);
                 _customDeserializer.Add(type, deserializer);
                 // reset property cache
-                Reflection.Instance.ResetPropertyCache();
+                Instance.ResetPropertyCache();
             }
         }
 
@@ -163,10 +162,10 @@ namespace Highcharts4Net.fastJSON
                         continue;
                     }
                     myPropInfo d = CreateMyProp(p.PropertyType, p.Name, customType);
-                    d.setter = Reflection.CreateSetMethod(type, p);
+                    d.setter = CreateSetMethod(type, p);
                     if (d.setter != null)
                         d.CanWrite = true;
-                    d.getter = Reflection.CreateGetMethod(type, p);
+                    d.getter = CreateGetMethod(type, p);
                     sd.Add(p.Name.ToLower(), d);
                 }
                 FieldInfo[] fi = type.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
@@ -175,10 +174,10 @@ namespace Highcharts4Net.fastJSON
                     myPropInfo d = CreateMyProp(f.FieldType, f.Name, customType);
                     if (f.IsLiteral == false)
                     {
-                        d.setter = Reflection.CreateSetField(type, f);
+                        d.setter = CreateSetField(type, f);
                         if (d.setter != null)
                             d.CanWrite = true;
-                        d.getter = Reflection.CreateGetField(type, f);
+                        d.getter = CreateGetField(type, f);
                         sd.Add(f.Name.ToLower(), d);
                     }
                 }
@@ -212,7 +211,7 @@ namespace Highcharts4Net.fastJSON
             }
             else if (t.Name.Contains("Dictionary"))
             {
-                d.GenericTypes = Reflection.Instance.GetGenericArguments(t);// t.GetGenericArguments();
+                d.GenericTypes = Instance.GetGenericArguments(t);// t.GetGenericArguments();
                 if (d.GenericTypes.Length > 0 && d.GenericTypes[0] == typeof(string))
                     d_type = myPropInfoType.StringKeyDictionary;
                 else
@@ -248,7 +247,7 @@ namespace Highcharts4Net.fastJSON
         private Type GetChangeType(Type conversionType)
         {
             if (conversionType.IsGenericType && conversionType.GetGenericTypeDefinition().Equals(typeof(Nullable<>)))
-                return Reflection.Instance.GetGenericArguments(conversionType)[0];// conversionType.GetGenericArguments()[0];
+                return Instance.GetGenericArguments(conversionType)[0];// conversionType.GetGenericArguments()[0];
 
             return conversionType;
         }

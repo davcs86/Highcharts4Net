@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Highcharts4Net.fastJSON
+﻿namespace Highcharts4Net.fastJSON
 {
     internal static class StringExtensions
     {

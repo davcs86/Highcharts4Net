@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Drawing;
 using Highcharts4Net.Library.Enums;
-//using Highcharts4Net.Library.Attributes;
 using Highcharts4Net.Library.Helpers;
+//using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Options
 {

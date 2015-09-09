@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Highcharts4Net.fastJSON;
+
 //using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Helpers

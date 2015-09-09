@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Globalization;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 #if !SILVERLIGHT
 using System.Data;
 #endif
-using System.Globalization;
-using System.IO;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Collections.Specialized;
 
 namespace Highcharts4Net.fastJSON
 {
@@ -69,7 +69,7 @@ namespace Highcharts4Net.fastJSON
         /// <summary>
         /// Ignore attributes to check for (default : XmlIgnoreAttribute)
         /// </summary>
-        public List<Type> IgnoreAttributes = new List<Type> { typeof(System.Xml.Serialization.XmlIgnoreAttribute) };
+        public List<Type> IgnoreAttributes = new List<Type> { typeof(XmlIgnoreAttribute) };
         /// <summary>
         /// If you have parametric and no default constructor for you classes (default = False)
         /// 
@@ -140,7 +140,7 @@ namespace Highcharts4Net.fastJSON
         /// <returns></returns>
         public static string ToJSON(object obj)
         {
-            return ToJSON(obj, JSON.Parameters);
+            return ToJSON(obj, Parameters);
         }
         /// <summary>
         /// Create a json representation for an object with parameter override on this call
@@ -556,7 +556,7 @@ namespace Highcharts4Net.fastJSON
 
             bool found = d.TryGetValue("$type", out tn);
 #if !SILVERLIGHT
-            if (found == false && type == typeof(System.Object))
+            if (found == false && type == typeof(Object))
             {
                 return d;   // CreateDataset(d, globaltypes);
             }
@@ -580,7 +580,7 @@ namespace Highcharts4Net.fastJSON
             if (o == null)
             {
                 if (_params.ParametricConstructorOverride)
-                    o = System.Runtime.Serialization.FormatterServices.GetUninitializedObject(type);
+                    o = FormatterServices.GetUninitializedObject(type);
                 else
                     o = Reflection.Instance.FastCreateInstance(type);
             }

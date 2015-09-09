@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using Highcharts4Net.Library.Helpers;
+﻿using Highcharts4Net.Library.Helpers;
 
 namespace Highcharts4Net.Library.Options
 {

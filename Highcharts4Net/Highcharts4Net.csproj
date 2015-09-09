@@ -70,6 +70,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\BubbleChartExtension.cs" />
+    <Compile Include="Library\ColumnChartExtension.cs" />
+    <Compile Include="Library\ColumnrangeChartExtension.cs" />
+    <Compile Include="Library\ErrorbarChartExtension.cs" />
+    <Compile Include="Library\FunnelChartExtension.cs" />
+    <Compile Include="Library\GaugeChartExtension.cs" />
+    <Compile Include="Library\HeatmapChartExtension.cs" />
+    <Compile Include="Library\BoxplotChartExtension.cs" />
+    <Compile Include="Library\GenericChartExtension.cs" />
+    <Compile Include="Library\BarChartExtension.cs" />
+    <Compile Include="Library\AreasplinerangeChartExtension.cs" />
+    <Compile Include="Library\AreasplineChartExtension.cs" />
     <Compile Include="Library\ArearangeChartExtension.cs" />
     <Compile Include="Library\AreaChartExtension.cs" />
     <Compile Include="HighchartSettings.cs" />
@@ -549,7 +561,15 @@
     <Compile Include="Library\Options\YAxisStackLabels.cs" />
     <Compile Include="Library\Options\YAxisTitle.cs" />
     <Compile Include="Library\LineChartExtension.cs" />
+    <Compile Include="Library\PieChartExtension.cs" />
+    <Compile Include="Library\PolygonChartExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\PyramidChartExtension.cs" />
+    <Compile Include="Library\ScatterChartExtension.cs" />
+    <Compile Include="Library\SolidgaugeChartExtension.cs" />
+    <Compile Include="Library\SplineChartExtension.cs" />
+    <Compile Include="Library\TreemapChartExtension.cs" />
+    <Compile Include="Library\WaterfallChartExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

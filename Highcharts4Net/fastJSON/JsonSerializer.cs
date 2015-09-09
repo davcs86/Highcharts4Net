@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-#if !SILVERLIGHT
-using System.Data;
-#endif
+using System.Collections.Specialized;
 using System.Globalization;
 using System.IO;
 using System.Text;
-using System.Collections.Specialized;
+#if !SILVERLIGHT
+using System.Data;
+#endif
 
 namespace Highcharts4Net.fastJSON
 {
@@ -433,7 +433,7 @@ namespace Highcharts4Net.fastJSON
                     if (o != null && _params.UseExtensions)
                     {
                         Type tt = o.GetType();
-                        if (tt == typeof(System.Object))
+                        if (tt == typeof(Object))
                             map.Add(p.Name, tt.ToString());
                     }
                     append = true;

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Globalization;
-using System.Text;
-using Highcharts4Net.Library;
-using Highcharts4Net.Library.Enums;
 
 namespace Highcharts4Net
 {

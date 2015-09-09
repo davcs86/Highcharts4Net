@@ -14,7 +14,7 @@ namespace Highcharts4Net
 	/// <summary>
 	/// Handles creation and execution of <see cref="IHc4xHandler"/> instances.
 	/// </summary>
-	public class Hc4xHandlerFactory : IHttpHandler
+	public sealed class Hc4xHandlerFactory : IHttpHandler
 	{
 		/// <summary>
 		/// Processes this request
