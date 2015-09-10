@@ -78,54 +78,57 @@
 
 @Html.Highcharts4Net().MultiTypeChart(settings =>
 {
-    settings.Title = new Title
-    {
-        Text = "July temperatures"
-    };
+    settings.SetTitle(s=> { s.Text = "July temperatures"; });
 
-    settings.XAxis = new XAxis
-    {
-        Type = AxisTypes.Datetime
-    };
-    settings.YAxis = new YAxis
-    {
-        Title = new YAxisTitle
-        {
-            Enabled = false
-        }
-    };
-    settings.Tooltip = new Tooltip
-    {
-        Crosshairs = new Crosshairs(true),
-        Shared = true,
-        ValueSuffix = " °C"
-    };
+    settings.AddXAxis(s => { s.Type=AxisTypes.Datetime;});
 
-    settings.Series.Add(
-        new SeriesLine
-        {
-            Name = "Temperatures",
-            Data = new Data(averages),
-            ZIndex = 1,
-            Marker = new PlotOptionsLineMarker
-            {
-                FillColor = new ColorOrGradient(Color.White),
-                LineWidth = 2,
-                LineColor = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]"))
-            }
-        });
+    settings.AddYAxis(s=> { s.Title = new YAxisTitle {Enabled = false}; });
 
-    settings.Series.Add(
-        new SeriesArearange
-        {
-            Name = "Range",
-            Data = new Data(ranges),
-            LineWidth = 0,
-            LinkedTo = ":previous",
-            Color = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]")),
-            FillOpacity = 0.3,
-            ZIndex = 0,
-        });
+    settings.SetTooltip(s =>
+    {
+        s.Crosshairs = new Crosshairs(true);
+        s.Shared = true;
+        s.ValueSuffix = " °C";
+    });
+
+    settings.AddSeries((SerieSettings<SeriesLine>)(s =>
+    {
+        s.Name = "Temperatures";
+        s.Data = new Data(averages);
+        s.ZIndex = 1;
+        //s.Marker = new PlotOptionsLineMarker
+        //    {
+        //        FillColor = new ColorOrGradient(Color.White),
+        //        LineWidth = 2,
+        //        LineColor = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]"))
+        //    }
+    }));
+
+    //settings.Series.Add(
+    //    new SeriesLine
+    //    {
+    //        Name = "Temperatures",
+    //        Data = new Data(averages),
+    //        ZIndex = 1,
+    //        Marker = new PlotOptionsLineMarker
+    //        {
+    //            FillColor = new ColorOrGradient(Color.White),
+    //            LineWidth = 2,
+    //            LineColor = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]"))
+    //        }
+    //    });
+
+    //settings.Series.Add(
+    //    new SeriesArearange
+    //    {
+    //        Name = "Range",
+    //        Data = new Data(ranges),
+    //        LineWidth = 0,
+    //        LinkedTo = ":previous",
+    //        Color = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]")),
+    //        FillOpacity = 0.3,
+    //        ZIndex = 0,
+    //    });
 }).Render()
 
 @section source_code{

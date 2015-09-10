@@ -54,7 +54,7 @@ namespace Highcharts4Net
         public List<YAxis> YAxis { get; set; }
     }
 
-    internal sealed class HighchartSettings<T>
+    internal sealed class HighchartSettings<T> where T: ISeries
     {
 
         private HighchartObj<T> _chart;
@@ -319,6 +319,7 @@ namespace Highcharts4Net
             }
             return false;
         }
+
     }
     
 }
