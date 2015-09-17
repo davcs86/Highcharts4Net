@@ -4,7 +4,15 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class AreaChartSettings : BaseChartSettings<SeriesArea> { }
+
+    public delegate void SerieAreaSettings(SeriesArea s);
+
+    public sealed class AreaChartSettings : BaseChartSettings<SeriesArea>
+    {
+
+        public void AddSeries(SerieAreaSettings s)=>AddSeries(s, new SeriesArea());
+
+    }
 
     public sealed class AreaChartExtension : BaseChartExtension<AreaChartSettings>
     {

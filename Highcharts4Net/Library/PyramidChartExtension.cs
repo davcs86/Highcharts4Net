@@ -4,7 +4,12 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class PyramidChartSettings : BaseChartSettings<SeriesPyramid> { }
+    public delegate void SeriePyramidSettings(SeriesPyramid s);
+
+    public sealed class PyramidChartSettings : BaseChartSettings<SeriesPyramid>
+    {
+        public void AddSeries(SeriePyramidSettings s)=>AddSeries(s, new SeriesPyramid());
+    }
 
     public sealed class PyramidChartExtension : BaseChartExtension<PyramidChartSettings>
     {

@@ -4,7 +4,12 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class ColumnrangeChartSettings : BaseChartSettings<SeriesColumnrange> { }
+    public delegate void SerieColumnrangeSettings(SeriesColumnrange s);
+
+    public sealed class ColumnrangeChartSettings : BaseChartSettings<SeriesColumnrange>
+    {
+        public void AddSeries(SerieColumnrangeSettings s)=>AddSeries(s, new SeriesColumnrange());
+    }
 
     public sealed class ColumnrangeChartExtension : BaseChartExtension<ColumnrangeChartSettings>
     {

@@ -4,7 +4,12 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class WaterfallChartSettings : BaseChartSettings<SeriesWaterfall> { }
+    public delegate void SerieWaterfallSettings(SeriesWaterfall s);
+
+    public sealed class WaterfallChartSettings : BaseChartSettings<SeriesWaterfall>
+    {
+        public void AddSeries(SerieWaterfallSettings s) => AddSeries(s, new SeriesWaterfall());
+    }
 
     public sealed class WaterfallChartExtension : BaseChartExtension<WaterfallChartSettings>
     {

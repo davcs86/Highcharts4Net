@@ -4,7 +4,11 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class FunnelChartSettings : BaseChartSettings<SeriesFunnel> { }
+    public delegate void SerieFunnelSettings(SeriesFunnel s);
+    public sealed class FunnelChartSettings : BaseChartSettings<SeriesFunnel>
+    {
+        public void AddSeries(SerieFunnelSettings s)=>AddSeries(s, new SeriesFunnel());
+    }
 
     public sealed class FunnelChartExtension : BaseChartExtension<FunnelChartSettings>
     {

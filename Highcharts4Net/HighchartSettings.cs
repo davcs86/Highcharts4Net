@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Web;
+using System.Web.Mvc;
 using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
@@ -22,7 +23,6 @@ namespace Highcharts4Net
     public delegate void NavigationSettings(Navigation s);
     public delegate void NoDataSettings(NoData s);
     public delegate void PaneSettings(Pane s);
-    public delegate void SerieSettings<V>(V s);
 
     public delegate void TitleSettings(Title s);
     public delegate void SubtitleSettings(Subtitle s);
@@ -31,13 +31,13 @@ namespace Highcharts4Net
     public delegate void TooltipSettings(Tooltip s);
     public delegate void PlotOptionsSettings(PlotOptions s);
 
-    internal sealed class HighchartObj<U>
+    internal sealed class HighchartObj<TU>
     {
         public Chart Chart { internal set; get; }
         public List<ColorOrGradient> Colors { get; set; }
         public Credits Credits { get; set; } //
         public DataOptions Data { get; set; } //
-        public Drilldown<U> Drilldown { set; get; } // 
+        public Drilldown<TU> Drilldown { set; get; } // 
         public Exporting Exporting { set; get; } // 
         public Labels Labels { set; get; } //
         public Legend Legend { set; get; } //
@@ -46,7 +46,7 @@ namespace Highcharts4Net
         public NoData NoData { set; get; } //
         public Pane Pane { set; get; } //
         public PlotOptions PlotOptions { get; set; }
-        public List<U> Series { get; set; }
+        public List<ISeries> Series { get; set; }
         public Subtitle Subtitle { set; get; }
         public Title Title { set; get; }
         public Tooltip Tooltip { get; set; }
@@ -90,15 +90,14 @@ namespace Highcharts4Net
             _chart.YAxis.Add(yAxis);
         }
 
-        public void AddSeries(SerieSettings<T> s)
+        public void AddSeries(Delegate d, ISeries s)
         {
             if (_chart.Series == null)
             {
-                _chart.Series = new List<T>();
+                _chart.Series = new List<ISeries>();
             }
-            var serie = (T)Activator.CreateInstance(typeof(T));
-            s(serie);
-            _chart.Series.Add(serie);
+            d.DynamicInvoke(s);
+            _chart.Series.Add(s);
         }
 
         public string Name { get; set; }

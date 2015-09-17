@@ -4,7 +4,12 @@ using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
 {
-    public sealed class SolidgaugeChartSettings : BaseChartSettings<SeriesSolidgauge> { }
+    public delegate void SerieSolidgaugeSettings(SeriesSolidgauge s);
+
+    public sealed class SolidgaugeChartSettings : BaseChartSettings<SeriesSolidgauge>
+    {
+        public void AddSeries(SerieSolidgaugeSettings s)=>AddSeries(s, new SeriesSolidgauge());
+    }
 
     public sealed class SolidgaugeChartExtension : BaseChartExtension<SolidgaugeChartSettings>
     {
