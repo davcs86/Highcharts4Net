@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Web;
-using System.Web.Mvc;
 using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
@@ -218,6 +217,7 @@ namespace Highcharts4Net
         {
             FixChartType();
 
+            var isJSONP = FixDataCSV();
             var chartOptions = JSON.ToJSON(_chart,
                 new JSONParameters
                 {
@@ -230,12 +230,12 @@ namespace Highcharts4Net
 
             StringBuilder output = new StringBuilder();
 
-            if (FixDataCSV())
+            if (isJSONP)
             {
                 output.AppendFormat("<div id='{0}'></div>\n" +
                                     "<script>" +
                                     "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
-                                    "\n\tvar {1};\n\t{3}.push($.getJSON(\"{4}\",function({2}_data){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}}));" +
+                                    "\n\tvar {1};\n\t{3}.push($.getJSON(\"{4}\",function({1}_data){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}}));" +
                                     "\n</script>",
                                     _chart.Chart.RenderTo, Name, chartOptions, "hc4n_arr", _chart.Data.getJSONP);
             }

@@ -154,7 +154,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AreaChartsController.cs" />
-    <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LineChartsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -163,18 +163,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\images\logo.svg" />
-    <Content Include="Content\js\bootstrap.min.js" />
-    <Content Include="Content\js\highslide-full.min.js" />
-    <Content Include="Content\js\highslide.config.min.js" />
-    <Content Include="Content\js\jquery-1.7.2.js" />
-    <Content Include="Content\js\modernizr.js" />
-    <Content Include="Content\js\script.js" />
-    <Content Include="Content\styles\bootstrap.min.css" />
-    <Content Include="Content\styles\font-awesome.css" />
-    <Content Include="Content\styles\highslide.min.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\styles\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\styles\imgs\logo.svg" />
+    <Content Include="Content\styles\js\bootstrap-sprockets.js" />
+    <Content Include="Content\styles\js\bootstrap.js" />
+    <Content Include="Content\styles\js\bootstrap.min.js" />
+    <Content Include="Content\styles\js\bootstrap\affix.js" />
+    <Content Include="Content\styles\js\bootstrap\alert.js" />
+    <Content Include="Content\styles\js\bootstrap\button.js" />
+    <Content Include="Content\styles\js\bootstrap\carousel.js" />
+    <Content Include="Content\styles\js\bootstrap\collapse.js" />
+    <Content Include="Content\styles\js\bootstrap\dropdown.js" />
+    <Content Include="Content\styles\js\bootstrap\modal.js" />
+    <Content Include="Content\styles\js\bootstrap\popover.js" />
+    <Content Include="Content\styles\js\bootstrap\scrollspy.js" />
+    <Content Include="Content\styles\js\bootstrap\tab.js" />
+    <Content Include="Content\styles\js\bootstrap\tooltip.js" />
+    <Content Include="Content\styles\js\bootstrap\transition.js" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\AreaCharts\Arearange.cshtml" />
     <Content Include="Views\AreaCharts\ArearangeWithLine.cshtml" />
@@ -197,8 +205,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Inicio\Demo.cshtml" />
-    <Content Include="Views\Shared\_LayoutHighcharts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -214,6 +220,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\LineCharts\Basic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\styles\config.rb" />
+    <Content Include="Content\styles\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\styles\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\styles\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\styles\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\styles\sass\styles.sass" />
+    <Content Include="Content\styles\sass\_bootstrap-variables.sass" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

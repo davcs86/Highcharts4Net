@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -11,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieArearangeSettings s) => AddSeries(s, new SeriesArearange());
     }
 
-    public sealed class ArearangeChartExtension : BaseChartExtension<ArearangeChartSettings>
+    public sealed class ArearangeChartExtension : BaseChartExtension<ArearangeChartSettings, SeriesArearange>
     {
-        public ArearangeChartExtension(Action<ArearangeChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
+        public ArearangeChartExtension(Action<ArearangeChartSettings> settings) : base(settings) { }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -11,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieAreasplineSettings s) => AddSeries(s, new SeriesAreaspline());
     }
 
-    public sealed class AreasplineChartExtension : BaseChartExtension<AreasplineChartSettings>
+    public sealed class AreasplineChartExtension : BaseChartExtension<AreasplineChartSettings, SeriesAreaspline>
     {
-        public AreasplineChartExtension(Action<AreasplineChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
+        public AreasplineChartExtension(Action<AreasplineChartSettings> settings): base(settings) { }
     }
 }

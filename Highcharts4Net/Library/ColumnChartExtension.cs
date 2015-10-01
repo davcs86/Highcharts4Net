@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -11,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieColumnSettings s)=> AddSeries(s, new SeriesColumn());
     }
 
-    public sealed class ColumnChartExtension : BaseChartExtension<ColumnChartSettings>
+    public sealed class ColumnChartExtension : BaseChartExtension<ColumnChartSettings, SeriesColumn>
     {
         public ColumnChartExtension(Action<ColumnChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

@@ -11,13 +11,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieWaterfallSettings s) => AddSeries(s, new SeriesWaterfall());
     }
 
-    public sealed class WaterfallChartExtension : BaseChartExtension<WaterfallChartSettings>
+    public sealed class WaterfallChartExtension : BaseChartExtension<WaterfallChartSettings, SeriesWaterfall>
     {
         public WaterfallChartExtension(Action<WaterfallChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

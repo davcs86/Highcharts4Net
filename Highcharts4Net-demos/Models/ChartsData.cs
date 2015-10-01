@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Drawing;
 using Highcharts4Net.Library.Helpers;
 using Highcharts4Net.Library.Options;
-using Point = Highcharts4Net.Library.Options.Point;
 
 namespace Highcharts4Net_demos.Controllers
 {

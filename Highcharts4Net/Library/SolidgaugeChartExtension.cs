@@ -11,13 +11,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieSolidgaugeSettings s)=>AddSeries(s, new SeriesSolidgauge());
     }
 
-    public sealed class SolidgaugeChartExtension : BaseChartExtension<SolidgaugeChartSettings>
+    public sealed class SolidgaugeChartExtension : BaseChartExtension<SolidgaugeChartSettings, SeriesSolidgauge>
     {
         public SolidgaugeChartExtension(Action<SolidgaugeChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

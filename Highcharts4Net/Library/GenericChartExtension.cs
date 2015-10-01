@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -51,13 +50,8 @@ namespace Highcharts4Net.Library
         public void AddSeriesWaterfall(SerieWaterfallSettings s) => AddSeries(s, new SeriesWaterfall());
     }
 
-    public sealed class GenericChartExtension : BaseChartExtension<GenericChartSettings>
+    public sealed class GenericChartExtension : BaseChartExtension<GenericChartSettings, ISeries>
     {
         public GenericChartExtension(Action<GenericChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

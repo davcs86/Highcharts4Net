@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -11,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieBoxplotSettings s)=>AddSeries(s, new SeriesBoxplot());
     }
 
-    public sealed class BoxplotChartExtension : BaseChartExtension<BoxplotChartSettings>
+    public sealed class BoxplotChartExtension : BaseChartExtension<BoxplotChartSettings, SeriesBoxplot>
     {
-        public BoxplotChartExtension(Action<BoxplotChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
+        public BoxplotChartExtension(Action<BoxplotChartSettings> settings) : base(settings) { }
     }
 }

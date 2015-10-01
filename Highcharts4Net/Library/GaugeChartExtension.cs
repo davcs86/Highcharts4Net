@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -11,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieGaugeSettings s)=>AddSeries(s, new SeriesGauge());
     }
 
-    public sealed class GaugeChartExtension : BaseChartExtension<GaugeChartSettings>
+    public sealed class GaugeChartExtension : BaseChartExtension<GaugeChartSettings, SeriesGauge>
     {
         public GaugeChartExtension(Action<GaugeChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

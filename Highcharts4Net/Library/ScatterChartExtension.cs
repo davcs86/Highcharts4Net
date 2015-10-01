@@ -11,13 +11,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieScatterSettings s)=> AddSeries(s, new SeriesScatter());
     }
 
-    public sealed class ScatterChartExtension : BaseChartExtension<ScatterChartSettings>
+    public sealed class ScatterChartExtension : BaseChartExtension<ScatterChartSettings, SeriesScatter>
     {
         public ScatterChartExtension(Action<ScatterChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }

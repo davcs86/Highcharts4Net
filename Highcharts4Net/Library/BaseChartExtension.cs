@@ -61,19 +61,19 @@ namespace Highcharts4Net.Library
 
     }
 
-    public class BaseChartExtension<T>
+    public class BaseChartExtension<T, TU> where T: BaseChartSettings<TU> where TU : ISeries
     {
         protected readonly T ChartSettings;
 
-        public BaseChartExtension(Action<T> applySettings)
+        protected BaseChartExtension(Action<T> applySettings)
         {
             ChartSettings = (T) Activator.CreateInstance(typeof (T));
             applySettings(ChartSettings);
         }
-
+        
         public virtual HtmlString Render()
         {
-            return new HtmlString(string.Empty);
+            return ChartSettings.Settings.Render();
         }
     }
 }

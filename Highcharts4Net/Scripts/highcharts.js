@@ -577,7 +577,7 @@ var cb_addEventListener = function (obj, evt, fnc) {
         return obj.attachEvent('on' + evt, fnc);
     }
 };
-
+if (typeof (hc4n_arr) == 'undefined') { { var hc4n_arr = []; } };
 cb_addEventListener(window,"load",function(){
     for (var i in hc4n_arr) {
         hc4n_arr[i]();

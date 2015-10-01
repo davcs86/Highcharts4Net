@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Web;
-using Highcharts4Net.Library;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library
@@ -12,13 +10,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieBarSettings s)=>AddSeries(s, new SeriesBar());
     }
 
-    public sealed class BarChartExtension : BaseChartExtension<BarChartSettings>
+    public sealed class BarChartExtension : BaseChartExtension<BarChartSettings, SeriesBar>
     {
-        public BarChartExtension(Action<BarChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
+        public BarChartExtension(Action<BarChartSettings> settings) : base(settings) { }
     }
 }

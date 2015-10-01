@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Highcharts4Net.Library.Helpers;
+
 //using Highcharts4Net.Library.Attributes;
 
 namespace Highcharts4Net.Library.Options

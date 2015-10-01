@@ -11,13 +11,8 @@ namespace Highcharts4Net.Library
         public void AddSeries(SerieTreemapSettings s)=>AddSeries(s, new SeriesTreemap());
     }
 
-    public sealed class TreemapChartExtension : BaseChartExtension<TreemapChartSettings>
+    public sealed class TreemapChartExtension : BaseChartExtension<TreemapChartSettings, SeriesTreemap>
     {
         public TreemapChartExtension(Action<TreemapChartSettings> applySettings) : base(applySettings) { }
-
-        public override HtmlString Render()
-        {
-            return ChartSettings.Settings.Render();
-        }
     }
 }
