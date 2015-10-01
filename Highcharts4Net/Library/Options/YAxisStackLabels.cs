@@ -1,7 +1,7 @@
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -30,7 +30,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback JavaScript function to format the label. The value is  given by <code>this.total</code>. Defaults to: <pre>function() { return this.total;}</pre>
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string Formatter { get; set; }
 
 		/// <summary>

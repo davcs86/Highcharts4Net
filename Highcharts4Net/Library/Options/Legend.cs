@@ -2,7 +2,7 @@ using System;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -104,7 +104,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback function to format each of the series' labels. The <em>this</em> keyword refers to the series object, or the point object in case of pie charts. By default the series or point name is printed.
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string LabelFormatter { get; set; }
 
 		/// <summary>

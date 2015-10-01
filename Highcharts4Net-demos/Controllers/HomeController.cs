@@ -6,7 +6,7 @@ namespace Highcharts4Net_demos.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToActionPermanent("Basic","LineCharts");
+            return RedirectToActionPermanent("Index","LineCharts");
         }
 
     }

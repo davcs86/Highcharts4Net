@@ -2,7 +2,7 @@ using System;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -281,7 +281,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A callback function returning array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> and <a href='#xAxis.tickInterval'>tickInterval</a>.
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string TickPositioner { get; set; }
 
 		/// <summary>

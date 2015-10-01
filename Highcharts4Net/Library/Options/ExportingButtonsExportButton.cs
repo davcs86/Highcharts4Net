@@ -1,6 +1,6 @@
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -18,7 +18,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A click handler callback to use on the button directly instead of the popup menu.
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string Onclick { get; set; }
 
 		/// <summary>

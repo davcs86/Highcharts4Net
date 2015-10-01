@@ -1,7 +1,7 @@
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -86,7 +86,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback JavaScript function to format the data label. Note that if a <code>format</code> is defined, the format takes precedence and the formatter is ignored. Available data are:<table><tbody><tr>  <td><code>this.percentage</code></td>  <td>Stacked series and pies only. The point's percentage of the total.</td></tr><tr>  <td><code>this.point</code></td>  <td>The point object. The point name, if defined, is available through <code>this.point.name</code>.</td></tr><tr>  <td><code>this.series</code>:</td>  <td>The series object. The series name is available through <code>this.series.name</code>.</td></tr><tr>  <td><code>this.total</code></td>  <td>Stacked series only. The total value at this point's x value.</td></tr><tr>  <td><code>this.x</code>:</td>  <td>The x value.</td></tr><tr>  <td><code>this.y</code>:</td>  <td>The y value.</td></tr></tbody></table>
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string Formatter { get; set; }
 
 		/// <summary>

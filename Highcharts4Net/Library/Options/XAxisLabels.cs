@@ -1,7 +1,7 @@
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -49,7 +49,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Callback JavaScript function to format the label. The value is  given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. Defaults to: <pre>function() { return this.value;}</pre>
 		/// </summary>
-		////[JsonFormatter("{0}")]
+		//
 		public LiteralString Formatter { get; set; }
 
 		/// <summary>

@@ -8,35 +8,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Line charts » Ajax loaded data, clickable points";
 }
+
 @Html.Highcharts4Net().LineChart(settings =>
 {
-    settings.SetData(s=>
-    {
-        s.getJSONP = "http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?";
-    });
+    settings.SetData(s => { s.getJSONP = "http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?"; });
 
-    settings.SetTitle(s =>
-    {
-        s.Text = "Daily visits at www.highcharts.com";
-    });
+    settings.SetTitle(s => { s.Text = "Daily visits at www.highcharts.com"; });
 
-    settings.SetTitle(s=>
-    {
-        s.Text = "Source: Google Analytics";
-    });
+    settings.SetTitle(s => { s.Text = "Source: Google Analytics"; });
 
-    settings.AddXAxis(s=>
+    settings.AddXAxis(s =>
     {
-        s.TickInterval = 7*24*3600*1000;
+        s.TickInterval = (7*24*3600*1000);
         s.TickWidth = 0;
         s.GridLineWidth = 1;
         s.Labels = new XAxisLabels
         {
             Align = HorizontalAligns.Left,
-            X = 3, Y = 3
+            X = 3,
+            Y = -3
         };
     });
-    settings.AddYAxis(s=>
+    settings.AddYAxis(s =>
     {
         s.Title = new YAxisTitle
         {
@@ -69,11 +62,11 @@
         };
         s.ShowFirstLabel = false;
     });
-    settings.SetLegend(s=>
+    settings.SetLegend(s =>
     {
-        s.Align=HorizontalAligns.Left;
+        s.Align = HorizontalAligns.Left;
         s.VerticalAlign = VerticalAligns.Top;
-        s.Y= 20;
+        s.Y = 20;
         s.Floating = true;
         s.BorderWidth = 0;
     });
@@ -84,74 +77,59 @@
         s.Crosshairs = new Crosshairs(true);
     });
 
-    //    settings.SetPlotOptions(s=>
-    //    {
-    //    s.Series = new PlotOptionsSeries
-    //    {
-    //        Cursor: ,
-    //                    point:
-    //        {
-    //        events:
-    //        {
-    //            click: function(e) {
-    //                hs.htmlExpand(null, {
-    //                    pageOrigin:
-    //                    {
-    //                        x: e.pageX || e.clientX,
-    //                                        y:
-    //                        e.pageY || e.clientY
-    //                                    },
-    //                                    headingText: this.series.name,
-    //                                    maincontentText:
-    //                    Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
-    //       this.y + ' visits',
-    //                                    width:
-    //                    200
-    //                                });
-    //}
-    //    }
-    //    },
-    //                    marker: {
-    //                        lineWidth: 1
-    //                    }
-    //                }
-    //            });
+    settings.SetPlotOptions(s =>
+    {
+        s.Series = new PlotOptionsSeries
+        {
+            Cursor = Cursors.Pointer,
+            Events = new PlotOptionsSeriesEvents
+            {
+                Click = @"function(e) {
+                            if (typeof(hs)!='undefined'){
+                                hs.htmlExpand(null, {
+                                    pageOrigin:
+                                    {
+                                        x: e.pageX || e.clientX,
+                                        y: e.pageY || e.clientY
+                                    },
+                                    headingText: this.series.name,
+                                    maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' + this.y + ' visits',                                       
+                                    width: 200
+                                });
+                            } else {
+                                alert('You need to include Highslide in your page');
+                            }
+                        }"
+            },
+            Marker = new PointMarker
+            {
+                LineWidth = 1
+            }
+        };
+    });
 
     settings.AddSeries(s =>
     {
         s.Name = "All visits";
         s.LineWidth = 4;
-        //s.Marker = new PlotOptionsLineMarker
-        //{
-        //    Radius: 4
-        //};
-    });
-    settings.AddSeries(s =>
-    {
-        s.Name = "New visitors";
-    });
 
-
+        s.Marker = new PlotOptionsLineMarker
+        {
+            Radius = 4
+        };
+    });
+    settings.AddSeries(s => { s.Name = "New visitors"; });
 }).Render()
 @section source_code{
 @@Html.Highcharts4Net().LineChart(settings =>
 {
-    settings.SetData(s=>
-    {
-        s.getJSONP = "http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?";
-    });
+    settings.SetData(s => { s.getJSONP = "http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?"; });
 
-    settings.SetTitle(s =>
-    {
-        s.Text = "Daily visits at www.highcharts.com";
-    });
+    settings.SetTitle(s => { s.Text = "Daily visits at www.highcharts.com"; });
 
-    settings.SetTitle(s=>
-    {
-        s.Text = "Source: Google Analytics";
-    });
+    settings.SetTitle(s => { s.Text = "Source: Google Analytics"; });
 
-    settings.AddXAxis(s=>
+    settings.AddXAxis(s =>
     {
         s.TickInterval = 7*24*3600*1000;
         s.TickWidth = 0;
@@ -162,7 +140,7 @@
             X = 3, Y = 3
         };
     });
-    settings.AddYAxis(s=>
+    settings.AddYAxis(s =>
     {
         s.Title = new YAxisTitle
         {
@@ -195,5 +173,62 @@
         };
         s.ShowFirstLabel = false;
     });
+    settings.SetLegend(s =>
+    {
+        s.Align = HorizontalAligns.Left;
+        s.VerticalAlign = VerticalAligns.Top;
+        s.Y = 20;
+        s.Floating = true;
+        s.BorderWidth = 0;
+    });
+
+    settings.SetTooltip(s =>
+    {
+        s.Shared = true;
+        s.Crosshairs = new Crosshairs(true);
+    });
+
+    settings.SetPlotOptions(s =>
+    {
+        s.Series = new PlotOptionsSeries
+        {
+            Cursor = Cursors.Pointer,
+            Events = new PlotOptionsSeriesEvents
+            {
+                Click = @@"function(e) {
+                            if (typeof(hs)!='undefined'){
+                                hs.htmlExpand(null, {
+                                    pageOrigin:
+                                    {
+                                        x: e.pageX || e.clientX,
+                                        y: e.pageY || e.clientY
+                                    },
+                                    headingText: this.series.name,
+                                    maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':&lt;br /> ' + this.y + ' visits',
+                                    width: 200
+                                });
+                            } else {
+                                alert('You need to include Highslide in your page');
+                            }
+                        }"
+            },
+            Marker = new PointMarker
+            {
+                LineWidth = 1
+            }
+        };
+    });
+
+    settings.AddSeries(s =>
+    {
+        s.Name = "All visits";
+        s.LineWidth = 4;
+
+        s.Marker = new PlotOptionsLineMarker
+        {
+            Radius = 4
+        };
+    });
+    settings.AddSeries(s => { s.Name = "New visitors"; });
 }).Render()
 }

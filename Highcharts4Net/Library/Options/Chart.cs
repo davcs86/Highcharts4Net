@@ -7,7 +7,7 @@ namespace Highcharts4Net.Library.Options
     /// <summary>
     /// Options regarding the chart area and plot area as well as general chart options.
     /// </summary>
-    //[Serializable()]
+    
     public class Chart
 	{
 		/// <summary>

@@ -7,7 +7,7 @@ namespace Highcharts4Net_demos.Controllers
         // GET: ~/LineCharts
         public ActionResult Index()
         {
-            return RedirectToAction("Index","Inicio");
+            return RedirectToAction("Basic");
         }
         // GET: ~/LineCharts/Basic
         public ActionResult Basic()
@@ -16,6 +16,11 @@ namespace Highcharts4Net_demos.Controllers
         }
         // GET: ~/LineCharts/AjaxLoadedClickablePoints
         public ActionResult AjaxLoadedClickablePoints()
+        {
+            return View();
+        }
+        // GET: ~/LineCharts/WithDataLabels
+        public ActionResult WithDataLabels()
         {
             return View();
         }

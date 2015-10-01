@@ -1,6 +1,6 @@
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library.Options
 		/// A click handler callback to use on the button directly. By default this onclick calls
 		/// chart.print(), but it can be overridden to do other actions.
 		/// </summary>
-		//[JsonFormatter("{0}")]
+		
 		public string Onclick { get; set; }
 
 		/// <summary>

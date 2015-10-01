@@ -1,6 +1,6 @@
 using Highcharts4Net.Library.Helpers;
 
-//using Highcharts4Net.Library.Attributes;
+
 
 namespace Highcharts4Net.Library.Options
 {
@@ -52,7 +52,7 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// <p>A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.</p>
         /// </summary>
-        //[JsonFormatter("{0}")]
+        
         public string Pointformatter { get; set; }
 
         /// <summary>
