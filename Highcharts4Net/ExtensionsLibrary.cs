@@ -7,6 +7,28 @@ using Highcharts4Net.Library;
 
 namespace Highcharts4Net
 {
+
+    public sealed class LibraryScriptsOptions
+    {
+        /// <summary>
+        /// <i>True</i> for use Highcharts' official CDNs (http://code.highcharts.com/)
+        /// </summary>
+        public bool UseCDN { get; set; }
+        /// <summary>
+        /// Define the url path where the Highcharts' files are. Only taken when <b>UseCDN</b> is <i>false</i>.
+        /// This value can be relative (using ~/)
+        /// </summary>
+        public string BasePath { get; set; }
+        /// <summary>
+        /// <i>True</i> for include highcharts-more.js
+        /// </summary>
+        public bool IncludeMore { get; set; }
+        /// <summary>
+        /// <i>True</i> for include module/exporting.js
+        /// </summary>
+        public bool IncludeExporting { get; set; }
+    }
+
     public sealed class ExtensionsLibrary
     {
 
@@ -18,27 +40,29 @@ namespace Highcharts4Net
         }
 
         /// <summary>
-        /// Returns the script tag to include Highcharts-all.js in your page.
+        /// Returns the script tags to include Highcharts files in your page.
         /// </summary>
         /// <returns></returns>
-        public HtmlString IncludeLibraryScripts()
+        public HtmlString IncludeLibraryScripts(LibraryScriptsOptions options)
         {
-            return
-                new MvcHtmlString("<script src='" +
-                                  UrlHelper.GenerateContentUrl("~/highcharts.hc4x", _helper.ViewContext.HttpContext) +
-                                  "'></script>");
-        }
+            var context = _helper.ViewContext.HttpContext;
+            string baseUrl = options.UseCDN
+                ? context.Request.Url.Scheme+"://code.highcharts.com/"
+                : UrlHelper.GenerateContentUrl(options.BasePath, context);
 
-        /// <summary>
-        /// Returns Highcharts-all.js inside a SCRIPT tag in your page.
-        /// </summary>
-        /// <returns></returns>
-        public HtmlString PrintLibraryScripts()
-        {
-            var resource = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Highcharts4Net.Scripts.highcharts.js"));
+            var returnStr = string.Format("<script src='{0}'></script>\n", baseUrl+"highcharts.js");
 
-            return
-                new MvcHtmlString("<script>\n"+resource.ReadToEnd()+"\n</script>");
+            if(options.IncludeMore)
+                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts-more.js");
+            if (options.IncludeExporting)
+                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "module/exporting.js");
+
+            // include custom code 
+            //var resource = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Highcharts4Net.Scripts.highcharts4net.min.js"));
+            //if (resource!=StreamReader.Null)
+            //    returnStr += string.Format("<script>\n{0}\n</script>", resource.ReadToEnd());
+
+            return new MvcHtmlString(returnStr);
         }
 
         public AreaChartExtension AreaChart(Action<AreaChartSettings> settings) => new AreaChartExtension(settings);

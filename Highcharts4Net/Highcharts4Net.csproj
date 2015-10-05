@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fastJSON\ForceNullableAttribute.cs" />
     <Compile Include="Library\BubbleChartExtension.cs" />
     <Compile Include="Library\ColumnChartExtension.cs" />
     <Compile Include="Library\ColumnrangeChartExtension.cs" />
@@ -96,8 +97,6 @@
     <Compile Include="fastJSON\Reflection.cs" />
     <Compile Include="fastJSON\SafeDictionary.cs" />
     <Compile Include="fastJSON\StringExtensions.cs" />
-    <Compile Include="Hc4xHandler.cs" />
-    <Compile Include="Hc4xHandlerFactory.cs" />
     <Compile Include="Highcharts4NetHelper.cs" />
     <Compile Include="Library\BaseChartExtension.cs" />
     <Compile Include="Library\Enums\AxisTitleAligns.cs" />
@@ -132,6 +131,7 @@
     <Compile Include="Library\Helpers\Data.cs" />
     <Compile Include="Library\Helpers\DateTimeLabel.cs" />
     <Compile Include="Library\Helpers\Events.cs" />
+    <Compile Include="Library\Helpers\FunctionString.cs" />
     <Compile Include="Library\Helpers\GlobalOptions.cs" />
     <Compile Include="Library\Helpers\LiteralString.cs" />
     <Compile Include="Library\Helpers\Lang.cs" />
@@ -575,9 +575,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Scripts\highcharts.js" />
+    <EmbeddedResource Include="Scripts\highcharts4net.js" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Scripts\highcharts4net.min.js" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

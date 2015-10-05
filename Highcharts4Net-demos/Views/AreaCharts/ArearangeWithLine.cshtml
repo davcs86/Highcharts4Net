@@ -99,7 +99,7 @@
         {
             FillColor = new ColorOrGradient(Color.White),
             LineWidth = 2,
-            LineColor = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]"))
+            LineColor = new ColorOrGradient("Highcharts.getOptions().colors[0]", false)
         };
     });
 
@@ -109,7 +109,7 @@
         s.Data = new Data(ranges);
         s.LineWidth = 0;
         s.LinkedTo = ":previous";
-        s.Color = new ColorOrGradient(new LiteralString("Highcharts.getOptions().colors[0]"));
+        s.Color = new ColorOrGradient("Highcharts.getOptions().colors[0]", false);
         s.FillOpacity = 0.3;
         s.ZIndex = 0;
     });

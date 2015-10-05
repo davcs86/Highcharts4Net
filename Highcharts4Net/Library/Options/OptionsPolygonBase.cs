@@ -1,4 +1,5 @@
-﻿using Highcharts4Net.Library.Enums;
+﻿using Highcharts4Net.fastJSON;
+using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
 
@@ -161,7 +162,8 @@ namespace Highcharts4Net.Library.Options
         /// The threshold, also called zero level or base level. For line type series this is only used in conjunction with <a href='#plotOptions.series.negativeColor'>negativeColor</a>.
         /// Default: 0
         /// </summary>
-        public Number? Threshold { get; set; }
+        [ForceNullable]
+		public Number? Threshold { get; set; }
 
         /// <summary>
         /// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.

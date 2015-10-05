@@ -19,19 +19,13 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// The callback that is evaluated when the data is finished loading, optionally from an external source, and parsed. The first argument passed is a finished chart options object, containing the series. These options can be extended with additional options and passed directly to the chart constructor.
         /// </summary>
-        public LiteralString Complete { get; set; }
+        public FunctionString Complete { get; set; }
 
         /// <summary>
         /// A comma delimited string to be parsed. Related options are startRow, endRow, startColumn and endColumn to delimit what part of the table is used. The lineDelimiter and itemDelimiter options define the CSV delimiter formats.
         /// </summary>
         public LiteralString Csv { get; set; }
 
-        /// <summary>
-        /// JSONP url for ajax loaded data (example: http://www.highcharts.com/demo/line-ajax)
-        /// Overrides the value of "CSV"
-        /// </summary>
-        [XmlIgnore]
-        public string getJSONP { get; set; }
-        
     }
+
 }

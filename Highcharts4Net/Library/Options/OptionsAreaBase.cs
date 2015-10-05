@@ -1,3 +1,4 @@
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
@@ -195,6 +196,7 @@ namespace Highcharts4Net.Library.Options
 		/// The Y axis value to serve as the base for the area, for distinguishing between values above and below a threshold. If <code>null</code>, the area behaves like a line series with fill between the graph and the Y axis minimum.
 		/// Default: 0
 		/// </summary>
+		[ForceNullable]
 		public Number? Threshold { get; set; }
 
 		/// <summary>

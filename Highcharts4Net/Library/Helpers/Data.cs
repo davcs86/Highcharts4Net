@@ -27,13 +27,13 @@ namespace Highcharts4Net.Library.Helpers
             data.CopyTo(DoubleArrayData, 0);
         }
 
-        private object[] ArrayData { get; set; }
+        private object[] ArrayData { get; }
 
-        private object[,] DoubleArrayData { get; set ; }
+        private object[,] DoubleArrayData { get; }
 
-        private Point[] Points { get; set; }
+        private Point[] Points { get; }
 
-        private SeriesData[] SeriesData { get; set; }
+        private SeriesData[] SeriesData { get; }
 
         public override string ToString()
         {

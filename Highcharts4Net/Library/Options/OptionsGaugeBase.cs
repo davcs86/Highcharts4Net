@@ -1,3 +1,4 @@
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
@@ -115,6 +116,7 @@ namespace Highcharts4Net.Library.Options
 		/// The threshold, also called zero level or base level. For line type series this is only used in conjunction with <a href='#plotOptions.series.negativeColor'>negativeColor</a>.
 		/// Default: 0
 		/// </summary>
+		[ForceNullable]
 		public Number? Threshold { get; set; }
 
 		/// <summary>

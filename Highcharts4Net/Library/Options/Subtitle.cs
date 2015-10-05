@@ -33,7 +33,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The subtitle of the chart.
 		/// </summary>
-		public string Text { get; set; }
+		public LiteralString Text { get; set; }
 
 		/// <summary>
 		/// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the text.

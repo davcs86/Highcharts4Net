@@ -416,7 +416,7 @@ namespace Highcharts4Net.fastJSON
             {
                 var p = g[ii];
                 object o = p.Getter(obj);
-                if (_params.SerializeNullValues == false && (o == null || o is DBNull))
+                if (p.ForceNullValue==false&&(_params.SerializeNullValues == false && (o == null || o is DBNull)))
                 {
                     //append = false;
                 }

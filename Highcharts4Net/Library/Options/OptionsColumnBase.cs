@@ -1,4 +1,5 @@
 using System.Drawing;
+using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Enums;
 using Highcharts4Net.Library.Helpers;
 
@@ -228,6 +229,7 @@ namespace Highcharts4Net.Library.Options
 		/// The Y axis value to serve as the base for the columns, for distinguishing between values above and below a threshold. If <code>null</code>, the columns extend from the padding Y axis minimum.
 		/// Default: 0
 		/// </summary>
+		[ForceNullable]
 		public Number? Threshold { get; set; }
 
 		/// <summary>

@@ -11,7 +11,7 @@
 
 @Html.Highcharts4Net().LineChart(settings =>
 {
-    settings.SetData(s => { s.getJSONP = "http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?"; });
+    settings.Name = "AjaxLoadedChart";
 
     settings.SetTitle(s => { s.Text = "Daily visits at www.highcharts.com"; });
 
@@ -19,6 +19,7 @@
 
     settings.AddXAxis(s =>
     {
+        s.Type = AxisTypes.Datetime;
         s.TickInterval = (7*24*3600*1000);
         s.TickWidth = 0;
         s.GridLineWidth = 1;
@@ -120,6 +121,20 @@
     });
     settings.AddSeries(s => { s.Name = "New visitors"; });
 }).Render()
+
+<script>
+    Highcharts4Net.RegisterCallback(function (chartObj, chartDom, chartOptions, chartName) {
+        console.log(chartObj); console.log(chartDom); console.log(chartOptions);
+        if (chartName == "AjaxLoadedChart") {
+            $.getJSON("http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?", function (data) {
+                chartOptions.data = { csv: data };
+                $(chartDom).highcharts(chartOptions);
+            });
+        }
+    });
+</script>
+
+
 @section source_code{
 @@Html.Highcharts4Net().LineChart(settings =>
 {

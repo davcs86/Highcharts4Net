@@ -207,17 +207,20 @@ namespace Highcharts4Net
             Name = DateTime.Now.ToString("c\\har\\t_HHmmssffffff");
 
             JSON.RegisterCustomType(typeof(LiteralString), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(FunctionString), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(GradientStops), ToStringSerializer, ToStringDeserializer);
+            
         }
 
         public HtmlString Render()
         {
             FixChartType();
 
-            var isJSONP = FixDataCSV();
+            //var isJSONP = FixDataCSV();
             var chartOptions = JSON.ToJSON(_chart,
                 new JSONParameters
                 {
@@ -230,24 +233,12 @@ namespace Highcharts4Net
 
             StringBuilder output = new StringBuilder();
 
-            if (isJSONP)
-            {
+
                 output.AppendFormat("<div id='{0}'></div>\n" +
                                     "<script>" +
-                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
-                                    "\n\tvar {1};\n\t{3}.push($.getJSON(\"{4}\",function({1}_data){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}}));" +
+                                    "\n\tvar {1}, {1}_options;\n\tHighcharts4Net.RegisterChart(function(){{\n\t\t{1}_options={2};\n\t\t{1} = new Highcharts.Chart({1}_options);\n\t\treturn [{1}, {0}, {1}_options, \"{1}\"];\n\t}});" +
                                     "\n</script>",
-                                    _chart.Chart.RenderTo, Name, chartOptions, "hc4n_arr", _chart.Data.getJSONP);
-            }
-            else
-            {
-                output.AppendFormat("<div id='{0}'></div>\n" +
-                                    "<script>" +
-                                    "\n\tif(typeof({3})=='undefined'){{var {3} = [];}};" +
-                                    "\n\tvar {1};\n\t{3}.push(function(){{\n\t\t{1} = new Highcharts.Chart({2});\n\t}});" +
-                                    "\n</script>",
-                                    _chart.Chart.RenderTo, Name, chartOptions, "hc4n_arr");
-            }
+                                    _chart.Chart.RenderTo, Name, chartOptions);
 
             return new HtmlString(output.ToString());
         }
@@ -305,20 +296,6 @@ namespace Highcharts4Net
 
         }
         
-        internal bool FixDataCSV()
-        {
-            if (_chart.Data != null)
-            {
-                if (!string.IsNullOrWhiteSpace(_chart.Data.getJSONP))
-                {
-                    _chart.Data.Csv = Name + "_data";
-                    return true;
-                }
-                _chart.Data.Csv = string.Format("\"{0}\"", Name);
-            }
-            return false;
-        }
-
     }
     
 }

@@ -10,7 +10,7 @@
     @Scripts.Render("~/bundles/jquery")*@
     @Scripts.Render("~/Scripts/jquery.js")
     @Scripts.Render("~/Content/styles/js/bootstrap.min.js")
-
+    @Html.Highcharts4Net().IncludeLibraryScripts(new LibraryScriptsOptions { UseCDN = true, IncludeMore = true})
 </head>
 <body>
 <div class="site-outer-wrap">
@@ -31,20 +31,22 @@
                     <div class="header-content-bottom">
                         <nav class="main-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
                             <ul id="menu-main-menu" class="menu">
-                                <li id="menu-item-3698" class="menu-item current-menu-item">
-                                    <a href="#">Line charts</a><span class="subnav-close"></span><ul class="sub-menu" style="display:block">
-                                        <li class="menu-item">
+                                <li id="menu-item-linecharts_index" class="menu-item">
+                                    <a href="#">Line charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                        <li id="menu-item-linecharts_basic" class="menu-item">
                                             <a href="@Url.Action("Basic", "LineCharts")">Basic line</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li id="menu-item-linecharts_ajaxloadedclickablepoints" class="menu-item">
                                             <a href="@Url.Action("AjaxLoadedClickablePoints", "LineCharts")">Ajax loaded data, clickable points</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li id="menu-item-linecharts_withdatalabels" class="menu-item">
                                             <a href="@Url.Action("WithDataLabels", "LineCharts")">With data labels</a>
+                                        </li>
+                                        <li id="menu-item-linecharts_timeseries" class="menu-item">
+                                            <a href="@Url.Action("TimeSeries", "LineCharts")">Time series, zoomable</a>
                                         </li>
                                     </ul>
                                 </li>
-
                             </ul>
                         </nav><aside class="header-widgets" itemscope itemtype="http://schema.org/WPSideBar">
                             <div id="text-1" class="widget widget_text">
@@ -100,9 +102,19 @@
             $("#sidebar").toggleClass("active");
             $(".toggleSidebar").toggleClass("active");
         });
+
+        var current_menu = "@ViewContext.RouteData.GetRequiredString("controller").ToLower()"+"_"+"@ViewContext.RouteData.GetRequiredString("action").ToLower()";
+        $("#menu-item-" + current_menu).addClass("current-menu-item");
+        $("#menu-item-" + current_menu).parents("ul.sub-menu").first().show();
+
+        $("body").on("click", "#menu-main-menu > .menu-item > a", function(ev) {
+            ev.preventDefault();
+            $(this).parent().find(".sub-menu:first").slideToggle();
+        });
+
     });
 </script>
-    @Html.Highcharts4Net().IncludeLibraryScripts()
+    
 <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Roboto:400,300,700,500,700italic,400italic,300italic,500italic:latin,latin-ext' ] }

@@ -16,6 +16,7 @@ namespace Highcharts4Net.fastJSON
         public string lcName;
         //public string OtherName;
         public Reflection.GenericGetter Getter;
+        public bool ForceNullValue;
     }
 
     internal enum myPropInfoType
@@ -529,7 +530,7 @@ namespace Highcharts4Net.fastJSON
                 }
                 GenericGetter g = CreateGetMethod(type, p);
                 if (g != null)
-                    getters.Add(new Getters { Getter = g, Name = p.Name, lcName = p.Name.ToLower() });
+                    getters.Add(new Getters { Getter = g, Name = p.Name, lcName = p.Name.ToLower(), ForceNullValue=p.IsDefined(typeof (ForceNullable), false) });
             }
 
             FieldInfo[] fi = type.GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.Static);
@@ -553,7 +554,7 @@ namespace Highcharts4Net.fastJSON
                 {
                     GenericGetter g = CreateGetField(type, f);
                     if (g != null)
-                        getters.Add(new Getters { Getter = g, Name = f.Name, lcName = f.Name.ToLower() });
+                        getters.Add(new Getters { Getter = g, Name = f.Name, lcName = f.Name.ToLower(), ForceNullValue = f.IsDefined(typeof(ForceNullable), false) });
                 }
             }
             val = getters.ToArray();

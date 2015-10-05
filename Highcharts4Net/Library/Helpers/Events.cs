@@ -4,16 +4,16 @@ namespace Highcharts4Net.Library.Helpers
 {
     public class Events
     {
-        
-        public LiteralString Click { get; set; }
+
+        public FunctionString Click { get; set; }
+
+
+        public FunctionString MouseOver { get; set; }
 
         
-        public LiteralString MouseOver { get; set; }
+        public FunctionString MouseOut { get; set; }
 
         
-        public LiteralString MouseOut { get; set; }
-
-        
-        public string Mousemove { get; set; }
+        public FunctionString MouseMove { get; set; }
     }
 }

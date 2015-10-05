@@ -24,7 +24,7 @@
         s.Y = 100;
         s.Floating = true;
         s.BorderWidth = 1;
-        s.BackgroundColor = new ColorOrGradient(new LiteralString("(Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'"));
+        s.BackgroundColor = new ColorOrGradient("(Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'",false);
     });
 
     settings.AddXAxis(s=>
