@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library.Options
 		/// The thickness of the panel.
 		/// Default: 1
 		/// </summary>
-		public Number? Size { get; set; }
+		public NumberOrDateTime? Size { get; set; }
 
 	}
 

@@ -1,35 +1,26 @@
 ﻿using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Options;
 
-
-
 namespace Highcharts4Net.Library.Helpers
 {
-    public class Data
+    public sealed class Data
     {
-        public Data(object[] data) { ArrayData = data; }
-
-        public Data(object[,] data) { DoubleArrayData = data; }
 
         public Data(Point[] data) { Points = data; }
 
         public Data(SeriesData[] data) { SeriesData = data; }
 
-        public Data(Number?[] data)
-        {
-            ArrayData = new object[data.Length];
-            data.CopyTo(ArrayData, 0);
-        }
+        public Data(NumberOrDateTime?[] data) { NumberData = data; }
 
-        public Data(Number?[,] data)
-        {
-            DoubleArrayData = new object[data.GetLength(0), data.GetLength(1)];
-            data.CopyTo(DoubleArrayData, 0);
-        }
+        public Data(NumberOrDateTime?[][] data) { JaggedNumberData = data; }
 
-        private object[] ArrayData { get; }
+        public Data(NumberOrDateTime?[,] data) { DoubleNumberData = data; }
 
-        private object[,] DoubleArrayData { get; }
+        private NumberOrDateTime?[] NumberData { get; }
+
+        private NumberOrDateTime?[][] JaggedNumberData { get; }
+
+        private NumberOrDateTime?[,] DoubleNumberData { get; }
 
         private Point[] Points { get; }
 
@@ -37,13 +28,18 @@ namespace Highcharts4Net.Library.Helpers
 
         public override string ToString()
         {
-            if (ArrayData != null)
+            if (NumberData != null)
             {
-                return JSON.ToJSON(ArrayData);
+                return JSON.ToJSON(NumberData);
             }
-            if (DoubleArrayData != null)
+            if (DoubleNumberData != null)
             {
-                return JSON.ToJSON(DoubleArrayData);
+                return JSON.ToJSON(DoubleNumberData);
+            }
+
+            if (JaggedNumberData != null)
+            {
+                return JSON.ToJSON(JaggedNumberData);
             }
             if (Points != null)
             {

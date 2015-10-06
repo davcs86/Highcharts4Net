@@ -124,8 +124,7 @@
 
 <script>
     Highcharts4Net.RegisterCallback(function (chartObj, chartDom, chartOptions, chartName) {
-        console.log(chartObj); console.log(chartDom); console.log(chartOptions);
-        if (chartName == "AjaxLoadedChart") {
+        if (chartName === "AjaxLoadedChart") {
             $.getJSON("http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?", function (data) {
                 chartOptions.data = { csv: data };
                 $(chartDom).highcharts(chartOptions);
@@ -246,4 +245,15 @@
     });
     settings.AddSeries(s => { s.Name = "New visitors"; });
 }).Render()
+
+&lt;script>
+    Highcharts4Net.RegisterCallback(function (chartObj, chartDom, chartOptions, chartName) {
+        if (chartName === "AjaxLoadedChart") {
+            $.getJSON("http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?", function (data) {
+                chartOptions.data = { csv: data };
+                $(chartDom).highcharts(chartOptions);
+            });
+        }
+    });
+&lt;/script>
 }

@@ -13,7 +13,7 @@ namespace Highcharts4Net.Library.Options
 		/// The duration in milliseconds of the fade out effect.
 		/// Default: 100
 		/// </summary>
-		public Number? HideDuration { get; set; }
+		public NumberOrDateTime? HideDuration { get; set; }
 
 		/// <summary>
 		/// CSS styles for the loading label <code>span</code>.
@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// The duration in milliseconds of the fade in effect.
 		/// Default: 100
 		/// </summary>
-		public Number? ShowDuration { get; set; }
+		public NumberOrDateTime? ShowDuration { get; set; }
 
 		/// <summary>
 		/// CSS styles for the loading screen that covers the plot area. Defaults to:<pre>style: { position: 'absolute', backgroundColor: 'white', opacity: 0.5, textAlign: 'center'}</pre>

@@ -37,17 +37,17 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The position of the line in axis units.
 		/// </summary>
-		public Number? Value { get; set; }
+		public NumberOrDateTime? Value { get; set; }
 
 		/// <summary>
 		/// The width or thickness of the plot line.
 		/// </summary>
-		public Number? Width { get; set; }
+		public NumberOrDateTime? Width { get; set; }
 
 		/// <summary>
 		/// The z index of the plot line within the chart.
 		/// </summary>
-		public Number? ZIndex { get; set; }
+		public NumberOrDateTime? ZIndex { get; set; }
 
 	}
 

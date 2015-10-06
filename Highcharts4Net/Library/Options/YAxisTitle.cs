@@ -20,18 +20,18 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel distance between the axis labels and the title. Positive values are outside the axis line, negative are inside.
 		/// Default: 40
 		/// </summary>
-		public Number? Margin { get; set; }
+		public NumberOrDateTime? Margin { get; set; }
 
 		/// <summary>
 		/// The distance of the axis title from the axis line. By default, this distance is  computed from the offset width of the labels, the labels' distance from  the axis and the title's margin. However when the offset option is set, it overrides all this.
 		/// </summary>
-		public Number? Offset { get; set; }
+		public NumberOrDateTime? Offset { get; set; }
 
 		/// <summary>
 		/// The rotation of the text in degrees. 0 is horizontal, 270 is  vertical reading from bottom to top.
 		/// Default: 270
 		/// </summary>
-		public Number? Rotation { get; set; }
+		public NumberOrDateTime? Rotation { get; set; }
 
 		/// <summary>
 		/// CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
@@ -50,12 +50,12 @@ namespace Highcharts4Net.Library.Options
         /// Horizontal pixel offset of the title position. 
         /// Default:  0
         /// </summary>
-        public Number? X { get; set; }
+        public NumberOrDateTime? X { get; set; }
 
         /// <summary>
         /// Vertical pixel offset of the title position.
         /// </summary>
-        public Number? Y { get; set; }
+        public NumberOrDateTime? Y { get; set; }
 
 	}
 

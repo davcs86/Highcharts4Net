@@ -12,7 +12,7 @@ namespace Highcharts4Net.Library.Helpers
         /// </summary>
         /// <param name="number">The number of pixel or percentage.</param>
         /// <param name="userPercentage">if set to <c>true</c> value as percentage.</param>
-        public PercentageOrPixel(Number number, bool userPercentage = false)
+        public PercentageOrPixel(NumberOrDateTime number, bool userPercentage = false)
         {
             if (userPercentage)
                 Value = number + "%";

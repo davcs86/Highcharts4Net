@@ -20,19 +20,19 @@ namespace Highcharts4Net.Library.Options
         /// For horizontal axes, the allowed degrees of label rotation to prevent overlapping labels. If there is enough space, labels are not rotated. As the chart gets narrower, it will start rotating the labels -45 degrees, then remove every second label and try again with rotations 0 and -45 etc. Set it to false to disable rotation, which will cause the labels to word-wrap if possible.
         /// Default: [-45]
         /// </summary>
-        public Number[] AutoRotation { get; set; }
+        public NumberOrDateTime[] AutoRotation { get; set; }
 
         // <summary>
         /// When each category width is more than this many pixels, we don't apply auto rotation. Instead, we lay out the axis label with word wrap. A lower limit makes sense when the label contains multiple short words that don't extend the available horizontal space for each label.
         /// Default: 80
         /// </summary>
-        public Number? AutoRotationLimit { get; set; }
+        public NumberOrDateTime? AutoRotationLimit { get; set; }
 
 		/// <summary>
 		/// Polar charts only. The label's pixel distance from the perimeter of the plot area.
 		/// Default: 15
 		/// </summary>
-		public Number? Distance { get; set; }
+		public NumberOrDateTime? Distance { get; set; }
 
 		/// <summary>
 		/// Enable or disable the axis labels.
@@ -50,13 +50,13 @@ namespace Highcharts4Net.Library.Options
 		/// Callback JavaScript function to format the label. The value is  given by <code>this.value</code>. Additional properties for <code>this</code> are <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. Defaults to: <pre>function() { return this.value;}</pre>
 		/// </summary>
 		//
-		public LiteralString Formatter { get; set; }
+		public FunctionString Formatter { get; set; }
 
 		/// <summary>
 		/// Horizontal axis only. When <code>staggerLines</code> is not set, <code>maxStaggerLines</code> defines how many lines the axis is allowed to add to automatically avoid overlapping X labels. Set to <code>1</code> to disable overlap detection. 
 		/// Default: 5
 		/// </summary>
-		public Number? MaxStaggerLines { get; set; }
+		public NumberOrDateTime? MaxStaggerLines { get; set; }
 
 		/// <summary>
 		/// How to handle overflowing labels on horizontal axis. Can be undefined, <code>false</code> or <code>'justify'</code>. By default it aligns inside the chart area. If 'justify', labels will not render outside the plot area. If <code>false</code>, it will not be aligned at all. If there is room to move it, it will be aligned to the edge, else it will be removed.
@@ -67,23 +67,23 @@ namespace Highcharts4Net.Library.Options
         /// The pixel padding for axis labels, to ensure white space between them.
         /// Default: 5
         /// </summary>
-        public Number? Padding { get; set; }
+        public NumberOrDateTime? Padding { get; set; }
         
         /// <summary>
         /// Rotation of the labels in degrees.
         /// Default: 0
         /// </summary>
-        public Number? Rotation { get; set; }
+        public NumberOrDateTime? Rotation { get; set; }
 
 		/// <summary>
 		/// Horizontal axes only. The number of lines to spread the labels over to make room or tighter labels.  .
 		/// </summary>
-		public Number? StaggerLines { get; set; }
+		public NumberOrDateTime? StaggerLines { get; set; }
 
 		/// <summary>
 		/// <p>To show only every <em>n</em>'th label on the axis, set the step to <em>n</em>. Setting the step to 2 shows every other label.</p><p>By default, the step is calculated automatically to avoid overlap. To prevent this, set it to 1. This usually only happens on a category axis, and is often a sign that you have chosen the wrong axis type. Read more at <a href='http://www.highcharts.com/docs/chart-concepts/axes'>Axis docs</a> => What axis should I use?</p> 
 		/// </summary>
-		public Number? Step { get; set; }
+		public NumberOrDateTime? Step { get; set; }
 
 		/// <summary>
 		/// CSS styles for the label. Use <code>whiteSpace: 'nowrap'</code> to prevent wrapping of category labels. Defaults to:<pre>style: { color: '#6D869F', fontWeight: 'bold'}</pre>
@@ -101,19 +101,19 @@ namespace Highcharts4Net.Library.Options
 		/// The x position offset of the label relative to the tick position on the axis.
 		/// Default: 0
 		/// </summary>
-		public Number? X { get; set; }
+		public NumberOrDateTime? X { get; set; }
 
 		/// <summary>
 		/// The y position offset of the label relative to the tick position on the axis. The default makes it adapt to the font size on bottom axis.
 		/// Default: null
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 		/// <summary>
 		/// The Z index for the axis labels.
 		/// Default: 7
 		/// </summary>
-		public Number? ZIndex { get; set; }
+		public NumberOrDateTime? ZIndex { get; set; }
 
 	}
 

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/styles.css")
-    @*@Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")*@
+    
     @Scripts.Render("~/Scripts/jquery.js")
+    
     @Scripts.Render("~/Content/styles/js/bootstrap.min.js")
-    @Html.Highcharts4Net().IncludeLibraryScripts(new LibraryScriptsOptions { UseCDN = true, IncludeMore = true})
+    @Html.Highcharts4Net().IncludeLibraryScripts(new LibraryScriptsOptions { UseCDN = true, IncludeMore = true, IncludeModuleData = true, IncludeModuleExporting = true })
 </head>
 <body>
 <div class="site-outer-wrap">
@@ -44,6 +44,9 @@
                                         </li>
                                         <li id="menu-item-linecharts_timeseries" class="menu-item">
                                             <a href="@Url.Action("TimeSeries", "LineCharts")">Time series, zoomable</a>
+                                        </li>
+                                        <li id="menu-item-linecharts_splineinverted" class="menu-item">
+                                            <a href="@Url.Action("SplineInverted", "LineCharts")">Spline with inverted axes</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -80,7 +83,7 @@
                                 @RenderBody()
                             </div>
                             <div class="tab-pane" id="source">
-                                <pre>@RenderSection("source_code", required: false)</pre>
+                                <pre><code lang="language-markup">@RenderSection("source_code", false)</code></pre>
                             </div>
                         </div>
                     </div>
@@ -91,25 +94,29 @@
 </div>
 
 <script>
-    jQuery(function($) {
-        $("body").on("click", ".header-toggle", function(a) {
-            $("body").toggleClass("header-open");
-            a.preventDefault();
-        });
-
-        $("body").on("click", ".toggleSidebar", function(ev) {
-            ev.preventDefault();
-            $("#sidebar").toggleClass("active");
-            $(".toggleSidebar").toggleClass("active");
-        });
-
+    jQuery(function ($) {
         var current_menu = "@ViewContext.RouteData.GetRequiredString("controller").ToLower()"+"_"+"@ViewContext.RouteData.GetRequiredString("action").ToLower()";
         $("#menu-item-" + current_menu).addClass("current-menu-item");
         $("#menu-item-" + current_menu).parents("ul.sub-menu").first().show();
 
-        $("body").on("click", "#menu-main-menu > .menu-item > a", function(ev) {
+        $("body").on("click", ".header-toggle", function (ev) {
+            $("body").toggleClass("header-open");
             ev.preventDefault();
+        });
+
+        $("body").on("click", ".toggleSidebar", function (ev) {
+            $("#sidebar").toggleClass("active");
+            $(".toggleSidebar").toggleClass("active");
+            ev.preventDefault();
+        });
+
+        $("body").on("click", "#menu-main-menu > .menu-item > a", function(ev) {
             $(this).parent().find(".sub-menu:first").slideToggle();
+            ev.preventDefault();
+        });
+
+        $("body").on("shown.bs.tab", "a[data-toggle=\"tab\"]", function () {
+            $(window).trigger("resize"); // fix for highcharts 
         });
 
     });

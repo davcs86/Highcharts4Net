@@ -1,177 +1,232 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 
 namespace Highcharts4Net.Library.Helpers
 {
-    public struct Number : IComparable
+    public struct NumberOrDateTime : IComparable
     {
-        double? _DoubleNumber;
-        int? _IntNumber;
-        decimal? _DecimalNumber;
-        float? _FloatNumber;
+        private DateTime? _dateValue;
+        private readonly bool _isDateTime;
 
-        Number(double value)
+        private double? _doubleValue;
+        private readonly bool _isDouble;
+
+        private int? _intValue;
+        private readonly bool _isInt;
+
+        private decimal? _decimalValue;
+        private readonly bool _isDecimal;
+
+        private float? _floatValue;
+        private readonly bool _isFloat;
+
+        private long? _longValue;
+        private readonly bool _isLong;
+
+        NumberOrDateTime(DateTime? value)
         {
-            _DoubleNumber = value;
-            _IntNumber = null;
-            _DecimalNumber = null;
-            _FloatNumber = null;
+            _dateValue = value;
+            _isDateTime = true;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = null;
+            _isLong = false;
         }
 
-        Number(int value)
+        NumberOrDateTime(double? value)
         {
-            _IntNumber = value;
-            _DoubleNumber = null;
-            _DecimalNumber = null;
-            _FloatNumber = null;
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = value;
+            _isDouble = true;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = null;
+            _isLong = false;
         }
 
-        Number(decimal value)
+        NumberOrDateTime(int? value)
         {
-            _DecimalNumber = value;
-            _DoubleNumber = null;
-            _IntNumber = null;
-            _FloatNumber = null;
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = value;
+            _isInt = true;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = null;
+            _isLong = false;
         }
 
-        Number(float value)
+        NumberOrDateTime(decimal? value)
         {
-            _DoubleNumber = null;
-            _IntNumber = null;
-            _DecimalNumber = null;
-            _FloatNumber = value;
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = value;
+            _isDecimal = true;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = null;
+            _isLong = false;
+        }
+
+        NumberOrDateTime(float? value)
+        {
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = value;
+            _isFloat = true;
+
+            _longValue = null;
+            _isLong = false;
+        }
+
+        NumberOrDateTime(long? value)
+        {
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = value;
+            _isLong = true;
         }
 
         #region IComparable Members
 
         public int CompareTo(object obj)
         {
-            if (_DoubleNumber == null && _IntNumber == null && _DecimalNumber == null && _FloatNumber == null)
-                throw new ArgumentException("The number is not correct.");
+            if (!_isDateTime && !_isDouble && !_isInt && !_isDecimal && !_isFloat && !_isLong)
+                throw new ArgumentException("The value is not correct.");
 
             if (obj == null) return 1;
 
-            IComparable comparer = (((IComparable) (_DoubleNumber ?? _IntNumber) ?? _DecimalNumber) ?? _FloatNumber);
-            Number objectNumber = (Number)obj;
-            return comparer.CompareTo((((IComparable)(objectNumber._DoubleNumber ?? objectNumber._IntNumber) ?? objectNumber._DecimalNumber) ?? objectNumber._FloatNumber));
+            IComparable comparer = _isDateTime
+                ? _dateValue
+                : (_isDouble
+                    ? _doubleValue
+                    : (_isInt ? _intValue : (_isDecimal ? (IComparable) _decimalValue : (_isFloat ? _floatValue : (_isLong ? _longValue : null)))));
+
+            NumberOrDateTime objectNumber = (NumberOrDateTime)obj;
+            return comparer.CompareTo(objectNumber._isDateTime
+                ? objectNumber._dateValue
+                : (objectNumber._isDouble
+                    ? objectNumber._doubleValue
+                    : (objectNumber._isInt ? objectNumber._intValue : (objectNumber._isDecimal ? (IComparable)objectNumber._decimalValue : (objectNumber._isFloat ? objectNumber._floatValue : (_isLong ? _longValue : null))))));
         }
 
         #endregion
 
-        public static implicit operator Number(double value) { return new Number(value); }
-        public static implicit operator Number(int value) { return new Number(value); }
-        public static implicit operator Number(decimal value) { return new Number(value); }
-        public static implicit operator Number(float value) { return new Number(value); }
+        public static implicit operator NumberOrDateTime(double value) { return new NumberOrDateTime(value); }
+        public static implicit operator NumberOrDateTime(int value) { return new NumberOrDateTime(value); }
+        public static implicit operator NumberOrDateTime(decimal value) { return new NumberOrDateTime(value); }
+        public static implicit operator NumberOrDateTime(float value) { return new NumberOrDateTime(value); }
+        public static implicit operator NumberOrDateTime(long value) { return new NumberOrDateTime(value); }
+        public static implicit operator NumberOrDateTime(DateTime value) { return new NumberOrDateTime(value); }
 
-        public static Number? GetNumber(object o)
+        public static implicit operator DateTime? (NumberOrDateTime a)
         {
-            if (o is int)
-                return new Number((int)o);
-            if (o is decimal)
-                return new Number((decimal)o);
-            if (o is double)
-                return new Number((double)o);
-            if (o is float)
-                return new Number((float)o);
-            return null;
+            return a._dateValue;
         }
 
-        public static implicit operator int?(Number a)
+        public static implicit operator int?(NumberOrDateTime a)
         {
-            try
-            {
-                if (a._IntNumber.HasValue)
-                return a._IntNumber.Value;
-            if (a._DecimalNumber.HasValue)
-                return Convert.ToInt32(a._DecimalNumber.Value);
-            if (a._DoubleNumber.HasValue)
-                return Convert.ToInt32(a._DoubleNumber.Value);
-            if (a._FloatNumber.HasValue)
-                return Convert.ToInt32(a._FloatNumber.Value);
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-            return null;
+            return a._intValue;
         }
 
-        public static implicit operator double?(Number a)
+        public static implicit operator double?(NumberOrDateTime a)
         {
-            try
-            {
-                if (a._DoubleNumber.HasValue)
-                return a._DoubleNumber;
-            if (a._DecimalNumber.HasValue)
-                return Convert.ToDouble(a._DecimalNumber.Value);
-            if (a._IntNumber.HasValue)
-                return Convert.ToDouble(a._IntNumber.Value);
-            if (a._FloatNumber.HasValue)
-                return Convert.ToDouble(a._FloatNumber.Value);
-        }
-            catch (Exception)
-            {
-                // ignored
-            }
-            return null;
+            return a._doubleValue;
         }
 
-        public static implicit operator decimal?(Number a)
+        public static implicit operator decimal?(NumberOrDateTime a)
         {
-            try
-            {
-                if (a._DecimalNumber.HasValue)
-                    return a._DecimalNumber;
-                if (a._DoubleNumber.HasValue)
-                    return Convert.ToDecimal(a._DoubleNumber.Value);
-                if (a._IntNumber.HasValue)
-                    return Convert.ToDecimal(a._IntNumber.Value);
-                if (a._FloatNumber.HasValue)
-                    return Convert.ToDecimal(a._FloatNumber.Value);
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-            return null;
+            return a._decimalValue;
         }
 
-        public static implicit operator float? (Number a)
+        public static implicit operator float? (NumberOrDateTime a)
         {
-            try
-            {
-                if (a._FloatNumber.HasValue)
-                    return a._FloatNumber;
-                if (a._DoubleNumber.HasValue)
-                    return float.Parse(a._DoubleNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat),
-                        CultureInfo.InvariantCulture.NumberFormat);
-                if (a._IntNumber.HasValue)
-                    return float.Parse(a._IntNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat),
-                        CultureInfo.InvariantCulture.NumberFormat);
-                if (a._DecimalNumber.HasValue)
-                    return float.Parse(a._DecimalNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat),
-                        CultureInfo.InvariantCulture.NumberFormat);
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-            return null;
+            return a._floatValue;
+        }
+
+        public static implicit operator long? (NumberOrDateTime a)
+        {
+            return a._longValue;
         }
 
         public override string ToString()
         {
-            if (_DoubleNumber.HasValue)
-                return _DoubleNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
-            if (_IntNumber.HasValue)
-                return _IntNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
-            if (_DecimalNumber.HasValue)
-                return _DecimalNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
-            if (_FloatNumber.HasValue)
-                return _FloatNumber.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isDateTime && _dateValue.HasValue)
+                return _dateValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isDouble && _doubleValue.HasValue)
+                return _doubleValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isInt && _intValue.HasValue)
+                return _intValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isDecimal && _decimalValue.HasValue)
+                return _decimalValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isFloat && _floatValue.HasValue)
+                return _floatValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+            if (_isLong && _longValue.HasValue)
+                return _longValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
             return string.Empty;
         }
+
     }
 }

@@ -30,12 +30,12 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the point marker's outline.
 		/// Default: 0
 		/// </summary>
-		public Number? LineWidth { get; set; }
+		public NumberOrDateTime? LineWidth { get; set; }
 
 		/// <summary>
 		/// The radius of the point marker. In hover state, it defaults to the normal state's radius + 2.
 		/// </summary>
-		public Number? Radius { get; set; }
+		public NumberOrDateTime? Radius { get; set; }
 
 	}
 

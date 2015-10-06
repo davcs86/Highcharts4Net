@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// Pixel height of the buttons.
 		/// Default: 20
 		/// </summary>
-		public Number? Height { get; set; }
+		public NumberOrDateTime? Height { get; set; }
 
 		/// <summary>
 		/// <p>A collection of config options for the menu items. Each options object consists of a <code>text</code> option which is a string to show in the menu item, as well as an <code>onclick</code> parameter which is a callback function to run on click.</p> <p>By default, there is the 'Print' menu item plus one menu item for each of the available export types. Menu items can be customized by defining a new array of items and assigning  <code>null</code> to unwanted positions (see override example below).</p>
@@ -56,7 +56,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel size of the symbol on the button.
 		/// Default: 14
 		/// </summary>
-		public Number? SymbolSize { get; set; }
+		public NumberOrDateTime? SymbolSize { get; set; }
 
 		/// <summary>
 		/// The color of the symbol's stroke or line.
@@ -68,19 +68,19 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel stroke width of the symbol on the button.
 		/// Default: 1
 		/// </summary>
-		public Number? SymbolStrokeWidth { get; set; }
+		public NumberOrDateTime? SymbolStrokeWidth { get; set; }
 
 		/// <summary>
 		/// The x position of the center of the symbol inside the button.
 		/// Default: 12.5
 		/// </summary>
-		public Number? SymbolX { get; set; }
+		public NumberOrDateTime? SymbolX { get; set; }
 
 		/// <summary>
 		/// The y position of the center of the symbol inside the button.
 		/// Default: 10.5
 		/// </summary>
-		public Number? SymbolY { get; set; }
+		public NumberOrDateTime? SymbolY { get; set; }
 
 		/// <summary>
 		/// A text string to add to the individual button. 
@@ -103,19 +103,19 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the button.
 		/// Default: 24
 		/// </summary>
-		public Number? Width { get; set; }
+		public NumberOrDateTime? Width { get; set; }
 
 		/// <summary>
 		/// The horizontal position of the button relative to the <code>align</code> option.
 		/// Default: -10
 		/// </summary>
-		public Number? X { get; set; }
+		public NumberOrDateTime? X { get; set; }
 
 		/// <summary>
 		/// The vertical offset of the button's position relative to its <code>verticalAlign</code>. .
 		/// Default: 0
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 	}
 

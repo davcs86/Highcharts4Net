@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the border surrounding each slice.
 		/// Default: 1
 		/// </summary>
-		public Number? BorderWidth { get; set; }
+		public NumberOrDateTime? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The center of the funnel. By default, it is centered in the middle of the plot area, so it fills the plot area height.
@@ -51,7 +51,7 @@ namespace Highcharts4Net.Library.Options
 		/// The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
 		/// Default: 0
 		/// </summary>
-		public Number? Depth { get; set; }
+		public NumberOrDateTime? Depth { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -93,7 +93,7 @@ namespace Highcharts4Net.Library.Options
 		/// The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
 		/// Default: 80
 		/// </summary>
-		public Number? MinSize { get; set; }
+		public NumberOrDateTime? MinSize { get; set; }
 
 		/// <summary>
 		/// The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.
@@ -141,7 +141,7 @@ namespace Highcharts4Net.Library.Options
 		/// If a point is sliced, moved out from the center, how many pixels should  it be moved?.
 		/// Default: 10
 		/// </summary>
-		public Number? SlicedOffset { get; set; }
+		public NumberOrDateTime? SlicedOffset { get; set; }
 
 		/// <summary>
 		/// A wrapper object for all the series options in specific states.

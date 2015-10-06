@@ -35,13 +35,13 @@ namespace Highcharts4Net.Library.Options
 		/// The corner radius of the border surrounding each column or bar.
 		/// Default: 0
 		/// </summary>
-		public Number? BorderRadius { get; set; }
+		public NumberOrDateTime? BorderRadius { get; set; }
 
 		/// <summary>
 		/// The width of the border surrounding each column or bar.
 		/// Default: 1
 		/// </summary>
-		public Number? BorderWidth { get; set; }
+		public NumberOrDateTime? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
@@ -63,7 +63,7 @@ namespace Highcharts4Net.Library.Options
 		/// When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
 		/// Default: 50
 		/// </summary>
-		public Number? CropThreshold { get; set; }
+		public NumberOrDateTime? CropThreshold { get; set; }
 
 		/// <summary>
 		/// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -79,7 +79,7 @@ namespace Highcharts4Net.Library.Options
 		/// Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.
 		/// Default: 25
 		/// </summary>
-		public Number? Depth { get; set; }
+		public NumberOrDateTime? Depth { get; set; }
 
 		/// <summary>
 		/// 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
@@ -90,7 +90,7 @@ namespace Highcharts4Net.Library.Options
 		/// 3D columns only. The width of the colored edges.
 		/// Default: 1
 		/// </summary>
-		public Number? EdgeWidth { get; set; }
+		public NumberOrDateTime? EdgeWidth { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -110,13 +110,13 @@ namespace Highcharts4Net.Library.Options
 		/// Padding between each value groups, in x axis units.
 		/// Default: 0.2
 		/// </summary>
-		public Number? GroupPadding { get; set; }
+		public NumberOrDateTime? GroupPadding { get; set; }
 
 		/// <summary>
 		/// The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
 		/// Default: 1
 		/// </summary>
-		public Number? GroupZPadding { get; set; }
+		public NumberOrDateTime? GroupZPadding { get; set; }
 
 		/// <summary>
 		/// Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
@@ -138,7 +138,7 @@ namespace Highcharts4Net.Library.Options
 		/// The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a  pixel value like 3. In stacked column charts, minPointLength might not be respected for tightly packed values.
 		/// Default: 0
 		/// </summary>
-		public Number? MinPointLength { get; set; }
+		public NumberOrDateTime? MinPointLength { get; set; }
 
 		/// <summary>
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
@@ -155,7 +155,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
 		/// Default: 1
 		/// </summary>
-		public Number? PointInterval { get; set; }
+		public NumberOrDateTime? PointInterval { get; set; }
 
     /// <summary>
     /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
@@ -166,7 +166,7 @@ namespace Highcharts4Net.Library.Options
 		/// Padding between each column or bar, in x axis units.
 		/// Default: 0.1
 		/// </summary>
-		public Number? PointPadding { get; set; }
+		public NumberOrDateTime? PointPadding { get; set; }
 
 		/// <summary>
 		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
@@ -177,7 +177,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
 		/// </summary>
-		public Number? PointRange { get; set; }
+		public NumberOrDateTime? PointRange { get; set; }
 
 		/// <summary>
 		/// If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
@@ -189,7 +189,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// A pixel value specifying a fixed width for each column or bar. When <code>null</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>.
 		/// </summary>
-		public Number? PointWidth { get; set; }
+		public NumberOrDateTime? PointWidth { get; set; }
 
 		/// <summary>
 		/// Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -236,7 +236,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		[ForceNullable]
-		public Number? Threshold { get; set; }
+		public NumberOrDateTime? Threshold { get; set; }
 
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
@@ -247,7 +247,7 @@ namespace Highcharts4Net.Library.Options
 		/// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
 		/// Default: 1000
 		/// </summary>
-		public Number? TurboThreshold { get; set; }
+		public NumberOrDateTime? TurboThreshold { get; set; }
 
 		/// <summary>
 		/// Set the initial visibility of the series.

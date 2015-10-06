@@ -208,7 +208,7 @@ namespace Highcharts4Net
 
             JSON.RegisterCustomType(typeof(LiteralString), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(FunctionString), ToStringSerializer, ToStringDeserializer);
-            JSON.RegisterCustomType(typeof(Number), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(NumberOrDateTime), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
@@ -235,8 +235,7 @@ namespace Highcharts4Net
 
 
                 output.AppendFormat("<div id='{0}'></div>\n" +
-                                    "<script>" +
-                                    "\n\tvar {1}, {1}_options;\n\tHighcharts4Net.RegisterChart(function(){{\n\t\t{1}_options={2};\n\t\t{1} = new Highcharts.Chart({1}_options);\n\t\treturn [{1}, {0}, {1}_options, \"{1}\"];\n\t}});" +
+                                    "<script>\nvar {1},{1}_options;Highcharts4Net.RegisterChart(function(){{{1}_options={2};{1}=new Highcharts.Chart({1}_options);return [{1},{0},{1}_options,\"{1}\"];}});" +
                                     "\n</script>",
                                     _chart.Chart.RenderTo, Name, chartOptions);
 

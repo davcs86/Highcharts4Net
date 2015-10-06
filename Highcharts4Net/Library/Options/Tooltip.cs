@@ -33,13 +33,13 @@ namespace Highcharts4Net.Library.Options
 		/// The radius of the rounded border corners.
 		/// Default: 3
 		/// </summary>
-		public Number? BorderRadius { get; set; }
+		public NumberOrDateTime? BorderRadius { get; set; }
 
 		/// <summary>
 		/// The pixel width of the tooltip border.
 		/// Default: 1
 		/// </summary>
-		public Number? BorderWidth { get; set; }
+		public NumberOrDateTime? BorderWidth { get; set; }
 
 		/// <summary>
 		/// Display crosshairs to connect the points with their corresponding axis values. The crosshairs can be defined as a boolean, an array of booleans or an object. <dl> <dt>Boolean</dt> <dd>If the crosshairs option is true, a single crosshair relating to the x axis will be shown.</dd>  <dt>Array of booleans</dt> <dd>In an array of booleans, the first value turns on the x axis crosshair and the second value to the y axis crosshair. Use <code>[true, true]</code> to show complete crosshairs.</dd>  <dt>Array of objects</dt> <dd>In an array of objects, the first value applies to the x axis crosshair and the second value to the y axis crosshair. For each dimension, a <code>width</code>, <code>color</code>, <code><a href='http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/'>dashStyle</a></code> and <code>zIndex</code> can be given.</dd> </dl> Defaults to <code>null</code>.
@@ -80,7 +80,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Callback function to format the text of the tooltip. Return false to disable tooltip for a specific point on series.</p> <p>A subset of HTML is supported. The HTML of the tooltip is parsed and converted to SVG,  therefore this isn't a complete HTML renderer. The following tabs are supported:  <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;span&gt;</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS that is  shared with SVG is handled. </p> <p>Since version 2.1 the tooltip can be shared between multiple series through  the <code>shared</code> option. The available data in the formatter differ a bit depending on whether the tooltip is shared or not. In a shared tooltip, all  properties except <code>x</code>, which is common for all points, are kept in  an array, <code>this.points</code>.</p>  <p>Available data are:</p> <dl> <dt>this.percentage (not shared) / this.points[i].percentage (shared)</dt> <dd>Stacked series and pies only. The point's percentage of the total.</dd>  <dt>this.point (not shared) / this.points[i].point (shared)</dt> <dd>The point object. The point name, if defined, is available  through <code>this.point.name</code>.</dd>  <dt>this.points</dt> <dd>In a shared tooltip, this is an array containing all other properties for each point.</dd>  <dt>this.series (not shared) / this.points[i].series (shared)</dt> <dd>The series object. The series name is available  through <code>this.series.name</code>.</dd>  <dt>this.total (not shared) / this.points[i].total (shared)</dt> <dd>Stacked series only. The total value at this point's x value.</dd>  <dt>this.x</dt> <dd>The x value. This property is the same regardless of the tooltip being shared or not.</dd>  <dt>this.y (not shared) / this.points[i].y (shared)</dt> <dd>The y value.</dd>  </dl>
 		/// </summary>
 		
-		public string Formatter { get; set; }
+		public FunctionString Formatter { get; set; }
 
 		/// <summary>
 		/// <p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variablesare <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using tooltip.xDateFormat.</p> <p>Defaults to <code>&lt;span style='font-size: 10px'&gt;{point.key}&lt;/span&gt;&lt;br/&gt;</code></p>
@@ -91,7 +91,7 @@ namespace Highcharts4Net.Library.Options
 		/// The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
 		/// Default: 500
 		/// </summary>
-		public Number? HideDelay { get; set; }
+		public NumberOrDateTime? HideDelay { get; set; }
 
 		/// <summary>
 		/// <p>The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the <code>tooltip.yPrefix</code> and <code>tooltip.ySuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units.</p>
@@ -103,7 +103,7 @@ namespace Highcharts4Net.Library.Options
         /// A callback function for formatting the HTML output for a single point in the tooltip. Like the <pre>pointFormat</pre> string, but with more flexibility.
         /// </summary>
         
-        public string PointFormatter { get; set; }
+        public FunctionString PointFormatter { get; set; }
 
 		/// <summary>
 		/// <p>A callback function to place the tooltip in a default position. The callback receives three parameters: <code>labelWidth</code>, <code>labelHeight</code> and <code>point</code>, where point contains values for <code>plotX</code> and <code>plotY</code> telling where the reference point is in the plot area. Add <code>chart.plotLeft</code> and <code>chart.plotTop</code> to get the full coordinates.</p><p>The return should be an object containing x and y values, for example <code>{ x: 100, y: 100 }</code>.</p>
@@ -132,7 +132,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Proximity snap for graphs or single points. Does not apply to bars, columns and pie slices. It defaults to 10 for mouse-powered devices and 25 for touch  devices.
 		/// </summary>
-		public Number? Snap { get; set; }
+		public NumberOrDateTime? Snap { get; set; }
 
 		/// <summary>
 		/// CSS styles for the tooltip. The tooltip can also be styled through the CSS class <code>.highcharts-tooltip</code>. Default value:<pre>style: { color: '#333333', fontSize: '12px', padding: '8px'}</pre>
@@ -149,7 +149,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
 		/// </summary>
-		public Number? ValueDecimals { get; set; }
+		public NumberOrDateTime? ValueDecimals { get; set; }
 
 		/// <summary>
 		/// A string to prepend to each series' y value. Overridable in each series' tooltip options object.

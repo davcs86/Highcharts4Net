@@ -35,7 +35,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The highest allowed value for automatically computed axis extremes.
 		/// </summary>
-		public Number? Ceiling { get; set; }
+		public NumberOrDateTime? Ceiling { get; set; }
 
 		/// <summary>
 		/// For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For an overview of the replacement codes, see dateFormat. Defaults to:<pre>{ millisecond: '%H:%M:%S.%L', second: '%H:%M:%S', minute: '%H:%M', hour: '%H:%M', day: '%e. %b', week: '%e. %b', month: '%b \'%y', year: '%Y'}</pre>
@@ -54,7 +54,7 @@ namespace Highcharts4Net.Library.Options
 		/// The lowest allowed value for automatically computed axis extremes.
 		/// Default: null
 		/// </summary>
-		public Number? Floor { get; set; }
+		public NumberOrDateTime? Floor { get; set; }
 
 		/// <summary>
 		/// Color of the grid lines extending the ticks across the plot area.
@@ -78,13 +78,13 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the grid lines extending the ticks across the plot area.
 		/// Default: 1
 		/// </summary>
-		public Number? GridLineWidth { get; set; }
+		public NumberOrDateTime? GridLineWidth { get; set; }
 
 		/// <summary>
 		/// The Z index of the grid lines.
 		/// Default: 1
 		/// </summary>
-		public Number? GridZIndex { get; set; }
+		public NumberOrDateTime? GridZIndex { get; set; }
 
 		/// <summary>
 		/// An id for the axis. This can be used after render time to get a pointer to the axis object through <code>chart.get()</code>.
@@ -103,17 +103,17 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the line marking the axis itself.
 		/// Default: 0
 		/// </summary>
-		public Number? LineWidth { get; set; }
+		public NumberOrDateTime? LineWidth { get; set; }
 
 		/// <summary>
 		/// Index of another axis that this axis is linked to. When an axis is linked to a master axis, it will take the same extremes as the master, but as assigned by min or max or by setExtremes. It can be used to show additional info, or to ease reading the chart by duplicating the scales.
 		/// </summary>
-		public Number? LinkedTo { get; set; }
+		public NumberOrDateTime? LinkedTo { get; set; }
 
 		/// <summary>
 		/// The maximum value of the axis. If <code>null</code>, the max value is automatically calculated. If the <code>endOnTick</code> option is true, the <code>max</code> value might be rounded up. The actual maximum value is also influenced by  <a class='internal' href='#chart'>chart.alignTicks</a>.
 		/// </summary>
-		public Number? Max { get; set; }
+		public NumberOrDateTime? Max { get; set; }
 
 		/// <summary>
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the maximum value of the Y axis.
@@ -125,15 +125,15 @@ namespace Highcharts4Net.Library.Options
 		/// Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area.
 		/// Default: 0.05
 		/// </summary>
-		public Number? MaxPadding { get; set; }
+		public NumberOrDateTime? MaxPadding { get; set; }
 
 		[Obsolete("Deprecated. Renamed to <code>minRange</code> as of Highcharts 2.2.")]
-		public Number? MaxZoom { get; set; }
+		public NumberOrDateTime? MaxZoom { get; set; }
 
 		/// <summary>
 		/// The minimum value of the axis. If <code>null</code> the min value is automatically calculated. If the <code>startOnTick</code> option is true, the <code>min</code> value might be rounded down.
 		/// </summary>
-		public Number? Min { get; set; }
+		public NumberOrDateTime? Min { get; set; }
 
 		/// <summary>
 		/// Solid gauge only. Unless <a href='#yAxis.stops'>stops</a> are set, the color to represent the minimum value of the Y axis.
@@ -145,17 +145,17 @@ namespace Highcharts4Net.Library.Options
 		/// Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area.
 		/// Default: 0.05
 		/// </summary>
-		public Number? MinPadding { get; set; }
+		public NumberOrDateTime? MinPadding { get; set; }
 
 		/// <summary>
 		/// <p>The minimum range to display on this axis. The entire axis will not be allowed to span over a smaller interval than this. For example, for a datetime axis the main unit is milliseconds. If minRange is set to 3600000, you can't zoom in more than to one hour.</p> <p>The default minRange for the x axis is five times the smallest interval between any of the data points.</p> <p>On a logarithmic axis, the unit for the minimum range is the power. So a minRange of 1 means that the axis can be zoomed to 10-100, 100-1000, 1000-10000 etc.</p>
 		/// </summary>
-		public Number? MinRange { get; set; }
+		public NumberOrDateTime? MinRange { get; set; }
 
 		/// <summary>
 		/// The minimum tick interval allowed in axis values. For example on zooming in on an axis with daily data, this can be used to prevent the axis from showing hours.
 		/// </summary>
-		public Number? MinTickInterval { get; set; }
+		public NumberOrDateTime? MinTickInterval { get; set; }
 
 		/// <summary>
 		/// Color of the minor, secondary grid lines.
@@ -173,7 +173,7 @@ namespace Highcharts4Net.Library.Options
 		/// Width of the minor, secondary grid lines.
 		/// Default: 1
 		/// </summary>
-		public Number? MinorGridLineWidth { get; set; }
+		public NumberOrDateTime? MinorGridLineWidth { get; set; }
 
 		/// <summary>
 		/// Color for the minor tick marks.
@@ -184,13 +184,13 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>'auto'</code>,  the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code>, minor ticks are not shown.</p> <p>On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10,  10 and 100 etc. A minorTickInterval of 'auto' on a log axis results in a best guess, attempting to enter approximately 5 minor ticks between each major tick.</p><p>On axes using <a href='#xAxis.categories'>categories</a>, minor ticks are not supported.</p>
 		/// </summary>
-		public Number? MinorTickInterval { get; set; }
+		public NumberOrDateTime? MinorTickInterval { get; set; }
 
 		/// <summary>
 		/// The pixel length of the minor tick marks.
 		/// Default: 2
 		/// </summary>
-		public Number? MinorTickLength { get; set; }
+		public NumberOrDateTime? MinorTickLength { get; set; }
 
 		/// <summary>
 		/// The position of the minor tick marks relative to the axis line. Can be one of <code>inside</code> and <code>outside</code>.
@@ -202,13 +202,13 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the minor tick mark.
 		/// Default: 0
 		/// </summary>
-		public Number? MinorTickWidth { get; set; }
+		public NumberOrDateTime? MinorTickWidth { get; set; }
 
 		/// <summary>
 		/// The distance in pixels from the plot area to the axis line. A positive offset moves the axis with it's line, labels and ticks away from the plot area. This is typically used when two or more axes are displayed on the same side of the plot.
 		/// Default: 0
 		/// </summary>
-		public Number? Offset { get; set; }
+		public NumberOrDateTime? Offset { get; set; }
 
 		/// <summary>
 		/// Whether to display the axis on the opposite side of the normal. The normal is on the left side for vertical axes and bottom for horizontal, so the opposite sides will be right and top respectively. This is typically used with dual or multiple axes.
@@ -277,7 +277,7 @@ namespace Highcharts4Net.Library.Options
         /// The amount of ticks to draw on the axis. This opens up for aligning the ticks of multiple charts or panes within a chart. This option overrides the <pre>tickPixelInterval</pre> option.
         /// This option only has an effect on linear axes. Datetime, logarithmic or category axes are not affected.
         /// </summary>
-        public Number? TickAmount { get; set; }
+        public NumberOrDateTime? TickAmount { get; set; }
 
 		/// <summary>
 		/// Color for the main tick marks.
@@ -288,18 +288,18 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// <p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category.  Note that datetime axes are based on milliseconds, so for  example an interval of one day is expressed as <code>24 * 3600 * 1000</code>.</p> <p>On logarithmic axes, the tickInterval is based on powers, so a tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.</p>
 		/// </summary>
-		public Number? TickInterval { get; set; }
+		public NumberOrDateTime? TickInterval { get; set; }
 
 		/// <summary>
 		/// The pixel length of the main tick marks.
 		/// Default: 10
 		/// </summary>
-		public Number? TickLength { get; set; }
+		public NumberOrDateTime? TickLength { get; set; }
 
 		/// <summary>
 		/// If tickInterval is <code>null</code> this option sets the approximate pixel interval of the tick marks. Not applicable to categorized axis. Defaults to <code>72</code>  for the Y axis and <code>100</code> forthe X axis.
 		/// </summary>
-		public Number? TickPixelInterval { get; set; }
+		public NumberOrDateTime? TickPixelInterval { get; set; }
 
 		/// <summary>
 		/// The position of the major tick marks relative to the axis line. Can be one of <code>inside</code> and <code>outside</code>.
@@ -316,13 +316,13 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// An array defining where the ticks are laid out on the axis. This overrides the default behaviour of <a href='#xAxis.tickPixelInterval'>tickPixelInterval</a> and <a href='#xAxis.tickInterval'>tickInterval</a>.
 		/// </summary>
-		public Number?[] TickPositions { get; set; }
+		public NumberOrDateTime?[] TickPositions { get; set; }
 
 		/// <summary>
 		/// The pixel width of the major tick marks.
 		/// Default: 0
 		/// </summary>
-		public Number? TickWidth { get; set; }
+		public NumberOrDateTime? TickWidth { get; set; }
 
 		/// <summary>
 		/// For categorized axes only. If 'on' the tick mark is placed in the center of  the category, if 'between' the tick mark is placed between categories.

@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Rotation of the text label in degrees. Defaults to 0 for horizontal plot lines and 90 for vertical lines.
 		/// </summary>
-		public Number? Rotation { get; set; }
+		public NumberOrDateTime? Rotation { get; set; }
 
 		/// <summary>
 		/// CSS styles for the text label.
@@ -52,12 +52,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Horizontal position relative the alignment. Default varies by orientation.
 		/// </summary>
-		public Number? X { get; set; }
+		public NumberOrDateTime? X { get; set; }
 
 		/// <summary>
 		/// Vertical position of the text baseline relative to the alignment. Default varies by orientation.
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 	}
 

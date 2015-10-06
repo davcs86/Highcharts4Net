@@ -21,11 +21,11 @@ namespace Highcharts4Net.Library.Helpers
         /// Constructor with start point as number
         /// </summary>
         /// <param name="pointStart"></param>
-        public PointStart(Number pointStart) { PointStartNumber = pointStart; }
+        public PointStart(NumberOrDateTime pointStart) { PointStartNumber = pointStart; }
 
         private DateTime? PointStartDate { get; set; }
 
-        private Number? PointStartNumber { get; set; }
+        private NumberOrDateTime? PointStartNumber { get; set; }
 
         public override string ToString()
         {

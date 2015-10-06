@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// Pixel height of the buttons.
 		/// Default: 20
 		/// </summary>
-		public Number? Height { get; set; }
+		public NumberOrDateTime? Height { get; set; }
 
 		/// <summary>
 		/// Fill color for the symbol within the button.
@@ -39,7 +39,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel size of the symbol on the button.
 		/// Default: 14
 		/// </summary>
-		public Number? SymbolSize { get; set; }
+		public NumberOrDateTime? SymbolSize { get; set; }
 
 		/// <summary>
 		/// The color of the symbol's stroke or line.
@@ -51,19 +51,19 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel stroke width of the symbol on the button.
 		/// Default: 1
 		/// </summary>
-		public Number? SymbolStrokeWidth { get; set; }
+		public NumberOrDateTime? SymbolStrokeWidth { get; set; }
 
 		/// <summary>
 		/// The x position of the center of the symbol inside the button.
 		/// Default: 12.5
 		/// </summary>
-		public Number? SymbolX { get; set; }
+		public NumberOrDateTime? SymbolX { get; set; }
 
 		/// <summary>
 		/// The y position of the center of the symbol inside the button.
 		/// Default: 10.5
 		/// </summary>
-		public Number? SymbolY { get; set; }
+		public NumberOrDateTime? SymbolY { get; set; }
 
 		/// <summary>
 		/// A text string to add to the individual button. 
@@ -86,13 +86,13 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the button.
 		/// Default: 24
 		/// </summary>
-		public Number? Width { get; set; }
+		public NumberOrDateTime? Width { get; set; }
 
 		/// <summary>
 		/// The vertical offset of the button's position relative to its <code>verticalAlign</code>. .
 		/// Default: 0
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 	}
 

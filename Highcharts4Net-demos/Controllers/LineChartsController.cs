@@ -33,5 +33,11 @@ namespace Highcharts4Net_demos.Controllers
         {
             return View();
         }
+
+        // GET: ~/LineCharts/SplineInverted
+        public ActionResult SplineInverted()
+        {
+            return View();
+        }
     }
 }

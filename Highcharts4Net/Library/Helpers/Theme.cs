@@ -6,7 +6,7 @@ namespace Highcharts4Net.Library.Helpers
     {
         public string Fill { get; set; }
         public string Stroke { get; set; }
-        public Number? R { get; set; }
+        public NumberOrDateTime? R { get; set; }
         public ThemeStates States { get; set; }
     }
 

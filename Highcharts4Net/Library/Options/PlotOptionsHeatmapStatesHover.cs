@@ -11,7 +11,7 @@ namespace Highcharts4Net.Library.Options
 		/// How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.
 		/// Default: 0.1
 		/// </summary>
-		public Number? Brightness { get; set; }
+		public NumberOrDateTime? Brightness { get; set; }
 
         /// <summary>
         /// Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend..

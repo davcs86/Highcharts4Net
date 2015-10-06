@@ -38,13 +38,13 @@ namespace Highcharts4Net.Library.Options
 		/// The corner radius of the outer chart border.
 		/// Default: 0
 		/// </summary>
-		public Number? BorderRadius { get; set; }
+		public NumberOrDateTime? BorderRadius { get; set; }
 
 		/// <summary>
 		/// The pixel width of the outer chart border.
 		/// Default: 0
 		/// </summary>
-		public Number? BorderWidth { get; set; }
+		public NumberOrDateTime? BorderWidth { get; set; }
 
         /// <summary>
         /// A CSS class name to apply to the charts container <code>div</code>, allowing unique CSS styling for each chart.
@@ -59,7 +59,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// An explicit height for the chart. By default the height is calculated from the offset height of the containing element, or 400 pixels if the containing element's height is 0.
 		/// </summary>
-		public Number? Height { get; set; }
+		public NumberOrDateTime? Height { get; set; }
 
 		/// <summary>
 		/// If true, the axes will scale to the remaining visible series once one series is hidden. If false, hiding and showing a series will not affect the axes or the other series. For stacks, once one series within the stack is hidden, the rest of the stack will close in around it even if the axis is not affected.
@@ -81,22 +81,22 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingBottom</code>.
 		/// </summary>
-		public Number? MarginBottom { get; set; }
+		public NumberOrDateTime? MarginBottom { get; set; }
 
 		/// <summary>
 		/// The margin between the left outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingLeft</code>.
 		/// </summary>
-		public Number? MarginLeft { get; set; }
+		public NumberOrDateTime? MarginLeft { get; set; }
 
 		/// <summary>
 		/// The margin between the right outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingRight</code>.
 		/// </summary>
-		public Number? MarginRight { get; set; }
+		public NumberOrDateTime? MarginRight { get; set; }
 
 		/// <summary>
 		/// The margin between the top outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingTop</code>.
 		/// </summary>
-		public Number? MarginTop { get; set; }
+		public NumberOrDateTime? MarginTop { get; set; }
 
 		/// <summary>
 		/// Options to render charts in 3 dimensions. This feature requires <code>highcharts-3d.js</code>, found in the download package or online at <a href='http://code.highcharts.com/highcharts-3d.js'>code.highcharts.com/highcharts-3d.js</a>.
@@ -141,7 +141,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the plot area border.
 		/// Default: 0
 		/// </summary>
-		public Number? PlotBorderWidth { get; set; }
+		public NumberOrDateTime? PlotBorderWidth { get; set; }
 
 		/// <summary>
 		/// Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
@@ -193,31 +193,31 @@ namespace Highcharts4Net.Library.Options
 		/// The distance between the outer edge of the chart and the content, like title, legend, axis title or labels. The numbers in the array designate top, right, bottom and left respectively. Use the options spacingTop, spacingRight, spacingBottom and spacingLeft options for shorthand setting of one option.
 		/// Default: [10, 10, 15, 10]
 		/// </summary>
-		public Number?[] Spacing { get; set; }
+		public NumberOrDateTime?[] Spacing { get; set; }
 
 		/// <summary>
 		/// <p>The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p>
 		/// Default: 15
 		/// </summary>
-		public Number? SpacingBottom { get; set; }
+		public NumberOrDateTime? SpacingBottom { get; set; }
 
 		/// <summary>
 		/// <p>The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p>
 		/// Default: 10
 		/// </summary>
-		public Number? SpacingLeft { get; set; }
+		public NumberOrDateTime? SpacingLeft { get; set; }
 
 		/// <summary>
 		/// <p>The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p>
 		/// Default: 10
 		/// </summary>
-		public Number? SpacingRight { get; set; }
+		public NumberOrDateTime? SpacingRight { get; set; }
 
 		/// <summary>
 		/// <p>The space between the top edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p>
 		/// Default: 10
 		/// </summary>
-		public Number? SpacingTop { get; set; }
+		public NumberOrDateTime? SpacingTop { get; set; }
 
 		/// <summary>
 		/// Additional CSS styles to apply inline to the container <code>div</code>. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally. Defaults to:<pre>style: { fontFamily: ''Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif', // default font fontSize: '12px'}</pre>
@@ -234,7 +234,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// An explicit width for the chart. By default the width is calculated from the offset width of the containing element.
 		/// </summary>
-		public Number? Width { get; set; }
+		public NumberOrDateTime? Width { get; set; }
 
 		/// <summary>
 		/// Decides in what dimensions the user can zoom by dragging the mouse. Can be one of <code>x</code>, <code>y</code> or <code>xy</code>.

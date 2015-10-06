@@ -31,13 +31,13 @@ namespace Highcharts4Net.Library.Options
         /// The corner radius of the border surrounding each column or bar.
         /// Default: 0
         /// </summary>
-        public Number? BorderRadius { get; set; }
+        public NumberOrDateTime? BorderRadius { get; set; }
 
         /// <summary>
         /// The width of the border surrounding each column or bar.
         /// Default: 1
         /// </summary>
-        public Number? BorderWidth { get; set; }
+        public NumberOrDateTime? BorderWidth { get; set; }
 
         /// <summary>
         /// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
@@ -59,13 +59,13 @@ namespace Highcharts4Net.Library.Options
         /// The column size - how many X axis units each column in the heatmap.
         /// Default: 1
         /// </summary>
-        public Number? Colsize { get; set; }
+        public NumberOrDateTime? Colsize { get; set; }
 
         /// <summary>
         /// When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
         /// Default: 50
         /// </summary>
-        public Number? CropThreshold { get; set; }
+        public NumberOrDateTime? CropThreshold { get; set; }
 
         /// <summary>
         /// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -110,7 +110,7 @@ namespace Highcharts4Net.Library.Options
         /// The row size - how many Y axis units each heatmap row should span.
         /// Default: 1
         /// </summary>
-        public Number? Rowsize { get; set; }
+        public NumberOrDateTime? Rowsize { get; set; }
 
         /// <summary>
         /// Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -155,7 +155,7 @@ namespace Highcharts4Net.Library.Options
         /// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
         /// Default: 1000
         /// </summary>
-        public Number? TurboThreshold { get; set; }
+        public NumberOrDateTime? TurboThreshold { get; set; }
 
         /// <summary>
         /// Set the initial visibility of the series.

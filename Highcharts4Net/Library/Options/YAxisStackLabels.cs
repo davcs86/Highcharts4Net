@@ -31,13 +31,13 @@ namespace Highcharts4Net.Library.Options
 		/// Callback JavaScript function to format the label. The value is  given by <code>this.total</code>. Defaults to: <pre>function() { return this.total;}</pre>
 		/// </summary>
 		
-		public string Formatter { get; set; }
+		public FunctionString Formatter { get; set; }
 
 		/// <summary>
 		/// Rotation of the labels in degrees.
 		/// Default: 0
 		/// </summary>
-		public Number? Rotation { get; set; }
+		public NumberOrDateTime? Rotation { get; set; }
 
 		/// <summary>
 		/// CSS styles for the label. Defaults to:<pre>style: { color: '#666', 'font-size': '11px', 'line-height': '14px'}</pre>
@@ -64,12 +64,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The x position offset of the label relative to the left of the stacked bar. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.
 		/// </summary>
-		public Number? X { get; set; }
+		public NumberOrDateTime? X { get; set; }
 
 		/// <summary>
 		/// The y position offset of the label relative to the tick position on the axis. The default value is calculated at runtime and depends on orientation and whether  the stack is positive or negative.
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 	}
 

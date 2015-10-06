@@ -25,6 +25,6 @@ namespace Highcharts4Net.Library.Options
         /// The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
         /// Default: undefined.
         /// </summary>
-        public Number? Value { get; set; }
+        public NumberOrDateTime? Value { get; set; }
     }
 }

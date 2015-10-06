@@ -51,7 +51,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Pies only. The sequential index of the pie slice in the legend..
 		/// </summary>
-		public Number? LegendIndex { get; set; }
+		public NumberOrDateTime? LegendIndex { get; set; }
 
 		public SeriesDataMarker Marker { get; set; }
 
@@ -69,12 +69,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The x value of the point.
 		/// </summary>
-		public Number? X { get; set; }
+		public NumberOrDateTime? X { get; set; }
 
 		/// <summary>
 		/// The y value of the point.
 		/// </summary>
-		public Number? Y { get; set; }
+		public NumberOrDateTime? Y { get; set; }
 
 	}
 

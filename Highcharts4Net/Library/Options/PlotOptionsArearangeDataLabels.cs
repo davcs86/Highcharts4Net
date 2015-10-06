@@ -10,32 +10,32 @@ namespace Highcharts4Net.Library.Options
     public class PlotOptionsArearangeDataLabels : PlotOptionsAreaDataLabels
 	{
 
-        private new Number? Y { get; set; }
-        private new Number? X { get; set; }
+        private new NumberOrDateTime? Y { get; set; }
+        private new NumberOrDateTime? X { get; set; }
 
         /// <summary>
         /// X offset of the higher data labels relative to the point value. 
         /// Default: 0
         /// </summary>
-        public Number? XHigh { get; set; }
+        public NumberOrDateTime? XHigh { get; set; }
 
         /// <summary>
         /// X offset of the lower data labels relative to the point value.  
         /// Default: 0
         /// </summary>
-        public Number? XLow { get; set; }
+        public NumberOrDateTime? XLow { get; set; }
 
         /// <summary>
         /// Y offset of the higher data labels relative to the point value. 
         /// Default: -6
         /// </summary>
-        public virtual Number? YHigh { get; set; }
+        public virtual NumberOrDateTime? YHigh { get; set; }
 
         /// <summary>
         /// Y offset of the lower data labels relative to the point value.
         /// Default: -6
         /// </summary>
-        public virtual Number? YLow { get; set; }
+        public virtual NumberOrDateTime? YLow { get; set; }
 
 	}
 

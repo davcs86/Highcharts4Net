@@ -578,7 +578,7 @@
     <EmbeddedResource Include="Scripts\highcharts4net.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\highcharts4net.min.js" />
+    <Content Include="Scripts\highcharts4net.src.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

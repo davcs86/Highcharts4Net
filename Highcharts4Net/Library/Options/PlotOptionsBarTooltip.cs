@@ -41,7 +41,7 @@ namespace Highcharts4Net.Library.Options
 		/// The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
 		/// Default: 500
 		/// </summary>
-		public Number? HideDelay { get; set; }
+		public NumberOrDateTime? HideDelay { get; set; }
 
 		/// <summary>
 		/// <p>The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the <code>tooltip.yPrefix</code> and <code>tooltip.ySuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units.</p>
@@ -53,7 +53,7 @@ namespace Highcharts4Net.Library.Options
         /// <p>A callback function for formatting the HTML output for a single point in the tooltip. Like the pointFormat string, but with more flexibility.</p>
         /// </summary>
         
-        public string Pointformatter { get; set; }
+        public FunctionString PointFormatter { get; set; }
 
 		/// <summary>
 		/// The name of a symbol to use for the border around the tooltip. In Highcharts 3.x and less, the shape was <code>square</code>. 
@@ -64,7 +64,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
 		/// </summary>
-		public Number? ValueDecimals { get; set; }
+		public NumberOrDateTime? ValueDecimals { get; set; }
 
 		/// <summary>
 		/// A string to prepend to each series' y value. Overridable in each series' tooltip options object.

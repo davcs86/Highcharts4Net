@@ -24,13 +24,13 @@ namespace Highcharts4Net.Library.Options
 		/// Pixel with of the graph line.
 		/// Default: 2
 		/// </summary>
-		public Number? LineWidth { get; set; }
+		public NumberOrDateTime? LineWidth { get; set; }
 
 		/// <summary>
 		/// The additional line width for the graph of a hovered series.
 		/// Default: 1
 		/// </summary>
-		public Number? LineWidthPlus { get; set; }
+		public NumberOrDateTime? LineWidthPlus { get; set; }
 
 		public PlotOptionsAreasplineStatesHoverMarker Marker { get; set; }
 

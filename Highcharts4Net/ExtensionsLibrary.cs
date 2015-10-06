@@ -24,9 +24,14 @@ namespace Highcharts4Net
         /// </summary>
         public bool IncludeMore { get; set; }
         /// <summary>
-        /// <i>True</i> for include module/exporting.js
+        /// <i>True</i> for include modules/data.js
+        /// Required for parsing data from csv.
         /// </summary>
-        public bool IncludeExporting { get; set; }
+        public bool IncludeModuleData { get; set; }
+        /// <summary>
+        /// <i>True</i> for include modules/exporting.js
+        /// </summary>
+        public bool IncludeModuleExporting { get; set; }
     }
 
     public sealed class ExtensionsLibrary
@@ -54,13 +59,20 @@ namespace Highcharts4Net
 
             if(options.IncludeMore)
                 returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts-more.js");
-            if (options.IncludeExporting)
-                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "module/exporting.js");
+            if (options.IncludeModuleData)
+                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/data.js");
+            if (options.IncludeModuleExporting)
+                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/exporting.js");
 
             // include custom code 
-            //var resource = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Highcharts4Net.Scripts.highcharts4net.min.js"));
-            //if (resource!=StreamReader.Null)
-            //    returnStr += string.Format("<script>\n{0}\n</script>", resource.ReadToEnd());
+            var resource =
+                Assembly.GetExecutingAssembly()
+                    .GetManifestResourceStream("Highcharts4Net.Scripts.highcharts4net.js");
+            if (resource != null)
+            {
+                var reader = new StreamReader(resource);
+                returnStr += string.Format("<script>\n{0}\n</script>", reader.ReadToEnd());
+            }
 
             return new MvcHtmlString(returnStr);
         }

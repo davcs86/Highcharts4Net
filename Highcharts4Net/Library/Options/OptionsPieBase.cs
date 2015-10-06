@@ -34,7 +34,7 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the border surrounding each slice.
 		/// Default: 1
 		/// </summary>
-		public Number? BorderWidth { get; set; }
+		public NumberOrDateTime? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to <code>['50%', '50%']</code>. 
@@ -58,7 +58,7 @@ namespace Highcharts4Net.Library.Options
 		/// The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
 		/// Default: 0
 		/// </summary>
-		public Number? Depth { get; set; }
+		public NumberOrDateTime? Depth { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -70,7 +70,7 @@ namespace Highcharts4Net.Library.Options
 		/// The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to <code>startAngle</code> plus 360.
 		/// Default: null
 		/// </summary>
-		public Number? EndAngle { get; set; }
+		public NumberOrDateTime? EndAngle { get; set; }
 
 		public PlotOptionsPieEvents Events { get; set; }
 
@@ -107,7 +107,7 @@ namespace Highcharts4Net.Library.Options
 		/// The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
 		/// Default: 80
 		/// </summary>
-		public Number? MinSize { get; set; }
+		public NumberOrDateTime? MinSize { get; set; }
 
 		/// <summary>
 		/// Properties for each single point
@@ -143,13 +143,13 @@ namespace Highcharts4Net.Library.Options
 		/// If a point is sliced, moved out from the center, how many pixels should  it be moved?.
 		/// Default: 10
 		/// </summary>
-		public Number? SlicedOffset { get; set; }
+		public NumberOrDateTime? SlicedOffset { get; set; }
 
 		/// <summary>
 		/// The start angle of the pie slices in degrees where 0 is top and 90 right. 
 		/// Default: 0
 		/// </summary>
-		public Number? StartAngle { get; set; }
+		public NumberOrDateTime? StartAngle { get; set; }
 
 		/// <summary>
 		/// A wrapper object for all the series options in specific states.
