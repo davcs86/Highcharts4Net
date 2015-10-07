@@ -13,17 +13,17 @@ namespace Highcharts4Net.Library.Helpers
 
         public ColorOrGradient(string rawColor, bool escape = true) { color = (new LiteralString(rawColor, escape)).ToString(); }
 
-        public ColorOrGradient(Gradient gradient) { Gradient = gradient; }
+        public ColorOrGradient(Gradient _gradient) { gradient = _gradient; }
 
         public ColorOrGradient(Color _color) { color = (new LiteralString(_color.ToRGBAString())).ToString(); }
 
         private string color { get; }
 
-        private Gradient Gradient { get; }
+        private Gradient gradient { get; }
 
         public override string ToString()
         {
-            return Gradient?.ToString() ?? color;
+            return gradient?.ToString() ?? color;
         }
     }
 
