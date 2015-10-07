@@ -20,11 +20,11 @@ namespace Highcharts4Net
         /// </summary>
         public string BasePath { get; set; }
         /// <summary>
-        /// <i>True</i> for include highcharts-more.js
+        /// <i>True</i> for include highcharts-more.js.
         /// </summary>
-        public bool IncludeMore { get; set; }
+        public bool IncludeMore { get; set; } 
         /// <summary>
-        /// <i>True</i> for include modules/data.js
+        /// <i>True</i> for include modules/data.js.
         /// Required for parsing data from csv.
         /// </summary>
         public bool IncludeModuleData { get; set; }
