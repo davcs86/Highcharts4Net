@@ -25,7 +25,7 @@ namespace Highcharts4Net
         public bool IncludeMore { get; set; } 
         /// <summary>
         /// <i>True</i> for include modules/data.js.
-        /// Required for parsing data from csv.
+        /// Required for parsing data from csv. 
         /// </summary>
         public bool IncludeModuleData { get; set; }
         /// <summary>
