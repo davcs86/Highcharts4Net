@@ -8,7 +8,7 @@ namespace Highcharts4Net.Library.Helpers
 
         public Data(Point[] data) { Points = data; }
 
-        public Data(SeriesData[] data) { SeriesData = data; }
+        public Data(SeriesData[] data) { seriesData = data; }
 
         public Data(NumberOrDateTime?[] data) { NumberData = data; }
 
@@ -24,7 +24,7 @@ namespace Highcharts4Net.Library.Helpers
 
         private Point[] Points { get; }
 
-        private SeriesData[] SeriesData { get; }
+        private SeriesData[] seriesData { get; }
 
         public override string ToString()
         {
@@ -45,7 +45,7 @@ namespace Highcharts4Net.Library.Helpers
             {
                 return JSON.ToJSON(Points);
             }
-            return SeriesData != null ? JSON.ToJSON(SeriesData) : "";
+            return seriesData != null ? JSON.ToJSON(seriesData) : "";
         }
     }
 }

@@ -11,19 +11,19 @@ namespace Highcharts4Net.Library.Helpers
         {
         }
 
-        public ColorOrGradient(string rawColor, bool escape = true) { Color = (new LiteralString(rawColor, escape)).ToString(); }
+        public ColorOrGradient(string rawColor, bool escape = true) { color = (new LiteralString(rawColor, escape)).ToString(); }
 
         public ColorOrGradient(Gradient gradient) { Gradient = gradient; }
 
-        public ColorOrGradient(Color color) { Color = (new LiteralString(color.ToRGBAString())).ToString(); }
+        public ColorOrGradient(Color _color) { color = (new LiteralString(_color.ToRGBAString())).ToString(); }
 
-        private string Color { get; }
+        private string color { get; }
 
         private Gradient Gradient { get; }
 
         public override string ToString()
         {
-            return Gradient?.ToString() ?? Color;
+            return Gradient?.ToString() ?? color;
         }
     }
 

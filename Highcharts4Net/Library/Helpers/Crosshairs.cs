@@ -9,19 +9,19 @@ namespace Highcharts4Net.Library.Helpers
 
         public Crosshairs(bool showXCrosshairs, bool sShowYCrosshairs) { ShowBothCrosshairs = new[] { showXCrosshairs, sShowYCrosshairs }; }
 
-        public Crosshairs(CrosshairsFormat xCrosshairsFormat, CrosshairsFormat yCrosshairsFormat) { CrosshairsFormat = new[] { xCrosshairsFormat, yCrosshairsFormat }; }
+        public Crosshairs(CrosshairsFormat xCrosshairsFormat, CrosshairsFormat yCrosshairsFormat) { crosshairsFormat = new[] { xCrosshairsFormat, yCrosshairsFormat }; }
 
         public bool? ShowXCrosshairs { get; }
 
         public bool[] ShowBothCrosshairs { get; }
 
-        public CrosshairsFormat[] CrosshairsFormat { get; }
+        public CrosshairsFormat[] crosshairsFormat { get; }
 
         public override string ToString()
         {
-            if (CrosshairsFormat!=null)
+            if (crosshairsFormat != null)
             {
-                return JSON.ToJSON(CrosshairsFormat);
+                return JSON.ToJSON(crosshairsFormat);
             }
             if (ShowBothCrosshairs != null)
             {
