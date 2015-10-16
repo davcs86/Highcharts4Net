@@ -30,7 +30,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the credits label. Defaults to:<pre>style: { cursor: 'pointer', color: '#909090', fontSize: '10px'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 		/// <summary>
 		/// The text for the credits label.

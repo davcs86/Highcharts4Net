@@ -89,7 +89,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the label. Use <code>whiteSpace: 'nowrap'</code> to prevent wrapping of category labels. Defaults to:<pre>style: { color: '#6D869F', fontWeight: 'bold'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 		/// <summary>
 		/// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.

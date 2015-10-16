@@ -114,7 +114,7 @@ namespace Highcharts4Net.Library.Options
 		/// Styles for the label.
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
         /// <summary>
         /// The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 

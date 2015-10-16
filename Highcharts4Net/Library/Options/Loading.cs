@@ -32,7 +32,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the loading screen that covers the plot area. Defaults to:<pre>style: { position: 'absolute', backgroundColor: 'white', opacity: 0.5, textAlign: 'center'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 	}
 

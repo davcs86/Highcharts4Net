@@ -43,7 +43,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the label. Defaults to:<pre>style: { color: '#666', 'font-size': '11px', 'line-height': '14px'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 		/// <summary>
 		/// The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed with regards to the stack, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are <code>'left'</code>, <code>'center'</code> and <code>'right'</code>. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.

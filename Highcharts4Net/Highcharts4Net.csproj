@@ -509,7 +509,6 @@
     <Compile Include="Library\Options\PlotOptionsWaterfallZone.cs" />
     <Compile Include="Library\Options\Point.cs" />
     <Compile Include="Library\Options\PointEvents.cs" />
-    <Compile Include="Library\Options\PointMarker.cs" />
     <Compile Include="Library\Options\ISeries.cs" />
     <Compile Include="Library\Options\SeriesWaterfall.cs" />
     <Compile Include="Library\Options\SeriesTreemap.cs" />

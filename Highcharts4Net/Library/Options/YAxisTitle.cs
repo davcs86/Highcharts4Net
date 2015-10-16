@@ -38,7 +38,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: { "color": "#707070", "fontWeight": "bold" }
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 		/// <summary>
 		/// The actual text of the axis title. Horizontal texts can contain HTML,  but rotated texts are painted using vector techniques and must be  clean text. The Y axis title is disabled by setting the <code>text</code> option to <code>null</code>.

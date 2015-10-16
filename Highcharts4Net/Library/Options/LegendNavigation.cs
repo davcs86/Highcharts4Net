@@ -38,7 +38,7 @@ namespace Highcharts4Net.Library.Options
 		/// Text styles for the legend page navigation.
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 	}
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Highcharts4Net.fastJSON;
 
 
@@ -23,15 +24,15 @@ namespace Highcharts4Net.Library.Helpers
         /// <param name="pointStart"></param>
         public PointStart(NumberOrDateTime pointStart) { PointStartNumber = pointStart; }
 
-        private DateTime? PointStartDate { get; set; }
+        private DateTime? PointStartDate { get;}
 
-        private NumberOrDateTime? PointStartNumber { get; set; }
+        private NumberOrDateTime? PointStartNumber { get;  }
 
         public override string ToString()
         {
             if (PointStartDate != null)
             {
-                return JSON.ToJSON(PointStartDate);
+                return string.Format("Date.UTC({0},{1},{2},{3},{4},{5})", PointStartDate.Value.Year, PointStartDate.Value.Month-1, PointStartDate.Value.Day,PointStartDate.Value.Hour, PointStartDate.Value.Minute, PointStartDate.Value.Second);
             }
             return (PointStartNumber != null) ? JSON.ToJSON(PointStartNumber) : "";
         }

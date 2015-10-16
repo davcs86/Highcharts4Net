@@ -1,5 +1,7 @@
 
 
+using Highcharts4Net.Library.Helpers;
+
 namespace Highcharts4Net.Library.Options
 {
 	/// <summary>
@@ -11,7 +13,7 @@ namespace Highcharts4Net.Library.Options
 		/// Generic CSS styles for the legend title. Defaults to:<pre>style: {   fontWeight: 'bold'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 		/// <summary>
 		/// A text or HTML string for the title. 

@@ -1,5 +1,7 @@
 
 
+using Highcharts4Net.Library.Helpers;
+
 namespace Highcharts4Net.Library.Options
 {
 	/// <summary>
@@ -16,7 +18,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for each label. To position the label, use left and top like this:<pre>style: { left: '100px', top: '100px'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 	}
 

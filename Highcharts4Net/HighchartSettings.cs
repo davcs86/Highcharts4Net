@@ -213,7 +213,7 @@ namespace Highcharts4Net
             JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(GradientStops), ToStringSerializer, ToStringDeserializer);
-            
+
         }
 
         public HtmlString Render()

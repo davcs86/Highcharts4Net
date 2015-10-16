@@ -20,6 +20,6 @@ namespace Highcharts4Net.Library.Helpers
         public string Fill { get; set; }
 
         //[JsonFormatter("{{ {0} }}")]
-        public string Style { get; set; }
+        public FunctionString Style { get; set; }
     }
 }

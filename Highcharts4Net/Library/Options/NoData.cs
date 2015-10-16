@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: { "fontSize": "12px", "fontWeight": "bold", "color": "#60606a" }
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 	}
 

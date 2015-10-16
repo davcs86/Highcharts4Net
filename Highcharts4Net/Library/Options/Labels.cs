@@ -1,5 +1,7 @@
 
 
+using Highcharts4Net.Library.Helpers;
+
 namespace Highcharts4Net.Library.Options
 {
 	/// <summary>
@@ -16,7 +18,7 @@ namespace Highcharts4Net.Library.Options
 		/// Shared CSS styles for all labels. Defaults to:<pre>style: { color: '#3E576F'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public string Style { get; set; }
+		public FunctionString Style { get; set; }
 
 	}
 

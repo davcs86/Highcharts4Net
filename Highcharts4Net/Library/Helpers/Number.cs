@@ -214,7 +214,7 @@ namespace Highcharts4Net.Library.Helpers
         public override string ToString()
         {
             if (_isDateTime && _dateValue.HasValue)
-                return _dateValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
+                return string.Format("Date.UTC({0},{1},{2},{3},{4},{5})", _dateValue.Value.Year, _dateValue.Value.Month - 1, _dateValue.Value.Day, _dateValue.Value.Hour, _dateValue.Value.Minute, _dateValue.Value.Second);
             if (_isDouble && _doubleValue.HasValue)
                 return _doubleValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
             if (_isInt && _intValue.HasValue)
