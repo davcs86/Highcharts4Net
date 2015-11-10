@@ -128,6 +128,7 @@
     <Compile Include="Library\Helpers\BackColorOrGradient.cs" />
     <Compile Include="Library\Helpers\BackgroundObject.cs" />
     <Compile Include="Library\Helpers\Crosshairs.cs" />
+    <Compile Include="Library\Helpers\CSSObject.cs" />
     <Compile Include="Library\Helpers\Data.cs" />
     <Compile Include="Library\Helpers\DateTimeLabel.cs" />
     <Compile Include="Library\Helpers\Events.cs" />
@@ -140,7 +141,6 @@
     <Compile Include="Library\Helpers\PercentageOrPixel.cs" />
     <Compile Include="Library\Helpers\PointDrilldown.cs" />
     <Compile Include="Library\Helpers\PointPlacement.cs" />
-    <Compile Include="Library\Helpers\PointStart.cs" />
     <Compile Include="Library\Helpers\Position.cs" />
     <Compile Include="Library\Helpers\Theme.cs" />
     <Compile Include="Library\Helpers\Tools.cs" />

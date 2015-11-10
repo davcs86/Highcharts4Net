@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the text label.
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The string text itself. A subset of HTML is supported.

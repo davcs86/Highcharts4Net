@@ -8,18 +8,18 @@ var Highcharts4Net = (function () {
             return obj.attachEvent("on" + evt, fnc);
         }
         return false;
-    }
-    var registerChart = function (chart) {
+    }, 
+    registerChart = function (chart) {
         if (typeof chart !== "undefined") {
             c.push(chart); // register charts
         }
-    }
-    var registerCallback = function (callback) {
+    },
+    registerCallback = function (callback) {
         if (typeof callback !== "undefined") {
             f.push(callback); // register callbacks
         }
-    }
-    var renderCharts = function () {
+    },
+    renderCharts = function () {
         for (var i in c) {
             if ("undefined" !== typeof c[i]) {
                 var newchart = c[i]();
@@ -30,8 +30,8 @@ var Highcharts4Net = (function () {
                 }
             }
         }
-    }
-    var init = function () {
+    },
+    init = function () {
         f = [];
         c = [];
         addEventListener(window, "load", function () {

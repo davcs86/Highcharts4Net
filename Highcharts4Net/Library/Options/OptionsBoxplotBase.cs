@@ -165,7 +165,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
-		public PointStart PointStart { get; set; }
+		public NumberOrDateTime? PointStart { get; set; }
 
 		/// <summary>
 		/// A pixel value specifying a fixed width for each column or bar. When <code>null</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>.

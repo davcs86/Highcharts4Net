@@ -161,7 +161,7 @@ namespace Highcharts4Net.Library.Options
 
 		[Obsolete("CSS styles for the legend area. In the 1.x versions the position of the legend area was determined by CSS. In 2.x, the position is determined by properties like  <code>align</code>, <code>verticalAlign</code>, <code>x</code> and <code>y</code>, but the styles are still parsed for backwards compatibility.")]
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The pixel height of the symbol for series types that use a rectangle in the legend.

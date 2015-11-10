@@ -138,7 +138,7 @@ namespace Highcharts4Net.Library.Options
 		/// CSS styles for the tooltip. The tooltip can also be styled through the CSS class <code>.highcharts-tooltip</code>. Default value:<pre>style: { color: '#333333', fontSize: '12px', padding: '8px'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows advanced formatting like tables and images in the tooltip. It is also recommended for rtl languages as it works around rtl bugs in early Firefox.

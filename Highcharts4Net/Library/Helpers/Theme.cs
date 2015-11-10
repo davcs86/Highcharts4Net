@@ -1,6 +1,4 @@
-﻿
-
-namespace Highcharts4Net.Library.Helpers
+﻿namespace Highcharts4Net.Library.Helpers
 {
     public class Theme
     {
@@ -20,6 +18,6 @@ namespace Highcharts4Net.Library.Helpers
         public string Fill { get; set; }
 
         //[JsonFormatter("{{ {0} }}")]
-        public FunctionString Style { get; set; }
+        public CSSObject Style { get; set; }
     }
 }

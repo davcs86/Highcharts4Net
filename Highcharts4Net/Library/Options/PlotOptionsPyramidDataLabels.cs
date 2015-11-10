@@ -128,7 +128,7 @@ namespace Highcharts4Net.Library.Options
 		/// Styles for the label.
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// Whether to <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.

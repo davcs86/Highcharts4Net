@@ -210,7 +210,7 @@ namespace Highcharts4Net
             JSON.RegisterCustomType(typeof(FunctionString), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(NumberOrDateTime), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(Data), ToStringSerializer, ToStringDeserializer);
-            JSON.RegisterCustomType(typeof(PointStart), ToStringSerializer, ToStringDeserializer);
+            JSON.RegisterCustomType(typeof(NumberOrDateTime), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(ColorOrGradient), ToStringSerializer, ToStringDeserializer);
             JSON.RegisterCustomType(typeof(GradientStops), ToStringSerializer, ToStringDeserializer);
 

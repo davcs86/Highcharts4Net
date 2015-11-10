@@ -40,7 +40,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: { "color": "#707070", "fontWeight": "bold" }
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The actual text of the axis title. It can contain basic HTML text markup like &lt;b&gt;, &lt;i&gt; and spans with style.

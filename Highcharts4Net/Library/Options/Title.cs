@@ -33,7 +33,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: { "color": "#333333", "fontSize": "18px" }
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public FunctionString Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The title of the chart. To disable the title, set the <code>text</code> to <code>null</code>.

@@ -141,7 +141,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
-		public PointStart PointStart { get; set; }
+		public NumberOrDateTime? PointStart { get; set; }
 
 		/// <summary>
 		/// Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
