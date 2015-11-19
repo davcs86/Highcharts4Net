@@ -223,7 +223,7 @@ namespace Highcharts4Net.Library.Options
 		/// Additional CSS styles to apply inline to the container <code>div</code>. Note that since the default font styles are applied in the renderer, it is ignorant of the individual chart  options and must be set globally. Defaults to:<pre>style: { fontFamily: ''Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif', // default font fontSize: '12px'}</pre>
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-        public Dictionary<string,string> Style { get; set; }
+        public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The default series type for the chart. Can be any of the chart types listed under <a href='#plotOptions'>plotOptions</a>.

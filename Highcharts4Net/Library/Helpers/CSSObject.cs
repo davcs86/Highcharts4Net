@@ -55,6 +55,8 @@ namespace Highcharts4Net.Library.Helpers
 
         public string BorderWidth { get; set; }
 
+        public string Bottom { get; set; }
+
         public string Clear { get; set; }
 
         public string Clip { get; set; }
@@ -120,6 +122,8 @@ namespace Highcharts4Net.Library.Helpers
         public string PageBreakBefore { get; set; }
 
         public string Position { get; set; }
+
+        public string Right { get; set; }
 
         public string CssFloat { get; set; }
 

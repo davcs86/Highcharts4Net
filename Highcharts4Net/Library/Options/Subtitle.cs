@@ -28,7 +28,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: { "color": "#555555" }
 		/// </summary>
 		//[JsonFormatter("{{ {0} }}")]
-		public Dictionary<string,string> Style { get; set; }
+		public CSSObject Style { get; set; }
 
 		/// <summary>
 		/// The subtitle of the chart.

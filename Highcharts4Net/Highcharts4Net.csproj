@@ -125,7 +125,7 @@
     <Compile Include="Library\Enums\WeekDays.cs" />
     <Compile Include="Library\Enums\ZoomTypes.cs" />
     <Compile Include="Library\Helpers\Animation.cs" />
-    <Compile Include="Library\Helpers\BackColorOrGradient.cs" />
+    <Compile Include="Library\Helpers\ColorOrGradient.cs" />
     <Compile Include="Library\Helpers\BackgroundObject.cs" />
     <Compile Include="Library\Helpers\Crosshairs.cs" />
     <Compile Include="Library\Helpers\CSSObject.cs" />
