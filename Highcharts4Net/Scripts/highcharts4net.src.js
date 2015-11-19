@@ -1,5 +1,4 @@
-﻿// ReSharper disable MissingHasOwnPropertyInForeach
-var Highcharts4Net = (function () {
+﻿var Highcharts4Net = (function () {
     "use strict";
     var f, c, addEventListener = function (obj, evt, fnc) {
         if (obj.addEventListener) { // W3C model
@@ -51,4 +50,3 @@ var Highcharts4Net = (function () {
     }
 }());
 Highcharts4Net.Init();
-// ReSharper restore MissingHasOwnPropertyInForeach

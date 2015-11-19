@@ -8,6 +8,5 @@ namespace Highcharts4Net
         {
             return new ExtensionsLibrary(htmlHelper);
         }
-
     }
 }

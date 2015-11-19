@@ -22,7 +22,7 @@ namespace Highcharts4Net
         /// <summary>
         /// <i>True</i> for include highcharts-more.js.
         /// </summary>
-        public bool IncludeMore { get; set; } 
+        public bool IncludeMore { get; set; }
         /// <summary>
         /// <i>True</i> for include modules/data.js.
         /// Required for parsing data from csv. 
@@ -52,12 +52,12 @@ namespace Highcharts4Net
         {
             var context = _helper.ViewContext.HttpContext;
             string baseUrl = options.UseCDN
-                ? context.Request.Url.Scheme+"://code.highcharts.com/"
+                ? context.Request.Url.Scheme + "://code.highcharts.com/"
                 : UrlHelper.GenerateContentUrl(options.BasePath, context);
 
-            var returnStr = string.Format("<script src='{0}'></script>\n", baseUrl+"highcharts.js");
+            var returnStr = string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts.js");
 
-            if(options.IncludeMore)
+            if (options.IncludeMore)
                 returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts-more.js");
             if (options.IncludeModuleData)
                 returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/data.js");
@@ -79,9 +79,9 @@ namespace Highcharts4Net
 
         public AreaChartExtension AreaChart(Action<AreaChartSettings> settings) => new AreaChartExtension(settings);
 
-        public ArearangeChartExtension ArearangeChart(Action<ArearangeChartSettings> settings) =>new ArearangeChartExtension(settings);
+        public ArearangeChartExtension ArearangeChart(Action<ArearangeChartSettings> settings) => new ArearangeChartExtension(settings);
 
-        public AreasplineChartExtension AreasplineChart(Action<AreasplineChartSettings> settings) =>new AreasplineChartExtension(settings);
+        public AreasplineChartExtension AreasplineChart(Action<AreasplineChartSettings> settings) => new AreasplineChartExtension(settings);
 
         public AreasplinerangeChartExtension AreasplinerangeChart(Action<AreasplinerangeChartSettings> settings) => new AreasplinerangeChartExtension(settings);
 
@@ -91,25 +91,25 @@ namespace Highcharts4Net
 
         public BubbleChartExtension BubbleChart(Action<BubbleChartSettings> settings) => new BubbleChartExtension(settings);
 
-        public ColumnChartExtension ColumnChart(Action<ColumnChartSettings> settings)=> new ColumnChartExtension(settings);
+        public ColumnChartExtension ColumnChart(Action<ColumnChartSettings> settings) => new ColumnChartExtension(settings);
 
-        public ColumnrangeChartExtension ColumnrangeChart(Action<ColumnrangeChartSettings> settings)=> new ColumnrangeChartExtension(settings);
+        public ColumnrangeChartExtension ColumnrangeChart(Action<ColumnrangeChartSettings> settings) => new ColumnrangeChartExtension(settings);
 
-        public ErrorbarChartExtension ErrorbarChart(Action<ErrorbarChartSettings> settings)=> new ErrorbarChartExtension(settings);
+        public ErrorbarChartExtension ErrorbarChart(Action<ErrorbarChartSettings> settings) => new ErrorbarChartExtension(settings);
 
-        public FunnelChartExtension FunnelChart(Action<FunnelChartSettings> settings)=> new FunnelChartExtension(settings);
+        public FunnelChartExtension FunnelChart(Action<FunnelChartSettings> settings) => new FunnelChartExtension(settings);
 
-        public GaugeChartExtension GaugeChart(Action<GaugeChartSettings> settings)=> new GaugeChartExtension(settings);
+        public GaugeChartExtension GaugeChart(Action<GaugeChartSettings> settings) => new GaugeChartExtension(settings);
 
-        public HeatmapChartExtension HeatmapChart(Action<HeatmapChartSettings> settings)=> new HeatmapChartExtension(settings);
+        public HeatmapChartExtension HeatmapChart(Action<HeatmapChartSettings> settings) => new HeatmapChartExtension(settings);
 
-        public LineChartExtension LineChart(Action<LineChartSettings> settings)=> new LineChartExtension(settings);
+        public LineChartExtension LineChart(Action<LineChartSettings> settings) => new LineChartExtension(settings);
 
-        public PieChartExtension PieChart(Action<PieChartSettings> settings)=> new PieChartExtension(settings);
+        public PieChartExtension PieChart(Action<PieChartSettings> settings) => new PieChartExtension(settings);
 
-        public PolygonChartExtension PolygonChart(Action<PolygonChartSettings> settings)=> new PolygonChartExtension(settings);
+        public PolygonChartExtension PolygonChart(Action<PolygonChartSettings> settings) => new PolygonChartExtension(settings);
 
-        public PyramidChartExtension PyramidChart(Action<PyramidChartSettings> settings)=> new PyramidChartExtension(settings);
+        public PyramidChartExtension PyramidChart(Action<PyramidChartSettings> settings) => new PyramidChartExtension(settings);
 
         public ScatterChartExtension ScatterChart(Action<ScatterChartSettings> settings) => new ScatterChartExtension(settings);
 
