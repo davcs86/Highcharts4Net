@@ -270,7 +270,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// <p>Solid gauge series only. Color stops for the solid gauge. Use this in cases where a linear gradient between a <code>minColor</code> and <code>maxColor</code> is not sufficient. The stops is an array of tuples, where the first item is a float between 0 and 1 assigning the relative position in the gradient, and the second item is the color.</p><p>For solid gauges, the Y axis also inherits the concept of <a href='http://api.highcharts.com/highmaps#colorAxis.dataClasses'>data classes</a> from the Highmaps color axis.</p>
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public Gradient Stops { get; set; }
 
         /// <summary>

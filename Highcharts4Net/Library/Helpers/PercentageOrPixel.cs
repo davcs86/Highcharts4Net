@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Helpers
                 Value = number.ToString();
         }
 
-        //[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        //
         public string Value { get; private set; }
     }
 }

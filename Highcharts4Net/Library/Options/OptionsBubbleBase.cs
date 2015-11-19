@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href='#chart.animation'>chart.animation</a> and the animation parameter under the API methods.The following properties are supported:</p><dl>  <dt>duration</dt>  <dd>The duration of the animation in milliseconds.</dd><dt>easing</dt><dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or<code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notablythe jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using MooTools as the general framework, use the property name <code>transition</code> instead of <code>easing</code>.</dd></dl><p>Due to poor performance, animation is disabled in old IE browsers for column charts and polar charts.</p>
 		/// Default: true
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public Animation Animation { get; set; }
 
 		/// <summary>
@@ -124,7 +124,7 @@ namespace Highcharts4Net.Library.Options
 		/// If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 		/// Default: 0
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public NumberOrDateTime? PointStart { get; set; }
 
 		/// <summary>

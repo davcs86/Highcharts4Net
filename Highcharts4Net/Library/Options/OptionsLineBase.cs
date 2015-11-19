@@ -18,7 +18,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href='#chart.animation'>chart.animation</a> and the animation parameter under the API methods.The following properties are supported:</p><dl>  <dt>duration</dt>  <dd>The duration of the animation in milliseconds.</dd><dt>easing</dt><dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or<code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notablythe jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using MooTools as the general framework, use the property name <code>transition</code> instead of <code>easing</code>.</dd></dl><p>Due to poor performance, animation is disabled in old IE browsers for column charts and polar charts.</p>
 		/// Default: true
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public Animation Animation { get; set; }
 
 		/// <summary>
@@ -114,14 +114,14 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
         /// </summary>
-        //[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        //
 		public PointPlacement PointPlacement { get; set; }
 
 		/// <summary>
 		/// If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
 		/// Default: 0
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public NumberOrDateTime? PointStart { get; set; }
 
 		/// <summary>

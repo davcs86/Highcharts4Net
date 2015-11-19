@@ -5,7 +5,11 @@ namespace Highcharts4Net.Library.Options
 	/// </summary>
 	public class PlotOptionsColumnrange: OptionsColumnrangeBase
 	{
-		
-	}
+        public PlotOptionsColumnrange()
+        {
+            // Sets default values for [ForceNullable] properties
+            Threshold = 0;
+        }
+    }
 
 }

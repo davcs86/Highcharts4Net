@@ -5,7 +5,11 @@ namespace Highcharts4Net.Library.Options
 	/// </summary>
 	public class PlotOptionsBubble: OptionsBubbleBase
 	{
-		
-	}
+        public PlotOptionsBubble()
+        {
+            // Sets default values for [ForceNullable] properties
+            Threshold = 0;
+        }
+    }
 
 }

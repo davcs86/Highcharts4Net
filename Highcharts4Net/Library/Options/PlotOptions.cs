@@ -82,7 +82,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// <p>General options for all series types.</p>
 		/// </summary>
-		public PlotOptionsSeries Series { get; set; }
+		//public PlotOptionsSeries Series { get; set; }
 
 		/// <summary>
 		/// A gauge showing values using a filled arc with colors indicating the value. The solid gauge plots values against the <code>yAxis</code>, which is extended with some color options, <a href='#yAxis.minColor'>minColor</a>, <a href='#yAxis.maxColor'>maxColor</a> and <a href='#yAxis.stops'>stops</a>, to control the color of the gauge itself.

@@ -7,7 +7,11 @@ namespace Highcharts4Net.Library.Options
 	/// </summary>
 	public class PlotOptionsGauge: OptionsGaugeBase
 	{
-		
+        public PlotOptionsGauge()
+        {
+            // Sets default values for [ForceNullable] properties
+            Threshold = 0;
+        }
     }
 
 }

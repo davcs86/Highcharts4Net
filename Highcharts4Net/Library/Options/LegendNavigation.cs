@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library.Options
 		/// How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
 		/// Default: true
 		/// </summary>
-		//[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		//
 		public Animation Animation { get; set; }
 
 		/// <summary>
