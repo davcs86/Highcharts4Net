@@ -31,11 +31,32 @@ namespace Highcharts4Net.Library.Helpers
         }
     }
 
+    public class AxisCrosshair
+    {
+        public AxisCrosshair(bool showCrosshairs) { ShowCrosshairs = showCrosshairs; }
+
+        public AxisCrosshair(CrosshairsFormat crosshairFormat) { CrosshairsFormat = crosshairFormat; }
+
+        public bool? ShowCrosshairs { get; }
+
+        public CrosshairsFormat CrosshairsFormat { get; }
+
+        public override string ToString()
+        {
+            if (CrosshairsFormat != null)
+            {
+                return JSON.ToJSON(CrosshairsFormat);
+            }
+            return ShowCrosshairs != null ? JSON.ToJSON(ShowCrosshairs) : "";
+        }
+    }
+
     public class CrosshairsFormat
     {
         public int? Width { get; set; }
         public ColorOrGradient Color { get; set; }
         public DashStyles DashStyle { get; set; }
+        public bool? Snap { get; set; }
         public int? ZIndex { get; set; }
     }
 }

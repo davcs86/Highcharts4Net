@@ -137,7 +137,7 @@
     <Compile Include="Library\Helpers\LiteralString.cs" />
     <Compile Include="Library\Helpers\Lang.cs" />
     <Compile Include="Library\Helpers\MenuItem.cs" />
-    <Compile Include="Library\Helpers\Number.cs" />
+    <Compile Include="Library\Helpers\NumberOrDateTime.cs" />
     <Compile Include="Library\Helpers\PercentageOrPixel.cs" />
     <Compile Include="Library\Helpers\PointDrilldown.cs" />
     <Compile Include="Library\Helpers\PointPlacement.cs" />
