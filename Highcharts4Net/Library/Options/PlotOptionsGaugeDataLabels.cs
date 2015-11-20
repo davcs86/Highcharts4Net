@@ -32,7 +32,7 @@ namespace Highcharts4Net.Library.Options
 		/// The border color for the data label.
 		/// Default: silver
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The border radius in pixels for the gauge's data label.

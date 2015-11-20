@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Options
 		/// The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
 		/// Default: silver
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The border or stroke width of the pivot.

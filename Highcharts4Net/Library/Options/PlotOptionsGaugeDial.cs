@@ -32,7 +32,7 @@ namespace Highcharts4Net.Library.Options
 		/// The border color or stroke of the gauge's dial. By default, the borderWidth is 0, so this must be set in addition to a custom border color.
 		/// Default: silver
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The width of the gauge dial border in pixels.

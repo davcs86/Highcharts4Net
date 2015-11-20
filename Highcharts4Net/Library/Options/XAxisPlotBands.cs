@@ -14,7 +14,7 @@ namespace Highcharts4Net.Library.Options
         /// Border color for the plot band. Also requires <pre>borderWidth</pre> to be set.
         /// Default: null
         /// </summary>
-        public string BorderColor { get; set; }
+        public ColorOrGradient BorderColor { get; set; }
 
         /// <summary>
         /// Border width for the plot band. Also requires <pre>borderColor</pre> to be set.

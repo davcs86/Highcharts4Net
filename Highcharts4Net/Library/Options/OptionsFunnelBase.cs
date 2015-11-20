@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the border surrounding each slice.
 		/// Default: #FFFFFF
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The width of the border surrounding each slice.

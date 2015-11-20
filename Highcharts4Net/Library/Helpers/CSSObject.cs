@@ -3,157 +3,159 @@ namespace Highcharts4Net.Library.Helpers
 {
     sealed public class CSSObject
     {
-        public string Background { get; set; }
+        public LiteralString Background { get; set; }
 
-        public string BackgroundAttachment { get; set; }
+        public LiteralString BackgroundAttachment { get; set; }
 
-        public string BackgroundColor { get; set; }
+        public LiteralString BackgroundColor { get; set; }
 
-        public string BackgroundImage { get; set; }
+        public LiteralString BackgroundImage { get; set; }
 
-        public string BackgroundPosition { get; set; }
+        public LiteralString BackgroundPosition { get; set; }
 
-        public string BackgroundRepeat { get; set; }
+        public LiteralString BackgroundRepeat { get; set; }
 
-        public string Border { get; set; }
+        public LiteralString Border { get; set; }
 
-        public string BorderBottom { get; set; }
+        public LiteralString BorderBottom { get; set; }
 
-        public string BorderBottomColor { get; set; }
+        public LiteralString BorderBottomColor { get; set; }
 
-        public string BorderBottomStyle { get; set; }
+        public LiteralString BorderBottomStyle { get; set; }
 
-        public string BorderBottomWidth { get; set; }
+        public LiteralString BorderBottomWidth { get; set; }
 
-        public string BorderColor { get; set; }
+        public LiteralString BorderColor { get; set; }
 
-        public string BorderLeft { get; set; }
+        public LiteralString BorderLeft { get; set; }
 
-        public string BorderLeftColor { get; set; }
+        public LiteralString BorderLeftColor { get; set; }
 
-        public string BorderLeftStyle { get; set; }
+        public LiteralString BorderLeftStyle { get; set; }
 
-        public string BorderLeftWidth { get; set; }
+        public LiteralString BorderLeftWidth { get; set; }
 
-        public string BorderRight { get; set; }
+        public LiteralString BorderRight { get; set; }
 
-        public string BorderRightColor { get; set; }
+        public LiteralString BorderRightColor { get; set; }
 
-        public string BorderRightStyle { get; set; }
+        public LiteralString BorderRightStyle { get; set; }
 
-        public string BorderRightWidth { get; set; }
+        public LiteralString BorderRightWidth { get; set; }
 
-        public string BorderStyle { get; set; }
+        public LiteralString BorderStyle { get; set; }
 
-        public string BorderTop { get; set; }
+        public LiteralString BorderTop { get; set; }
 
-        public string BorderTopColor { get; set; }
+        public LiteralString BorderTopColor { get; set; }
 
-        public string BorderTopStyle { get; set; }
+        public LiteralString BorderTopStyle { get; set; }
 
-        public string BorderTopWidth { get; set; }
+        public LiteralString BorderTopWidth { get; set; }
 
-        public string BorderWidth { get; set; }
+        public LiteralString BorderWidth { get; set; }
 
-        public string Bottom { get; set; }
+        public LiteralString Bottom { get; set; }
 
-        public string Clear { get; set; }
+        public LiteralString Clear { get; set; }
 
-        public string Clip { get; set; }
+        public LiteralString Clip { get; set; }
 
-        public string Color { get; set; }
+        public LiteralString Color { get; set; }
 
-        public string Cursor { get; set; }
+        public LiteralString Cursor { get; set; }
 
-        public string Display { get; set; }
+        public LiteralString Display { get; set; }
 
-        public string Filter { get; set; }
+        public LiteralString Filter { get; set; }
 
-        public string Font { get; set; }
+        public LiteralString Font { get; set; }
 
-        public string FontFamily { get; set; }
+        public LiteralString FontFamily { get; set; }
 
-        public string FontSize { get; set; }
+        public LiteralString FontSize { get; set; }
 
-        public string FontVariant { get; set; }
+        public LiteralString FontVariant { get; set; }
 
-        public string FontWeight { get; set; }
+        public LiteralString FontWeight { get; set; }
 
-        public string Height { get; set; }
+        public LiteralString Height { get; set; }
 
-        public string Left { get; set; }
+        public LiteralString Left { get; set; }
 
-        public string LetterSpacing { get; set; }
+        public LiteralString LetterSpacing { get; set; }
 
-        public string LineHeight { get; set; }
+        public LiteralString LineHeight { get; set; }
 
-        public string ListStyle { get; set; }
+        public LiteralString ListStyle { get; set; }
 
-        public string ListStyleImage { get; set; }
+        public LiteralString ListStyleImage { get; set; }
 
-        public string ListStylePosition { get; set; }
+        public LiteralString ListStylePosition { get; set; }
 
-        public string ListStyleType { get; set; }
+        public LiteralString ListStyleType { get; set; }
 
-        public string Margin { get; set; }
+        public LiteralString Margin { get; set; }
 
-        public string MarginBottom { get; set; }
+        public LiteralString MarginBottom { get; set; }
 
-        public string MarginLeft { get; set; }
+        public LiteralString MarginLeft { get; set; }
 
-        public string MarginRight { get; set; }
+        public LiteralString MarginRight { get; set; }
 
-        public string MarginTop { get; set; }
+        public LiteralString MarginTop { get; set; }
 
-        public string Overflow { get; set; }
+        public LiteralString Overflow { get; set; }
 
-        public string Padding { get; set; }
+        public LiteralString Padding { get; set; }
 
-        public string PaddingBottom { get; set; }
+        public LiteralString PaddingBottom { get; set; }
 
-        public string PaddingLeft { get; set; }
+        public LiteralString PaddingLeft { get; set; }
 
-        public string PaddingRight { get; set; }
+        public LiteralString PaddingRight { get; set; }
 
-        public string PaddingTop { get; set; }
+        public LiteralString PaddingTop { get; set; }
 
-        public string PageBreakAfter { get; set; }
+        public LiteralString PageBreakAfter { get; set; }
 
-        public string PageBreakBefore { get; set; }
+        public LiteralString PageBreakBefore { get; set; }
 
-        public string Position { get; set; }
+        public LiteralString Position { get; set; }
 
-        public string Right { get; set; }
+        public LiteralString Right { get; set; }
 
-        public string CssFloat { get; set; }
+        public LiteralString CssFloat { get; set; }
 
-        public string TextAlign { get; set; }
+        public LiteralString TextAlign { get; set; }
 
-        public string TextDecoration { get; set; }
+        public LiteralString TextDecoration { get; set; }
 
-        public string TextDecorationBlink { get; set; }
+        public LiteralString TextDecorationBlink { get; set; }
 
-        public string TextDecorationLineThrough { get; set; }
+        public LiteralString TextDecorationLineThrough { get; set; }
 
-        public string TextDecorationNone { get; set; }
+        public LiteralString TextDecorationNone { get; set; }
 
-        public string TextDecorationOverline { get; set; }
+        public LiteralString TextDecorationOverline { get; set; }
 
-        public string TextDecorationUnderline { get; set; }
+        public LiteralString TextDecorationUnderline { get; set; }
 
-        public string TextIndent { get; set; }
+        public LiteralString TextIndent { get; set; }
 
-        public string TextTransform { get; set; }
+        public LiteralString TextShadow { get; set; }
 
-        public string Top { get; set; }
+        public LiteralString TextTransform { get; set; }
 
-        public string VerticalAlign { get; set; }
+        public LiteralString Top { get; set; }
 
-        public string Visibility { get; set; }
+        public LiteralString VerticalAlign { get; set; }
 
-        public string Width { get; set; }
+        public LiteralString Visibility { get; set; }
 
-        public string ZIndex { get; set; }
+        public LiteralString Width { get; set; }
+
+        public LiteralString ZIndex { get; set; }
 
     }
 }

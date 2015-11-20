@@ -37,7 +37,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the border of each waterfall column.
         /// Default: #333333
         /// </summary>
-        public string BorderColor { get; set; }
+        public ColorOrGradient BorderColor { get; set; }
 
         /// <summary>
         /// The width of the border surrounding each column or bar.

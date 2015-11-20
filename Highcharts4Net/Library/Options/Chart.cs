@@ -32,7 +32,7 @@ namespace Highcharts4Net.Library.Options
 		/// The color of the outer chart border.
 		/// Default: #4572A7
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The corner radius of the outer chart border.

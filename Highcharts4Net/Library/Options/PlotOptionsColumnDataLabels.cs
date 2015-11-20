@@ -28,7 +28,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The border color for the data label. Defaults to <code>undefined</code>.
 		/// </summary>
-		public string BorderColor { get; set; }
+		public ColorOrGradient BorderColor { get; set; }
 
 		/// <summary>
 		/// The border radius in pixels for the data label.

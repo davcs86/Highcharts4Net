@@ -25,7 +25,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the border surrounding each column or bar.
         /// Default: #FFFFFF
         /// </summary>
-        public string BorderColor { get; set; }
+        public ColorOrGradient BorderColor { get; set; }
 
         /// <summary>
         /// The corner radius of the border surrounding each column or bar.

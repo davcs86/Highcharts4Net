@@ -10,7 +10,7 @@ namespace Highcharts4Net.Library.Options
         /// The color of the border of each waterfall column.
         /// Default: #333333
         /// </summary>
-        public string BorderColor { get; set; }
+        public ColorOrGradient BorderColor { get; set; }
 
         /// <summary>
         /// Set the dash style of the border of all the point which lies on the level.
