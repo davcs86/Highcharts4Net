@@ -25,23 +25,23 @@ namespace Highcharts4Net.Library.Options
         /// The width of the point marker's outline.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? LineWidth { get; set; }
+        public HighchartsDataPoint? LineWidth { get; set; }
 
         /// <summary>
         /// The additional line width for a hovered point.
         /// Default: 1
         /// </summary>
-        public NumberOrDateTime? LineWidthPlus { get; set; }
+        public HighchartsDataPoint? LineWidthPlus { get; set; }
 
         /// <summary>
         /// The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the <a href='#plotOptions.series.marker.states.hover.radiusPlus'>radiusPlus</a> option.
         /// </summary>
-        public NumberOrDateTime? Radius { get; set; }
+        public HighchartsDataPoint? Radius { get; set; }
 
         /// <summary>
         /// The number of pixels to increase the radius of the hovered point.
         /// Default: 2
         /// </summary>
-        public NumberOrDateTime? RadiusPlus { get; set; }
+        public HighchartsDataPoint? RadiusPlus { get; set; }
     }
 }

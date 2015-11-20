@@ -17,7 +17,7 @@ namespace Highcharts4Net.Library.Options
         /// Border width for the plot band. Also requires <pre>borderColor</pre> to be set.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? BorderWidth { get; set; }
+        public HighchartsDataPoint? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The color of the plot band.
@@ -32,7 +32,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The start position of the plot band in axis units.
 		/// </summary>
-		public NumberOrDateTime? From { get; set; }
+		public HighchartsDataPoint? From { get; set; }
 
 		/// <summary>
 		/// An id used for identifying the plot band in Axis.removePlotBand.
@@ -68,12 +68,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The end position of the plot band in axis units.
 		/// </summary>
-		public NumberOrDateTime? To { get; set; }
+		public HighchartsDataPoint? To { get; set; }
 
 		/// <summary>
 		/// The z index of the plot band within the chart.
 		/// </summary>
-		public NumberOrDateTime? ZIndex { get; set; }
+		public HighchartsDataPoint? ZIndex { get; set; }
 
 	}
 

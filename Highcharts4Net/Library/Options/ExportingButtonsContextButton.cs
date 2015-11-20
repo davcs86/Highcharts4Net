@@ -27,7 +27,7 @@ namespace Highcharts4Net.Library.Options
 		/// Pixel height of the buttons.
 		/// Default: 20
 		/// </summary>
-		public NumberOrDateTime? Height { get; set; }
+		public HighchartsDataPoint? Height { get; set; }
 
 		/// <summary>
 		/// <p>A collection of config options for the menu items. Each options object consists of a <code>text</code> option which is a string to show in the menu item, as well as an <code>onclick</code> parameter which is a callback function to run on click.</p> <p>By default, there is the 'Print' menu item plus one menu item for each of the available export types. Menu items can be customized by defining a new array of items and assigning  <code>null</code> to unwanted positions (see override example below).</p>
@@ -56,7 +56,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel size of the symbol on the button.
 		/// Default: 14
 		/// </summary>
-		public NumberOrDateTime? SymbolSize { get; set; }
+		public HighchartsDataPoint? SymbolSize { get; set; }
 
 		/// <summary>
 		/// The color of the symbol's stroke or line.
@@ -68,19 +68,19 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel stroke width of the symbol on the button.
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? SymbolStrokeWidth { get; set; }
+		public HighchartsDataPoint? SymbolStrokeWidth { get; set; }
 
 		/// <summary>
 		/// The x position of the center of the symbol inside the button.
 		/// Default: 12.5
 		/// </summary>
-		public NumberOrDateTime? SymbolX { get; set; }
+		public HighchartsDataPoint? SymbolX { get; set; }
 
 		/// <summary>
 		/// The y position of the center of the symbol inside the button.
 		/// Default: 10.5
 		/// </summary>
-		public NumberOrDateTime? SymbolY { get; set; }
+		public HighchartsDataPoint? SymbolY { get; set; }
 
 		/// <summary>
 		/// A text string to add to the individual button. 
@@ -103,19 +103,19 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the button.
 		/// Default: 24
 		/// </summary>
-		public NumberOrDateTime? Width { get; set; }
+		public HighchartsDataPoint? Width { get; set; }
 
 		/// <summary>
 		/// The horizontal position of the button relative to the <code>align</code> option.
 		/// Default: -10
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The vertical offset of the button's position relative to its <code>verticalAlign</code>. .
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
 	}
 

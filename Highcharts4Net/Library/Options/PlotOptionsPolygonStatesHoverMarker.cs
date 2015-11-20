@@ -19,7 +19,7 @@ namespace Highcharts4Net.Library.Options
         /// Image markers only. Set the image height explicitly. When using this option, a width must also be set. 
         /// Default: null
         /// </summary>
-        public NumberOrDateTime? Height { get; set; }
+        public HighchartsDataPoint? Height { get; set; }
 
         /// <summary>
         /// The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
@@ -31,13 +31,13 @@ namespace Highcharts4Net.Library.Options
         /// The width of the point marker's outline.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? LineWidth { get; set; }
+        public HighchartsDataPoint? LineWidth { get; set; }
 
         /// <summary>
         /// The radius of the point marker.
         /// Default: 4
         /// </summary>
-        public NumberOrDateTime? Radius { get; set; }
+        public HighchartsDataPoint? Radius { get; set; }
 
         public PlotOptionsPolygonMarkerStates States { get; set; }
 
@@ -50,6 +50,6 @@ namespace Highcharts4Net.Library.Options
         /// Image markers only. Set the image width explicitly. When using this option, a height must also be set. 
         /// Default: null
         /// </summary>
-        public NumberOrDateTime? Width { get; set; }
+        public HighchartsDataPoint? Width { get; set; }
     }
 }

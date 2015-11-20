@@ -13,7 +13,7 @@ namespace Highcharts4Net.Library.Options
 		/// How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.
 		/// Default: 0.1
 		/// </summary>
-		public NumberOrDateTime? Brightness { get; set; }
+		public HighchartsDataPoint? Brightness { get; set; }
 
 		/// <summary>
 		/// Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend..
@@ -30,13 +30,13 @@ namespace Highcharts4Net.Library.Options
 		/// Pixel with of the graph line.
 		/// Default: 2
 		/// </summary>
-		public NumberOrDateTime? LineWidth { get; set; }
+		public HighchartsDataPoint? LineWidth { get; set; }
 
 		/// <summary>
 		/// The additional line width for the graph of a hovered series.
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? LineWidthPlus { get; set; }
+		public HighchartsDataPoint? LineWidthPlus { get; set; }
 
 		//public PlotOptionsPyramidStatesHoverMarker Marker { get; set; }
 

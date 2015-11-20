@@ -49,7 +49,7 @@ namespace Highcharts4Net.Library.Options
 		/// The horizontal positioin of the button relative to the align
 		/// option. Defaults to 10
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 	}
 

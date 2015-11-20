@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Highcharts4Net.Library.Helpers
 {
-    public struct NumberOrDateTime : IComparable
+    public struct HighchartsDataPoint : IComparable
     {
         private DateTime? _dateValue;
         private readonly bool _isDateTime;
@@ -23,7 +23,10 @@ namespace Highcharts4Net.Library.Helpers
         private long? _longValue;
         private readonly bool _isLong;
 
-        NumberOrDateTime(DateTime? value)
+        private LiteralString _stringValue;
+        private readonly bool _isString;
+
+        HighchartsDataPoint(DateTime? value)
         {
             _dateValue = value;
             _isDateTime = true;
@@ -42,9 +45,12 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = null;
             _isLong = false;
+
+            _stringValue = null;
+            _isString = false;
         }
 
-        NumberOrDateTime(double? value)
+        HighchartsDataPoint(double? value)
         {
             _dateValue = null;
             _isDateTime = false;
@@ -63,9 +69,12 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = null;
             _isLong = false;
+
+            _stringValue = null;
+            _isString = false;
         }
 
-        NumberOrDateTime(int? value)
+        HighchartsDataPoint(int? value)
         {
             _dateValue = null;
             _isDateTime = false;
@@ -84,9 +93,12 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = null;
             _isLong = false;
+
+            _stringValue = null;
+            _isString = false;
         }
 
-        NumberOrDateTime(decimal? value)
+        HighchartsDataPoint(decimal? value)
         {
             _dateValue = null;
             _isDateTime = false;
@@ -105,9 +117,12 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = null;
             _isLong = false;
+
+            _stringValue = null;
+            _isString = false;
         }
 
-        NumberOrDateTime(float? value)
+        HighchartsDataPoint(float? value)
         {
             _dateValue = null;
             _isDateTime = false;
@@ -126,9 +141,12 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = null;
             _isLong = false;
+
+            _stringValue = null;
+            _isString = false;
         }
 
-        NumberOrDateTime(long? value)
+        HighchartsDataPoint(long? value)
         {
             _dateValue = null;
             _isDateTime = false;
@@ -147,13 +165,40 @@ namespace Highcharts4Net.Library.Helpers
 
             _longValue = value;
             _isLong = true;
+
+            _stringValue = null;
+            _isString = false;
+        }
+
+        HighchartsDataPoint(LiteralString value)
+        {
+            _dateValue = null;
+            _isDateTime = false;
+
+            _doubleValue = null;
+            _isDouble = false;
+
+            _intValue = null;
+            _isInt = false;
+
+            _decimalValue = null;
+            _isDecimal = false;
+
+            _floatValue = null;
+            _isFloat = false;
+
+            _longValue = null;
+            _isLong = false;
+
+            _stringValue = value;
+            _isString = true;
         }
 
         #region IComparable Members
 
         public int CompareTo(object obj)
         {
-            if (!_isDateTime && !_isDouble && !_isInt && !_isDecimal && !_isFloat && !_isLong)
+            if (!_isDateTime && !_isDouble && !_isInt && !_isDecimal && !_isFloat && !_isLong && !_isString)
                 throw new ArgumentException("The value is not correct.");
 
             if (obj == null) return 1;
@@ -162,51 +207,81 @@ namespace Highcharts4Net.Library.Helpers
                 ? _dateValue
                 : (_isDouble
                     ? _doubleValue
-                    : (_isInt ? _intValue : (_isDecimal ? (IComparable) _decimalValue : (_isFloat ? _floatValue : (_isLong ? _longValue : null)))));
+                    : (_isInt ? _intValue : (_isDecimal ? (IComparable)_decimalValue : (_isFloat ? _floatValue : (_isLong ? _longValue : null)))));
 
-            NumberOrDateTime objectNumber = (NumberOrDateTime)obj;
-            return comparer.CompareTo(objectNumber._isDateTime
-                ? objectNumber._dateValue
-                : (objectNumber._isDouble
-                    ? objectNumber._doubleValue
-                    : (objectNumber._isInt ? objectNumber._intValue : (objectNumber._isDecimal ? (IComparable)objectNumber._decimalValue : (objectNumber._isFloat ? objectNumber._floatValue : (_isLong ? _longValue : null))))));
+            HighchartsDataPoint objectNumber = (HighchartsDataPoint)obj;
+
+            if (_isString && objectNumber._isString)
+            {
+                return string.Compare(_stringValue.ToString(), objectNumber._stringValue.ToString());
+            }
+            else if (_isString && !objectNumber._isString)
+            {
+                var objectString = objectNumber.ToString();
+                return string.Compare(_stringValue.ToString(), objectString);
+            }
+            else if (!_isString && objectNumber._isString)
+            {
+                var thisString = ToString();
+                return string.Compare(thisString, objectNumber._stringValue.ToString());
+            }
+            else
+            {
+                return comparer.CompareTo(objectNumber._isDateTime
+                    ? objectNumber._dateValue
+                    : (objectNumber._isDouble
+                        ? objectNumber._doubleValue
+                        : (objectNumber._isInt ? objectNumber._intValue : (objectNumber._isDecimal ? (IComparable)objectNumber._decimalValue : (objectNumber._isFloat ? objectNumber._floatValue : (_isLong ? _longValue : null))))));
+            }
         }
 
         #endregion
 
-        public static implicit operator NumberOrDateTime(double value) { return new NumberOrDateTime(value); }
-        public static implicit operator NumberOrDateTime(int value) { return new NumberOrDateTime(value); }
-        public static implicit operator NumberOrDateTime(decimal value) { return new NumberOrDateTime(value); }
-        public static implicit operator NumberOrDateTime(float value) { return new NumberOrDateTime(value); }
-        public static implicit operator NumberOrDateTime(long value) { return new NumberOrDateTime(value); }
-        public static implicit operator NumberOrDateTime(DateTime value) { return new NumberOrDateTime(value); }
+        public static implicit operator HighchartsDataPoint(double value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(int value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(decimal value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(float value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(long value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(DateTime value) { return new HighchartsDataPoint(value); }
+        public static implicit operator HighchartsDataPoint(string value) { return new HighchartsDataPoint(new LiteralString(value)); }
+        public static implicit operator HighchartsDataPoint(LiteralString value) { return new HighchartsDataPoint(value); }
 
-        public static implicit operator DateTime? (NumberOrDateTime a)
+        public static implicit operator LiteralString (HighchartsDataPoint a)
+        {
+            return a._stringValue;
+        }
+
+        public static implicit operator string(HighchartsDataPoint a)
+        {
+            return a._stringValue.ToString();
+        }
+
+        public static implicit operator DateTime? (HighchartsDataPoint a)
         {
             return a._dateValue;
         }
 
-        public static implicit operator int?(NumberOrDateTime a)
+        public static implicit operator int? (HighchartsDataPoint a)
         {
             return a._intValue;
         }
 
-        public static implicit operator double?(NumberOrDateTime a)
+        public static implicit operator double? (HighchartsDataPoint a)
         {
             return a._doubleValue;
         }
 
-        public static implicit operator decimal?(NumberOrDateTime a)
+        public static implicit operator decimal? (HighchartsDataPoint a)
         {
             return a._decimalValue;
         }
 
-        public static implicit operator float? (NumberOrDateTime a)
+        public static implicit operator float? (HighchartsDataPoint a)
         {
             return a._floatValue;
         }
 
-        public static implicit operator long? (NumberOrDateTime a)
+        public static implicit operator long? (HighchartsDataPoint a)
         {
             return a._longValue;
         }
@@ -225,7 +300,9 @@ namespace Highcharts4Net.Library.Helpers
                 return _floatValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
             if (_isLong && _longValue.HasValue)
                 return _longValue.Value.ToString(CultureInfo.InvariantCulture.NumberFormat);
-            return string.Empty;
+            if (_isString)
+                return _stringValue.ToString();
+            return "''";
         }
 
     }

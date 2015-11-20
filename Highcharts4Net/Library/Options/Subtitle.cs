@@ -51,13 +51,13 @@ namespace Highcharts4Net.Library.Options
 		/// The x position of the subtitle relative to the alignment within chart.spacingLeft and chart.spacingRight.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The y position of the subtitle relative to the alignment within chart.spacingTop and chart.spacingBottom. By default the subtitle is laid out below the title unless the title is floating.
 		/// Default:  null
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
 	}
 

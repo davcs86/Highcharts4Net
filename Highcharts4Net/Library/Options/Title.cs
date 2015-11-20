@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// The margin between the title and the plot area, or if a subtitle is present, the margin between the subtitle and the plot area.
 		/// Default: 15
 		/// </summary>
-		public NumberOrDateTime? Margin { get; set; }
+		public HighchartsDataPoint? Margin { get; set; }
 
 		/// <summary>
 		/// CSS styles for the title. Use this for font styling, but use <code>align</code>, <code>x</code> and <code>y</code> for text alignment.
@@ -57,12 +57,12 @@ namespace Highcharts4Net.Library.Options
 		/// The x position of the title relative to the alignment within chart.spacingLeft and chart.spacingRight.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The y position of the title relative to the alignment within <a href='#chart.spacingTop'>chart.spacingTop</a> and <a href='#chart.spacingBottom'>chart.spacingBottom</a>. By default it depends on the font size.
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
 	}
 

@@ -42,7 +42,7 @@ namespace Highcharts4Net.Library.Options
 		/// When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
 		/// Default: 300
 		/// </summary>
-		public NumberOrDateTime? CropThreshold { get; set; }
+		public HighchartsDataPoint? CropThreshold { get; set; }
 
 		/// <summary>
 		/// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -80,7 +80,7 @@ namespace Highcharts4Net.Library.Options
         /// Pixel with of the graph line.
         /// Default: 2
         /// </summary>
-        public NumberOrDateTime? LineWidth { get; set; }
+        public HighchartsDataPoint? LineWidth { get; set; }
 
 		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -104,7 +104,7 @@ namespace Highcharts4Net.Library.Options
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? PointInterval { get; set; }
+		public HighchartsDataPoint? PointInterval { get; set; }
 
         /// <summary>
         /// <p>On datetime series, this allows for setting the pointInterval to the two irregular time units, month and year. Combine it with pointInterval to draw quarters, 6 months, 10 years etc.</p>
@@ -122,7 +122,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		//
-		public NumberOrDateTime? PointStart { get; set; }
+		public HighchartsDataPoint? PointStart { get; set; }
 
 		/// <summary>
 		/// Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -175,7 +175,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		[ForceNullable]
-		public NumberOrDateTime? Threshold { get; set; }
+		public HighchartsDataPoint? Threshold { get; set; }
 
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
@@ -186,7 +186,7 @@ namespace Highcharts4Net.Library.Options
 		/// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
 		/// Default: 1000
 		/// </summary>
-		public NumberOrDateTime? TurboThreshold { get; set; }
+		public HighchartsDataPoint? TurboThreshold { get; set; }
 
 		/// <summary>
 		/// Set the initial visibility of the series.

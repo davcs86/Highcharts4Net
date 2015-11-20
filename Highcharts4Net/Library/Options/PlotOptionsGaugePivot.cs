@@ -26,13 +26,13 @@ namespace Highcharts4Net.Library.Options
 		/// The border or stroke width of the pivot.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? BorderWidth { get; set; }
+		public HighchartsDataPoint? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The pixel radius of the pivot.
 		/// Default: 5
 		/// </summary>
-		public NumberOrDateTime? Radius { get; set; }
+		public HighchartsDataPoint? Radius { get; set; }
 
 	}
 

@@ -33,13 +33,13 @@ namespace Highcharts4Net.Library.Options
 		/// The border corner radius of the legend.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? BorderRadius { get; set; }
+		public HighchartsDataPoint? BorderRadius { get; set; }
 
 		/// <summary>
 		/// The width of the drawn border around the legend.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? BorderWidth { get; set; }
+		public HighchartsDataPoint? BorderWidth { get; set; }
 
 		/// <summary>
 		/// Enable or disable the legend.
@@ -57,7 +57,7 @@ namespace Highcharts4Net.Library.Options
 		/// In a legend with horizontal layout, the itemDistance defines the pixel distance between each item. 
 		/// Default: 20
 		/// </summary>
-		public NumberOrDateTime? ItemDistance { get; set; }
+		public HighchartsDataPoint? ItemDistance { get; set; }
 
 		/// <summary>
 		/// CSS styles for each legend item when the corresponding series or point is hidden. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from <code>style</code> unless overridden here. Defaults to:<pre>itemHiddenStyle: { color: '#CCC'}</pre>
@@ -75,13 +75,13 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel bottom margin for each legend item.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? ItemMarginBottom { get; set; }
+		public HighchartsDataPoint? ItemMarginBottom { get; set; }
 
 		/// <summary>
 		/// The pixel top margin for each legend item.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? ItemMarginTop { get; set; }
+		public HighchartsDataPoint? ItemMarginTop { get; set; }
 
 		/// <summary>
 		/// CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text.
@@ -93,7 +93,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The width for each legend item. This is useful in a horizontal layout with many items when you want the items to align vertically.  .
 		/// </summary>
-		public NumberOrDateTime? ItemWidth { get; set; }
+		public HighchartsDataPoint? ItemWidth { get; set; }
 
 		/// <summary>
 		/// A <a href='http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting'>format string</a> for each legend label. Available variables relates to properties on the series, or the point in case of pies.
@@ -117,18 +117,18 @@ namespace Highcharts4Net.Library.Options
 		/// Line height for the legend items. Deprecated as of 2.1. Instead, the line height for each  item can be set using itemStyle.lineHeight, and the padding between items using itemMarginTop and itemMarginBottom.
 		/// Default: 16
 		/// </summary>
-		public NumberOrDateTime? LineHeight { get; set; }
+		public HighchartsDataPoint? LineHeight { get; set; }
 
 		/// <summary>
 		/// If the plot area sized is calculated automatically and the legend is not floating, the legend margin is the  space between the legend and the axis labels or plot area.
 		/// Default: 15
 		/// </summary>
-		public NumberOrDateTime? Margin { get; set; }
+		public HighchartsDataPoint? Margin { get; set; }
 
 		/// <summary>
 		/// Maximum pixel height for the legend. When the maximum height is extended, navigation will show.
 		/// </summary>
-		public NumberOrDateTime? MaxHeight { get; set; }
+		public HighchartsDataPoint? MaxHeight { get; set; }
 
 		/// <summary>
 		/// Options for the paging or navigation appearing when the legend is overflown. When <a href='#legend.useHTML'>legend.useHTML</a> is enabled, navigation is disabled. 
@@ -139,7 +139,7 @@ namespace Highcharts4Net.Library.Options
 		/// The inner padding of the legend box.
 		/// Default: 8
 		/// </summary>
-		public NumberOrDateTime? Padding { get; set; }
+		public HighchartsDataPoint? Padding { get; set; }
 
 		/// <summary>
 		/// Whether to reverse the order of the legend items compared to the order of the series or points as defined in the configuration object.
@@ -167,25 +167,25 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel height of the symbol for series types that use a rectangle in the legend.
 		/// Default: 12
 		/// </summary>
-		public NumberOrDateTime? SymbolHeight { get; set; }
+		public HighchartsDataPoint? SymbolHeight { get; set; }
 
 		/// <summary>
 		/// The pixel padding between the legend item symbol and the legend item text.
 		/// Default: 5
 		/// </summary>
-		public NumberOrDateTime? SymbolPadding { get; set; }
+		public HighchartsDataPoint? SymbolPadding { get; set; }
 
 		/// <summary>
 		/// The border radius of the symbol for series types that use a rectangle in the legend.
 		/// Default: 2
 		/// </summary>
-		public NumberOrDateTime? SymbolRadius { get; set; }
+		public HighchartsDataPoint? SymbolRadius { get; set; }
 
 		/// <summary>
 		/// The pixel width of the legend item symbol.
 		/// Default: 16
 		/// </summary>
-		public NumberOrDateTime? SymbolWidth { get; set; }
+		public HighchartsDataPoint? SymbolWidth { get; set; }
 
 		/// <summary>
 		/// A title to be added on top of the legend.
@@ -207,19 +207,19 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The width of the legend box.
 		/// </summary>
-		public NumberOrDateTime? Width { get; set; }
+		public HighchartsDataPoint? Width { get; set; }
 
 		/// <summary>
 		/// The x offset of the legend relative to its horizontal alignment <code>align</code> within chart.spacingLeft and chart.spacingRight. Negative x moves it to the left, positive x moves it to the right. 
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The vertical offset of the legend relative to it's vertical alignment <code>verticalAlign</code> within chart.spacingTop and chart.spacingBottom. Negative y moves it up, positive y moves it down.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
 	}
 

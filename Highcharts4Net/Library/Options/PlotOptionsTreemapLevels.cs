@@ -21,7 +21,7 @@ namespace Highcharts4Net.Library.Options
         /// The width of the border surrounding each column or bar.
         /// Default: 1
         /// </summary>
-        public NumberOrDateTime? BorderWidth { get; set; }
+        public HighchartsDataPoint? BorderWidth { get; set; }
 
         /// <summary>
         /// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.

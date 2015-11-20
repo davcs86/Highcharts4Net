@@ -4,7 +4,7 @@
     {
         public string Fill { get; set; }
         public string Stroke { get; set; }
-        public NumberOrDateTime? R { get; set; }
+        public HighchartsDataPoint? R { get; set; }
         public ThemeStates States { get; set; }
     }
 

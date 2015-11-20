@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of the base of the gauge dial. The base is the part closest to the pivot, defined by baseLength. 
 		/// Default: 3
 		/// </summary>
-		public NumberOrDateTime? BaseWidth { get; set; }
+		public HighchartsDataPoint? BaseWidth { get; set; }
 
 		/// <summary>
 		/// The border color or stroke of the gauge's dial. By default, the borderWidth is 0, so this must be set in addition to a custom border color.
@@ -38,7 +38,7 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the gauge dial border in pixels.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? BorderWidth { get; set; }
+		public HighchartsDataPoint? BorderWidth { get; set; }
 
 		/// <summary>
 		/// The radius or length of the dial, in percentages relative to the radius of the gauge itself.
@@ -56,7 +56,7 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the top of the dial, closest to the perimeter. The pivot narrows in from the base to the top.
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? TopWidth { get; set; }
+		public HighchartsDataPoint? TopWidth { get; set; }
 
 	}
 

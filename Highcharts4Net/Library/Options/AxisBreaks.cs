@@ -7,22 +7,22 @@ namespace Highcharts4Net.Library.Options
         /// <summary>
         /// A number indicating how much space should be left between the start and the end of the break. The break size is given in axis units, so for instance on a <pre>datetime</pre> axis, a break size of 3600000 would indicate the equivalent of an hour.
         /// </summary>
-        public NumberOrDateTime? BreakSize { get; set; }
+        public HighchartsDataPoint? BreakSize { get; set; }
 
         /// <summary>
         /// The point where the break starts.
         /// </summary>
-        public NumberOrDateTime? From { get; set; }
+        public HighchartsDataPoint? From { get; set; }
 
         /// <summary>
         /// Defines an interval after which the break appears again. By default the breaks do not repeat.
         /// </summary>
-        public NumberOrDateTime? Repeat { get; set; }
+        public HighchartsDataPoint? Repeat { get; set; }
 
         /// <summary>
         /// The point where the break ends.
         /// </summary>
-        public NumberOrDateTime? To { get; set; }
+        public HighchartsDataPoint? To { get; set; }
 
     }
 }

@@ -24,12 +24,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
 		/// </summary>
-		public NumberOrDateTime? Index { get; set; }
+		public HighchartsDataPoint? Index { get; set; }
 
 		/// <summary>
 		/// The sequential index of the series in the legend.  <div class='demo'>Try it:  <a href='http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/' target='_blank'>Legend in opposite order</a> </div>.
 		/// </summary>
-		public NumberOrDateTime? LegendIndex { get; set; }
+		public HighchartsDataPoint? LegendIndex { get; set; }
 
 		/// <summary>
 		/// The name of the series as shown in the legend, tooltip etc.
@@ -61,7 +61,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Define the visual z index of the series.
 		/// </summary>
-		public NumberOrDateTime? ZIndex { get; set; }
+		public HighchartsDataPoint? ZIndex { get; set; }
 
 		public ColorOrGradient Color { get; set; }
 

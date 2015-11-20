@@ -14,19 +14,19 @@ namespace Highcharts4Net.Library.Helpers
 
         public Data(SeriesData[] data) { seriesData = data; }
 
-        public Data(NumberOrDateTime?[] data) { NumberData = data; }
+        public Data(HighchartsDataPoint?[] data) { NumberData = data; }
 
-        public Data(NumberOrDateTime?[][] data) { JaggedNumberData = data; }
+        public Data(HighchartsDataPoint?[][] data) { JaggedNumberData = data; }
 
-        public Data(NumberOrDateTime?[,] data) { DoubleNumberData = data; }
+        public Data(HighchartsDataPoint?[,] data) { DoubleNumberData = data; }
 
         private object[] ObjectData { get; }
 
-        private NumberOrDateTime?[] NumberData { get; }
+        private HighchartsDataPoint?[] NumberData { get; }
 
-        private NumberOrDateTime?[][] JaggedNumberData { get; }
+        private HighchartsDataPoint?[][] JaggedNumberData { get; }
 
-        private NumberOrDateTime?[,] DoubleNumberData { get; }
+        private HighchartsDataPoint?[,] DoubleNumberData { get; }
 
         private Point[] Points { get; }
 

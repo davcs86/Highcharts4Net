@@ -11,7 +11,7 @@ namespace Highcharts4Net.Library.Options
         public AxisUnitsType Type { get; set; }
 
         
-        public NumberOrDateTime[] Values { get; set; }
+        public HighchartsDataPoint[] Values { get; set; }
 
     }
 }

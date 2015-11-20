@@ -42,17 +42,17 @@ namespace Highcharts4Net.Library.Options
 		/// Defines the scale or zoom factor for the exported image compared to the on-screen display. While for instance a 600px wide chart may look good on a website, it will look bad in print. The default scale of 2 makes this chart export to a 1200px PNG or JPG. 
 		/// Default: 2
 		/// </summary>
-		public NumberOrDateTime? Scale { get; set; }
+		public HighchartsDataPoint? Scale { get; set; }
 
 		/// <summary>
 		/// Analogous to <a href='#exporting.sourceWidth'>sourceWidth</a>
 		/// </summary>
-		public NumberOrDateTime? SourceHeight { get; set; }
+		public HighchartsDataPoint? SourceHeight { get; set; }
 
 		/// <summary>
 		/// The width of the original chart when exported, unless an explicit <a href='#chart.width'>chart.width</a> is set. The width exported raster image is then multiplied by <a href='#exporting.scale'>scale</a>.
 		/// </summary>
-		public NumberOrDateTime? SourceWidth { get; set; }
+		public HighchartsDataPoint? SourceWidth { get; set; }
 
 		/// <summary>
 		/// Default MIME type for exporting if <code>chart.exportChart()</code> is called without specifying a <code>type</code> option. Possible values are <code>image/png</code>, <code>image/jpeg</code>, <code>application/pdf</code> and <code>image/svg+xml</code>.
@@ -70,7 +70,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel width of charts exported to PNG or JPG. As of Highcharts 3.0, the default pixel width is a function of the <a href='#chart.width'>chart.width</a> or <a href='#exporting.sourceWidth'>exporting.sourceWidth</a> and the <a href='#exporting.scale'>exporting.scale</a>.
 		/// Default: undefined
 		/// </summary>
-		public NumberOrDateTime? Width { get; set; }
+		public HighchartsDataPoint? Width { get; set; }
 
 	}
 

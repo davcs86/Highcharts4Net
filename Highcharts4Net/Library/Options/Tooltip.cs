@@ -32,13 +32,13 @@ namespace Highcharts4Net.Library.Options
 		/// The radius of the rounded border corners.
 		/// Default: 3
 		/// </summary>
-		public NumberOrDateTime? BorderRadius { get; set; }
+		public HighchartsDataPoint? BorderRadius { get; set; }
 
 		/// <summary>
 		/// The pixel width of the tooltip border.
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? BorderWidth { get; set; }
+		public HighchartsDataPoint? BorderWidth { get; set; }
 
 		/// <summary>
 		/// Display crosshairs to connect the points with their corresponding axis values. The crosshairs can be defined as a boolean, an array of booleans or an object. <dl> <dt>Boolean</dt> <dd>If the crosshairs option is true, a single crosshair relating to the x axis will be shown.</dd>  <dt>Array of booleans</dt> <dd>In an array of booleans, the first value turns on the x axis crosshair and the second value to the y axis crosshair. Use <code>[true, true]</code> to show complete crosshairs.</dd>  <dt>Array of objects</dt> <dd>In an array of objects, the first value applies to the x axis crosshair and the second value to the y axis crosshair. For each dimension, a <code>width</code>, <code>color</code>, <code><a href='http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/'>dashStyle</a></code> and <code>zIndex</code> can be given.</dd> </dl> Defaults to <code>null</code>.
@@ -91,7 +91,7 @@ namespace Highcharts4Net.Library.Options
 		/// The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
 		/// Default: 500
 		/// </summary>
-		public NumberOrDateTime? HideDelay { get; set; }
+		public HighchartsDataPoint? HideDelay { get; set; }
 
 		/// <summary>
 		/// <p>The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the <code>tooltip.yPrefix</code> and <code>tooltip.ySuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units.</p>
@@ -132,7 +132,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Proximity snap for graphs or single points. Does not apply to bars, columns and pie slices. It defaults to 10 for mouse-powered devices and 25 for touch  devices.
 		/// </summary>
-		public NumberOrDateTime? Snap { get; set; }
+		public HighchartsDataPoint? Snap { get; set; }
 
 		/// <summary>
 		/// CSS styles for the tooltip. The tooltip can also be styled through the CSS class <code>.highcharts-tooltip</code>. Default value:<pre>style: { color: '#333333', fontSize: '12px', padding: '8px'}</pre>
@@ -149,7 +149,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
 		/// </summary>
-		public NumberOrDateTime? ValueDecimals { get; set; }
+		public HighchartsDataPoint? ValueDecimals { get; set; }
 
 		/// <summary>
 		/// A string to prepend to each series' y value. Overridable in each series' tooltip options object.

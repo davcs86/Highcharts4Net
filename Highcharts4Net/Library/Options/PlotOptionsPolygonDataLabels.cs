@@ -34,13 +34,13 @@ namespace Highcharts4Net.Library.Options
         /// The border radius in pixels for the data label.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? BorderRadius { get; set; }
+        public HighchartsDataPoint? BorderRadius { get; set; }
 
         /// <summary>
         /// The border width in pixels for the data label.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? BorderWidth { get; set; }
+        public HighchartsDataPoint? BorderWidth { get; set; }
 
         /// <summary>
         /// The text color for the data labels. Defaults to <code>null</code>.
@@ -92,13 +92,13 @@ namespace Highcharts4Net.Library.Options
         /// When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, thisis the padding within the box.
         /// Default: 2
         /// </summary>
-        public NumberOrDateTime? Padding { get; set; }
+        public HighchartsDataPoint? Padding { get; set; }
 
         /// <summary>
         /// Text rotation in degrees. Note that due to a more complex structure, backgrounds and borders will be lost on a rotated data label.
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? Rotation { get; set; }
+        public HighchartsDataPoint? Rotation { get; set; }
 
         /// <summary>
         /// The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
@@ -133,18 +133,18 @@ namespace Highcharts4Net.Library.Options
         /// The x position offset of the label relative to the point. 
         /// Default: 0
         /// </summary>
-        public NumberOrDateTime? X { get; set; }
+        public HighchartsDataPoint? X { get; set; }
 
         /// <summary>
         /// The y position offset of the label relative to the point. 
         /// Default: -6
         /// </summary>
-        public NumberOrDateTime? Y { get; set; }
+        public HighchartsDataPoint? Y { get; set; }
 
         /// <summary>
         /// The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.
         /// Default: 6
         /// </summary>
-        public NumberOrDateTime? ZIndex { get; set; }
+        public HighchartsDataPoint? ZIndex { get; set; }
     }
 }

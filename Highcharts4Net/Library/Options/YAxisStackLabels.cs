@@ -37,7 +37,7 @@ namespace Highcharts4Net.Library.Options
 		/// Rotation of the labels in degrees.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? Rotation { get; set; }
+		public HighchartsDataPoint? Rotation { get; set; }
 
 		/// <summary>
 		/// CSS styles for the label. Defaults to:<pre>style: { color: '#666', 'font-size': '11px', 'line-height': '14px'}</pre>
@@ -64,12 +64,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The x position offset of the label relative to the left of the stacked bar. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The y position offset of the label relative to the tick position on the axis. The default value is calculated at runtime and depends on orientation and whether  the stack is positive or negative.
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
 	}
 

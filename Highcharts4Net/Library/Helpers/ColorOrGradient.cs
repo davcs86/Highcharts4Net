@@ -86,16 +86,16 @@ namespace Highcharts4Net.Library.Helpers
 
     public class RadialGradient
     {
-        public NumberOrDateTime Cx { get; set; }
-        public NumberOrDateTime Cy { get; set; }
-        public NumberOrDateTime R { get; set; }
+        public HighchartsDataPoint Cx { get; set; }
+        public HighchartsDataPoint Cy { get; set; }
+        public HighchartsDataPoint R { get; set; }
     }
 
     public class LinearGradient
     {
-        public NumberOrDateTime X1 { get; set; }
-        public NumberOrDateTime Y1 { get; set; }
-        public NumberOrDateTime X2 { get; set; }
-        public NumberOrDateTime Y2 { get; set; }
+        public HighchartsDataPoint X1 { get; set; }
+        public HighchartsDataPoint Y1 { get; set; }
+        public HighchartsDataPoint X2 { get; set; }
+        public HighchartsDataPoint Y2 { get; set; }
     }
 }

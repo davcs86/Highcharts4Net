@@ -23,7 +23,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to <a href='#pane.startAngle'>startAngle</a> + 360.
 		/// </summary>
-		public NumberOrDateTime? EndAngle { get; set; }
+		public HighchartsDataPoint? EndAngle { get; set; }
 
 		/// <summary>
 		/// The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are.
@@ -35,7 +35,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.
 		/// </summary>
-		public NumberOrDateTime? StartAngle { get; set; }
+		public HighchartsDataPoint? StartAngle { get; set; }
 
 	}
 

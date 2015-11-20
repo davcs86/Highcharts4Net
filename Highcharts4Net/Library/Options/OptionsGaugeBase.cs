@@ -72,7 +72,7 @@ namespace Highcharts4Net.Library.Options
 		/// Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? Overshoot { get; set; }
+		public HighchartsDataPoint? Overshoot { get; set; }
 
 		/// <summary>
 		/// Options for the pivot or the center point of the gauge.
@@ -117,7 +117,7 @@ namespace Highcharts4Net.Library.Options
 		/// Default: 0
 		/// </summary>
 		[ForceNullable]
-		public NumberOrDateTime? Threshold { get; set; }
+		public HighchartsDataPoint? Threshold { get; set; }
 
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.

@@ -26,7 +26,7 @@ namespace Highcharts4Net.Library.Options
 		/// The pixel size of the up and down arrows in the legend paging navigation.  .
 		/// Default: 12
 		/// </summary>
-		public NumberOrDateTime? ArrowSize { get; set; }
+		public HighchartsDataPoint? ArrowSize { get; set; }
 
 		/// <summary>
 		/// The color of the inactive up or down arrow in the legend page navigation.  .

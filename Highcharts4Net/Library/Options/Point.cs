@@ -40,7 +40,7 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// Pies only. The sequential index of the pie slice in the legend. Defaults to undefined
 		/// </summary>
-		public NumberOrDateTime? LegendIndex { get; set; }
+		public HighchartsDataPoint? LegendIndex { get; set; }
 
 		/// <summary>
 		/// The name of the point as shown in the legend, tooltip, dataLabel etc. Defaults to ""
@@ -55,12 +55,12 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The x value of the point Defaults to null
 		/// </summary>
-		public NumberOrDateTime? X { get; set; }
+		public HighchartsDataPoint? X { get; set; }
 
 		/// <summary>
 		/// The y value of the point Defaults to null
 		/// </summary>
-		public NumberOrDateTime? Y { get; set; }
+		public HighchartsDataPoint? Y { get; set; }
 
         public PointDrilldown Drilldown { get; set; }
 

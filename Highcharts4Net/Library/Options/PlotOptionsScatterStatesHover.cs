@@ -24,13 +24,13 @@ namespace Highcharts4Net.Library.Options
 		/// The width of the line connecting the data points.
 		/// Default: 0
 		/// </summary>
-		public NumberOrDateTime? LineWidth { get; set; }
+		public HighchartsDataPoint? LineWidth { get; set; }
 
 		/// <summary>
 		/// The additional line width for the graph of a hovered series.
 		/// Default: 1
 		/// </summary>
-		public NumberOrDateTime? LineWidthPlus { get; set; }
+		public HighchartsDataPoint? LineWidthPlus { get; set; }
 
 		public PlotOptionsScatterStatesHoverMarker Marker { get; set; }
 
