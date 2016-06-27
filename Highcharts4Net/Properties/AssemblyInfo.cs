@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Highcharts4Net")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("MVC helpers for Highcharts 4.1")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("David Castillo <davcs86@gmail.com>")]
 [assembly: AssemblyProduct("Highcharts4Net")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
