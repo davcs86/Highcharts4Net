@@ -1,2 +1,6 @@
 language: csharp
 solution: Highcharts4Net.sln
+install:
+  - nuget restore Highcharts4Net.sln
+script:
+  - xbuild /p:Configuration=Release Highcharts4Net.sln
