@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class PieChartSettings : BaseChartSettings<SeriesPie>
     {
-        public void AddSeries(SeriePieSettings s)=>AddSeries(s, new SeriesPie());
+		public void AddSeries(SeriePieSettings s){
+			AddSeries (s, new SeriesPie ());
+		}
     }
 
     public sealed class PieChartExtension : BaseChartExtension<PieChartSettings, SeriesPie>

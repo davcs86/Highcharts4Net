@@ -6,11 +6,11 @@ namespace Highcharts4Net.Library.Helpers
     {
         public LiteralString(string x, bool escape = true)
         {
-            _LiteralString = x;
+            _literalString = x;
             _escape = escape;
         }
 
-        protected string _LiteralString { get; }
+        protected string _literalString { get; set; }
         protected bool _escape { get; set; }
 
         internal void SetEscape(bool escape)
@@ -20,7 +20,7 @@ namespace Highcharts4Net.Library.Helpers
 
         public override string ToString()
         {
-            return (_escape)? JSON.ToJSON(_LiteralString,
+            return (_escape)? JSON.ToJSON(_literalString,
                     new JSONParameters
                     {
                         EnableAnonymousTypes = true,
@@ -28,7 +28,7 @@ namespace Highcharts4Net.Library.Helpers
                         UseEscapedUnicode = true,
                         SerializeToLowerFirstLetterNames = true,
                         SerializeToLowerFirstLetterEnums = true
-                    }):_LiteralString;
+                    }):_literalString;
         }
         
         public static implicit operator LiteralString(string x)
@@ -39,7 +39,7 @@ namespace Highcharts4Net.Library.Helpers
 
         public static explicit operator string (LiteralString x)
         {
-            return x._LiteralString;
+            return x._literalString;
         }
     }
 }

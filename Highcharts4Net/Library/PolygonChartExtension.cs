@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class PolygonChartSettings : BaseChartSettings<SeriesPolygon>
     {
-        public void AddSeries(SeriePolygonSettings s)=>AddSeries(s, new SeriesPolygon());
+		public void AddSeries(SeriePolygonSettings s){
+			AddSeries (s, new SeriesPolygon ());
+		}
     }
 
     public sealed class PolygonChartExtension : BaseChartExtension<PolygonChartSettings, SeriesPolygon>

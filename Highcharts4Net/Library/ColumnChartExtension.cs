@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class ColumnChartSettings : BaseChartSettings<SeriesColumn>
     {
-        public void AddSeries(SerieColumnSettings s)=> AddSeries(s, new SeriesColumn());
+		public void AddSeries(SerieColumnSettings s){
+			AddSeries (s, new SeriesColumn ());
+		}
     }
 
     public sealed class ColumnChartExtension : BaseChartExtension<ColumnChartSettings, SeriesColumn>

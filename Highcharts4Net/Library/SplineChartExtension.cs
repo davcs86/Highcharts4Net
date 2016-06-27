@@ -8,7 +8,9 @@ namespace Highcharts4Net.Library
 
     public sealed class SplineChartSettings : BaseChartSettings<SeriesSpline>
     {
-        public void AddSeries(SerieSplineSettings s)=>AddSeries(s, new SeriesSpline());
+		public void AddSeries(SerieSplineSettings s){
+			AddSeries (s, new SeriesSpline ());
+		}
     }
 
     public sealed class SplineChartExtension : BaseChartExtension<SplineChartSettings, SeriesSpline>

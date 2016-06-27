@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class BarChartSettings : BaseChartSettings<SeriesBar>
     {
-        public void AddSeries(SerieBarSettings s)=>AddSeries(s, new SeriesBar());
+		public void AddSeries(SerieBarSettings s) {
+			AddSeries (s, new SeriesBar ());
+		}
     }
 
     public sealed class BarChartExtension : BaseChartExtension<BarChartSettings, SeriesBar>

@@ -11,11 +11,11 @@ namespace Highcharts4Net.Library.Helpers
 
         public Crosshairs(CrosshairsFormat xCrosshairsFormat, CrosshairsFormat yCrosshairsFormat) { crosshairsFormat = new[] { xCrosshairsFormat, yCrosshairsFormat }; }
 
-        public bool? ShowXCrosshairs { get; }
+        public bool? ShowXCrosshairs { get; private set; }
 
-        public bool[] ShowBothCrosshairs { get; }
+        public bool[] ShowBothCrosshairs { get; private set; }
 
-        public CrosshairsFormat[] crosshairsFormat { get; }
+        public CrosshairsFormat[] crosshairsFormat { get; private set; }
 
         public override string ToString()
         {
@@ -37,9 +37,9 @@ namespace Highcharts4Net.Library.Helpers
 
         public AxisCrosshair(CrosshairsFormat crosshairFormat) { CrosshairsFormat = crosshairFormat; }
 
-        public bool? ShowCrosshairs { get; }
+        public bool? ShowCrosshairs { get; private set; }
 
-        public CrosshairsFormat CrosshairsFormat { get; }
+        public CrosshairsFormat CrosshairsFormat { get; private set; }
 
         public override string ToString()
         {

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Highcharts4Net.fastJSON;
+﻿using Highcharts4Net.fastJSON;
 using Highcharts4Net.Library.Options;
 
 namespace Highcharts4Net.Library.Helpers
@@ -12,7 +10,7 @@ namespace Highcharts4Net.Library.Helpers
 
         public Data(Point[] data) { Points = data; }
 
-        public Data(SeriesData[] data) { seriesData = data; }
+        public Data(SeriesData[] data) { SeriesData = data; }
 
         public Data(HighchartsDataPoint?[] data) { NumberData = data; }
 
@@ -20,17 +18,17 @@ namespace Highcharts4Net.Library.Helpers
 
         public Data(HighchartsDataPoint?[,] data) { DoubleNumberData = data; }
 
-        private object[] ObjectData { get; }
+        private object[] ObjectData { get; set; }
 
-        private HighchartsDataPoint?[] NumberData { get; }
+        private HighchartsDataPoint?[] NumberData { get; set; }
 
-        private HighchartsDataPoint?[][] JaggedNumberData { get; }
+        private HighchartsDataPoint?[][] JaggedNumberData { get; set; }
 
-        private HighchartsDataPoint?[,] DoubleNumberData { get; }
+        private HighchartsDataPoint?[,] DoubleNumberData { get; set; }
 
-        private Point[] Points { get; }
+        private Point[] Points { get; set; }
 
-        private SeriesData[] seriesData { get; }
+        private SeriesData[] SeriesData { get; set; }
 
         public override string ToString()
         {
@@ -79,9 +77,9 @@ namespace Highcharts4Net.Library.Helpers
                     SerializeToLowerFirstLetterEnums = true
                 });
             }
-            if (seriesData != null)
+            if (SeriesData != null)
             {
-                return JSON.ToJSON(seriesData, new JSONParameters
+                return JSON.ToJSON(SeriesData, new JSONParameters
                 {
                     EnableAnonymousTypes = true,
                     SerializeNullValues = false,

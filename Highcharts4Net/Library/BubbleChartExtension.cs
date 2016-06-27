@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class BubbleChartSettings : BaseChartSettings<SeriesBubble>
     {
-        public void AddSeries(SerieBubbleSettings s)=>AddSeries(s, new SeriesBubble());
+		public void AddSeries(SerieBubbleSettings s) {
+			AddSeries (s, new SeriesBubble());
+		}
     }
 
     public sealed class BubbleChartExtension : BaseChartExtension<BubbleChartSettings, SeriesBubble>

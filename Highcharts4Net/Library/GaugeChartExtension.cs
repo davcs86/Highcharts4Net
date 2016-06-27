@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class GaugeChartSettings : BaseChartSettings<SeriesGauge>
     {
-        public void AddSeries(SerieGaugeSettings s)=>AddSeries(s, new SeriesGauge());
+		public void AddSeries(SerieGaugeSettings s){
+			AddSeries (s, new SeriesGauge ());
+		}
     }
 
     public sealed class GaugeChartExtension : BaseChartExtension<GaugeChartSettings, SeriesGauge>

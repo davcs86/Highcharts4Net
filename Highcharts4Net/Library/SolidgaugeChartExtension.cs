@@ -8,7 +8,9 @@ namespace Highcharts4Net.Library
 
     public sealed class SolidgaugeChartSettings : BaseChartSettings<SeriesSolidgauge>
     {
-        public void AddSeries(SerieSolidgaugeSettings s)=>AddSeries(s, new SeriesSolidgauge());
+		public void AddSeries(SerieSolidgaugeSettings s){
+			AddSeries (s, new SeriesSolidgauge ());
+		}
     }
 
     public sealed class SolidgaugeChartExtension : BaseChartExtension<SolidgaugeChartSettings, SeriesSolidgauge>

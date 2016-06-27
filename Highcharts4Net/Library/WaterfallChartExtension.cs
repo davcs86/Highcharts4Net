@@ -8,7 +8,9 @@ namespace Highcharts4Net.Library
 
     public sealed class WaterfallChartSettings : BaseChartSettings<SeriesWaterfall>
     {
-        public void AddSeries(SerieWaterfallSettings s) => AddSeries(s, new SeriesWaterfall());
+		public void AddSeries(SerieWaterfallSettings s) {
+			AddSeries (s, new SeriesWaterfall ());
+		}
     }
 
     public sealed class WaterfallChartExtension : BaseChartExtension<WaterfallChartSettings, SeriesWaterfall>

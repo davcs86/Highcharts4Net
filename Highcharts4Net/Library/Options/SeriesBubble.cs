@@ -48,7 +48,9 @@ namespace Highcharts4Net.Library.Options
 		/// <summary>
 		/// The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
 		/// </summary>
-		public ChartTypes Type => ChartTypes.Bubble;
+		public ChartTypes Type {
+			get { return ChartTypes.Bubble; }
+		}
 
 	    /// <summary>
 		/// When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href='#xAxis.id'>axis id</a> or the index of the axis in the xAxis array, with 0 being the first.

@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class BoxplotChartSettings : BaseChartSettings<SeriesBoxplot>
     {
-        public void AddSeries(SerieBoxplotSettings s) => AddSeries(s, new SeriesBoxplot());
+		public void AddSeries(SerieBoxplotSettings s) {
+			AddSeries (s, new SeriesBoxplot ());
+		}
     }
 
     public sealed class BoxplotChartExtension : BaseChartExtension<BoxplotChartSettings, SeriesBoxplot>

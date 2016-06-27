@@ -7,7 +7,9 @@ namespace Highcharts4Net.Library
 
     public sealed class AreasplinerangeChartSettings : BaseChartSettings<SeriesAreasplinerange>
     {
-        public void AddSeries(SerieAreasplinerangeSettings s) => AddSeries(s, new SeriesAreasplinerange());
+		public void AddSeries(SerieAreasplinerangeSettings s) { 
+			AddSeries(s, new SeriesAreasplinerange());
+		}
     }
 
     public sealed class AreasplinerangeChartExtension : BaseChartExtension<AreasplinerangeChartSettings, SeriesAreasplinerange>

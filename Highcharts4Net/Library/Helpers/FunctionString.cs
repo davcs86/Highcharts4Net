@@ -18,12 +18,12 @@ namespace Highcharts4Net.Library.Helpers
 
         public static explicit operator string (FunctionString x)
         {
-            return x._LiteralString;
+            return x._literalString;
         }
 
         public new string ToString()
         {
-            return _LiteralString;
+            return _literalString;
         }
     }
 }
