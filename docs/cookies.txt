@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.highcharts.com	TRUE	/	FALSE	1999999999	__cfduid	d826c83ba8d1ba9093a35cf8fe1d5978d1477415771
+

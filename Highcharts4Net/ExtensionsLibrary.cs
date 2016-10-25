@@ -57,12 +57,9 @@ namespace Highcharts4Net
 
             var returnStr = string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts.js");
 
-            if (options.IncludeMore)
-                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts-more.js");
-            if (options.IncludeModuleData)
-                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/data.js");
-            if (options.IncludeModuleExporting)
-                returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/exporting.js");
+            if (options.IncludeMore) returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "highcharts-more.js");
+            if (options.IncludeModuleData) returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/data.js");
+            if (options.IncludeModuleExporting) returnStr += string.Format("<script src='{0}'></script>\n", baseUrl + "modules/exporting.js");
 
             // include custom code 
             var resource =

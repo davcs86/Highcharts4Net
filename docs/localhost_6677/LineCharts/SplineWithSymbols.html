@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost:6677/LineCharts/SplineWithSymbols by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Line charts &#187; Spline with symbols</title>
+    <link href="../Content/styles.css" rel="stylesheet"/>
+
+
+    <script src="../Scripts/jquery.js"></script>
+
+
+    <script src="../Content/styles/js/bootstrap.min.js"></script>
+
+    <script src='../../code.highcharts.com/highcharts.js'></script>
+<script src='../../code.highcharts.com/highcharts-more.js'></script>
+<script src='../../code.highcharts.com/modules/data.js'></script>
+<script src='../../code.highcharts.com/modules/exporting.js'></script>
+<script>
+"use strict";var H4N=function(){this.f=this.c=[],this.Init()};H4N.prototype.AddEventListener=function(t,i,n){return t.addEventListener?(t.addEventListener(i,n,!1),!0):t.attachEvent?t.attachEvent("on"+i,n):!1},H4N.prototype.Init=function(){var t=this;this.AddEventListener(window,"load",function(){t.RenderCharts()})},H4N.prototype.RegisterChart=function(t){void 0!==t&&this.c.push(t)},H4N.prototype.RegisterCallback=function(t){void 0!==t&&this.f.push(t)},H4N.prototype.RenderCharts=function(){for(var t in this.c)if(void 0!==this.c[t]){var i=this.c[t].call(null);for(var n in this.f)void 0!==this.f[n]&&this.f[n].apply(this.f[n],i)}};var Highcharts4Net=new H4N;
+</script>
+</head>
+<body>
+    <div class="site-outer-wrap">
+        <div class="site-wrap">
+            <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+                <div class="header-content-wrap">
+                    <div class="header-content">
+                        <div class="header-content-top">
+                            <div class="brand">
+                                <a href="https://github.com/davcs86/Highcharts4Net">
+                                    <img src="../Content/styles/imgs/logo.svg" alt="Highcharts4Net" />
+                                </a>
+                                <div class="tagline">Asp.Net MVC helpers for Highcharts</div>
+                            </div><button class="header-toggle btn btn-ui">
+                                <span><span></span></span>
+                            </button>
+                        </div>
+                        <div class="header-content-bottom">
+                            <nav class="main-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                <ul id="menu-main-menu" class="menu">
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Line charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-linecharts_basic" class="menu-item">
+                                                <a href="Basic.html">Basic line</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_ajaxloadedclickablepoints" class="menu-item">
+                                                <a href="AjaxLoadedClickablePoints.html">Ajax loaded data, clickable points</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_withdatalabels" class="menu-item">
+                                                <a href="WithDataLabels.html">With data labels</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_timeseries" class="menu-item">
+                                                <a href="TimeSeries.html">Time series, zoomable</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineinverted" class="menu-item">
+                                                <a href="SplineInverted.html">Spline with inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithsymbols" class="menu-item">
+                                                <a href="SplineWithSymbols.html">Spline with symbols</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithplotbands" class="menu-item">
+                                                <a href="SplineWithPlotBands.html">Spline with plot bands</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineirregulartime" class="menu-item">
+                                                <a href="SplineIrregularTime.html">Time data with irregular intervals</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_logarithmicaxis" class="menu-item">
+                                                <a href="LogarithmicAxis.html">Logarithmic axis</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Area charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-areacharts_basic" class="menu-item">
+                                                <a href="../AreaCharts/Basic.html">Basic area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_negative" class="menu-item">
+                                                <a href="../AreaCharts/Negative.html">Area with negative values</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_stacked" class="menu-item">
+                                                <a href="../AreaCharts/Stacked.html">Stacked area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_percentage" class="menu-item">
+                                                <a href="../AreaCharts/Percentage.html">Percentage area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_missingpoints" class="menu-item">
+                                                <a href="../AreaCharts/MissingPoints.html">Area with missing points</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_invertedaxes" class="menu-item">
+                                                <a href="../AreaCharts/InvertedAxes.html">Inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_areaspline" class="menu-item">
+                                                <a href="../AreaCharts/Areaspline.html">Area-spline</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearange" class="menu-item">
+                                                <a href="../AreaCharts/Arearange.html">Area range</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearangewithline" class="menu-item">
+                                                <a href="../AreaCharts/ArearangeWithLine.html">Area range and line</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-columnandbarcharts_index" class="menu-item">
+                                        <a href="#">Column and bar charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-columnandbarcharts_basicbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicBar.html">Basic bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedBar.html">Stacked bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_barwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BarWithNegatives.html">Bar with negative stack</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_basiccolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicColumn.html">Basic column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_columnwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/ColumnWithNegatives.html">Column with negative values</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedColumn.html">Stacked column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedgroupedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedGroupedColumn.html">Stacked and grouped column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedpercentagecolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedPercentageColumn.html">Stacked percentage column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_rotatedlabelscolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/RotatedLabelsColumn.html">Column with rotated labels</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav><aside class="header-widgets" itemscope itemtype="http://schema.org/WPSideBar">
+                                <div id="text-1" class="widget widget_text">
+                                    <h4 class="widget-title">Repository</h4>
+                                    <div class="textwidget text-center">
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net" data-count-href="/davcs86/Highcharts4Net/stargazers" data-count-api="/repos/davcs86/Highcharts4Net#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star davcs86/Highcharts4Net on GitHub">Star</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net/archive/master.zip" aria-label="Download davcs86/Highcharts4Net on GitHub">Download library</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net-demos/archive/master.zip" aria-label="Download davcs86/Highcharts4Net-demos on GitHub">Download demos</a>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content-area-wrap">
+                <div class="content-area fullwidth">
+                    <div class="content-header">
+                        <div class="content-header-affix clearfix">
+                            <h1 class="content-title"> Line charts &#187; Spline with symbols</h1>
+                        </div>
+                    </div>
+                    <div class="content-wrap">
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#chart" data-toggle="tab">Chart</a>
+                                </li>
+                                <li>
+                                    <a href="#source" data-toggle="tab">Source</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="chart">
+                                    
+
+<div id='SplineWithSymbols_container'></div>
+<script>
+var SplineWithSymbols,SplineWithSymbols_options;Highcharts4Net.RegisterChart(function(){SplineWithSymbols_options={"chart":{"renderTo":"SplineWithSymbols_container","type":"spline"},"plotOptions":{"spline":{"marker":{"lineColor":"#666666","lineWidth":1,"radius":4},"threshold":0}},"series":[{"data":[7,6.9,9.5,14.5,18.2,21.5,25.2,{"marker":{"symbol":"url(http://www.highcharts.com/demo/gfx/sun.png)"},"y":26.5},23.3,18.3,13.9,9.6],"name":"Tokyo","type":"spline","marker":{"symbol":"square"},"threshold":0},{"data":[{"marker":{"symbol":"url(http://www.highcharts.com/demo/gfx/snow.png)"},"y":3.9},4.2,5.7,8.5,11.9,15.2,17,16.6,14.2,10.3,6.6,4.8],"name":"London","type":"spline","marker":{"symbol":"diamond"},"threshold":0}],"subtitle":{"text":"Source: WorldClimate.com"},"title":{"text":"Monthly Average Temperature"},"tooltip":{"crosshairs":{"showXCrosshairs":true},"shared":true},"xAxis":[{"categories":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}],"yAxis":[{"labels":{"formatter":function () {
+                    return this.value + '°';
+                }},"title":{"text":"Temperature"}}]};SplineWithSymbols=new Highcharts.Chart(SplineWithSymbols_options);return [SplineWithSymbols,SplineWithSymbols_container,SplineWithSymbols_options,"SplineWithSymbols"];});
+</script>
+
+
+
+                                </div>
+                                <div class="tab-pane" id="source">
+                                    <pre><code lang="language-markup">
+@Html.Highcharts4Net().SplineChart(settings =>
+{
+    settings.Name = "SplineWithSymbols";
+
+    settings.SetTitle(s => { s.Text = "Monthly Average Temperature"; });
+
+    settings.SetTitle(s => { s.Text = "Source: WorldClimate.com"; });
+
+    settings.AddXAxis(s => { s.Categories = new[] {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}; });
+    settings.AddYAxis(s =>
+    {
+        s.Title = new YAxisTitle
+        {
+            Text = "Temperature"
+        };
+        s.Labels = new YAxisLabels
+        {
+            Formatter = @"function () {
+                    return this.value + '°';
+                }"
+        };
+    });
+    settings.SetTooltip(s =>
+    {
+        s.Crosshairs = new Crosshairs(true);
+        s.Shared = true;
+    });
+
+    settings.SetPlotOptions(s =>
+    {
+        s.Spline = new PlotOptionsSpline
+        {
+            Marker = new PlotOptionsSplineMarker
+            {
+                Radius = 4,
+                LineColor = "#666666",
+                LineWidth = 1
+            }
+        };
+    });
+
+    settings.AddSeries(s =>
+    {
+        s.Name = "Tokyo";
+        s.Marker = new PlotOptionsSplineMarker
+        {
+            Symbol = "square"
+        };
+        s.Data = new Data(new object[]
+        {
+            7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, new Point
+            {
+                Y = 26.5,
+                Marker = new PlotOptionsSeriesMarker
+                {
+                    Symbol = "url(http://www.highcharts.com/demo/gfx/sun.png)"
+                }
+            },
+            23.3, 18.3, 13.9, 9.6
+        });
+    });
+    settings.AddSeries(s =>
+    {
+        s.Name = "London";
+        s.Marker = new PlotOptionsSplineMarker
+        {
+            Symbol = "diamond"
+        };
+        s.Data = new Data(new object[]
+        {
+            new Point
+            {
+                Y = 3.9,
+                Marker = new PlotOptionsSeriesMarker
+                {
+                    Symbol = "url(http://www.highcharts.com/demo/gfx/snow.png)"
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8
+        });
+    });
+}).Render()
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            var current_menu = "linecharts" + "_" + "splinewithsymbols";
+            $("#menu-item-" + current_menu).addClass("current-menu-item");
+            $("#menu-item-" + current_menu).parents("ul.sub-menu").first().show();
+
+            $("body").on("click", ".header-toggle", function (ev) {
+                $("body").toggleClass("header-open");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", ".toggleSidebar", function (ev) {
+                $("#sidebar").toggleClass("active");
+                $(".toggleSidebar").toggleClass("active");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", "#menu-main-menu > .menu-item > a", function (ev) {
+                $(this).parent().find(".sub-menu:first").slideToggle();
+                ev.preventDefault();
+            });
+
+            $("body").on("shown.bs.tab", "a[data-toggle=\"tab\"]", function () {
+                $(window).trigger("resize"); // fix for highcharts
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Roboto:400,300,700,500,700italic,400italic,300italic,500italic:latin,latin-ext'] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="../../buttons.github.io/buttons.js"></script>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"a1811a8a83f44b77970301aec012b829"}
+</script>
+<script type="text/javascript" src="http://localhost:54532/b5556992dfd04a778ca6a8f87ff85a09/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:6677/LineCharts/SplineWithSymbols by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+</html>

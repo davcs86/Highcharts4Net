@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost:6677/AreaCharts/ArearangeWithLine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Area charts &#187; Area range with line</title>
+    <link href="../Content/styles.css" rel="stylesheet"/>
+
+
+    <script src="../Scripts/jquery.js"></script>
+
+
+    <script src="../Content/styles/js/bootstrap.min.js"></script>
+
+    <script src='../../code.highcharts.com/highcharts.js'></script>
+<script src='../../code.highcharts.com/highcharts-more.js'></script>
+<script src='../../code.highcharts.com/modules/data.js'></script>
+<script src='../../code.highcharts.com/modules/exporting.js'></script>
+<script>
+"use strict";var H4N=function(){this.f=this.c=[],this.Init()};H4N.prototype.AddEventListener=function(t,i,n){return t.addEventListener?(t.addEventListener(i,n,!1),!0):t.attachEvent?t.attachEvent("on"+i,n):!1},H4N.prototype.Init=function(){var t=this;this.AddEventListener(window,"load",function(){t.RenderCharts()})},H4N.prototype.RegisterChart=function(t){void 0!==t&&this.c.push(t)},H4N.prototype.RegisterCallback=function(t){void 0!==t&&this.f.push(t)},H4N.prototype.RenderCharts=function(){for(var t in this.c)if(void 0!==this.c[t]){var i=this.c[t].call(null);for(var n in this.f)void 0!==this.f[n]&&this.f[n].apply(this.f[n],i)}};var Highcharts4Net=new H4N;
+</script>
+</head>
+<body>
+    <div class="site-outer-wrap">
+        <div class="site-wrap">
+            <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+                <div class="header-content-wrap">
+                    <div class="header-content">
+                        <div class="header-content-top">
+                            <div class="brand">
+                                <a href="https://github.com/davcs86/Highcharts4Net">
+                                    <img src="../Content/styles/imgs/logo.svg" alt="Highcharts4Net" />
+                                </a>
+                                <div class="tagline">Asp.Net MVC helpers for Highcharts</div>
+                            </div><button class="header-toggle btn btn-ui">
+                                <span><span></span></span>
+                            </button>
+                        </div>
+                        <div class="header-content-bottom">
+                            <nav class="main-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                <ul id="menu-main-menu" class="menu">
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Line charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-linecharts_basic" class="menu-item">
+                                                <a href="../LineCharts/Basic.html">Basic line</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_ajaxloadedclickablepoints" class="menu-item">
+                                                <a href="../LineCharts/AjaxLoadedClickablePoints.html">Ajax loaded data, clickable points</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_withdatalabels" class="menu-item">
+                                                <a href="../LineCharts/WithDataLabels.html">With data labels</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_timeseries" class="menu-item">
+                                                <a href="../LineCharts/TimeSeries.html">Time series, zoomable</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineinverted" class="menu-item">
+                                                <a href="../LineCharts/SplineInverted.html">Spline with inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithsymbols" class="menu-item">
+                                                <a href="../LineCharts/SplineWithSymbols.html">Spline with symbols</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithplotbands" class="menu-item">
+                                                <a href="../LineCharts/SplineWithPlotBands.html">Spline with plot bands</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineirregulartime" class="menu-item">
+                                                <a href="../LineCharts/SplineIrregularTime.html">Time data with irregular intervals</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_logarithmicaxis" class="menu-item">
+                                                <a href="../LineCharts/LogarithmicAxis.html">Logarithmic axis</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Area charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-areacharts_basic" class="menu-item">
+                                                <a href="Basic.html">Basic area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_negative" class="menu-item">
+                                                <a href="Negative.html">Area with negative values</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_stacked" class="menu-item">
+                                                <a href="Stacked.html">Stacked area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_percentage" class="menu-item">
+                                                <a href="Percentage.html">Percentage area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_missingpoints" class="menu-item">
+                                                <a href="MissingPoints.html">Area with missing points</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_invertedaxes" class="menu-item">
+                                                <a href="InvertedAxes.html">Inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_areaspline" class="menu-item">
+                                                <a href="Areaspline.html">Area-spline</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearange" class="menu-item">
+                                                <a href="Arearange.html">Area range</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearangewithline" class="menu-item">
+                                                <a href="ArearangeWithLine.html">Area range and line</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-columnandbarcharts_index" class="menu-item">
+                                        <a href="#">Column and bar charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-columnandbarcharts_basicbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicBar.html">Basic bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedBar.html">Stacked bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_barwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BarWithNegatives.html">Bar with negative stack</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_basiccolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicColumn.html">Basic column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_columnwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/ColumnWithNegatives.html">Column with negative values</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedColumn.html">Stacked column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedgroupedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedGroupedColumn.html">Stacked and grouped column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedpercentagecolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedPercentageColumn.html">Stacked percentage column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_rotatedlabelscolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/RotatedLabelsColumn.html">Column with rotated labels</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav><aside class="header-widgets" itemscope itemtype="http://schema.org/WPSideBar">
+                                <div id="text-1" class="widget widget_text">
+                                    <h4 class="widget-title">Repository</h4>
+                                    <div class="textwidget text-center">
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net" data-count-href="/davcs86/Highcharts4Net/stargazers" data-count-api="/repos/davcs86/Highcharts4Net#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star davcs86/Highcharts4Net on GitHub">Star</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net/archive/master.zip" aria-label="Download davcs86/Highcharts4Net on GitHub">Download library</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net-demos/archive/master.zip" aria-label="Download davcs86/Highcharts4Net-demos on GitHub">Download demos</a>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content-area-wrap">
+                <div class="content-area fullwidth">
+                    <div class="content-header">
+                        <div class="content-header-affix clearfix">
+                            <h1 class="content-title"> Area charts &#187; Area range with line</h1>
+                        </div>
+                    </div>
+                    <div class="content-wrap">
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#chart" data-toggle="tab">Chart</a>
+                                </li>
+                                <li>
+                                    <a href="#source" data-toggle="tab">Source</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="chart">
+                                    
+
+<div id='chart_121628592880_container'></div>
+<script>
+var chart_121628592880,chart_121628592880_options;Highcharts4Net.RegisterChart(function(){chart_121628592880_options={"chart":{"renderTo":"chart_121628592880_container"},"series":[{"data":[[1246406400000,21.5],[1246492800000,22.1],[1246579200000,23],[1246665600000,23.8],[1246752000000,21.4],[1246838400000,21.3],[1246924800000,18.3],[1247011200000,15.4],[1247097600000,16.4],[1247184000000,17.7],[1247270400000,17.5],[1247356800000,17.6],[1247443200000,17.7],[1247529600000,16.8],[1247616000000,17.7],[1247702400000,16.3],[1247788800000,17.8],[1247875200000,18.1],[1247961600000,17.2],[1248048000000,14.4],[1248134400000,13.7],[1248220800000,15.7],[1248307200000,14.6],[1248393600000,15.3],[1248480000000,15.3],[1248566400000,15.8],[1248652800000,15.2],[1248739200000,14.8],[1248825600000,14.4],[1248912000000,15],[1248998400000,13.6]],"name":"Temperatures","type":"line","zIndex":1,"marker":{"fillColor":"rgba(255,255,255,1.00)","lineColor":Highcharts.getOptions().colors[0],"lineWidth":2},"threshold":0},{"data":[[1246406400000,14.3,27.7],[1246492800000,14.5,27.8],[1246579200000,15.5,29.6],[1246665600000,16.7,30.7],[1246752000000,16.5,25],[1246838400000,17.8,25.7],[1246924800000,13.5,24.8],[1247011200000,10.5,21.4],[1247097600000,9.2,23.8],[1247184000000,11.6,21.8],[1247270400000,10.7,23.7],[1247356800000,11,23.3],[1247443200000,11.6,23.7],[1247529600000,11.8,20.7],[1247616000000,12.6,22.4],[1247702400000,13.6,19.6],[1247788800000,11.4,22.6],[1247875200000,13.2,25],[1247961600000,14.2,21.6],[1248048000000,13.1,17.1],[1248134400000,12.2,15.5],[1248220800000,12,20.8],[1248307200000,12,17.1],[1248393600000,12.7,18.3],[1248480000000,12.4,19.4],[1248566400000,12.6,19.9],[1248652800000,11.9,20.2],[1248739200000,11,19.3],[1248825600000,10.8,17.8],[1248912000000,11.8,18.5],[1248998400000,10.8,16.1]],"name":"Range","type":"arearange","zIndex":0,"color":Highcharts.getOptions().colors[0],"fillOpacity":0.3,"lineWidth":0,"linkedTo":":previous"}],"title":{"text":"July temperatures"},"tooltip":{"crosshairs":{"showXCrosshairs":true},"shared":true,"valueSuffix":" \u00B0C"},"xAxis":[{"type":"datetime"}],"yAxis":[{"title":{"enabled":false}}]};chart_121628592880=new Highcharts.Chart(chart_121628592880_options);return [chart_121628592880,chart_121628592880_container,chart_121628592880_options,"chart_121628592880"];});
+</script>
+
+
+                                </div>
+                                <div class="tab-pane" id="source">
+                                    <pre><code lang="language-markup">
+var ranges = new HighchartsDataPoint?[][] {
+    new HighchartsDataPoint?[]{1246406400000, 14.3, 27.7},
+    new HighchartsDataPoint?[]{1246492800000, 14.5, 27.8},
+    new HighchartsDataPoint?[]{1246579200000, 15.5, 29.6},
+    new HighchartsDataPoint?[]{1246665600000, 16.7, 30.7},
+    new HighchartsDataPoint?[]{1246752000000, 16.5, 25.0},
+    new HighchartsDataPoint?[]{1246838400000, 17.8, 25.7},
+    new HighchartsDataPoint?[]{1246924800000, 13.5, 24.8},
+    new HighchartsDataPoint?[]{1247011200000, 10.5, 21.4},
+    new HighchartsDataPoint?[]{1247097600000, 9.2, 23.8},
+    new HighchartsDataPoint?[]{1247184000000, 11.6, 21.8},
+    new HighchartsDataPoint?[]{1247270400000, 10.7, 23.7},
+    new HighchartsDataPoint?[]{1247356800000, 11.0, 23.3},
+    new HighchartsDataPoint?[]{1247443200000, 11.6, 23.7},
+    new HighchartsDataPoint?[]{1247529600000, 11.8, 20.7},
+    new HighchartsDataPoint?[]{1247616000000, 12.6, 22.4},
+    new HighchartsDataPoint?[]{1247702400000, 13.6, 19.6},
+    new HighchartsDataPoint?[]{1247788800000, 11.4, 22.6},
+    new HighchartsDataPoint?[]{1247875200000, 13.2, 25.0},
+    new HighchartsDataPoint?[]{1247961600000, 14.2, 21.6},
+    new HighchartsDataPoint?[]{1248048000000, 13.1, 17.1},
+    new HighchartsDataPoint?[]{1248134400000, 12.2, 15.5},
+    new HighchartsDataPoint?[]{1248220800000, 12.0, 20.8},
+    new HighchartsDataPoint?[]{1248307200000, 12.0, 17.1},
+    new HighchartsDataPoint?[]{1248393600000, 12.7, 18.3},
+    new HighchartsDataPoint?[]{1248480000000, 12.4, 19.4},
+    new HighchartsDataPoint?[]{1248566400000, 12.6, 19.9},
+    new HighchartsDataPoint?[]{1248652800000, 11.9, 20.2},
+    new HighchartsDataPoint?[]{1248739200000, 11.0, 19.3},
+    new HighchartsDataPoint?[]{1248825600000, 10.8, 17.8},
+    new HighchartsDataPoint?[]{1248912000000, 11.8, 18.5},
+    new HighchartsDataPoint?[]{1248998400000, 10.8, 16.1}
+};
+var averages = new HighchartsDataPoint?[][]
+{
+    new HighchartsDataPoint?[] {1246406400000, 21.5},
+    new HighchartsDataPoint?[] {1246492800000, 22.1},
+    new HighchartsDataPoint?[] {1246579200000, 23},
+    new HighchartsDataPoint?[] {1246665600000, 23.8},
+    new HighchartsDataPoint?[] {1246752000000, 21.4},
+    new HighchartsDataPoint?[] {1246838400000, 21.3},
+    new HighchartsDataPoint?[] {1246924800000, 18.3},
+    new HighchartsDataPoint?[] {1247011200000, 15.4},
+    new HighchartsDataPoint?[] {1247097600000, 16.4},
+    new HighchartsDataPoint?[] {1247184000000, 17.7},
+    new HighchartsDataPoint?[] {1247270400000, 17.5},
+    new HighchartsDataPoint?[] {1247356800000, 17.6},
+    new HighchartsDataPoint?[] {1247443200000, 17.7},
+    new HighchartsDataPoint?[] {1247529600000, 16.8},
+    new HighchartsDataPoint?[] {1247616000000, 17.7},
+    new HighchartsDataPoint?[] {1247702400000, 16.3},
+    new HighchartsDataPoint?[] {1247788800000, 17.8},
+    new HighchartsDataPoint?[] {1247875200000, 18.1},
+    new HighchartsDataPoint?[] {1247961600000, 17.2},
+    new HighchartsDataPoint?[] {1248048000000, 14.4},
+    new HighchartsDataPoint?[] {1248134400000, 13.7},
+    new HighchartsDataPoint?[] {1248220800000, 15.7},
+    new HighchartsDataPoint?[] {1248307200000, 14.6},
+    new HighchartsDataPoint?[] {1248393600000, 15.3},
+    new HighchartsDataPoint?[] {1248480000000, 15.3},
+    new HighchartsDataPoint?[] {1248566400000, 15.8},
+    new HighchartsDataPoint?[] {1248652800000, 15.2},
+    new HighchartsDataPoint?[] {1248739200000, 14.8},
+    new HighchartsDataPoint?[] {1248825600000, 14.4},
+    new HighchartsDataPoint?[] {1248912000000, 15},
+    new HighchartsDataPoint?[] {1248998400000, 13.6}
+};
+
+@Html.Highcharts4Net().MultiTypeChart(settings =>
+{
+    settings.SetTitle(s => { s.Text = "July temperatures"; });
+
+    settings.AddXAxis(s => { s.Type = AxisTypes.Datetime; });
+
+    settings.AddYAxis(s => { s.Title = new YAxisTitle { Enabled = false }; });
+
+    settings.SetTooltip(s =>
+    {
+        s.Crosshairs = new Crosshairs(true);
+        s.Shared = true;
+        s.ValueSuffix = " °C";
+    });
+
+    settings.AddSeriesLine(s =>
+    {
+        s.Name = "Temperatures";
+        s.Data = new Data(averages);
+        s.ZIndex = 1;
+        s.Marker = new PlotOptionsLineMarker
+        {
+            FillColor = new ColorOrGradient(Color.White),
+            LineWidth = 2,
+            LineColor = new ColorOrGradient("Highcharts.getOptions().colors[0]", false) // false to avoid quotes in the javascript code.
+        };
+    });
+
+    settings.AddSeriesArearange(s =>
+    {
+        s.Name = "Range";
+        s.Data = new Data(ranges);
+        s.LineWidth = 0;
+        s.LinkedTo = ":previous";
+        s.Color = new ColorOrGradient("Highcharts.getOptions().colors[0]", false); // false to avoid quotes in the javascript code.
+        s.FillOpacity = 0.3;
+        s.ZIndex = 0;
+    });
+
+}).Render()
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            var current_menu = "areacharts" + "_" + "arearangewithline";
+            $("#menu-item-" + current_menu).addClass("current-menu-item");
+            $("#menu-item-" + current_menu).parents("ul.sub-menu").first().show();
+
+            $("body").on("click", ".header-toggle", function (ev) {
+                $("body").toggleClass("header-open");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", ".toggleSidebar", function (ev) {
+                $("#sidebar").toggleClass("active");
+                $(".toggleSidebar").toggleClass("active");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", "#menu-main-menu > .menu-item > a", function (ev) {
+                $(this).parent().find(".sub-menu:first").slideToggle();
+                ev.preventDefault();
+            });
+
+            $("body").on("shown.bs.tab", "a[data-toggle=\"tab\"]", function () {
+                $(window).trigger("resize"); // fix for highcharts
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Roboto:400,300,700,500,700italic,400italic,300italic,500italic:latin,latin-ext'] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="../../buttons.github.io/buttons.js"></script>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"3770a535e8754e0b8388e93406961514"}
+</script>
+<script type="text/javascript" src="http://localhost:54532/b5556992dfd04a778ca6a8f87ff85a09/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:6677/AreaCharts/ArearangeWithLine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+</html>

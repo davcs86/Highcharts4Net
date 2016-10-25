@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost:6677/LineCharts/SplineIrregularTime by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Line charts &#187; Time data with irregular intervals</title>
+    <link href="../Content/styles.css" rel="stylesheet"/>
+
+
+    <script src="../Scripts/jquery.js"></script>
+
+
+    <script src="../Content/styles/js/bootstrap.min.js"></script>
+
+    <script src='../../code.highcharts.com/highcharts.js'></script>
+<script src='../../code.highcharts.com/highcharts-more.js'></script>
+<script src='../../code.highcharts.com/modules/data.js'></script>
+<script src='../../code.highcharts.com/modules/exporting.js'></script>
+<script>
+"use strict";var H4N=function(){this.f=this.c=[],this.Init()};H4N.prototype.AddEventListener=function(t,i,n){return t.addEventListener?(t.addEventListener(i,n,!1),!0):t.attachEvent?t.attachEvent("on"+i,n):!1},H4N.prototype.Init=function(){var t=this;this.AddEventListener(window,"load",function(){t.RenderCharts()})},H4N.prototype.RegisterChart=function(t){void 0!==t&&this.c.push(t)},H4N.prototype.RegisterCallback=function(t){void 0!==t&&this.f.push(t)},H4N.prototype.RenderCharts=function(){for(var t in this.c)if(void 0!==this.c[t]){var i=this.c[t].call(null);for(var n in this.f)void 0!==this.f[n]&&this.f[n].apply(this.f[n],i)}};var Highcharts4Net=new H4N;
+</script>
+</head>
+<body>
+    <div class="site-outer-wrap">
+        <div class="site-wrap">
+            <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+                <div class="header-content-wrap">
+                    <div class="header-content">
+                        <div class="header-content-top">
+                            <div class="brand">
+                                <a href="https://github.com/davcs86/Highcharts4Net">
+                                    <img src="../Content/styles/imgs/logo.svg" alt="Highcharts4Net" />
+                                </a>
+                                <div class="tagline">Asp.Net MVC helpers for Highcharts</div>
+                            </div><button class="header-toggle btn btn-ui">
+                                <span><span></span></span>
+                            </button>
+                        </div>
+                        <div class="header-content-bottom">
+                            <nav class="main-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                <ul id="menu-main-menu" class="menu">
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Line charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-linecharts_basic" class="menu-item">
+                                                <a href="Basic.html">Basic line</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_ajaxloadedclickablepoints" class="menu-item">
+                                                <a href="AjaxLoadedClickablePoints.html">Ajax loaded data, clickable points</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_withdatalabels" class="menu-item">
+                                                <a href="WithDataLabels.html">With data labels</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_timeseries" class="menu-item">
+                                                <a href="TimeSeries.html">Time series, zoomable</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineinverted" class="menu-item">
+                                                <a href="SplineInverted.html">Spline with inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithsymbols" class="menu-item">
+                                                <a href="SplineWithSymbols.html">Spline with symbols</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splinewithplotbands" class="menu-item">
+                                                <a href="SplineWithPlotBands.html">Spline with plot bands</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_splineirregulartime" class="menu-item">
+                                                <a href="SplineIrregularTime.html">Time data with irregular intervals</a>
+                                            </li>
+                                            <li id="menu-item-linecharts_logarithmicaxis" class="menu-item">
+                                                <a href="LogarithmicAxis.html">Logarithmic axis</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-linecharts_index" class="menu-item">
+                                        <a href="#">Area charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-areacharts_basic" class="menu-item">
+                                                <a href="../AreaCharts/Basic.html">Basic area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_negative" class="menu-item">
+                                                <a href="../AreaCharts/Negative.html">Area with negative values</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_stacked" class="menu-item">
+                                                <a href="../AreaCharts/Stacked.html">Stacked area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_percentage" class="menu-item">
+                                                <a href="../AreaCharts/Percentage.html">Percentage area</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_missingpoints" class="menu-item">
+                                                <a href="../AreaCharts/MissingPoints.html">Area with missing points</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_invertedaxes" class="menu-item">
+                                                <a href="../AreaCharts/InvertedAxes.html">Inverted axes</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_areaspline" class="menu-item">
+                                                <a href="../AreaCharts/Areaspline.html">Area-spline</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearange" class="menu-item">
+                                                <a href="../AreaCharts/Arearange.html">Area range</a>
+                                            </li>
+                                            <li id="menu-item-areacharts_arearangewithline" class="menu-item">
+                                                <a href="../AreaCharts/ArearangeWithLine.html">Area range and line</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-columnandbarcharts_index" class="menu-item">
+                                        <a href="#">Column and bar charts</a><span class="subnav-close"></span><ul class="sub-menu">
+                                            <li id="menu-item-columnandbarcharts_basicbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicBar.html">Basic bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedbar" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedBar.html">Stacked bar</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_barwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BarWithNegatives.html">Bar with negative stack</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_basiccolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/BasicColumn.html">Basic column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_columnwithnegatives" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/ColumnWithNegatives.html">Column with negative values</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedColumn.html">Stacked column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedgroupedcolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedGroupedColumn.html">Stacked and grouped column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_stackedpercentagecolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/StackedPercentageColumn.html">Stacked percentage column</a>
+                                            </li>
+                                            <li id="menu-item-columnandbarcharts_rotatedlabelscolumn" class="menu-item">
+                                                <a href="../ColumnAndBarCharts/RotatedLabelsColumn.html">Column with rotated labels</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav><aside class="header-widgets" itemscope itemtype="http://schema.org/WPSideBar">
+                                <div id="text-1" class="widget widget_text">
+                                    <h4 class="widget-title">Repository</h4>
+                                    <div class="textwidget text-center">
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net" data-count-href="/davcs86/Highcharts4Net/stargazers" data-count-api="/repos/davcs86/Highcharts4Net#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star davcs86/Highcharts4Net on GitHub">Star</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net/archive/master.zip" aria-label="Download davcs86/Highcharts4Net on GitHub">Download library</a><br/>
+                                        <!-- Place this tag where you want the button to render. -->
+                                        <a class="github-button" href="https://github.com/davcs86/Highcharts4Net-demos/archive/master.zip" aria-label="Download davcs86/Highcharts4Net-demos on GitHub">Download demos</a>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content-area-wrap">
+                <div class="content-area fullwidth">
+                    <div class="content-header">
+                        <div class="content-header-affix clearfix">
+                            <h1 class="content-title"> Line charts &#187; Time data with irregular intervals</h1>
+                        </div>
+                    </div>
+                    <div class="content-wrap">
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#chart" data-toggle="tab">Chart</a>
+                                </li>
+                                <li>
+                                    <a href="#source" data-toggle="tab">Source</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="chart">
+                                    
+
+
+<div id='SplineIrregularTime_container'></div>
+<script>
+var SplineIrregularTime,SplineIrregularTime_options;Highcharts4Net.RegisterChart(function(){SplineIrregularTime_options={"chart":{"renderTo":"SplineIrregularTime_container","type":"spline"},"plotOptions":{"spline":{"marker":{"enabled":true},"threshold":0}},"series":[{"data":[[Date.UTC(1970,9,21,0,0,0,1),0],[Date.UTC(1970,10,4,0,0,0,1),0.28],[Date.UTC(1970,10,9,0,0,0,1),0.25],[Date.UTC(1970,10,27,0,0,0,1),0.2],[Date.UTC(1970,11,2,0,0,0,1),0.28],[Date.UTC(1970,11,26,0,0,0,1),0.28],[Date.UTC(1970,11,29,0,0,0,1),0.47],[Date.UTC(1971,0,11,0,0,0,1),0.79],[Date.UTC(1971,0,26,0,0,0,1),0.72],[Date.UTC(1971,1,3,0,0,0,1),1.02],[Date.UTC(1971,1,11,0,0,0,1),1.12],[Date.UTC(1971,1,25,0,0,0,1),1.2],[Date.UTC(1971,2,11,0,0,0,1),1.18],[Date.UTC(1971,3,11,0,0,0,1),1.19],[Date.UTC(1971,4,1,0,0,0,1),1.85],[Date.UTC(1971,4,5,0,0,0,1),2.22],[Date.UTC(1971,4,19,0,0,0,1),1.15],[Date.UTC(1971,5,3,0,0,0,1),0]],"name":"Winter 2012-2013","type":"spline","threshold":0},{"data":[[Date.UTC(1970,9,29,0,0,0,1),0],[Date.UTC(1970,10,9,0,0,0,1),0.4],[Date.UTC(1970,11,1,0,0,0,1),0.25],[Date.UTC(1971,0,1,0,0,0,1),1.66],[Date.UTC(1971,0,10,0,0,0,1),1.8],[Date.UTC(1971,1,19,0,0,0,1),1.76],[Date.UTC(1971,2,25,0,0,0,1),2.62],[Date.UTC(1971,3,19,0,0,0,1),2.41],[Date.UTC(1971,3,30,0,0,0,1),2.05],[Date.UTC(1971,4,14,0,0,0,1),1.7],[Date.UTC(1971,4,24,0,0,0,1),1.1],[Date.UTC(1971,5,10,0,0,0,1),0]],"name":"Winter 2013-2014","type":"spline","threshold":0},{"data":[[Date.UTC(1970,10,25,0,0,0,1),0],[Date.UTC(1970,11,6,0,0,0,1),0.25],[Date.UTC(1970,11,20,0,0,0,1),1.41],[Date.UTC(1970,11,25,0,0,0,1),1.64],[Date.UTC(1971,0,4,0,0,0,1),1.6],[Date.UTC(1971,0,17,0,0,0,1),2.55],[Date.UTC(1971,0,24,0,0,0,1),2.62],[Date.UTC(1971,1,4,0,0,0,1),2.5],[Date.UTC(1971,1,14,0,0,0,1),2.42],[Date.UTC(1971,2,6,0,0,0,1),2.74],[Date.UTC(1971,2,14,0,0,0,1),2.62],[Date.UTC(1971,2,24,0,0,0,1),2.6],[Date.UTC(1971,3,2,0,0,0,1),2.81],[Date.UTC(1971,3,12,0,0,0,1),2.63],[Date.UTC(1971,3,28,0,0,0,1),2.77],[Date.UTC(1971,4,5,0,0,0,1),2.68],[Date.UTC(1971,4,10,0,0,0,1),2.56],[Date.UTC(1971,4,15,0,0,0,1),2.39],[Date.UTC(1971,4,20,0,0,0,1),2.3],[Date.UTC(1971,5,5,0,0,0,1),2],[Date.UTC(1971,5,10,0,0,0,1),1.85],[Date.UTC(1971,5,15,0,0,0,1),1.49],[Date.UTC(1971,5,23,0,0,0,1),1.08]],"name":"Winter 2014-2015","type":"spline","threshold":0}],"subtitle":{"text":"Irregular time data in Highcharts JS"},"title":{"text":"Snow depth at Vikjafjellet, Norway"},"tooltip":{"headerFormat":"<b>{series.name}</b><br>","pointFormat":"{point.x:%e. %b}: {point.y:.2f} m"},"xAxis":[{"dateTimeLabelFormats":{"month":"%e. %b","year":"%b"},"title":{"enabled":false,"text":"Date"},"type":"datetime"}],"yAxis":[{"min":0,"title":{"text":"Snow depth (m)"}}]};SplineIrregularTime=new Highcharts.Chart(SplineIrregularTime_options);return [SplineIrregularTime,SplineIrregularTime_container,SplineIrregularTime_options,"SplineIrregularTime"];});
+</script>
+
+
+
+                                </div>
+                                <div class="tab-pane" id="source">
+                                    <pre><code lang="language-markup">
+@Html.Highcharts4Net().SplineChart(settings =>
+{
+    settings.Name = "SplineWithPlotBands";
+
+    settings.SetTitle(s => { s.Text = "Wind speed during two days"; });
+
+    settings.SetTitle(s => { s.Text = "May 31 and and June 1, 2015 at two locations in Vik i Sogn, Norway"; });
+
+    settings.AddXAxis(s =>
+    {
+        s.Type = AxisTypes.Datetime;
+        s.Labels = new XAxisLabels
+        {
+            Overflow = "justify"
+        };
+    });
+
+    settings.AddYAxis(s =>
+    {
+        s.Title = new YAxisTitle
+        {
+            Text = "Wind speed (m/s)"
+        };
+        s.MinorGridLineWidth = 0;
+        s.MinorGridLineWidth = 0;
+        s.GridLineWidth = 0;
+        s.AlternateGridColor = null;
+        s.PlotBands = new []
+        {
+            new YAxisPlotBands
+            {
+                // Light air
+                From = 0.3,
+                To = 1.5,
+                Color = new ColorOrGradient("rgba(68, 170, 213, 0.1)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Light air",
+                    Style = "{color:'#606060'}"
+                }
+            },
+            new YAxisPlotBands
+            {
+                // Light breeze
+                From = 1.5,
+                To = 3.3,
+                Color = new ColorOrGradient("rgba(0, 0, 0, 0)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Light breeze",
+                    Style = "{color: '#606060'}"
+                }
+            },
+            new YAxisPlotBands
+            {
+                // Gentle breeze
+                From = 3.3,
+                To = 5.5,
+                Color = new ColorOrGradient("rgba(68, 170, 213, 0.1)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Gentle breeze",
+                    Style = "{color:'#606060'}"
+                }
+            },
+            new  YAxisPlotBands
+            {
+                //Moderate breeze
+                From= 5.5,
+                To= 8,
+                Color = new ColorOrGradient("rgba(0, 0, 0, 0)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Moderate breeze",
+                    Style = "{color:'#606060'}"
+                }
+            },
+            new  YAxisPlotBands
+            {
+                // Fresh breeze
+                From= 8,
+                To= 11,
+                Color = new ColorOrGradient("rgba(68, 170, 213, 0.1)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Fresh breeze",
+                    Style = "{color:'#606060'}"
+                }
+            },
+            new  YAxisPlotBands
+            {
+                // Strong breeze
+                From= 11,
+                To= 14,
+                Color = new ColorOrGradient("rgba(0, 0, 0, 0)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "Strong breeze",
+                    Style = "{color:'#606060'}"
+                }
+            },
+            new  YAxisPlotBands
+            {
+                // High wind
+                From= 14,
+                To= 15,
+                Color = new ColorOrGradient("rgba(68, 170, 213, 0.1)"),
+                Label = new YAxisPlotBandsLabel
+                {
+                    Text = "High wind",
+                    Style = "{color:'#606060'}"
+                }
+            }
+        };
+    });
+
+    settings.SetTooltip(s => { s.ValueSuffix = "m/s"; });
+
+    settings.SetPlotOptions(s =>
+    {
+        s.Spline = new PlotOptionsSpline
+        {
+            LineWidth = 4,
+            States = new PlotOptionsSplineStates
+            {
+                Hover = new PlotOptionsSplineStatesHover
+                {
+                    LineWidth = 5
+                }
+            },
+            PointInterval = 3600000, // one hour
+            PointStart = new PointStart(new DateTime(2015, 5, 31)),
+            Marker = new PlotOptionsSplineMarker
+            {
+                Enabled = false
+            }
+        };
+    });
+
+    settings.AddSeries(s =>
+    {
+        s.Name = "Hestavollane";
+        s.Data = new Data(new HighchartsDataPoint?[] {0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6});
+    });
+    settings.AddSeries(s =>
+    {
+        s.Name = "Vik";
+        s.Data = new Data(new HighchartsDataPoint?[] {0, 0, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.1, 0.3, 0.3, 0, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 3.1, 2.5, 1.5, 1.9, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3});
+    });
+    settings.SetNavigation(s => { s.MenuItemStyle = "{fontSize: '10px'}"; });
+}).Render()
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            var current_menu = "linecharts" + "_" + "splineirregulartime";
+            $("#menu-item-" + current_menu).addClass("current-menu-item");
+            $("#menu-item-" + current_menu).parents("ul.sub-menu").first().show();
+
+            $("body").on("click", ".header-toggle", function (ev) {
+                $("body").toggleClass("header-open");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", ".toggleSidebar", function (ev) {
+                $("#sidebar").toggleClass("active");
+                $(".toggleSidebar").toggleClass("active");
+                ev.preventDefault();
+            });
+
+            $("body").on("click", "#menu-main-menu > .menu-item > a", function (ev) {
+                $(this).parent().find(".sub-menu:first").slideToggle();
+                ev.preventDefault();
+            });
+
+            $("body").on("shown.bs.tab", "a[data-toggle=\"tab\"]", function () {
+                $(window).trigger("resize"); // fix for highcharts
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Roboto:400,300,700,500,700italic,400italic,300italic,500italic:latin,latin-ext'] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="../../buttons.github.io/buttons.js"></script>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"d573f05bd10249c086eb4de91c748a61"}
+</script>
+<script type="text/javascript" src="http://localhost:54532/b5556992dfd04a778ca6a8f87ff85a09/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+
+<!-- Mirrored from localhost:6677/LineCharts/SplineIrregularTime by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Oct 2016 17:16:34 GMT -->
+</html>
