@@ -7,6 +7,10 @@ MVC helpers for Highcharts 4.1
 
 Download a project with examples of usage from [here](https://github.com/davcs86/Highcharts4Net-demos)
 
+## Demo
+
+[Online demo](http://davcs86.github.io/Highcharts4Net/)
+
 ## Requirements
 
 - Visual Studio 2013 / Xamarin Studio 6.0
