@@ -5,7 +5,7 @@ MVC helpers for Highcharts 4.1
 
 ## Demo
 
->> [Online demo](http://davcs86.github.io/Highcharts4Net/)
+> [Online demo](http://davcs86.github.io/Highcharts4Net/)
 
 Download the source code of the demo project from [here](https://github.com/davcs86/Highcharts4Net-demos)
 
